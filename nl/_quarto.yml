@@ -29,6 +29,7 @@ format:
       - cosmo
       - ../custom.scss
     toc: true
+    reading-time: true
     code-fold: true
     include-in-header:
       text: |
