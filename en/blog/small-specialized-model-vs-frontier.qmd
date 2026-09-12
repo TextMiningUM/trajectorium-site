@@ -1,0 +1,59 @@
+---
+title: "David vs. Goliath: A Fine-Tuned 8B Model Nearly Matches a Trillion-Parameter Giant — On One Task"
+description: "Recent research shows a small, locally-run model can get within a few points of a frontier foundation model on a specific job. The reason isn't magic — it's specialization."
+date: 2026-10-31
+categories: [text-to-action]
+lang: en
+---
+
+Here's a number worth sitting with: a fine-tuned 8-billion-parameter model, small enough to run on a single consumer GPU, recently landed within **1.2 percentage points** of a frontier foundation model on step-validity, and within **6.1 points** on task completion — on a genuinely hard task: following complex, branching procedures (think SOPs, repair manuals, multi-step business workflows) reliably from start to finish. The foundation model it was compared against is estimated at **625 times its size**. This post walks through what was actually built, what the numbers show, and — most importantly — why this result isn't a fluke. It's a direct consequence of what specialization buys you.
+
+## The Problem: AI Agents Are Bad at Following Instructions
+
+It's tempting to assume that if a language model can write an essay or debug code, it can obviously follow a company's standard operating procedure. Recent benchmarking says otherwise. One 2025 study deploying AI agents to execute real company SOPs found the *best* frontier model achieved only a **30.3% success rate**, with open-source models falling under 8%. Separate work testing frontier models on multi-hop reasoning tasks in a clinical records setting found accuracies **below 11%**. The common thread: unstructured procedural text — full of conditional branches, loops, and ambiguous phrasing ("if the name is already in the database... otherwise, start a registration process and execute steps 1 to 10") — is exactly where general-purpose models stumble, because they're reasoning over free-form text rather than a structured notion of where they are in a process and what's actually still valid to do next.
+
+## The Approach: Turn Manuals Into Training Signal, Not Just Context
+
+The core idea is to stop treating a procedure as text to reason over at inference time, and instead treat it as a source of *structured, step-level training data* the model can actually learn from. The pipeline runs in five stages:
+
+1. **Extract the workflow as a graph.** An LLM-based extraction loop reads a procedural document and recovers it as a directed graph — actions, decision gateways, branch conditions — with a self-checking refinement loop (a structural checker verifying every node is reachable and a path exists from start to end, plus a semantic checker comparing the extracted graph back against the original text for missed steps).
+2. **Turn the graph into a notion of progress.** Every valid path through the graph, enumerated deterministically (via breadth- and depth-first search), becomes a sequence of states: what's been done so far, which conditions held, and what's validly available next.
+3. **Generate both positive and near-miss training signals.** Alongside the correct next action at each state, the pipeline deliberately generates *wrong* next actions — a skipped step, two steps done in the wrong order, a repeated action, a wrong starting point — each labeled with exactly why it's wrong.
+4. **Train a small, specialized model on this data** — a Process Reward Model that scores candidate next actions given the current state, layered as a LoRA adapter on top of a small open-weight base model (Llama 3.1 8B).
+5. **Deploy an agent that combines the small trained model with the extracted graph itself** as a real-time filter: when the model is uncertain, it narrows its candidate actions to only what the graph says is actually valid at that point — at no extra training cost.
+
+## The Results: Each Layer Earns Its Keep
+
+The step-by-step improvement is the clearest evidence that this isn't one clever trick but a genuinely compounding architecture:
+
+- **A bare, ungrounded small model** invents actions that don't exist in the procedure roughly **35% of the time**, completes only **10.2%** of procedures end-to-end, and produces valid next-steps just **56%** of the time.
+- **Simply grounding it in the extracted action list** (no training required) already lifts completion to **36.7%** and valid steps to **81%**, and — critically — eliminates hallucinated actions entirely, since the model can now only pick from what's actually real.
+- **Adding the trained Process Reward Model**, blended with the base model's own judgment, pushes completion to **51%** and valid steps to **87%**.
+- **Adding the graph as a live safety net for uncertain moments** brings completion to **55.1%** and valid steps to **88.7%** — with almost no additional cost, since the graph was already extracted in step one.
+
+And the punchline: benchmarked against a frontier foundation model (also given the extracted action list, so it's not competing at a disadvantage) — the frontier model scored **89.9%** on valid steps and **61.2%** on completion, versus the small system's **88.7%** and **55.1%**. A gap of roughly one and six points, against a model estimated to be **625 times larger**.
+
+One more finding worth flagging: when the *training data itself* was deduplicated and rebalanced — cutting the dataset by 43% but removing redundant, near-identical examples and correcting a skew toward "correct" labels — the resulting model performed *better* on some configurations than the model trained on the larger, messier dataset. Quality beat volume, not just for the base architecture, but for the training data feeding it.
+
+## Why This Result Makes Complete Sense
+
+It's tempting to read a result like this as "small models are secretly as good as huge ones" — that's not the right lesson, and it's worth being precise about why.
+
+A frontier foundation model is a generalist. It has to be simultaneously good at writing poetry, debugging Rust, explaining quantum mechanics, translating Portuguese, and — only as one of thousands of competencies — following a company's specific loan-approval procedure. Its capacity is spread across an enormous space of possible tasks it might be asked to do. That's precisely why it's a 5-trillion-parameter-class system in the first place: breadth is expensive.
+
+A specialized model trained specifically on step-level, state-aware procedural data doesn't need any of that breadth. It needs to answer exactly one narrower question extremely well: *given where we are in this specific process, what's the valid next step?* All of its (comparatively tiny) capacity gets spent on that one competency, reinforced by thousands of concrete examples of what's correct and — just as importantly — labeled examples of what's *almost* correct but wrong in a specific, named way. A generalist model has never seen that kind of dense, structured, negative-example-rich training signal for your specific procedures, because it doesn't exist publicly — it has to be built from an organization's own manuals.
+
+This is the same logic that shows up whenever a narrow specialist competes with a generalist: a chess engine that only plays chess beats a human generalist at chess, not because it's more intelligent overall, but because it isn't spending any capacity on anything else. The 625x parameter gap doesn't disappear — it's just mostly irrelevant to this specific, narrow task, because the small model was never asked to be good at everything else the large model also has to be good at.
+
+## Why This Matters Practically
+
+The practical implications extend past the raw numbers:
+
+- **It runs locally, on a single consumer-grade GPU** — no data leaves the building, which matters directly for the kind of institutional and data sovereignty concerns this series has covered before.
+- **No proprietary procedural data has to be sent to an external API provider** to get this level of performance — the specialization happens entirely on infrastructure the organization controls.
+- **The cost and energy footprint drop by orders of magnitude** relative to querying a frontier model repeatedly, without giving up much of the task-specific performance that matters.
+- **The bottleneck that remains is extraction quality, not model size** — when the underlying workflow graph is perfect (gold-standard), the same small model completes 98% of procedures with 99.6% valid steps. The gap to frontier-model performance in real deployment comes almost entirely from imperfect automatic extraction of the workflow graph from messy source text, not from the small model's reasoning capacity itself.
+
+## The Takeaway
+
+A handful of percentage points separating an 8-billion-parameter specialist from a multi-trillion-parameter generalist, on a task that actually matters to an organization's operations, is not a coincidence and not a trick — it's the direct, predictable result of trading breadth for depth. Foundation models are built to be good at almost everything; a fine-tuned small model built on an organization's own procedural data only has to be good at one thing. When that one thing is narrow enough and the training data is good enough, the size gap stops being the deciding factor. That's the entire argument for building your own specialized agentic components on top of a commodity foundation model, rather than renting the whole capability from someone else's much bigger, much more expensive, much less controllable system.
