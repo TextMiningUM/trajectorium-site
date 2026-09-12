@@ -1,6 +1,6 @@
 ---
 title: "Slides"
-description: "Lecture slides from IRTM and ANLP courses at DACS, Maastricht University."
+description: "Lecture slides from the Advanced Natural Language Processing (ANLP) and Agentic Conversational Search courses at the Department of Advanced Computing Sciences, Maastricht University. Covers everything from tokenization and transformers to multi-agent orchestration, LLM fine-tuning, and speech recognition — openly available for reuse and adaptation."
 page-layout: full
 toc: false
 ---

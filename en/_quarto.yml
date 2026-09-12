@@ -34,3 +34,19 @@ format:
       text: |
         <link rel="alternate" hreflang="nl" href="https://trajectorium.ai/nl/" />
         <link rel="canonical" href="https://trajectorium.ai/en/" />
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Trajectorium",
+          "url": "https://trajectorium.ai",
+          "logo": "https://trajectorium.ai/images/ComponentsofAgent.png",
+          "description": "Research and education platform focused on agentic AI, energy-efficient sovereign architectures, and responsible AI.",
+          "founder": {
+            "@type": "Person",
+            "name": "Jan Scholtes",
+            "jobTitle": "Endowed Chair of Text Mining",
+            "affiliation": "Maastricht University"
+          }
+        }
+        </script>

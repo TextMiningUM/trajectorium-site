@@ -1,6 +1,6 @@
 ---
 title: "Slides"
-description: "College-slides van de IRTM- en ANLP-cursussen aan DACS, Universiteit Maastricht."
+description: "College-slides van de Advanced Natural Language Processing (ANLP)- en Agentic Conversational Search-cursussen aan de Vakgroep Advanced Computing Sciences, Universiteit Maastricht. Behandelt alles van tokenisatie en transformers tot multi-agent-orkestratie, LLM fine-tuning en spraakherkenning — vrij beschikbaar voor hergebruik en aanpassing."
 page-layout: full
 toc: false
 ---

@@ -3,6 +3,7 @@ title: "What Is an AI Agent? From Chatbot to Autonomous System"
 description: "A grounded introduction to agentic AI: what changes when a language model gains memory, tools, and the ability to act — and why that shift matters."
 date: 2026-09-12
 author: "Jan Scholtes"
+image: "../../images/ComponentsofAgent.png"
 categories: [fundamentals]
 lang: en
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Tutorials & Notebooks"
-description: "Praktische cursusmateriaal in Jupyter Notebook-formaat &mdash; openbaar beschikbaar op GitHub."
+description: "Openbaar beschikbare Jupyter-notebooks voor de Advanced Natural Language Processing (ANLP)- en Agentic Conversational Search-cursussen aan de Universiteit Maastricht. Praktische tutorials over neurale NLP-pipelines, transformer fine-tuning, retrieval-augmented generation en agentic system design — met GPU-klare code en volledige werkende voorbeelden."
 page-layout: full
 toc: false
 ---
