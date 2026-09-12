@@ -1,0 +1,72 @@
+---
+title: "Van tekst naar actie: NLP-pipelines omzetten in agentische workflows"
+description: "Hoe ruwe, ongestructureerde tekst de trainingsdata wordt achter het geheugen, de tools, de redenering en de guardrails van een agent — en waarom die omzetting het echte concurrentievoordeel oplevert."
+date: 2026-09-26
+categories: [tekst-naar-actie]
+lang: nl
+---
+
+De meeste organisaties beschikken al over een enorme hoeveelheid ongestructureerde tekst: handleidingen, dossiers, logboeken, contracten, jaren aan interne correspondentie. De vraag die dit artikel beantwoordt is heel praktisch: hoe zet je die ruwe tekst om in de daadwerkelijke trainingsdata die het geheugen, de tools, de redenering en de veiligheidscontroles van een agent aandrijft? En waarom doet die conversiepipeline er meer toe dan welk basismodel je er achter hangt?
+
+## Waarom het model niet jouw slotgracht is
+
+Het is verleidelijk te denken dat een sterk LLM koppelen aan een systeem-prompt *bouwen* aan een agent is. Dat is het niet. Volledig vertrouwen op systeem-prompts en Markdown-"skill files" geeft je slechts oppervlakkige controle — je behandelt het model als een black box en bouwt, nog belangrijker, een afhankelijkheid op van iemand anders' roadmap in plaats van van een eigen systeem. Veel teams die beweren een agent te hebben "gebouwd", hebben in werkelijkheid alleen instructietekst over een general-purpose model gelegd. Dat is de **God-Prompt-val**, en die is kwetsbaar: rigide als-dan-regels kunnen de oneindige lange staart van uitzonderingen die echte tekstmining en operaties bevatten, niet omvatten.
+
+Het echte concurrentievoordeel — de slotgracht — zit helemaal niet in het onderliggende LLM. Big Tech-modellen zijn generalisten: ze beheersen meerstapsredeneerketens, native tool-integratie en recursieve zelfverbetering, maar wat je via hun API's krijgt, is grotendeels een sandbox — systeem-prompts, function calling en standaard vectorzoekopdrachten. Als de waarde van jouw bedrijf puur gebonden is aan welk model je ook aanroept, sta je in de weg van een vloedgolf: de volgende modelupdate kan simpelweg absorberen wat jij hebt gebouwd. De slotgracht zit in de **architectuur rondom het model** — en die architectuur moet getraind zijn op *jouw* tekst.
+
+## Stap 1: Van ruwe tekst naar gestructureerde JSON
+
+Ruwe tekst — zeker uit PDF's — is gebouwd voor menselijke ogen, niet voor machineredenering. Een LLM dat een vlakke tekstdump leest, kan niet betrouwbaar een hoofdstuktitel onderscheiden van een technische definitie, of een waarschuwingslabel van een procedurestap. Die ambiguïteit is precies wat downstream agentische componenten laat breken, dus de eerste echte engineeringstap is het omzetten van ongestructureerde tekst in een hiërarchisch, machine-leesbaar **JSON-schema** — een "foundationele ontologie" die expliciet hoofdstukken koppelt aan subonderwerpen, definities en procedures.
+
+Deze stap doet er meer toe dan het lijkt, omdat fouten zich voorplanten. Als de JSON-conversie de hiërarchie platslaat of niet-gerelateerde alinea's samenvoegt:
+
+- **RAG-chunks verliezen hun bovenliggende context** — een opgehaalde procedure zoals "beëindig het kwaadaardige proces" kan stilzwijgend het feit verliezen dat deze alleen op één specifiek scenario van toepassing is, en de reranker downstream kan het juiste antwoord niet naar boven halen.
+- **Sequentiële workflows worden in de verkeerde volgorde aangeleerd** — als de Fase 1/2/3-structuur niet behouden blijft, kan de fijngeregelde planningslaag van een agent leren stap 3 vóór stap 1 uit te voeren.
+- **Kennisgrafen verliezen hun verbindingen** — entiteitsrelaties die niet hiërarchisch zijn vastgelegd, kunnen later geen multi-hop-redenering ondersteunen.
+- **RLHF-voorkeursparingen verliezen hun rechtvaardiging** — zonder de omringende context kan een Critic-agent niet beoordelen of een actie daadwerkelijk een regel heeft geschonden.
+
+Zorg één keer, vroeg in het proces, voor de juiste structuur, en elke downstream trainingspipeline profiteert ervan. Doe het fout, en elk downstream component erft de fout.
+
+## Stap 2: Geheugen — RAG en neurale herrangschikking als bedrijfsgeheugen
+
+Zodra je tekst gestructureerd is, wordt die de ruggengraat van het geheugen van de agent. De mechanismen zijn bekend, maar het loont de moeite er precies over te zijn:
+
+1. **Chunking** — splits lange documenten op in semantisch samenhangende secties (circa 500 woorden is een veelgebruikt doel), geen willekeurige stukken van vaste lengte.
+2. **Indexering** — zet chunks om in vectoren en sla ze op in een vectordatabase (Pinecone, pgvector, Azure AI Search).
+3. **Retrieval** — haal bij een query de meest relevante chunks op.
+4. **Augmentatie** — instrueer het model om *uitsluitend* die opgehaalde bronnen te gebruiken.
+5. **Generatie** — produceer een geciteerd, feitelijk antwoord.
+
+Een gewone vectorzoekopdracht vindt dingen die *gelijkaardig* zijn; het vindt niet betrouwbaar het ding dat *correct* is. Dat is de taak van een **neurale reranker** — een fijngeregeld cross-encoder getraind op je eigen query/beste-antwoord-paren, die de top 50-100 kandidaten opnieuw bekijkt en het werkelijke "doorslaggevende" antwoord naar positie één duwt. Dit vermindert hallucinaties drastisch en lost het "lost in the middle"-probleem op waarbij een model dat begraven is in twintig vergelijkbare chunks het ene relevante chunk mist. Dit goed opbouwen vereist echte infrastructuurkeuzes: een sterk embeddingmodel (bezuinig hier niet op — een slechte vertaler levert slechte zoekopdrachten op), een orkestratieraamwerk zoals LlamaIndex of LangChain om bestanden, database en model te verbinden, en een betrouwbare documentparser voor de rommelige PDF's waarmee je begint.
+
+## Stap 3: Tools — tekst omzetten in operationele ledematen
+
+Skills en tools zijn de "ledematen" van een agentische architectuur — gestructureerde definities (API-schema's, JSON-functies, SQL-interfaces) waarmee een model kan handelen in plaats van alleen praten. Propriëtaire interne API's zijn waar dit een echte bedrijfsslotgracht wordt: een general-purpose model van een grote aanbieder is juridisch en technisch geblokkeerd van het aanraken van jouw interne systemen, hoe slim het ook is. Een agent die is aangesloten op jouw eigen elektronisch patiëntendossier, CRM of monitoringtools kan echte historische waarden ophalen, ze kruislings raadplegen en handelen op basis van live context in plaats van te gokken vanuit voorgetrainde gewichten.
+
+Dit is ook waar multi-hop-orkestratie noodzakelijk wordt in plaats van optioneel. Complexe professionele taken lossen zelden op in één zoekopdracht — een agent die een HR-database (wie heeft dienst), een monitoringtool (huidige belasting) en een uitvoeringstool (herstart de service) aan elkaar koppelt, voert een **OODA-lus** uit: waarnemen, oriënteren, beslissen, handelen, en herhalen totdat het doel bereikt is, waarbij het plan wordt aangepast naarmate elke tool-aanroep nieuwe informatie teruggeeft.
+
+## Stap 4: Redenering en een digitale peer reviewer
+
+Planningsraamwerken zoals Chain-of-Thought, Tree-of-Thought en Skeleton-of-Thought geven een groot model ruimte om een taak op te splitsen in subdoelen met afhankelijkheden in plaats van in één stap te antwoorden. Maar een groot, algemeen model dat een eerste versie genereert, profiteert nog steeds van een tweede, veel kleiner en gespecialiseerder model dat het beoordeelt — een **Critic** — fijngeregeld specifiek op de correcties van jouw eigen organisatie.
+
+De trainingsdata voor die critic is concreet en verzamelbaar: de afgewezen of bewerkte ruwe uitvoer, de door experts gecorrigeerde versie, de reden voor de correctie ("schendt artikel 4.2"), en eventuele harde negatieve beperkingen of compliance-grenzen. Als ruwe schaalrichtlijn: 50-100 voorbeelden levert een prototype op, 500-1.000 een productiewaardige critic, en 2.000+ begint echte domeinexpertise te benaderen. Dit is precies het soort propriëtaire, praktijkgerichte correctiedata waartoe een general-purpose LLM-aanbieder nooit toegang zal hebben — en dat is precies waarom het een duurzaam voordeel is in plaats van een tijdelijk.
+
+## Stap 5: Guardrails — waar institutioneel vertrouwen werkelijk vandaan komt
+
+Hallucinatie- en compliancerisico is de grootste enkelvoudige drempel voor echte institutionele AI-adoptie, dus de architectuur heeft onafhankelijke verificatielagen nodig rondom het kernmodel, niet daarin ingebakken:
+
+- **Feitencontrole** — vergelijk elk concept met de RAG-waarheidsbron; elke bewering moet citeerbaar zijn.
+- **Veiligheidsfilters** — handhaving van juridische, ethische en compliance-beperkingen, waarbij uitvoer die gedefinieerde grenzen overschrijdt, wordt geblokkeerd.
+- **Zelfconsistentiecontroles** — voer dezelfde query uit via meerdere redeneerroutes en verwerp antwoorden die het niet met elkaar eens zijn.
+
+Niets hiervan mag volledig worden gedelegeerd aan een andere instantie van hetzelfde probabilistische model dat zichzelf bewaakt. Deterministische, hardgecodeerde controles — invoerbeveiliging voordat een prompt de hoofdagent ook maar bereikt, strikte schema-handhaving op uitvoer — bieden het vangnet dat een puur LLM-gebaseerde critic niet kan garanderen.
+
+## Het vliegwiel
+
+Zet deze onderdelen samen en er gebeurt iets samengesteld. Elke echte interactie genereert een **redeneerdrieluik**: de observatie die het systeem zag, de actie of tool-aanroep die het koos, en de consequentie — succes of mislukking. Die data blijft niet liggen; ze verfijnt je rerankers, je critics en je planners, wat betere uitkomsten oplevert, wat meer gebruik stimuleert, wat meer data oplevert. Dit is het vliegwiel dat een eenmalig tekstminingproject omzet in een samengesteld, verdedigbaar bedrijfsmiddel — en het is precies de dataset die je later in staat stelt om te fijnregelen rondom elke nieuwe generatie basismodellen, in plaats van erdoor vervangen te worden.
+
+## De conclusie
+
+Tekst omzetten in agentische trainingsdata is geen enkele technische truc — het is een pipeline: structureer de tekst in een getrouwe JSON-hiërarchie, gebruik die hiërarchie om een echte geheugenlaag te bouwen (RAG plus herrangschikking), extraheer de API-definities die de agent handen geven, verzamel de correctiedata die een critic traint, en omhul dat alles met deterministische guardrails. Doe dit goed met je eigen propriëtaire tekst, en je huurt geen intelligentie van een basismodelleverancier — je bouwt een architectuur, en een dataset, die waardevoller wordt elke keer dat die wordt gebruikt.
+
+*Volgende in deze reeks: een praktische walkthrough van het chunken van een echt document en het van begin tot eind bouwen van een kleine RAG-pipeline.*
