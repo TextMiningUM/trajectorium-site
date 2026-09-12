@@ -1,7 +1,7 @@
 # Copilot Instructions — Trajectorium Site
 
 ## Project overview
-Quarto-based bilingual website (English + Dutch) deployed to GitHub Pages at `balyzai.nl`.
+Quarto-based bilingual website (English + Dutch) deployed to GitHub Pages at `trajectorium.ai`.
 - `en/` — English Quarto project → outputs to `_site/en/`
 - `nl/` — Dutch Quarto project → outputs to `_site/nl/`
 - `images/` — shared assets used by both language sites
@@ -82,7 +82,7 @@ All project documentation (README, copilot-instructions, workflow comments, `.qm
 - After every change: `git add`, `git commit`, `git push`.
 
 ## Domain & config
-- Live URL: `https://balyzai.nl`
-- EN site URL: `https://balyzai.nl/en`
-- NL site URL: `https://balyzai.nl/nl`
-- CNAME: `balyzai.nl`
+- Live URL: `https://trajectorium.ai`
+- EN site URL: `https://trajectorium.ai/en`
+- NL site URL: `https://trajectorium.ai/nl`
+- CNAME: `trajectorium.ai`

@@ -6,7 +6,7 @@ lang: en
 
 website:
   title: "Trajectorium — AI, Agents & Energy-Efficient Sovereign Architectures"
-  site-url: "https://balyzai.nl/en"
+  site-url: "https://trajectorium.ai/en"
   navbar:
     left:
       - text: "Home"
@@ -21,7 +21,7 @@ website:
         href: about.qmd
     right:
       - text: "NL"
-        href: "https://balyzai.nl/nl/"
+        href: "https://trajectorium.ai/nl/"
 
 format:
   html:
@@ -32,5 +32,5 @@ format:
     code-fold: true
     include-in-header:
       text: |
-        <link rel="alternate" hreflang="nl" href="https://balyzai.nl/nl/" />
-        <link rel="canonical" href="https://balyzai.nl/en/" />
+        <link rel="alternate" hreflang="nl" href="https://trajectorium.ai/nl/" />
+        <link rel="canonical" href="https://trajectorium.ai/en/" />

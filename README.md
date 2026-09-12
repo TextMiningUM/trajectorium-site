@@ -38,7 +38,7 @@ A workflow is already configured at `.github/workflows/publish.yml`. It:
 **Steps to activate:**
 
 1. In the repo: **Settings → Pages → Source** → select **"GitHub Actions"**
-2. The `CNAME` file is already set to `balyzai.nl`
+2. The `CNAME` file is already set to `trajectorium.ai`
 3. Commit and push to the `main` branch — the workflow starts automatically
 4. Monitor progress under the **Actions** tab in the repo
 5. Once the first run succeeds, enable **"Enforce HTTPS"** under Settings → Pages
