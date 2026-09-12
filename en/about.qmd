@@ -1,0 +1,75 @@
+---
+title: "About"
+description: "About the author of Trajectorium — Jan Scholtes, professor of Text Mining at Maastricht University."
+page-layout: full
+toc: false
+---
+
+<div class="container py-5">
+
+<div class="row g-5">
+<div class="col-md-8">
+
+## Jan Scholtes
+
+**Prof. dr. ir. Johannes (Jan) C. Scholtes** has spent more than forty years at the intersection of artificial intelligence and human language — long before either field became fashionable. His first publications date to 1987, when he built a knowledge-based optical character recognition system at TU Delft. His 1993 PhD thesis at the University of Amsterdam — *Neural Networks in Natural Language Processing and Information Retrieval* — prefigured by decades the architectures now at the centre of modern AI.
+
+Since 2009 he holds the **Extraordinary Chair of Text Mining** at the [Department of Advanced Computing Sciences](https://www.maastrichtuniversity.nl/research/department-advanced-computing-sciences) at Maastricht University, where he teaches the Advanced NLP and Agentic Conversational Search courses and supervises graduate research spanning legal AI, clinical NLP, fraud detection, and agentic systems. He is a **Fellow of the SIKS School** of the Royal Netherlands Academy of Arts and Sciences (KNAW).
+
+His applied work spans some of the most demanding professional environments in which language AI is deployed. As a long-standing authority in **eDiscovery and LegalTech**, he has worked with and for major law firms, auditing institutions, and multinational corporations on large-scale document review, fraud investigation, and regulatory compliance. His work on text mining for auditing was published in the *European Court of Auditors Journal*; he presented at the International Conference on Artificial Intelligence and Law (ICAIL) and at Leiden University's Faculty of Law. He co-authored two books on the subject: *Big Data Analytics for eDiscovery* (Edgar Publishing, 2021) and *The LegalTech Bridge* (Meesterlijk, 2021).
+
+On the industry side, Jan is **Venture Partner at [Endeit Capital](https://www.endeit.com/)**, a leading European growth-equity fund focused on technology, and serves as **Board Member at [IPRally](https://iprally.com/)**, the AI-native patent intelligence company whose search technology brings deep NLP to patent analytics at global scale. His chair at Maastricht University was established with support from **[ZyLAB Technologies](https://www.zylab.com/)**, one of the world's leading platforms for AI-powered review of large document collections, used by Fortune 500 companies, enforcement agencies, and courts worldwide.
+
+His publication record runs to more than fifty peer-reviewed papers and book chapters — from the 1991 AAAI Spring Symposium and IEEE IJCNN to recent work on deep learning for clinical NLP, anomaly detection in complex networks, and conversational AI for assessment. He holds patents in text mining and information retrieval. A full list of publications is available at [textmining.nu](https://textmining.nu/publications/).
+
+The posts on this site draw on that accumulated record: forty years of building systems that turn language into knowledge, and the conviction that the most important problems in AI today are not technical but organisational — who governs it, who controls the data, and whether the architecture is built to last.
+
+[LinkedIn](https://www.linkedin.com/in/jscholtes/){.btn .btn-primary target="_blank" .me-2}
+[textmining.nu](https://textmining.nu){.btn .btn-outline-primary target="_blank"}
+
+</div>
+<div class="col-md-4">
+
+<div class="slide-block">
+
+### Positions
+
+**Extraordinary Chair of Text Mining**
+Department of Advanced Computing Sciences, Maastricht University
+
+**Fellow**
+SIKS School, Royal Netherlands Academy of Arts and Sciences (KNAW)
+
+**Venture Partner**
+Endeit Capital
+
+**Board Member**
+IPRally
+
+---
+
+### Education
+
+PhD, University of Amsterdam (1993)
+Neural Networks in NLP and Information Retrieval
+
+MSc, TU Delft (1987)
+Mathematics and Computer Science
+
+---
+
+### Selected topics
+
+AI agents and autonomous architectures
+— Legal AI and eDiscovery
+— Clinical NLP
+— Fraud and anomaly detection
+— AI governance and sovereignty
+— AI in education
+
+</div>
+
+</div>
+</div>
+
+</div>

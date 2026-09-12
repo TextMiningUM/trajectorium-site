@@ -1,0 +1,75 @@
+---
+title: "Over de auteur"
+description: "Over de auteur van Trajectorium — Jan Scholtes, hoogleraar Text Mining aan de Universiteit Maastricht."
+page-layout: full
+toc: false
+---
+
+<div class="container py-5">
+
+<div class="row g-5">
+<div class="col-md-8">
+
+## Jan Scholtes
+
+**Prof. dr. ir. Johannes (Jan) C. Scholtes** werkt al meer dan veertig jaar op het snijvlak van kunstmatige intelligentie en menselijke taal — lang voordat een van beide vakgebieden populair werd. Zijn eerste publicaties dateren uit 1987, toen hij aan de TU Delft een kennisgebaseerd systeem voor optische tekenherkenning bouwde. Zijn proefschrift aan de Universiteit van Amsterdam uit 1993 — *Neural Networks in Natural Language Processing and Information Retrieval* — voorafschaduwde met decennia de architecturen die nu centraal staan in moderne AI.
+
+Sinds 2009 bekleedt hij de **Bijzondere Leerstoel Text Mining** aan de [Vakgroep Advanced Computing Sciences](https://www.maastrichtuniversity.nl/research/department-advanced-computing-sciences) van de Universiteit Maastricht, waar hij de cursussen Advanced NLP en Agentic Conversational Search doceert en promotieonderzoek begeleidt op het gebied van juridische AI, klinische NLP, fraudedetectie en agentische systemen. Hij is **Fellow van de SIKS School** van de Koninklijke Nederlandse Akademie van Wetenschappen (KNAW).
+
+Zijn toegepaste werk bestrijkt een aantal van de veeleisendste professionele omgevingen waarin taal-AI wordt ingezet. Als een gezaghebbende stem op het gebied van **eDiscovery en LegalTech** heeft hij gewerkt met en voor grote advocatenkantoren, auditinstellingen en multinationale ondernemingen op het gebied van grootschalige documentreview, fraudeonderzoek en naleving van regelgeving. Zijn werk aan *text mining* voor auditing werd gepubliceerd in het *European Court of Auditors Journal*; hij presenteerde op de International Conference on Artificial Intelligence and Law (ICAIL) en aan de Faculteit Rechtsgeleerdheid van de Universiteit Leiden. Hij is co-auteur van twee boeken over het onderwerp: *Big Data Analytics for eDiscovery* (Edgar Publishing, 2021) en *The LegalTech Bridge* (Meesterlijk, 2021).
+
+Op bedrijfsmatig vlak is Jan **Venture Partner bij [Endeit Capital](https://www.endeit.com/)**, een toonaangevend Europees *growth-equity* fonds gericht op technologie, en **Board Member bij [IPRally](https://iprally.com/)**, het AI-native octrooianalyticsbedrijf waarvan de zoektechnologie geavanceerde NLP toepast op octrooianalyse op wereldschaal. Zijn leerstoel aan de Universiteit Maastricht werd ingesteld met steun van **[ZyLAB Technologies](https://www.zylab.com/)**, een van 's werelds toonaangevende platformen voor AI-gestuurde review van grote documentcollecties, gebruikt door Fortune 500-bedrijven, handhavingsinstanties en rechtbanken wereldwijd.
+
+Zijn publicatielijst omvat meer dan vijftig peer-reviewed artikelen en boekhoofdstukken — van het AAAI Spring Symposium en IEEE IJCNN in 1991 tot recent werk over *deep learning* voor klinische NLP, anomaliedetectie in complexe netwerken en conversatieve AI voor toetsing. Hij bezit octrooien op het gebied van *text mining* en *information retrieval*. Een volledige publicatielijst is beschikbaar op [textmining.nu](https://textmining.nu/publications/).
+
+De bijdragen op deze site bouwen voort op die veertig jaar ervaring: het bouwen van systemen die taal omzetten in kennis, en de overtuiging dat de belangrijkste vraagstukken in AI vandaag niet technisch zijn maar organisatorisch — wie het beheert, wie de data bezit, en of de architectuur gebouwd is om te blijven.
+
+[LinkedIn](https://www.linkedin.com/in/jscholtes/){.btn .btn-primary target="_blank" .me-2}
+[textmining.nu](https://textmining.nu){.btn .btn-outline-primary target="_blank"}
+
+</div>
+<div class="col-md-4">
+
+<div class="slide-block">
+
+### Functies
+
+**Bijzonder Hoogleraar Text Mining**
+Vakgroep Advanced Computing Sciences, Universiteit Maastricht
+
+**Fellow**
+SIKS School, Koninklijke Nederlandse Akademie van Wetenschappen (KNAW)
+
+**Venture Partner**
+Endeit Capital
+
+**Board Member**
+IPRally
+
+---
+
+### Opleiding
+
+Proefschrift, Universiteit van Amsterdam (1993)
+Neural Networks in NLP en Information Retrieval
+
+MSc, TU Delft (1987)
+Wiskunde en Informatica
+
+---
+
+### Onderwerpen
+
+AI-agents en autonome architecturen
+— Juridische AI en eDiscovery
+— Klinische NLP
+— Fraude- en anomaliedetectie
+— AI-bestuur en soevereiniteit
+— AI in het onderwijs
+
+</div>
+
+</div>
+</div>
+
+</div>

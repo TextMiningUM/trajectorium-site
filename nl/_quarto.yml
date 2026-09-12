@@ -17,6 +17,8 @@ website:
         href: notebooks/index.qmd
       - text: "Slides"
         href: slides/index.qmd
+      - text: "Over"
+        href: about.qmd
     right:
       - text: "EN"
         href: "https://balyzai.nl/en/"
