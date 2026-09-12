@@ -3,7 +3,7 @@ title: "The Institutional Moat: Why CTOs Can't Stop at Prompts and Skill Files"
 description: "Prompts and Markdown skill files on top of Claude, GPT, or Gemini are a starting point, not a strategy. What CTOs and CIOs actually need to build — and why the EU has an extra reason not to wait."
 date: 2026-10-10
 author: "Jan Scholtes"
-image: "../../images/BraininaJar.png"
+image: "https://trajectorium.ai/images/BraininaJar.png"
 categories: [enterprise-strategy]
 lang: en
 ---

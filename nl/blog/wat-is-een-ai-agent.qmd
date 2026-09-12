@@ -3,7 +3,7 @@ title: "Wat is een AI-agent? Van chatbot naar autonoom systeem"
 description: "Een praktische introductie in agentic AI: wat er verandert als een taalmodel geheugen, tools en handelingsvermogen krijgt — en waarom die verschuiving ertoe doet."
 date: 2026-09-12
 author: "Jan Scholtes"
-image: "../../images/ComponentsofAgent.png"
+image: "https://trajectorium.ai/images/ComponentsofAgent.png"
 categories: [fundamenten]
 lang: nl
 ---

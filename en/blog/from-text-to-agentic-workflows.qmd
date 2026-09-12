@@ -3,7 +3,7 @@ title: "From Text to Action: Turning NLP Pipelines into Agentic Workflows"
 description: "How raw, unstructured text becomes the training data behind an agent's memory, tools, reasoning, and guardrails — and why that conversion is where the real competitive advantage lives."
 date: 2026-09-26
 author: "Jan Scholtes"
-image: "../../images/AgentSmith.png"
+image: "https://trajectorium.ai/images/AgentSmith.png"
 categories: [text-to-action]
 lang: en
 ---
