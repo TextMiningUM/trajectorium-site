@@ -8,6 +8,9 @@ website:
   title: "Trajectorium — AI, Agents & Energy Efficient Sovereign Architectures"
   site-url: "https://trajectorium.ai/nl"
   site-map: true
+  search: true
+  open-graph: true
+  twitter-card: true
   navbar:
     left:
       - text: "Home"
@@ -21,8 +24,6 @@ website:
       - text: "Over"
         href: about.qmd
     right:
-      - icon: search
-        href: search.html
       - text: "EN"
         href: "https://trajectorium.ai/en/"
 
@@ -34,8 +35,6 @@ format:
     toc: true
     code-fold: true
     code-copy: true
-    open-graph: true
-    twitter-card: true
     include-in-header:
       text: |
         <link rel="alternate" hreflang="en" href="https://trajectorium.ai/en/" />
