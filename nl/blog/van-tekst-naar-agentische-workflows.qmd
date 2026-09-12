@@ -21,7 +21,7 @@ Ruwe tekst — zeker uit PDF's — is gebouwd voor menselijke ogen, niet voor ma
 Deze stap doet er meer toe dan het lijkt, omdat fouten zich voorplanten. Als de JSON-conversie de hiërarchie platslaat of niet-gerelateerde alinea's samenvoegt:
 
 - **RAG-chunks verliezen hun bovenliggende context** — een opgehaalde procedure zoals "beëindig het kwaadaardige proces" kan stilzwijgend het feit verliezen dat deze alleen op één specifiek scenario van toepassing is, en de reranker downstream kan het juiste antwoord niet naar boven halen.
-- **Sequentiële workflows worden in de verkeerde volgorde aangeleerd** — als de Fase 1/2/3-structuur niet behouden blijft, kan de fijngeregelde planningslaag van een agent leren stap 3 vóór stap 1 uit te voeren.
+- **Sequentiële workflows worden in de verkeerde volgorde aangeleerd** — als de Fase 1/2/3-structuur niet behouden blijft, kan de *fine-tuned* planningslaag van een agent leren stap 3 vóór stap 1 uit te voeren.
 - **Kennisgrafen verliezen hun verbindingen** — entiteitsrelaties die niet hiërarchisch zijn vastgelegd, kunnen later geen multi-hop-redenering ondersteunen.
 - **RLHF-voorkeursparingen verliezen hun rechtvaardiging** — zonder de omringende context kan een Critic-agent niet beoordelen of een actie daadwerkelijk een regel heeft geschonden.
 
@@ -37,7 +37,7 @@ Zodra je tekst gestructureerd is, wordt die de ruggengraat van het geheugen van 
 4. **Augmentatie** — instrueer het model om *uitsluitend* die opgehaalde bronnen te gebruiken.
 5. **Generatie** — produceer een geciteerd, feitelijk antwoord.
 
-Een gewone vectorzoekopdracht vindt dingen die *gelijkaardig* zijn; het vindt niet betrouwbaar het ding dat *correct* is. Dat is de taak van een **neurale reranker** — een fijngeregeld cross-encoder getraind op je eigen query/beste-antwoord-paren, die de top 50-100 kandidaten opnieuw bekijkt en het werkelijke "doorslaggevende" antwoord naar positie één duwt. Dit vermindert hallucinaties drastisch en lost het "lost in the middle"-probleem op waarbij een model dat begraven is in twintig vergelijkbare chunks het ene relevante chunk mist. Dit goed opbouwen vereist echte infrastructuurkeuzes: een sterk embeddingmodel (bezuinig hier niet op — een slechte vertaler levert slechte zoekopdrachten op), een orkestratieraamwerk zoals LlamaIndex of LangChain om bestanden, database en model te verbinden, en een betrouwbare documentparser voor de rommelige PDF's waarmee je begint.
+Een gewone vectorzoekopdracht vindt dingen die *gelijkaardig* zijn; het vindt niet betrouwbaar het ding dat *correct* is. Dat is de taak van een **neurale reranker** — een *fine-tuned* cross-encoder getraind op je eigen query/beste-antwoord-paren, die de top 50-100 kandidaten opnieuw bekijkt en het werkelijke "doorslaggevende" antwoord naar positie één duwt. Dit vermindert hallucinaties drastisch en lost het "lost in the middle"-probleem op waarbij een model dat begraven is in twintig vergelijkbare chunks het ene relevante chunk mist. Dit goed opbouwen vereist echte infrastructuurkeuzes: een sterk embeddingmodel (bezuinig hier niet op — een slechte vertaler levert slechte zoekopdrachten op), een orkestratieraamwerk zoals LlamaIndex of LangChain om bestanden, database en model te verbinden, en een betrouwbare documentparser voor de rommelige PDF's waarmee je begint.
 
 ## Stap 3: Tools — tekst omzetten in operationele ledematen
 
@@ -47,7 +47,7 @@ Dit is ook waar multi-hop-orkestratie noodzakelijk wordt in plaats van optioneel
 
 ## Stap 4: Redenering en een digitale peer reviewer
 
-Planningsraamwerken zoals Chain-of-Thought, Tree-of-Thought en Skeleton-of-Thought geven een groot model ruimte om een taak op te splitsen in subdoelen met afhankelijkheden in plaats van in één stap te antwoorden. Maar een groot, algemeen model dat een eerste versie genereert, profiteert nog steeds van een tweede, veel kleiner en gespecialiseerder model dat het beoordeelt — een **Critic** — fijngeregeld specifiek op de correcties van jouw eigen organisatie.
+Planningsraamwerken zoals Chain-of-Thought, Tree-of-Thought en Skeleton-of-Thought geven een groot model ruimte om een taak op te splitsen in subdoelen met afhankelijkheden in plaats van in één stap te antwoorden. Maar een groot, algemeen model dat een eerste versie genereert, profiteert nog steeds van een tweede, veel kleiner en gespecialiseerder model dat het beoordeelt — een **Critic** — *fine-tuned* specifiek op de correcties van jouw eigen organisatie.
 
 De trainingsdata voor die critic is concreet en verzamelbaar: de afgewezen of bewerkte ruwe uitvoer, de door experts gecorrigeerde versie, de reden voor de correctie ("schendt artikel 4.2"), en eventuele harde negatieve beperkingen of compliance-grenzen. Als ruwe schaalrichtlijn: 50-100 voorbeelden levert een prototype op, 500-1.000 een productiewaardige critic, en 2.000+ begint echte domeinexpertise te benaderen. Dit is precies het soort propriëtaire, praktijkgerichte correctiedata waartoe een general-purpose LLM-aanbieder nooit toegang zal hebben — en dat is precies waarom het een duurzaam voordeel is in plaats van een tijdelijk.
 

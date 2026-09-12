@@ -68,7 +68,7 @@ Zelfs met dat alles blijft doelbeheer moeilijk. Modellen zijn van nature niet go
 
 ### Critics, reflectie en guardrails: twijfel inbouwen
 
-Hier is een onderschat probleem: LLM’s zijn sycofantisch. Omdat ze via RLHF zijn fijngeregeld om vriendelijk en behulpzaam te zijn, neigen ze ernaar te zeggen wat je wilt horen — inclusief over hun eigen plannen. Zonder ingreep maakt dit een agent overmoedig in zijn eigen slechte ideën.
+Hier is een onderschat probleem: LLM’s zijn sycofantisch. Omdat ze via RLHF zijn *fine-tuned* om vriendelijk en behulpzaam te zijn, neigen ze ernaar te zeggen wat je wilt horen — inclusief over hun eigen plannen. Zonder ingreep maakt dit een agent overmoedig in zijn eigen slechte ideën.
 
 De oplossing is architecturaal, niet motivationeel: geef een **Critic-agent** een apart, adversarieel mandaat — zoek de zwakke punten, speel de advocaat van de duivel, weiger vriendelijk te zijn. Combineer dat met een **Reflectie-agent** die periodiek stopt en vraagt: “lost deze stap nog het oorspronkelijke probleem op, of zijn we het spoor kwijt?” Samen maken deze van een lineaire, foutgevoelige pijplijn een zichzelf corrigerende lus: een Actor stelt voor, een Critic breekt het af, een Reflector synthetiseert concrete aanpassingen, en de Actor probeert het opnieuw — totdat de Critic tevreden is.
 

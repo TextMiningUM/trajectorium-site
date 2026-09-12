@@ -1,0 +1,55 @@
+---
+title: "Waarom NLP eindelijk werkt: wat transformers goed deden dat vijftig jaar grammatica's, statistiek en RNN's niet lukte"
+description: "Van handgeschreven grammatica's tot statistische modellen tot LSTM's — elke generatie NLP loste één probleem op en liep tegen een nieuwe muur. Transformers zijn de eerste architectuur die alle lagen van taal tegelijk aanpakt en alles uit data afleidt."
+date: 2026-11-07
+categories: [fundamenten]
+lang: nl
+---
+
+Natural language processing is al ongeveer vijftig jaar "bijna klaar". Elke generatie onderzoekers loste een echt probleem op en liep meteen tegen een nieuw aan. *Transformers* zijn de eerste architectuur die niet alleen het volgende probleem in de rij oplost — ze pakken eindelijk alle lagen van taal tegelijk aan, en leiden alles af uit blootstelling aan data in plaats van uit wat een mens opschrijft. Begrijpen waarom dat zo is, vereist dat je doorloopt wat er aan voorafging, want het contrast is het hele verhaal.
+
+## Het probleem dat nooit verdween: taal volgt regels niet netjes
+
+Natuurlijke taal is op elk niveau ambigu. "Ik zag de man op de heuvel met een telescoop" heeft minstens vijf geldige lezingen, afhankelijk van wie de telescoop heeft en wie op de heuvel staat. Woorden als "lopen" dragen een dozijn gerelateerde betekenissen (*polysemy*); woorden als "bank" dragen twee volledig ongerelateerde (*homonymy*). Negatiebereik, pronomenresolutie, ironie, sarcasme, discoursstructuur — elk voegt een extra dimensie van ambiguïteit toe die moet worden opgelost met context, niet alleen met grammatica.
+
+Onder dit alles ligt een nog moeilijker wiskundig feit: taal volgt de *Zipf's Law*. Een klein aantal woorden en constructies komt extreem vaak voor, en dan is er een enorme, onvoorspelbare "lange staart" — idiomen, zeldzame vakterm, nieuwe formuleringen — die te zelden voorkomt om ooit volledig te worden opgesomd. Elk systeem gebouwd op een vaste set regels zal onvermijdelijk gevallen tegenkomen die de regels niet dekken, hoeveel regels je ook schrijft.
+
+Dat ene feit — de lange staart is onoplosbaar met vaste regels — verklaart bijna de gehele vijftigjarige geschiedenis van het vakgebied.
+
+## Generatie 1: Grammatica's en logica (het regelgebaseerde tijdperk)
+
+De vroegste computationele aanpak van taal, teruggaand via Chomsky's generatieve grammatica's tot Aristoteles' originele grammaticale categorieën, probeerde taal te formaliseren als een systeem van regels: woordsoortcategorieën, zinsstructuur, syntactische afleidingen. Dit geeft je precisie — een grammatica accepteert een zin of niet — maar het is fundamenteel kwetsbaar. Handgeschreven regels kunnen de lange staart niet omvatten, passen zich niet aan aan nieuwe woordenschat (een neologisme als "Zoomen" als werkwoord bestond gisteren niet en bestaat vandaag wel), en vereisen dat een taalkundige het systeem handmatig uitbreidt elke keer dat echte tekst het breekt.
+
+## Generatie 2: Probabilistische en *corpus*-gebaseerde modellen
+
+De volgende generatie voegde kansen toe bovenop structuur: in plaats van een regel die wel of niet vuurt, ken je er een waarschijnlijkheid aan toe die geleerd is uit een *corpus* echte tekst. Dit was een echte stap vooruit — het liet systemen graceus omgaan met ambiguïteit in plaats van volledig te falen, en het leerde patronen direct uit geannoteerde data in plaats van ze handmatig te coderen. Maar probabilistische modellen werkten grotendeels nog steeds over vaste, ontworpen kenmerken (*n-grams*, handgebouwde lexicale bronnen zoals WordNet die synoniemen en hyponiemen met de hand coderen). Ze waren robuuster dan pure grammatica's, maar ze leerden nog steeds niet de diepe structuur van taal — ze leerden statistieken *over* een structuur die iemand anders had gedefinieerd.
+
+## Generatie 3: Neurale netwerken leren sequentiële afhankelijkheden (RNN, LSTM)
+
+Vroege kunstmatige neurale netwerken, en vervolgens recurrente neurale netwerken en LSTM's, vertegenwoordigden een echte architectuursprong: in plaats van handgebouwde kenmerken leert het netwerk sequentiële afhankelijkheden direct uit data. Een RNN geeft een verborgen toestand door door een zin, wat betekent dat het in principe "wat er daarvoor was" kan gebruiken om "wat er nu is" te interpreteren — precies het soort contextresolutie dat ambiguïteit vereist. LSTM's, geïntroduceerd in 1997, voegden een *gated* geheugenmechanisme toe om het netwerk te helpen informatie te bewaren over langere afstanden ("Ik groeide op in Frankrijk ... ik spreek vloeiend Frans" vereist het verbinden van woorden die ver uit elkaar staan).
+
+Hier verscheen de muur opnieuw, en het was een serieuze. RNN's en LSTM's verwerken een zin strikt sequentieel — *token* voor *token*, elke stap afhankelijk van de uitvoer van de vorige. Dat heeft twee gevolgen die fataal bleken op schaal: training kan niet worden geparalleliseerd (je kunt stap 10 niet berekenen voordat stap 9 klaar is), en de sequentiële keten van vermenigvuldigingen zorgt ervoor dat *gradients* vervagen of exploderen naarmate zinnen langer worden, waardoor het moeilijk is echte langeafstandsafhankelijkheden te leren, hoe slim het *gating*-mechanisme ook is. Bovendien moest de volledige betekenis van een invoerreeks worden gecomprimeerd in één enkel definitief verborgen-toestandsvector — vaak slechts een handvol dimensies — voordat die werd doorgegeven aan een decoder. Te veel relaties, te kleine *bottleneck*.
+
+Halverwege de jaren 2010 had het vakgebied een echte diagnose: RNN's en LSTM's waren datahongerig, onstabiel, computationeel duur om te trainen, en structureel niet in staat parallel te draaien. Er was ruimte — eigenlijk een echte behoefte — aan iets fundamenteel anders.
+
+## Generatie 4: *Transformers* — de *bottleneck* en de sequentiële beperking tegelijk oplossen
+
+Het paper "Attention Is All You Need" uit 2017 verving terugkoppeling volledig door ***self-attention***: in plaats van informatie stap voor stap door een keten te sturen, wordt elk *token* in een reeks direct vergeleken met elk ander *token*, allemaal tegelijk, via matrixvermenigvuldiging. Die ene verandering lost beide RNN/LSTM-problemen tegelijkertijd op. Omdat er geen sequentiële afhankelijkheid tussen *tokens* is tijdens training, paralleliseert de volledige berekening — en matrixvermenigvuldiging is toevallig precies wat moderne GPU- en TPU-hardware met enorme snelheid uitvoert. En omdat *attention* direct wordt berekend tussen elk paar *tokens*, is er geen enkele *bottleneck*-vector meer die de betekenis van een volledige zin probeert vast te houden; het model kan direct naar elk eerder of later *token* kijken wanneer dat nodig is.
+
+Maar het interessantere deel, voor iedereen die geeft om *waarom* dit specifiek voor taal werkt, is wat er gebeurt als je meerdere lagen *self-attention* op elkaar stapelt. Elke laag neemt de uitvoer van de laag ervoor en verfijnt die verder — en empirisch specialiseren de lagen zich in iets dat opvallend lijkt op de klassieke linguïstische *pipeline* die computationele taalkundigen al decennia handmatig aan het bouwen waren: de lagere lagen pikken relatief duidelijke relaties op zoals interpunctie en morfologie, de middelste lagen beginnen syntaxis en basale semantische relaties te vangen, en de bovenste lagen behandelen de echt moeilijke dingen — pronomen en co-referenties oplossen, langeafstandslogische relaties bijhouden, het soort discoursstructuur waarvoor vroeger speciale handgebouwde modules nodig waren.
+
+Dit is het punt om bij stil te staan: de klassieke NLP-*pipeline* — *tokenization*, morfologie, syntaxis, semantiek, discours — verdwijnt niet in een *transformer*. Hij **herrijst automatisch**, laag voor laag, puur als gevolg van training op genoeg tekst, zonder dat iemand ook maar één grammaticaregel handmatig heeft gecodeerd. Vijftig jaar taalkunde probeerde die *pipeline* expliciet te specificeren, laag voor laag. *Transformers* leiden dezelfde structuur impliciet af, uit data, en — cruciaal — ze lopen niet vast op de manier waarop elke vorige generatie dat deed bij de lange staart, omdat het model niet vertrouwt op één vaste regel; het bouwt een probabilistische representatie die flexibel genoeg is om te generaliseren naar invoer die het nooit eerder heeft gezien.
+
+## Geluk, of wisten ze precies wat ze deden?
+
+Hier is een genuanceerde historische vraag die gesteld wordt over de acht auteurs van "Attention Is All You Need": was deze doorbraak een gelukkig architectuurongeluk, of begrepen de mensen die het bouwden daadwerkelijk de taalkunde die ze codeerden?
+
+Het eerlijke antwoord neigt naar het laatste. Verschillende auteurs van het paper hadden echte, substantiële achtergronden in computationele taalkunde in plaats van puur in machine learning — met name Jakob Uszkoreit, wiens vader, Hans Uszkoreit, een bekende computationele taalkundige is. Opgroeien in dat vakgebied is geen kleine biografische details; het is een plausibele reden dat de architectuur werd gebouwd met een intuïtie voor hoe betekenis werkelijk gelaagd is in taal — morfologie, dan syntaxis, dan semantiek, dan discours — in plaats van puur een engineeringoefening in het schalen van matrixvermenigvuldigingen. Het is een zeldzaam geval waarbij de vraag "toeval versus bewust plan" geen voor de hand liggend antwoord heeft, en waarbij de bewust-plan-interpretatie werkelijk goed wordt ondersteund door wie er in de kamer was.
+
+*Een noot over bronnen: de specifieke formulering van deze geschiedenis wordt breed besproken, ook in langvormige journalistiek over het onderwerp, hoewel ik niet elk detail van een enkel artikel onafhankelijk kan verifiëren zonder webtooegang in dit gesprek — de moeite van een snelle controle waard als je de exacte bron citeert.*
+
+## Waarom "eindelijk werkt" de juiste formulering is
+
+Zet de volledige geschiedenis naast elkaar en het patroon is onmiskenbaar. Grammatica's gaven precisie maar geen robuustheid voor de lange staart. Statistische modellen gaven robuustheid maar waren nog steeds gebouwd op vaste, handontworpen kenmerken. RNN's en LSTM's leerden eindelijk sequentiële structuur direct uit data, maar konden niet schalen — sequentiële verwerking begrenste zowel de trainingssnelheid als hoe ver terug ze daadwerkelijk konden "onthouden." *Transformers* zijn de eerste architectuur die echte datagedreven lering van taalkundige structuur *op elk niveau* combineert — van morfologie tot discours — met een berekening die voldoende paralleliseert om te worden getraind op een schaal die geen eerdere architectuur kon bereiken. Die combinatie — niet één enkele truc — is waarom, na vijftig jaar van gedeeltelijke oplossingen, natural language processing eindelijk werkt.
+
+*Cursusmateriaal waarnaar wordt verwezen: Advanced NLP-collegereeks, Department of Advanced Computing Sciences.*

@@ -1,0 +1,55 @@
+---
+title: "Why NLP Finally Works: What Transformers Got Right That Fifty Years of Grammars, Statistics, and RNNs Didn't"
+description: "From hand-written grammars to statistical models to LSTMs, each generation of NLP solved one problem and hit a new wall. Transformers are the first architecture to take on every layer of language at once — and derive it all from data."
+date: 2026-11-07
+categories: [fundamentals]
+lang: en
+---
+
+Natural language processing has been "almost working" for roughly fifty years. Every generation of researchers solved a real problem and ran headlong into a new one. Transformers are the first architecture that doesn't just solve the next problem in line — they finally take on every layer of language at once, and derive all of it from exposure to data rather than from a human writing it down. Understanding why requires walking through what came before, because the contrast is the whole story.
+
+## The Problem That Never Went Away: Language Doesn't Follow Rules Cleanly
+
+Natural language is ambiguous at every level. "I saw the man on the hill with a telescope" has at least five valid readings depending on who has the telescope and who's on the hill. Words like "run" carry a dozen related senses (polysemy); words like "bank" carry two entirely unrelated ones (homonymy). Negation scope, pronoun resolution, irony, sarcasm, discourse structure — each adds another dimension of ambiguity that has to be resolved using context, not just grammar.
+
+Underneath all of this sits an even harder mathematical fact: language follows Zipf's Law. A small number of words and constructions are extremely common, and then there's an enormous, unpredictable "long tail" — idioms, rare domain terms, novel phrasings — that occurs too rarely to ever be fully enumerated. Any system built on a fixed set of rules will inevitably run into cases the rules don't cover, no matter how many rules you write.
+
+That single fact — the long tail is unsolvable by fixed rules — explains almost the entire fifty-year history of the field.
+
+## Generation 1: Grammars and Logic (the Rule-Based Era)
+
+The earliest computational approach to language, tracing back through Chomsky's generative grammars to Aristotle's original grammatical categories, tried to formalize language as a system of rules: part-of-speech categories, phrase structure, syntactic derivations. This gives you precision — a grammar either accepts a sentence or it doesn't — but it's fundamentally brittle. Hand-written rules can't account for the long tail, don't adapt to new vocabulary (a neologism like "Zoom" as a verb didn't exist yesterday and does today), and require a linguist to manually extend the system every time real-world text breaks it.
+
+## Generation 2: Probabilistic and Corpus-Based Models
+
+The next generation added likelihoods on top of structure: instead of a rule either firing or not, assign it a probability learned from a corpus of real text. This was a genuine step forward — it let systems handle ambiguity gracefully instead of failing outright, and it learned patterns directly from annotated data rather than requiring them to be hand-coded. But probabilistic models still largely operated over fixed, engineered features (n-grams, hand-built lexical resources like WordNet encoding synonymy and hyponymy by hand). They were more robust than pure grammars, but they still weren't learning the deep structure of language — they were learning statistics *about* a structure someone else had defined.
+
+## Generation 3: Neural Networks Learn Sequential Dependencies (RNN, LSTM)
+
+Early artificial neural networks, and then recurrent neural networks and LSTMs, represented a real architectural leap: instead of hand-built features, the network learns sequential dependencies directly from data. An RNN passes a hidden state forward through a sentence, meaning it can, in principle, use "what came before" to interpret "what comes now" — exactly the kind of context resolution that ambiguity requires. LSTMs, introduced in 1997, added a gated memory mechanism specifically to help the network retain information across longer gaps ("I grew up in France ... I speak fluent French" requires connecting words that are far apart).
+
+Here's where the wall appeared again, though, and it was a serious one. RNNs and LSTMs process a sentence strictly sequentially — token by token, each step depending on the previous one's output. That has two consequences that turned out to be fatal at scale: training cannot be parallelized (you can't compute step 10 before step 9 finishes), and the sequential chain of multiplications causes gradients to either vanish or explode as sentences get longer, making genuinely long-range dependencies hard to learn no matter how clever the gating mechanism. On top of that, the entire meaning of an input sequence had to be compressed into a single final hidden-state vector — often just a handful of dimensions — before being handed to a decoder. Too many relations, too small a bottleneck.
+
+By the mid-2010s, the field had a real diagnosis: RNNs and LSTMs were data-hungry, unstable, computationally expensive to train, and structurally incapable of running in parallel. There was room — need, really — for something fundamentally different.
+
+## Generation 4: Transformers — Solving the Bottleneck and the Sequential Constraint at Once
+
+The 2017 paper "Attention Is All You Need" replaced recurrence entirely with **self-attention**: instead of passing information step-by-step through a chain, every token in a sequence is compared directly against every other token, all at once, via matrix multiplication. That single change fixes both of the RNN/LSTM problems simultaneously. Because there's no sequential dependency between tokens during training, the entire computation parallelizes — and matrix multiplication happens to be exactly what modern GPU and TPU hardware is built to do at enormous speed. And because attention is computed between every pair of tokens directly, there's no more single bottleneck vector trying to hold an entire sentence's meaning; the model can look directly at any earlier or later token when it needs to.
+
+But the more interesting part, for anyone who cares about *why* this actually works for language specifically, is what happens when you stack multiple layers of self-attention on top of each other. Each layer takes the output of the layer before it and refines it further — and empirically, the layers specialize into something that looks remarkably like the classical linguistic pipeline computational linguists had been hand-building for decades: the lower layers pick up on relatively obvious relations like punctuation and morphology, the middle layers start capturing syntax and basic semantic relationships, and the upper layers handle the genuinely hard stuff — resolving pronouns and co-references, tracking long-distance logical relationships, the kind of discourse-level structure that used to require dedicated hand-built modules.
+
+This is the point worth sitting with: the classical NLP pipeline — tokenization, morphology, syntax, semantics, discourse — doesn't disappear in a Transformer. It **re-emerges automatically**, layer by layer, purely as a consequence of training on enough text, without anyone hand-coding a single grammatical rule. Fifty years of linguistics tried to specify that pipeline explicitly, one layer at a time. Transformers derive the same structure implicitly, from data, and — critically — they don't get stuck the way every previous generation did on the long tail, because the model isn't relying on any single fixed rule; it's building a probabilistic representation flexible enough to generalize to inputs it's never seen.
+
+## Was It Luck, or Did They Know Exactly What They Were Doing?
+
+Here's a genuinely interesting historical question that gets asked about the eight authors of "Attention Is All You Need": was this breakthrough a lucky architectural accident, or did the people who built it actually understand the linguistics they were encoding?
+
+The honest answer leans toward the latter. Several of the paper's authors had real, substantial backgrounds in computational linguistics rather than pure machine learning — most notably Jakob Uszkoreit, whose father, Hans Uszkoreit, is a well-known computational linguist. Growing up around that field isn't a minor biographical detail; it's a plausible reason the architecture was built with an intuition for how meaning actually layers in language — morphology, then syntax, then semantics, then discourse — rather than being purely an engineering exercise in scaling matrix multiplications. It's a rare case where the "chance versus deliberate plan" question doesn't have an obvious answer, and where the deliberate-plan interpretation is genuinely well supported by who was in the room.
+
+*A note on sourcing: the specific framing of this history is widely discussed, including in long-form journalism on the topic, though I can't independently verify every detail of any single article without web access in this conversation — worth a quick check if you're citing the exact source yourself.*
+
+## Why "Finally Works" Is the Right Phrase
+
+Put the whole history side by side and the pattern is unmistakable. Grammars gave precision but no robustness to the long tail. Statistical models gave robustness but were still built on fixed, hand-engineered features. RNNs and LSTMs finally learned sequential structure directly from data, but couldn't scale — sequential processing capped both their training speed and how far back they could actually "remember." Transformers are the first architecture to combine genuine data-driven learning of linguistic structure *at every level* — from morphology up through discourse — with a computation that parallelizes cleanly enough to be trained at a scale no earlier architecture could reach. That combination — not any single trick — is why, after fifty years of partial solutions, natural language processing finally works.
+
+*Course material referenced: Advanced NLP lecture series, Department of Advanced Computing Sciences.*
