@@ -1,0 +1,66 @@
+---
+title: "How AI Will Revolutionize Education — And Where It Genuinely Shouldn't"
+description: "24/7 tutors, instant readers generated from slides, Socratic dialogues on demand — generative AI is already reshaping higher education. But the same technology has triggered a cheating arms race, and the honest picture is more nuanced than either the hype or the panic suggests."
+date: 2026-10-24
+categories: [education]
+lang: en
+---
+
+"Since 1985 I have been wondering how we can teach computers to use human language. And now, after all these years, it finally works." That's a fair summary of where higher education finds itself with generative AI — the technology finally works, and the harder question has shifted to how we responsibly fold it into teaching and learning. This post walks through both sides honestly: what's genuinely transformative, and where the same technology creates problems education hasn't fully solved yet.
+
+## The Kissinger Warning, Applied to the Classroom
+
+Before getting to the exciting use cases, it's worth sitting with an uncomfortable observation from Henry Kissinger, writing about AI and chess: *"AI is likely to win any game assigned to it. But for our purposes as humans, the games are not only about winning; they are about thinking... By treating a mathematical process as if it were a thought process, and either trying to mimic that process ourselves or merely accepting the results, we are in danger of losing the capacity that has been the essence of human cognition."*
+
+Swap "games" for "assignments" and the warning applies directly to education. The purpose of education was never just passing exams — it's learning to think. Yet assessment, historically, has often rewarded memorization over reasoning. With models like GPT now able to produce a polished essay in seconds, that mismatch has become impossible to ignore. AI can revolutionize education by acting as a scalable, personalized teaching assistant — but only if institutions redesign how they teach and assess around it, rather than bolting AI onto an assessment model built for a pre-AI world.
+
+## What Generative AI Actually Does Well in the Classroom
+
+Set aside the risks for a moment — the concrete use cases are genuinely compelling, and most have already been tested in real courses.
+
+**Socratic dialogues, generated on demand.** The Socratic method — probing questions that challenge assumptions and stimulate reasoning rather than handing over answers — is exactly the kind of interaction AI can produce at scale. Ask a model to generate five Socratic dialogues on a topic (what makes an approach powerful, where it breaks down, what the societal risks are) and you get ready-to-use classroom material that shifts the room from lecture to dialogue, in minutes rather than hours of prep.
+
+**A teaching assistant that works 24/7.** Students hit conceptual walls at 2 a.m. the night before an exam, not during office hours. An AI tutor with infinite patience — willing to re-explain a difficult concept as many times and in as many different ways as a student needs — fills a gap no human teaching staff can realistically cover.
+
+**Exercises, readers, and lecture material, generated at scale.** One concrete example from this material: a full 240-page reader — chapters, exercises, answers, and coding assignments — generated from 1,300 lecture slides in a few evenings, chapter by chapter. That's not a marginal efficiency gain; it's work that would otherwise take weeks, freeing an educator's time for the parts of teaching that actually require a human — deeper interaction, mentoring, judgment calls about where a specific student is stuck.
+
+**Personalized explanation and adaptive content.** The same underlying material can be re-explained at different levels of complexity depending on what a specific student needs — something a single lecture, delivered once to a room of 200, structurally cannot do.
+
+**Immediate feedback on your own teaching.** Educators can use the same tools to review their own lecture material and get concrete feedback on clarity and structure — a second pair of eyes available on demand.
+
+**Automated conversational assessment.** Early research (including ongoing work at Maastricht University's DACS group) is exploring conversational agents that combine a teacher's rubric, the content document, and a dialogue with the student to produce assessment recommendations — not to replace the teacher's judgment, but to structure and speed up a process that's currently manual and slow.
+
+## The Arms Race Nobody Wanted
+
+Here's where the honest picture gets more complicated. The moment AI got good enough to write a passable essay, an entire counter-industry appeared. Tools now exist specifically to "humanize" AI-generated text so it evades AI-detection software — and in a strange twist, students who write their *own* original work are now running it through the same detectors first, worried their authentic writing might get flagged as AI-generated. Teachers use AI-detection tools to catch AI-written submissions; students use humanizing tools to defeat those detectors; some students run their own real writing through detectors defensively. Everyone is now writing partly for the detector, not for the reader.
+
+This isn't entirely new — "homework machines" predate ChatGPT by decades, and every generation of technology has triggered similar panic (the same fear was raised about Google two decades ago: "Is Google Making Us Stupid?"). But generative AI's fluency makes the cat-and-mouse dynamic sharper and faster-moving than anything before it, and it's producing genuinely unhappy students and frustrated educators on both sides of the detection arms race.
+
+## Why the Underlying Technology Still Needs Guardrails
+
+It's worth being precise about what these models are — and aren't — actually doing, because it explains both their usefulness and their failure modes in an educational setting. A model like GPT is fundamentally a next-token predictor: given a sequence of words, it estimates the probability of what comes next, generating text autoregressively, one token at a time. It has no built-in factuality check, no persistent memory across sessions unless explicitly engineered, and no real-world grounding for the words it produces — critiques often summarized as "stochastic parrot": fluent language production without genuine understanding.
+
+That has direct educational consequences: the longer the generated text, the higher the odds of factual drift or outright hallucination — a serious problem when the content is a formula, a citation, a historical date, or a piece of code a student will trust. The mitigation techniques that matter here for an education setting are the same ones used in any serious deployment: retrieval-augmented generation to ground answers in actual course material rather than the model's general training data, knowledge-graph-based context injection for structured facts, and simply instructing the system to say "I don't know" rather than confidently inventing an answer when confidence is low. None of this is optional polish — it's the difference between a tutor that's occasionally wrong in a way students can catch, and one that's confidently wrong in a way they can't.
+
+## The Real Redesign Question
+
+The most productive framing isn't "should we ban this" or "should we embrace this uncritically" — it's "what does assessment need to become now that this exists." A few concrete directions worth taking seriously:
+
+- **Redesign assignments around understanding, not output.** Have students use GenAI to critique and improve their own work, understanding *why* something can be improved — turning the AI into a teammate rather than a shortcut.
+- **Consider flipping the classroom.** If lecturing information is a solved problem AI can do reasonably well, live class time can shift toward Socratic dialogue and applied reasoning — though this requires a real shift in what's expected of students, not just of instructors.
+- **Keep genuinely AI-free assessment where it matters.** Some final assessments should remain "do it on your own," without any AI tooling, specifically to verify the reasoning skill the AI-assisted work was meant to build toward.
+- **Avoid "AI-friendly assignments"** — tasks that don't require critical analysis in the first place are exactly the ones AI will complete indistinguishably from a human, telling you nothing about what the student actually learned.
+
+There's also a quieter risk worth naming: if an AI grading or tutoring assistant is right 49 times in a row, will an educator still carefully check the 50th? Automation complacency is a real failure mode, not a hypothetical one, and it argues for keeping a human genuinely in the loop rather than rubber-stamping AI output because it's usually been reliable.
+
+## Weighing It Honestly
+
+**The case for:** 24/7 access to explanation, genuinely personalized pacing, scaffolding for difficult topics, efficient tutoring support at a scale no institution could staff with humans alone, reduced barriers for students in under-resourced situations, and language support for non-native speakers.
+
+**The case for caution:** over-reliance that erodes the exact skill education is meant to build, the risk of confidently wrong information reaching students who can't yet tell the difference, unequal access if tools are costly, and the very real possibility that assignments get outsourced rather than understood.
+
+## The Takeaway
+
+The technology genuinely works now, after decades of research — that part isn't in question. What's still being worked out, in real time, in real classrooms, is how educators shift from being information providers to facilitators of critical thinking, and how assessment shifts from rewarding memorization to rewarding reasoning and application. Used well, AI in education looks like a tireless, patient, always-available teaching assistant that frees human educators for the parts of teaching machines still can't do. Used carelessly, it looks like an arms race between detection tools and humanizing tools that leaves everyone writing for the algorithm instead of for understanding. The technology doesn't decide which of those futures we get — the redesign of assessment and pedagogy around it does.
+
+*Based on "Exploring the Potential of AI Tutors in Higher Education" (Prof. dr. ir. Jan Scholtes, UM Education Day, June 2025).*
