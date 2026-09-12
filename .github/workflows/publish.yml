@@ -38,6 +38,7 @@ jobs:
           cp index.html _publish/
           cp -r _site/en _publish/en
           cp -r _site/nl _publish/nl
+          cp -r images _publish/images
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
