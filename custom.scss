@@ -1,0 +1,193 @@
+/*-- scss:defaults --*/
+
+// UM-inspired colour palette
+$um-navy:   #1d2d3e;
+$um-blue:   #005bac;
+$um-red:    #c0392b;
+$um-light:  #f4f6f9;
+$um-border: #dde2ea;
+
+$primary:            $um-blue;
+$link-color:         $um-blue;
+$link-hover-color:   #003d78;
+
+$font-family-sans-serif: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+$font-size-base:     1rem;
+$headings-font-weight: 700;
+$line-height-base:   1.65;
+
+$body-bg:            #ffffff;
+$body-color:         #1a1a2e;
+
+$navbar-bg:          $um-navy;
+$navbar-fg:          #ffffff;
+
+$border-radius:      0;
+$card-border-radius: 0;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+// ── Navbar ──────────────────────────────────────────────────────────────────
+
+.navbar {
+  background-color: $um-navy !important;
+  border-bottom: 3px solid $um-blue;
+  padding: 0.6rem 1.5rem;
+
+  .navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.5rem 0.9rem !important;
+
+    &:hover, &.active {
+      color: #fff !important;
+      border-bottom: 2px solid $um-blue;
+    }
+  }
+}
+
+// ── Page title / hero area ───────────────────────────────────────────────────
+
+#quarto-content .quarto-title-block,
+#title-block-header {
+  background-color: $um-light;
+  border-left: 5px solid $um-blue;
+  padding: 2rem 2rem 1.5rem;
+  margin-bottom: 2rem;
+
+  .title {
+    font-size: 2rem;
+    color: $um-navy;
+    margin-bottom: 0.4rem;
+  }
+
+  .description {
+    color: #4a5568;
+    font-size: 1.05rem;
+  }
+}
+
+// ── Headings ─────────────────────────────────────────────────────────────────
+
+h1, h2, h3, h4 {
+  color: $um-navy;
+  font-weight: 700;
+}
+
+h2 {
+  border-bottom: 2px solid $um-border;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+}
+
+// ── Links ────────────────────────────────────────────────────────────────────
+
+a {
+  color: $um-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: #003d78;
+    text-decoration: underline;
+  }
+}
+
+// ── Listing cards (blog / notebooks / slides) ─────────────────────────────
+
+.quarto-listing .card {
+  border: 1px solid $um-border;
+  border-top: 3px solid $um-blue;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+  }
+
+  .card-title a {
+    color: $um-navy;
+    font-weight: 700;
+  }
+
+  .card-text { color: #4a5568; }
+
+  .listing-category {
+    background-color: $um-blue;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+  }
+}
+
+// ── Sidebar / TOC ─────────────────────────────────────────────────────────
+
+#quarto-sidebar, #TOC {
+  border-left: 3px solid $um-blue;
+  padding-left: 1rem;
+
+  .sidebar-item-text, .nav-link {
+    color: #2d3748;
+    font-size: 0.9rem;
+
+    &:hover { color: $um-blue; }
+    &.active { color: $um-blue; font-weight: 600; }
+  }
+}
+
+// ── Code blocks ───────────────────────────────────────────────────────────
+
+pre.sourceCode {
+  border-left: 4px solid $um-blue;
+  background-color: #f7f9fc;
+  border-radius: 0;
+}
+
+// ── Footer ────────────────────────────────────────────────────────────────
+
+footer.footer {
+  background-color: $um-navy;
+  color: rgba(255,255,255,0.8);
+  padding: 1.5rem 0;
+  font-size: 0.875rem;
+  margin-top: 3rem;
+  border-top: 3px solid $um-blue;
+
+  a { color: rgba(255,255,255,0.8); }
+  a:hover { color: #fff; }
+}
+
+// ── Buttons / CTAs ────────────────────────────────────────────────────────
+
+.btn-primary {
+  background-color: $um-blue;
+  border-color: $um-blue;
+  border-radius: 0;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+
+  &:hover {
+    background-color: #003d78;
+    border-color: #003d78;
+  }
+}
+
+// ── Body max-width ────────────────────────────────────────────────────────
+
+#quarto-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
