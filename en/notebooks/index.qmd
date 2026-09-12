@@ -1,9 +1,43 @@
 ---
 title: "Tutorials & Notebooks"
-description: "Hands-on notebooks and tutorials on AI and agentic systems."
-listing:
-  contents: "*.qmd"
-  sort: "date desc"
-  type: default
+description: "Hands-on course materials in Jupyter Notebook format — publicly available on GitHub."
 page-layout: full
+toc: false
 ---
+
+<div class="container py-5">
+
+## Course Tutorials
+
+<p class="section-intro">The tutorials below are hosted as public GitHub repositories. Clone the repo to work through the materials at your own pace — no sign-in required.</p>
+
+<div class="row g-4">
+<div class="col-md-6"><div class="course-card">
+
+### Information Retrieval & Text Mining
+
+<p class="course-meta">IRTM &mdash; DACS, Maastricht University</p>
+
+Thirteen hands-on tutorials covering the full text-to-retrieval pipeline: from tokenisation and indexing to TF-IDF ranking, language models, neural retrieval, and systematic evaluation. All materials are implemented in Python and Jupyter Notebook.
+
+<p class="course-tags"><strong>Topics:</strong> Text preprocessing &middot; Inverted indices &middot; Ranking models &middot; Evaluation metrics &middot; Neural IR</p>
+
+[Open on GitHub &rarr;](https://github.com/TextMiningUM/IRTM-Student){.btn .btn-primary target="_blank"}
+
+</div></div>
+<div class="col-md-6"><div class="course-card">
+
+### Advanced Natural Language Processing
+
+<p class="course-meta">ANLP &mdash; DACS, Maastricht University</p>
+
+Advanced NLP course covering modern transformer-based approaches: sequence modelling, fine-tuning pre-trained language models, RLHF, and applied NLP tasks. Predominantly Jupyter Notebook with GPU support via CUDA.
+
+<p class="course-tags"><strong>Topics:</strong> Transformers &middot; Fine-tuning &middot; RLHF &middot; Sequence labelling &middot; Applied NLP</p>
+
+[Open on GitHub &rarr;](https://github.com/TextMiningUM/ANLP-Student){.btn .btn-primary target="_blank"}
+
+</div></div>
+</div>
+
+</div>

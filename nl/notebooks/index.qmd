@@ -1,9 +1,43 @@
 ---
 title: "Tutorials & Notebooks"
-description: "Praktische notebooks en tutorials over AI en agentic systemen."
-listing:
-  contents: "*.qmd"
-  sort: "date desc"
-  type: default
+description: "Praktische cursusmateriaal in Jupyter Notebook-formaat &mdash; openbaar beschikbaar op GitHub."
 page-layout: full
+toc: false
 ---
+
+<div class="container py-5">
+
+## Cursus-tutorials
+
+<p class="section-intro">De onderstaande tutorials zijn beschikbaar als publieke GitHub-repositories. Kloon de repo om de materialen in je eigen tempo door te werken &mdash; geen account vereist.</p>
+
+<div class="row g-4">
+<div class="col-md-6"><div class="course-card">
+
+### Information Retrieval & Text Mining
+
+<p class="course-meta">IRTM &mdash; DACS, Universiteit Maastricht</p>
+
+Dertien praktische tutorials die de volledige pipeline van ruwe tekst naar gerangschikte retrieval behandelen: tokenisatie, indexering, TF-IDF, taalmodellen, neurale retrieval en evaluatie. Alle materialen zijn ge&iuml;mplementeerd in Python en Jupyter Notebook.
+
+<p class="course-tags"><strong>Onderwerpen:</strong> Tekstverwerking &middot; Omgekeerde indices &middot; Rankingmodellen &middot; Evaluatiemetrieken &middot; Neurale IR</p>
+
+[Bekijk op GitHub &rarr;](https://github.com/TextMiningUM/IRTM-Student){.btn .btn-primary target="_blank"}
+
+</div></div>
+<div class="col-md-6"><div class="course-card">
+
+### Advanced Natural Language Processing
+
+<p class="course-meta">ANLP &mdash; DACS, Universiteit Maastricht</p>
+
+Geavanceerde NLP-cursus over moderne transformer-gebaseerde methoden: sequentiemodellering, fine-tuning van voorgetrainde taalmodellen, RLHF en toegepaste NLP-taken. Voornamelijk Jupyter Notebook met GPU-ondersteuning via CUDA.
+
+<p class="course-tags"><strong>Onderwerpen:</strong> Transformers &middot; Fine-tuning &middot; RLHF &middot; Sequentielabeling &middot; Toegepaste NLP</p>
+
+[Bekijk op GitHub &rarr;](https://github.com/TextMiningUM/ANLP-Student){.btn .btn-primary target="_blank"}
+
+</div></div>
+</div>
+
+</div>
