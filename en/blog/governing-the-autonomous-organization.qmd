@@ -42,7 +42,7 @@ Across all three, the pattern is the same: AI is given real decision-making and 
 
 ## Digital Sovereignty Is Part of Governance, Not a Separate Topic
 
-It's tempting to treat "who governs the AI's decisions" and "who controls the infrastructure the AI runs on" as two different conversations. The Navy's CBM+ case shows why they're the same conversation. Governing an autonomous decision-making system requires control over:
+It's tempting to treat "who governs the AI's decisions" and "who controls the infrastructure the AI runs on" as two different conversations. The Navy's CBM+ case shows why they're the same conversation. [Governing an autonomous system and owning its infrastructure are the same question — as the five-dimension sovereignty framework covered separately on this site makes clear.](why-europe-needs-sovereign-ai.qmd) Governing an autonomous decision-making system requires control over:
 
 - **Training infrastructure** — who shapes what the model learns
 - **Inference infrastructure**, including edge deployment — where and how the model actually runs when it makes a decision
@@ -67,3 +67,12 @@ If governing agentic AI across an entire organization feels daunting, there's a 
 The technology question — does agentic AI actually work? — is behind us. What's left is the governance question, and it doesn't have a single settled answer yet, but it does have a workable shape: train and validate against measurable standards, build in reflection so the system catches its own errors, require genuine explainability so a human can actually audit the decision, control the infrastructure the decisions run on, and decide deliberately — not by default — how much of that sits centrally versus close to where the work happens. Organizations that treat this as an engineering afterthought will find out the hard way that "the AI decided" is not an acceptable answer to a board, a regulator, or a sailor whose ship is stuck in port.
 
 *Based on "AI en Bestuurlijke Besluitvorming" (Prof. dr. ir. J.C. Scholtes, roundtable session, August 2026).*
+
+---
+
+**Further reading on this site**
+
+- [The Institutional Moat](the-institutional-moat.qmd) — the architecture layer that governance sits on top of
+- [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — sovereignty as the infrastructure prerequisite for real governance
+- [What Is an AI Agent?](what-is-an-ai-agent.qmd) — what the system being governed actually is
+- [Adversarial Attacks: Invisible Pixels and Swapped Words](adversarial-attacks-images-and-text.qmd) — the security threats a governance layer has to address

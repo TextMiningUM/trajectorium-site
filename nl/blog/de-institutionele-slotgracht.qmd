@@ -38,7 +38,7 @@ Complexe professionele taken worden nooit in één stap opgelost. Een nuttige ar
 
 ### 4. Guardrails — de grootste drempel voor adoptie oplossen
 
-Hallucinatierisico is de grootste reden waarom institutionele AI-adoptie stokt. De oplossing is geen groter model — het zijn onafhankelijke verificatieagenten rondom de kern-LLM: elke versie controleren tegen jouw RAG-waarheidsbron, veiligheidsfilters die juridische en compliance-grenzen handhaven, en zelfconsistentiecontroles die dezelfde query via meerdere redeneerroutes uitvoeren en antwoorden verwerpen die het niet met elkaar eens zijn. Niets hiervan mag worden overgelaten aan hetzelfde model dat zichzelf bewaakt.
+Hallucinatierisico is de grootste reden waarom institutionele AI-adoptie stokt. De oplossing is geen groter model — het zijn onafhankelijke verificatieagenten rondom de kern-LLM: elke versie controleren tegen jouw RAG-waarheidsbron, veiligheidsfilters die juridische en compliance-grenzen handhaven, en zelfconsistentiecontroles die dezelfde query via meerdere redeneerroutes uitvoeren en antwoorden verwerpen die het niet met elkaar eens zijn. Niets hiervan mag worden overgelaten aan hetzelfde model dat zichzelf bewaakt. Voor een volledige behandeling van de specifieke aanvalstypen waartegen deze *guardrails* verdedigen, zie het [artikel over adversariale aanvallen](adversariale-aanvallen-afbeeldingen-en-tekst.qmd) in deze reeks.
 
 ## Het samengestelde voordeel: redeneerdrieluiken
 
@@ -56,7 +56,7 @@ Als je als CTO of CIO dit leest en je eigen stack herkent, vereist de oplossing 
 
 ## De EU-hoek: waarom dit hier niet optioneel is
 
-Alles hierboven geldt wereldwijd. Maar Europese CTO's en CIO's hebben een extra, zeer concrete reden om dit niet als een nice-to-have te behandelen: **bijna alle architectuur staat momenteel bovenop Amerikaanse infrastructuur en Amerikaanse basismodellen — en die afhankelijkheid heeft al eens zijn kwetsbaarheid bewezen.**
+Alles hierboven geldt wereldwijd. Maar Europese CTO's en CIO's hebben een extra, zeer concrete reden om dit niet als een nice-to-have te behandelen: **bijna alle architectuur staat momenteel bovenop Amerikaanse infrastructuur en Amerikaanse basismodellen — en die afhankelijkheid heeft al eens zijn kwetsbaarheid bewezen.** Dit is de dimensie die [uitvoerig wordt behandeld in het begeleidende artikel over AI-soevereiniteit](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) op deze site.
 
 Half 2026 schortte Anthropic de toegang tot zijn nieuw uitgebrachte Fable- en Mythos-modeltiers gedurende enkele weken op om te voldoen aan exportcontroles van het Amerikaanse Ministerie van Handel, voordat het Ministerie die beperkingen ophief en de toegang werd hersteld. Wat de specifieke details van dat voorval ook zijn, het is een concreet, recent en praktijkgericht bewijs van precies het risico waar dit artikel over gaat: als je volledige operatie draait op een dunne laag prompts over een in het buitenland gehost model, kan een exportcontrolebeslissing, een prijswijziging of een beleidswijziging gemaakt in Washington — niet in Brussel, en niet door jou — je kernkapaciteit met onmiddellijke ingang opschorten of duurder maken, zonder voorafgaande kennisgeving en zonder verhaal.
 
@@ -69,3 +69,13 @@ Voor Europese instellingen specifiek — ziekenhuizen, juridische kantoren, fina
 De vraag waarop elke CTO en CIO een eerlijk antwoord nodig heeft, is niet of ze Claude, GPT of Gemini moeten gebruiken — het is wat je *eromheen* hebt gebouwd. Als het antwoord "een systeem-prompt en wat function calling" is, heb je een sandbox, geen slotgracht, en een enkel punt van buitenlandse afhankelijkheid dat onder je volledige operatie ligt. Bouw de architectuur — geheugen, tools, planning, critics, guardrails — en het basismodel eronder wordt precies wat het zou moeten zijn: inwisselbaar, gestandaardiseerd en niet langer het ding waarvan je bedrijf afhankelijk is voor zijn voortbestaan.
 
 *Dit artikel put uit "The Institutional Moat: Beyond the Big Tech AI Trap" (Prof. dr. ir. J.C. Scholtes, Endeit Capital, maart 2026).*
+
+---
+
+**Verder lezen op deze site**
+
+- [Wat is een AI-agent?](wat-is-een-ai-agent.qmd) — wat de zeven agentische componenten die je bouwt eigenlijk zijn
+- [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) — de concrete *pipeline* voor het bouwen van de propriëtaire architectuur beschreven hier
+- [Waarom Europa eigen AI-modellen nodig heeft](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) — de geopolitieke dimensie van waarom deze architectuur niet op buitenlandse infrastructuur kan rusten
+- [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd) — de governance-laag die er bovenop zit
+- [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — empirisch bewijs voor de gespecialiseerde-model-these

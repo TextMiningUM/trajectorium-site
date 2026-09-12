@@ -59,3 +59,12 @@ Stap terug van de boomgaard specifiek en het patroon generaliseert schoon, en he
 ## De conclusie
 
 Een logboekinvoer uit 2013, of een landbouwhandleiding uit 1890, werd nooit geschreven met een taalmodel in gedachten — en dat is precies waarom het zo goed werkt als trainingsdata. Het is eerlijk, concreet en verankerd in wat er werkelijk gebeurde, omdat het werd geschreven voor iemand die het zou moeten vertrouwen en herhalen. Die tekst omzetten in gestructureerde *retrieval*-data, *reranker*-paren, instructievoorbeelden, *preference pairs* en planningssjablonen is geen herinterpretatie van waar de kennis voor was — het is dezelfde overdracht van expertise van de ene beoefenaar naar de volgende, alleen met een nieuw soort opvolger aan het ontvangende einde.
+
+---
+
+**Verder lezen op deze site**
+
+- [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) — de algemene *pipeline* waarvan dit agrarische voorbeeld een instantie is
+- [Wat is een AI-agent?](wat-is-een-ai-agent.qmd) — wat de getrainde agent waarvoor deze data bedoeld is eigenlijk is
+- [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — wat een domein-gespecialiseerd model gebouwd op dit soort data kan bereiken
+- [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — waarom propriëtaire trainingsdata als deze het echte concurrentievoordeel is

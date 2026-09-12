@@ -62,3 +62,12 @@ Edge computing is the practical mechanism that ties all four together. It's what
 Stanford's AI Index doesn't use the phrase "edge computing," but its own sovereignty framework makes the case for it implicitly and repeatedly: sovereignty is only real when it reaches all the way down to where inference actually happens. For Europe specifically — with genuinely strong data protection law, fast-growing but still second-tier compute capacity, a widening base of open, adaptable models, and a real opening at the application layer — running your own models on your own infrastructure, as close to the edge as the use case demands, isn't a defensive or nostalgic choice. It's the version of the strategy the data actually supports.
 
 *Source: Stanford HAI, [2026 AI Index Report](https://hai.stanford.edu/ai-index), Chapter 8.3, "AI Sovereignty."*
+
+---
+
+**Further reading on this site**
+
+- [The Institutional Moat](the-institutional-moat.qmd) — how to build architecture that survives a model swap or export-control decision
+- [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — sovereignty and governance as one question, not two
+- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — the evidence that small, local models can nearly match frontier performance on specific tasks
+- [Shrinking the Giant: Pruning, Quantization, and Distillation](pruning-quantization-distillation.qmd) — compression as the concrete engineering path to edge and sovereign deployment

@@ -38,7 +38,7 @@ Complex professional tasks are never solved in one step. A useful architecture r
 
 ### 4. Guardrails — Solving the Single Biggest Barrier to Adoption
 
-Hallucination risk is the number one reason institutional AI adoption stalls. The fix isn't a bigger model — it's independent verification agents surrounding the core LLM: fact-checking every draft against your RAG source of truth, safety filters enforcing legal and compliance red lines, and self-consistency checks that run the same query through multiple reasoning paths and discard answers that don't agree with each other. None of this should be left to the same model policing itself.
+Hallucination risk is the number one reason institutional AI adoption stalls. The fix isn't a bigger model — it's independent verification agents surrounding the core LLM: fact-checking every draft against your RAG source of truth, safety filters enforcing legal and compliance red lines, and self-consistency checks that run the same query through multiple reasoning paths and discard answers that don't agree with each other. None of this should be left to the same model policing itself. For a full treatment of the specific attack types these guardrails defend against, see the [post on adversarial attacks](adversarial-attacks-images-and-text.qmd) in this series.
 
 ## The Compounding Advantage: Reasoning Triples
 
@@ -56,7 +56,7 @@ If you're a CTO or CIO reading this and recognizing your own stack, the fix does
 
 ## The EU Angle: Why This Isn't Optional Here
 
-Everything above applies globally. But European CTOs and CIOs have an additional, very concrete reason not to treat this as a nice-to-have: **almost all of this architecture currently sits on top of American infrastructure and American foundation models — and that dependency has already proven fragile once.**
+Everything above applies globally. But European CTOs and CIOs have an additional, very concrete reason not to treat this as a nice-to-have: **almost all of this architecture currently sits on top of American infrastructure and American foundation models — and that dependency has already proven fragile once.** This is the dimension [covered in depth in the companion post on AI sovereignty](why-europe-needs-sovereign-ai.qmd) on this site.
 
 In mid-2026, Anthropic suspended access to its newly released Fable and Mythos model tiers for several weeks to comply with U.S. Department of Commerce export controls, before the Department lifted those restrictions and access was restored. Whatever the specifics of that episode, it's a concrete, recent, real-world demonstration of the exact risk this post is about: if your entire operation runs on a thin layer of prompts over a foreign-hosted model, an export control decision, a pricing change, or a policy shift made in Washington — not in Brussels, and not by you — can suspend or reprice your core capability with no notice and no recourse.
 
@@ -69,3 +69,13 @@ For European institutions specifically — hospitals, legal firms, financial ser
 The question every CTO and CIO needs an honest answer to isn't whether to use Claude, GPT, or Gemini — it's what you've built *around* it. If the answer is "a system prompt and some function calling," you have a sandbox, not a moat, and a single point of foreign dependency sitting underneath your entire operation. Build the architecture — memory, tools, planning, critics, guardrails — and the foundation model underneath becomes exactly what it should be: swappable, commoditized, and no longer the thing your business depends on for survival.
 
 *This post draws on "The Institutional Moat: Beyond the Big Tech AI Trap" (Prof. dr. ir. J.C. Scholtes, Endeit Capital, March 2026).*
+
+---
+
+**Further reading on this site**
+
+- [What Is an AI Agent?](what-is-an-ai-agent.qmd) — what the seven agentic components you are building actually are
+- [From Text to Action](from-text-to-agentic-workflows.qmd) — the concrete pipeline for building the proprietary architecture described here
+- [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — the geopolitical dimension of why this architecture cannot rest on foreign infrastructure
+- [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — the governance layer that sits on top
+- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — empirical evidence for the specialized-model thesis

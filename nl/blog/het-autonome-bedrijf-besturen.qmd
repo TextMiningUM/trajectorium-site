@@ -42,7 +42,7 @@ Bij alle drie is het patroon hetzelfde: AI krijgt echte besluitvormings- en hand
 
 ## Digitale soevereiniteit is onderdeel van governance, geen apart onderwerp
 
-Het is verleidelijk om "wie de beslissingen van de AI bestiert" en "wie de infrastructuur beheert waarop de AI draait" als twee verschillende gesprekken te behandelen. De CBM+-casus van de marine laat zien waarom het hetzelfde gesprek is. Het besturen van een autonoom besluitvormingssysteem vereist controle over:
+Het is verleidelijk om "wie de beslissingen van de AI bestiert" en "wie de infrastructuur beheert waarop de AI draait" als twee verschillende gesprekken te behandelen. De CBM+-casus van de marine laat zien waarom het hetzelfde gesprek is. [Soevereiniteit en governance zijn dezelfde vraag — zoals het vijf-dimensies-kader uitvoerig behandeld in het begeleidende artikel laat zien.](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) Het besturen van een autonoom besluitvormingssysteem vereist controle over:
 
 - **Trainingsinfrastructuur** — wie bepaalt wat het model leert
 - **Inferentie-infrastructuur**, inclusief edge-implementatie — waar en hoe het model werkelijk draait wanneer het een beslissing neemt
@@ -67,3 +67,12 @@ Als het besturen van agentische AI over een hele organisatie ontmoedigend aanvoe
 De technologievraag — werkt agentische AI daadwerkelijk? — ligt achter ons. Wat overblijft is de bestuursvraag, en die heeft nog geen enkel vaststaand antwoord, maar wel een werkbare vorm: train en valideer aan de hand van meetbare standaarden, bouw reflectie in zodat het systeem zijn eigen fouten onderschept, eis echte uitlegbaarheid zodat een mens de beslissing daadwerkelijk kan controleren, beheers de infrastructuur waarop de beslissingen worden genomen, en besluit bewust — niet per ongeluk — hoeveel ervan centraal staat versus dicht bij waar het werk plaatsvindt. Organisaties die dit behandelen als een engineeringbijzaak, zullen op de harde manier ontdekken dat "de AI heeft besloten" geen aanvaardbaar antwoord is voor een raad van bestuur, een toezichthouder of een matroos wiens schip in de haven staat.
 
 *Gebaseerd op "AI en Bestuurlijke Besluitvorming" (Prof. dr. ir. J.C. Scholtes, rondetafelsessie, augustus 2026).*
+
+---
+
+**Verder lezen op deze site**
+
+- [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — de architectuurlaag waarop governance rust
+- [Waarom Europa eigen AI-modellen nodig heeft](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) — soevereiniteit als infrastructuurvoorwaarde voor echte governance
+- [Wat is een AI-agent?](wat-is-een-ai-agent.qmd) — wat het systeem dat wordt bestuurd eigenlijk is
+- [Adversariale aanvallen: onzichtbare pixels en omgewisselde woorden](adversariale-aanvallen-afbeeldingen-en-tekst.qmd) — de beveiligingsdreigingen die een governance-laag moet adresseren

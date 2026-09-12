@@ -62,3 +62,12 @@ Edge computing is het praktische mechanisme dat alle vier samenvoegt. Het is wat
 De Stanford AI Index gebruikt de term "edge computing" niet, maar zijn eigen soevereiniteitskader maakt er impliciet en herhaaldelijk het geval voor: soevereiniteit is alleen reëel wanneer die helemaal doorloopt tot waar inferentie daadwerkelijk plaatsvindt. Voor Europa specifiek — met werkelijk sterke gegevensbeschermingswetgeving, snel groeiende maar nog steeds tweede-tier rekenkracht, een groeiende basis van open, aanpasbare modellen, en een echte opening op de applicatielaag — is het draaien van eigen modellen op eigen infrastructuur, zo dicht bij de edge als de use case vraagt, geen defensieve of nostalgische keuze. Het is de versie van de strategie die de data daadwerkelijk ondersteunt.
 
 *Bron: Stanford HAI, [2026 AI Index Report](https://hai.stanford.edu/ai-index), hoofdstuk 8.3, "AI Sovereignty."*
+
+---
+
+**Verder lezen op deze site**
+
+- [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — hoe je architectuur bouwt die een modelwissel of exportcontrolebeslissing overleeft
+- [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd) — soevereiniteit en governance als één vraag, niet twee
+- [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — het bewijs dat kleine, lokale modellen bijna frontier-prestaties kunnen halen op specifieke taken
+- [De gigant inkrimpen: *pruning*, *quantization* en *distillation*](pruning-quantization-distillation.qmd) — compressie als het concrete engineeringpad naar edge- en soevereine implementatie

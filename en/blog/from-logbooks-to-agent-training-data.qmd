@@ -54,8 +54,17 @@ None of this works safely without an equally serious investment in what *not* to
 
 ## The Bigger Pattern
 
-Step back from the orchard specifically and the pattern generalizes cleanly, and it connects directly to something this site has covered before: any organization's internal manuals, standard operating procedures, incident logs, and handover notes were always written with an implicit reader in mind — the next person doing the job. That framing has quietly been the whole point of workplace documentation for as long as workplaces have existed. What's changed is who that "next person" can now be. The same discipline that made a good logbook entry useful to a human successor — being concrete about conditions, actions, and outcomes, rather than vague — is precisely what makes it usable as training data for an agent. Good documentation was never really about compliance or record-keeping for its own sake. It was about making tacit expertise transferable. It just turns out the recipient doesn't have to be human anymore.
+Step back from the orchard specifically and the pattern generalizes cleanly, and it connects directly to [something this site has covered before](from-text-to-agentic-workflows.qmd): any organization's internal manuals, standard operating procedures, incident logs, and handover notes were always written with an implicit reader in mind — the next person doing the job. That framing has quietly been the whole point of workplace documentation for as long as workplaces have existed. What's changed is who that "next person" can now be. The same discipline that made a good logbook entry useful to a human successor — being concrete about conditions, actions, and outcomes, rather than vague — is precisely what makes it usable as training data for an agent. Good documentation was never really about compliance or record-keeping for its own sake. It was about making tacit expertise transferable. It just turns out the recipient doesn't have to be human anymore.
 
 ## The Takeaway
 
 A logbook entry from 2013, or a farming manual from 1890, was never written with a language model in mind — and that's exactly why it works so well as training data. It's honest, concrete, and grounded in what actually happened, because it was written for someone who'd need to trust and repeat it. Turning that text into structured retrieval data, reranker pairs, instruction examples, preference pairs, and planning templates isn't a reinterpretation of what the knowledge was for — it's the same transfer of expertise from one practitioner to the next, just with a new kind of successor on the receiving end.
+
+---
+
+**Further reading on this site**
+
+- [From Text to Action](from-text-to-agentic-workflows.qmd) — the general pipeline this agricultural example instantiates
+- [What Is an AI Agent?](what-is-an-ai-agent.qmd) — what the trained agent this data is meant to power actually is
+- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — what a domain-specialized model built on this kind of data can achieve
+- [The Institutional Moat](the-institutional-moat.qmd) — why proprietary training data like this is the real competitive advantage

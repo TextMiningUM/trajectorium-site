@@ -13,7 +13,7 @@ Training GPT-2 cost an estimated 100-200 thousand dollars in compute. GPT-3 jump
 Three separate motivations converge on the same set of techniques:
 
 1. **Energy and battery life.** On-device and edge deployment — implanted medical devices, mobile phones, military hardware — simply cannot run a full-size frontier model. Every watt matters.
-2. **Local, sovereign deployment.** As covered in an earlier post on this site, a specialized model fine-tuned on your own data and run on your own hardware can get remarkably close to frontier-model performance *on a specific task* — but only if that specialized model is actually small enough to run locally at reasonable cost. Compression is what makes that "David vs. Goliath" story physically possible.
+2. **Local, sovereign deployment.** As covered in [an earlier post on this site](why-europe-needs-sovereign-ai.qmd), a specialized model fine-tuned on your own data and run on your own hardware can get remarkably close to frontier-model performance *on a specific task* — but only if that specialized model is actually small enough to run locally at reasonable cost. Compression is what makes that "David vs. Goliath" story physically possible.
 3. **Security.** Somewhat counter-intuitively, a smaller, distilled or pruned model can be *more* robust to certain attacks, because compression removes exactly the kind of redundant, unused connections that adversarial attacks tend to exploit.
 
 Let's go through the three main techniques in turn.
@@ -63,4 +63,13 @@ For a full treatment of what adversarial attacks on images and text actually loo
 
 ## Bringing It Together
 
-Distillation, quantization, and pruning are usually presented as separate cost-optimization tricks, but they share a common thread: each one asks the model to do more with less — fewer parameters, fewer bits, fewer connections — while preserving the behavior that actually matters. That's precisely the mechanism behind the "small specialized model nearly matching a frontier model" result covered in an earlier post on this site: a model doesn't need the full capacity of a generalist if it's only being asked to do one thing well, and compression is the concrete engineering path that turns "doesn't need the capacity" into "doesn't have the capacity, and runs on a laptop instead of a data center." Lower training and inference cost, genuine on-device and edge deployment, and — as a welcome side effect — a smaller, harder-to-exploit attack surface. That combination is why this remains one of the most active areas of research in the field.
+Distillation, quantization, and pruning are usually presented as separate cost-optimization tricks, but they share a common thread: each one asks the model to do more with less — fewer parameters, fewer bits, fewer connections — while preserving the behavior that actually matters. That's precisely the mechanism behind the ["small specialized model nearly matching a frontier model" result covered in an earlier post on this site](small-specialized-model-vs-frontier.qmd): a model doesn't need the full capacity of a generalist if it's only being asked to do one thing well, and compression is the concrete engineering path that turns "doesn't need the capacity" into "doesn't have the capacity, and runs on a laptop instead of a data center." Lower training and inference cost, genuine on-device and edge deployment, and — as a welcome side effect — a smaller, harder-to-exploit attack surface. That combination is why this remains one of the most active areas of research in the field.
+
+---
+
+**Further reading on this site**
+
+- [Adversarial Attacks: Invisible Pixels and Swapped Words](adversarial-attacks-images-and-text.qmd) — the full treatment of attack types and defenses that compression partially addresses
+- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — compression and specialization together: what a small, task-focused model can actually do
+- [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — why edge and on-device deployment matters geopolitically, not just for cost
+- [Why NLP Finally Works](why-nlp-finally-works.qmd) — the transformer architecture whose weights are being compressed here

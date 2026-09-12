@@ -69,4 +69,13 @@ Zet deze onderdelen samen en er gebeurt iets samengesteld. Elke echte interactie
 
 Tekst omzetten in agentische trainingsdata is geen enkele technische truc — het is een pipeline: structureer de tekst in een getrouwe JSON-hiërarchie, gebruik die hiërarchie om een echte geheugenlaag te bouwen (RAG plus herrangschikking), extraheer de API-definities die de agent handen geven, verzamel de correctiedata die een critic traint, en omhul dat alles met deterministische guardrails. Doe dit goed met je eigen propriëtaire tekst, en je huurt geen intelligentie van een basismodelleverancier — je bouwt een architectuur, en een dataset, die waardevoller wordt elke keer dat die wordt gebruikt.
 
-*Volgende in deze reeks: een praktische walkthrough van het chunken van een echt document en het van begin tot eind bouwen van een kleine RAG-pipeline.*
+*Voor een concreet domeinvoorbeeld van deze exacte *pipeline* toegepast op agrarische logboeken en institutionele kennis, zie [Van de volgende boerenknecht naar de volgende AI-agent](van-logboeken-naar-agent-trainingsdata.qmd).*
+
+---
+
+**Verder lezen op deze site**
+
+- [Wat is een AI-agent?](wat-is-een-ai-agent.qmd) — wat de zeven componenten die hier worden getraind eigenlijk zijn
+- [Van logboeken naar agent-trainingsdata](van-logboeken-naar-agent-trainingsdata.qmd) — dezelfde *pipeline* toegepast op een echte agrarische kennisbase
+- [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — wat een goed getraind gespecialiseerd model zo gebouwd kan bereiken
+- [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — waarom het bouwen van deze propriëtaire architectuur er strategisch toe doet

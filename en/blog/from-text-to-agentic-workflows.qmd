@@ -69,4 +69,13 @@ Put these pieces together and something compounding happens. Every real interact
 
 Converting text into agentic training data isn't a single technical trick — it's a pipeline: structure the text into a faithful JSON hierarchy, use that hierarchy to build a real memory layer (RAG plus reranking), extract the API definitions that give the agent hands, collect the correction data that trains a critic, and wrap all of it in deterministic guardrails. Do this well with your own proprietary text, and you're not renting intelligence from a foundation-model provider — you're building an architecture, and a dataset, that gets more valuable every time it's used.
 
-*Next in this series: a hands-on walkthrough of chunking a real document and building a small RAG pipeline end to end.*
+*For a concrete domain example of this exact pipeline applied to agricultural logbooks and institutional knowledge, see [From the Next Farmhand to the Next AI Agent](from-logbooks-to-agent-training-data.qmd).*
+
+---
+
+**Further reading on this site**
+
+- [What Is an AI Agent?](what-is-an-ai-agent.qmd) — what the seven components being trained here actually are
+- [From Logbooks to Agent Training Data](from-logbooks-to-agent-training-data.qmd) — the same pipeline applied to a real agricultural knowledge base
+- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — what a well-trained specialized model built this way can achieve
+- [The Institutional Moat](the-institutional-moat.qmd) — why building this proprietary architecture matters strategically

@@ -49,7 +49,7 @@ This is the same logic that shows up whenever a narrow specialist competes with 
 
 The practical implications extend past the raw numbers:
 
-- **It runs locally, on a single consumer-grade GPU** — no data leaves the building, which matters directly for the kind of institutional and data sovereignty concerns this series has covered before.
+- **It runs locally, on a single consumer-grade GPU** — no data leaves the building, which matters directly for the kind of [institutional and data sovereignty concerns covered earlier on this site](why-europe-needs-sovereign-ai.qmd).
 - **No proprietary procedural data has to be sent to an external API provider** to get this level of performance — the specialization happens entirely on infrastructure the organization controls.
 - **The cost and energy footprint drop by orders of magnitude** relative to querying a frontier model repeatedly, without giving up much of the task-specific performance that matters.
 - **The bottleneck that remains is extraction quality, not model size** — when the underlying workflow graph is perfect (gold-standard), the same small model completes 98% of procedures with 99.6% valid steps. The gap to frontier-model performance in real deployment comes almost entirely from imperfect automatic extraction of the workflow graph from messy source text, not from the small model's reasoning capacity itself.
@@ -57,3 +57,13 @@ The practical implications extend past the raw numbers:
 ## The Takeaway
 
 A handful of percentage points separating an 8-billion-parameter specialist from a multi-trillion-parameter generalist, on a task that actually matters to an organization's operations, is not a coincidence and not a trick — it's the direct, predictable result of trading breadth for depth. Foundation models are built to be good at almost everything; a fine-tuned small model built on an organization's own procedural data only has to be good at one thing. When that one thing is narrow enough and the training data is good enough, the size gap stops being the deciding factor. That's the entire argument for building your own specialized agentic components on top of a commodity foundation model, rather than renting the whole capability from someone else's much bigger, much more expensive, much less controllable system.
+
+---
+
+**Further reading on this site**
+
+- [From Text to Action](from-text-to-agentic-workflows.qmd) — how to build the training data pipeline that produces a model like this
+- [From Logbooks to Agent Training Data](from-logbooks-to-agent-training-data.qmd) — a concrete domain example of building exactly this kind of specialized training signal
+- [Shrinking the Giant: Pruning, Quantization, and Distillation](pruning-quantization-distillation.qmd) — the complementary compression techniques that make small models even smaller and cheaper
+- [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — why running this model locally on sovereign infrastructure matters
+- [The Institutional Moat](the-institutional-moat.qmd) — the strategic case for building specialized rather than renting general

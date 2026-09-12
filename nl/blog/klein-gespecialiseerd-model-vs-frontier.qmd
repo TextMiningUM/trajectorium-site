@@ -49,7 +49,7 @@ Dit is dezelfde logica die opduikt wanneer een nauwe specialist concurreert met 
 
 De praktische implicaties reiken verder dan de ruwe cijfers:
 
-- **Het draait lokaal, op een enkele consumentenkwaliteit GPU** — geen data verlaat het gebouw, wat direct van belang is voor het soort institutionele en datasoevereiniteitszorgen dat deze serie eerder heeft behandeld.
+- **Het draait lokaal, op een enkele consumentenkwaliteit GPU** — geen data verlaat het gebouw, wat direct van belang is voor het soort [institutionele en datasoevereiniteitszorgen dat eerder op deze site is behandeld](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd).
 - **Er hoeft geen propriëtaire procedurele data naar een externe API-aanbieder te worden gestuurd** om dit prestatieniveau te bereiken — de specialisatie vindt volledig plaats op infrastructuur die de organisatie beheert.
 - **De kosten- en energievoetafdruk dalen met ordes van grootte** ten opzichte van het herhaaldelijk bevragen van een frontier-model, zonder dat er veel taakspecifieke prestaties verloren gaan die ertoe doen.
 - **Het knelpunt dat overblijft is extractiekwaliteit, niet modelomvang** — wanneer de onderliggende workflow-*graph* perfect is (gouden standaard), voltooit hetzelfde kleine model 98% van de procedures met 99,6% geldige stappen. Het verschil met frontier-modelprestaties in echte implementatie komt bijna volledig van onvolmaakte automatische extractie van de workflow-*graph* uit rommelige brontekst, niet van de redenercapaciteit van het kleine model zelf.
@@ -57,3 +57,13 @@ De praktische implicaties reiken verder dan de ruwe cijfers:
 ## De conclusie
 
 Een handvol procentpunten dat een 8-miljard-parameter specialist scheidt van een multi-triljoen-parameter generalist, op een taak die er werkelijk toe doet voor de operaties van een organisatie, is geen toeval en geen truc — het is het directe, voorspelbare resultaat van het ruilen van breedte voor diepte. Basismodellen zijn gebouwd om goed te zijn in bijna alles; een *fine-tuned* klein model gebouwd op de eigen procedurele data van een organisatie hoeft slechts goed te zijn in één ding. Wanneer dat ene ding eng genoeg is en de trainingsdata goed genoeg, houdt de omvangskloof op de doorslaggevende factor te zijn. Dat is het volledige argument voor het bouwen van je eigen gespecialiseerde agentische componenten bovenop een gestandaardiseerd basismodel, in plaats van de volledige capaciteit te huren van iemand anders' veel grotere, veel duurdere, veel minder beheersbare systeem.
+
+---
+
+**Verder lezen op deze site**
+
+- [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) — hoe je de trainingsdata *pipeline* bouwt die zo'n model oplevert
+- [Van logboeken naar agent-trainingsdata](van-logboeken-naar-agent-trainingsdata.qmd) — een concreet domeinvoorbeeld van precies dit soort gespecialiseerd trainingssignaal
+- [De gigant inkrimpen: *pruning*, *quantization* en *distillation*](pruning-quantization-distillation.qmd) — de complementaire compressietechnieken die kleine modellen nog kleiner en goedkoper maken
+- [Waarom Europa eigen AI-modellen nodig heeft](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) — waarom dit model lokaal draaien op soevereine infrastructuur ertoe doet
+- [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — de strategische case voor specialiseren in plaats van huren

@@ -89,4 +89,13 @@ Geen van deze taken is eenmalige tekstgeneratie. Ze vereisen geheugen over stapp
 
 Een AI-agent is geen chatbot met een langer geheugen, en het is ook geen rebrand van een regelgebaseerd systeem uit de jaren negentig. Het is wat er gebeurt wanneer een taalmodel — voor het eerst werkelijk in staat tot open-ended redenering — wordt gewikkeld in dezelfde zeven componenten die AI-onderzoekers dertig jaar geleden al identificeerden: geheugen, kennistoegang, gebruik van tools, planning, doelbeheer, verificatie en een interface om door te handelen. De concepten zijn niet veranderd. Wat veranderde, is dat we eindelijk een motor hebben die krachtig genoeg is om ze te laten werken.
 
-*Dit artikel is een overzicht op hoog niveau. Latere artikelen in deze reeks gaan dieper in op specifieke componenten — RAG-architecturen, neurale herrangschikking, multi-agent-orkestratie en de trainingsdata die nodig is om deze componenten te specialiseren voor een bepaald domein.*
+*Dit artikel is een overzicht op hoog niveau. Latere artikelen in deze reeks gaan dieper in op specifieke componenten — [RAG-architecturen en neurale herrangschikking](van-tekst-naar-agentische-workflows.qmd), [multi-agent-orkestratie en governance](het-autonome-bedrijf-besturen.qmd) en [de trainingsdata die nodig is om deze componenten te specialiseren](van-logboeken-naar-agent-trainingsdata.qmd).*
+
+---
+
+**Verder lezen op deze site**
+
+- [Van tekst naar actie: NLP-pipelines omzetten in agentische workflows](van-tekst-naar-agentische-workflows.qmd) — hoe je de trainingsdata bouwt achter elk van deze componenten
+- [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd) — wie verantwoordelijk is als de agent handelt
+- [Waarom NLP eindelijk werkt](waarom-nlp-eindelijk-werkt.qmd) — de *transformer*-architectuur die agents mogelijk maakte
+- [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — waarom de architectuur rondom het model er meer toe doet dan het model zelf

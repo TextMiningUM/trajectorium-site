@@ -53,3 +53,12 @@ The honest answer leans toward the latter. Several of the paper's authors had re
 Put the whole history side by side and the pattern is unmistakable. Grammars gave precision but no robustness to the long tail. Statistical models gave robustness but were still built on fixed, hand-engineered features. RNNs and LSTMs finally learned sequential structure directly from data, but couldn't scale — sequential processing capped both their training speed and how far back they could actually "remember." Transformers are the first architecture to combine genuine data-driven learning of linguistic structure *at every level* — from morphology up through discourse — with a computation that parallelizes cleanly enough to be trained at a scale no earlier architecture could reach. That combination — not any single trick — is why, after fifty years of partial solutions, natural language processing finally works.
 
 *Course material referenced: Advanced NLP lecture series, Department of Advanced Computing Sciences.*
+
+---
+
+**Further reading on this site**
+
+- [What Is an AI Agent?](what-is-an-ai-agent.qmd) — the transformer-based language model as the missing engine that makes agentic systems work
+- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — what happens when you specialize one of these architectures on a single task
+- [Shrinking the Giant: Pruning, Quantization, and Distillation](pruning-quantization-distillation.qmd) — how to compress what transformers learned into something that runs on modest hardware
+- [Adversarial Attacks: Invisible Pixels and Swapped Words](adversarial-attacks-images-and-text.qmd) — the security vulnerabilities that emerge from how these models draw their decision boundaries

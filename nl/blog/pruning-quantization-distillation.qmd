@@ -13,7 +13,7 @@ Het trainen van GPT-2 kostte naar schatting 100-200 duizend dollar aan rekenkrac
 Drie afzonderlijke motivaties convergeren op dezelfde set technieken:
 
 1. **Energie en batterijduur.** On-device en edge-implementatie — geïmplanteerde medische apparaten, mobiele telefoons, militaire hardware — kan simpelweg geen full-size frontiermodel draaien. Elke watt telt.
-2. **Lokale, soevereine implementatie.** Zoals eerder op deze site behandeld, kan een gespecialiseerd model *fine-tuned* op jouw eigen data en draaiend op jouw eigen hardware opmerkelijk dicht bij frontier-modelprestaties komen *voor een specifieke taak* — maar alleen als dat gespecialiseerde model daadwerkelijk klein genoeg is om lokaal te draaien tegen redelijke kosten. Compressie is wat dat "David versus Goliath"-verhaal fysiek mogelijk maakt.
+2. **Lokale, soevereine implementatie.** Zoals [eerder op deze site behandeld](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd), kan een gespecialiseerd model *fine-tuned* op jouw eigen data en draaiend op jouw eigen hardware opmerkelijk dicht bij frontier-modelprestaties komen *voor een specifieke taak* — maar alleen als dat gespecialiseerde model daadwerkelijk klein genoeg is om lokaal te draaien tegen redelijke kosten. Compressie is wat dat "David versus Goliath"-verhaal fysiek mogelijk maakt.
 3. **Beveiliging.** Enigszins contra-intuïtief kan een kleiner, gedistilleerd of gepruned model *robuuster* zijn voor bepaalde aanvallen, omdat compressie precies het soort redundante, ongebruikte verbindingen verwijdert die *adversarial attacks* de neiging hebben te benutten.
 
 Laten we de drie hoofdtechnieken één voor één doorlopen.
@@ -64,3 +64,12 @@ Voor een volledige behandeling van hoe *adversarial attacks* op afbeeldingen en 
 ## Alles samen
 
 *Distillation*, *quantization* en *pruning* worden gewoonlijk gepresenteerd als afzonderlijke kostenoptimalisatietrucs, maar ze delen een rode draad: elk vraagt het model meer te doen met minder — minder parameters, minder bits, minder verbindingen — terwijl het gedrag dat er werkelijk toe doet behouden blijft. Dat is precies het mechanisme achter het "klein gespecialiseerd model dat bijna een frontiermodel evenaart"-resultaat dat eerder op deze site werd behandeld: een model heeft niet de volledige capaciteit van een generalist nodig als het alleen maar één ding goed hoeft te doen, en compressie is het concrete engineeringpad dat "heeft de capaciteit niet nodig" omzet in "heeft de capaciteit niet, en draait op een laptop in plaats van een datacenter." Lagere trainings- en inferentiekosten, echte on-device en edge-implementatie, en — als welkom neveneffect — een kleiner, moeilijker-te-benutten aanvalsoppervlak. Die combinatie is waarom dit een van de meest actieve onderzoeksgebieden in het vakgebied blijft.
+
+---
+
+**Verder lezen op deze site**
+
+- [Adversariale aanvallen: onzichtbare pixels en omgewisselde woorden](adversariale-aanvallen-afbeeldingen-en-tekst.qmd) — de volledige behandeling van aanvalstypen en verdedigingen die compressie gedeeltelijk aanpakt
+- [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — compressie en specialisatie samen: wat een klein, taakgericht model daadwerkelijk kan doen
+- [Waarom Europa eigen AI-modellen nodig heeft](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) — waarom edge- en on-device-implementatie er geopolitiek toe doet, niet alleen voor kosten
+- [Waarom NLP eindelijk werkt](waarom-nlp-eindelijk-werkt.qmd) — de *transformer*-architectuur waarvan de gewichten hier worden gecomprimeerd

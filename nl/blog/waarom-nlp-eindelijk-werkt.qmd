@@ -53,3 +53,12 @@ Het eerlijke antwoord neigt naar het laatste. Verschillende auteurs van het pape
 Zet de volledige geschiedenis naast elkaar en het patroon is onmiskenbaar. Grammatica's gaven precisie maar geen robuustheid voor de lange staart. Statistische modellen gaven robuustheid maar waren nog steeds gebouwd op vaste, handontworpen kenmerken. RNN's en LSTM's leerden eindelijk sequentiële structuur direct uit data, maar konden niet schalen — sequentiële verwerking begrenste zowel de trainingssnelheid als hoe ver terug ze daadwerkelijk konden "onthouden." *Transformers* zijn de eerste architectuur die echte datagedreven lering van taalkundige structuur *op elk niveau* combineert — van morfologie tot discours — met een berekening die voldoende paralleliseert om te worden getraind op een schaal die geen eerdere architectuur kon bereiken. Die combinatie — niet één enkele truc — is waarom, na vijftig jaar van gedeeltelijke oplossingen, natural language processing eindelijk werkt.
 
 *Cursusmateriaal waarnaar wordt verwezen: Advanced NLP-collegereeks, Department of Advanced Computing Sciences.*
+
+---
+
+**Verder lezen op deze site**
+
+- [Wat is een AI-agent?](wat-is-een-ai-agent.qmd) — het op *transformers* gebaseerde taalmodel als de ontbrekende motor die agentische systemen laat werken
+- [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — wat er gebeurt als je een van deze architecturen specialiseert op één taak
+- [De gigant inkrimpen: *pruning*, *quantization* en *distillation*](pruning-quantization-distillation.qmd) — hoe je comprimeert wat *transformers* hebben geleerd tot iets dat op bescheiden hardware draait
+- [Adversariale aanvallen: onzichtbare pixels en omgewisselde woorden](adversariale-aanvallen-afbeeldingen-en-tekst.qmd) — de beveiligingskwetsbaarheden die voortkomen uit hoe deze modellen hun beslissingsgrenzen trekken

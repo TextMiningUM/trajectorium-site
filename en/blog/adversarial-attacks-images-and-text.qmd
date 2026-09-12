@@ -6,7 +6,7 @@ categories: [fundamentals, efficiency]
 lang: en
 ---
 
-A picture of a panda, correctly classified by a neural network with 57% confidence, gets a tiny amount of carefully calculated noise added to it — invisible to a human eye, the image still looks exactly like a panda — and the same network now classifies it as a gibbon with over 99% confidence. This isn't a hypothetical; it's one of the founding demonstrations of what's called an **adversarial attack**, and the underlying vulnerability turns out to affect text models just as much as image models, if you know where to push. This post covers what these attacks actually look like in both domains, and what genuinely works as a defense — following on from the previous post on model compression, which turns out to be part of the answer, but far from all of it.
+A picture of a panda, correctly classified by a neural network with 57% confidence, gets a tiny amount of carefully calculated noise added to it — invisible to a human eye, the image still looks exactly like a panda — and the same network now classifies it as a gibbon with over 99% confidence. This isn't a hypothetical; it's one of the founding demonstrations of what's called an **adversarial attack**, and the underlying vulnerability turns out to affect text models just as much as image models, if you know where to push. This post covers what these attacks actually look like in both domains, and what genuinely works as a defense — following on from the [previous post on model compression](pruning-quantization-distillation.qmd), which turns out to be part of the answer, but far from all of it.
 
 ## Why This Is Possible at All
 
@@ -53,3 +53,12 @@ No single technique fully solves this, which is why real deployments layer sever
 Every one of these defenses is really doing the same underlying thing: making the model's decision boundary smoother, less sensitive to tiny or narrowly-targeted changes, and less trusting of any single unverified signal. None of them make a model perfectly unbreakable — this remains a genuinely active arms race between attack and defense research, on both images and text — but layering several of these together (adversarial training plus distillation plus input normalization plus detection) meaningfully raises the cost and difficulty of a successful attack, which in most real deployments is exactly the practical goal.
 
 *A note on sourcing: several of the specific attack and defense techniques described here (FGSM, PGD, universal triggers, defensive distillation, feature squeezing) come from a well-established line of published adversarial-machine-learning research, but I don't have web access in this conversation to verify every citation precisely — worth a quick check against the primary papers before citing specifics yourself.*
+
+---
+
+**Further reading on this site**
+
+- [Shrinking the Giant: Pruning, Quantization, and Distillation](pruning-quantization-distillation.qmd) — how model compression closes off a whole class of adversarial attacks as a side effect
+- [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — the governance layer that handles security threats in institutional AI deployments
+- [The Institutional Moat](the-institutional-moat.qmd) — why deterministic guardrails around a model matter more than trusting a model to police itself
+- [What Is an AI Agent?](what-is-an-ai-agent.qmd) — the agentic architecture where prompt injection specifically becomes a threat

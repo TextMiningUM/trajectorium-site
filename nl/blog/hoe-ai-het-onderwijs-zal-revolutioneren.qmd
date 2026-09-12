@@ -64,3 +64,12 @@ Er is ook een stiller risico dat benoemd verdient te worden: als een AI-beoordel
 De technologie werkt nu werkelijk, na decennia van onderzoek — dat deel staat niet ter discussie. Wat nog wordt uitgewerkt, in real time, in echte klaslokalen, is hoe docenten verschuiven van informatieverstrekkers naar facilitators van kritisch denken, en hoe beoordeling verschuift van het belonen van geheugen naar het belonen van redenering en toepassing. Goed gebruikt ziet AI in het onderwijs eruit als een onvermoeibare, geduldige, altijd beschikbare onderwijsassistent die menselijke docenten vrijmaakt voor de onderdelen van onderwijs die machines nog steeds niet kunnen doen. Onzorgvuldig gebruikt ziet het eruit als een wapenwedloop tussen detectietools en humaniseringstools die iedereen voor het algoritme laat schrijven in plaats van voor begrip. De technologie bepaalt niet welke van die toekomsten we krijgen — het herontwerp van beoordeling en pedagogiek eromheen doet dat.
 
 *Gebaseerd op "Exploring the Potential of AI Tutors in Higher Education" (Prof. dr. ir. Jan Scholtes, UM Education Day, juni 2025).*
+
+---
+
+**Verder lezen op deze site**
+
+- [Wat is een AI-agent?](wat-is-een-ai-agent.qmd) — de architectuur achter de AI-tutors en beoordelingsagenten hier besproken
+- [Waarom NLP eindelijk werkt](waarom-nlp-eindelijk-werkt.qmd) — de *transformer*-architectuur die generatieve AI in het onderwijs mogelijk maakte
+- [Adversariale aanvallen: onzichtbare pixels en omgewisselde woorden](adversariale-aanvallen-afbeeldingen-en-tekst.qmd) — waarom AI-systemen *guardrails* nodig hebben, ook in onderwijscontexten
+- [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) — hoe cursusmateriaal en correcties trainingsdata kunnen worden voor een gespecialiseerde onderwijsagent

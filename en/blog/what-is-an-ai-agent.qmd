@@ -89,4 +89,13 @@ None of these are single-shot text generation tasks. They require memory across 
 
 An AI agent isn't a chatbot with a longer memory, and it isn't a rebrand of a 1990s rule-based system either. It's what happens when a language model — genuinely capable of open-ended reasoning for the first time — gets wrapped in the same seven components AI researchers identified thirty years ago: memory, knowledge access, tool use, planning, goal management, verification, and an interface to act through. The concepts haven't changed. What changed is that we finally have an engine powerful enough to make them work.
 
-*This post is a high-level overview. Later posts in this series will go deeper into specific components — RAG architectures, neural reranking, multi-agent orchestration, and the training data needed to specialize these components for a given domain.*
+*This post is a high-level overview. Later posts in this series go deeper into specific components — [RAG architectures and neural reranking](from-text-to-agentic-workflows.qmd), [multi-agent orchestration and governance](governing-the-autonomous-organization.qmd), and [the training data needed to specialize these components for a given domain](from-logbooks-to-agent-training-data.qmd).*
+
+---
+
+**Further reading on this site**
+
+- [From Text to Action: Turning NLP Pipelines into Agentic Workflows](from-text-to-agentic-workflows.qmd) — how to build the training data behind each of these components
+- [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — who is accountable when the agent acts
+- [Why NLP Finally Works](why-nlp-finally-works.qmd) — the transformer architecture that made agents possible
+- [The Institutional Moat](the-institutional-moat.qmd) — why the architecture around the model matters more than the model itself
