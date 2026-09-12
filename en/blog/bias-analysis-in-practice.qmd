@@ -1,0 +1,138 @@
+---
+title: "Bias Analysis in Practice: How Do You Actually Test an Algorithm for Discrimination?"
+description: "The Dutch government's Algorithm Framework requires a bias analysis, a justification test, and an ethical desirability test for every algorithm that treats people. Here's how to actually carry that out, with tools, real cases, and the underlying science."
+date: 2026-08-15
+categories: [governance]
+lang: en
+---
+
+Any algorithm that treats people or businesses differently carries a risk of discrimination — sometimes blatantly, more often hidden inside an apparently neutral variable like a postal code. The Dutch government's Algorithm Framework (Algoritmekader, measure VER-03) requires a structured bias analysis for every algorithm that affects natural persons. This isn't a paperwork exercise — it's a concrete, technical, and legal test you can actually walk through step by step. This post covers the three required steps — bias analysis, justification test, ethical desirability test — with practical tools, real Dutch case studies, and the fairness science underneath it.
+
+## Why This Is More Than a Compliance Checkbox
+
+The Algorithm Framework frames this as fulfilling a requirement from the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) around automated decision-making: the risk of discriminatory processing has to be investigated *and* mitigated. Two recent Dutch cases show what goes wrong when this doesn't happen:
+
+- **DUO / student housing grant control**: between 2010 and 2023, the Dutch education executive agency (DUO) used a risk profile to detect misuse of the "living-away-from-home" student grant. An investigation by Algorithm Audit found insufficient statistical association between several of the selection criteria used — the profile was discontinued.
+- **Ministry of Foreign Affairs / visa applications**: the government's Rijks ICT Gilde ran a quantitative bias test on the assessment of short-stay visa applications and found a significant difference based on nationality — recommending that the use of profile scores and risk groups be discontinued entirely.
+
+Both cases illustrate the same lesson: bias is rarely sitting in an explicit "race" or "nationality" variable. It's in the patterns a model distills from data.
+
+## Step 1: Analyze Whether Bias Is Present
+
+### Direct discrimination: the relatively simple check
+
+Simply check whether your input variables directly reference a protected characteristic: religion, belief, political conviction, race, sex, nationality, sexual orientation, or civil status. Note that many proxy terms also count as "race" under case law — skin color, other racialized physical characteristics, migration background, a "non-Western-sounding name," or references to specific ancestry. If your model uses such variables directly (or a variable that functionally maps one-to-one onto them), that's prohibited direct discrimination — full stop.
+
+### Indirect discrimination: where the real work is
+
+This is where most bias actually hides: apparently neutral variables like postal code, income level, license plate, or low literacy that correlate strongly with a protected characteristic. The Algorithm Framework describes five concrete steps here — here's how to actually implement them:
+
+**1. Identify the vulnerable groups.** Base this on the discrimination grounds defined in law, optionally supplemented with groups for whom differential treatment is ethically sensitive in your specific context.
+
+**2. Define what "difference in treatment" means for your algorithm.** This requires choosing between (at least) two families of fairness definitions — and this is exactly where many projects get stuck, because they never make this choice explicit:
+
+- **Equal outcomes (representation)**: do different groups have an equal chance of being selected? This corresponds to what the fairness literature calls *demographic parity* or *statistical parity*.
+- **Equal performance (errors)**: does the algorithm perform equally well across different groups? This requires building a confusion matrix per group, and corresponds to concepts like *equalized odds* and *equal opportunity* — metrics that look at false positives and false negatives, not just the final score.
+
+A well-known and practical starting point for choosing which metric fits your situation is the **Fairness Tree** (a decision tree that asks about the nature of your decision and the consequences of false positives versus false negatives) — the Algorithm Framework itself points to this. Important to know: different fairness metrics can *mathematically contradict each other* — in most realistic situations, you cannot simultaneously guarantee demographic parity and equal error rates. This isn't an implementation flaw; it's a proven mathematical fact in the fairness literature. You therefore need to prioritize, in advance and together with stakeholders, which notion of fairness matters most in your context.
+
+**3. Collect the data needed to measure these groups.** This often collides directly with privacy law — you need sensitive data (ethnicity, sex, etc.) to be able to test for discrimination on exactly those same grounds. The EU AI Act explicitly provides an exception for this (Article 10.5) for high-risk AI systems: special category personal data may be processed specifically for the purpose of monitoring, detecting, and correcting bias. Make sure this processing is well documented and strictly scoped to that purpose.
+
+Also pay attention to the quality of this data itself: if your testing data already contains historical or representation bias, you may end up measuring the bias of your measurement instrument rather than the actual bias you're trying to detect. And for some groups (low literacy, for instance) reliable data simply isn't available — consider alternative signals in that case, such as monitoring through the complaints and objections process.
+
+**4. Calculate the differences.** This is the step where you actually measure, using open-source tools built specifically for this:
+
+- **Fairlearn** (Microsoft) — measures and constrains unfairness, with direct support for demographic parity and equalized odds constraints during training.
+- **Aequitas** — a bias-audit toolkit specifically aimed at policy and government contexts, built to report multiple fairness metrics side by side per group.
+- **AI Fairness 360 (IBM)** — a broad toolkit with dozens of fairness metrics and bias-mitigation techniques (pre-processing, in-processing, post-processing).
+- **FairML** — focused on tracing which input variables contribute most to an observed difference.
+
+In practice: build the confusion matrix per group, calculate the relevant metrics (selection-rate ratio, false-positive-rate gap, false-negative-rate gap), and test whether the difference is statistically significant rather than just random sampling noise.
+
+**5. Explain how the difference arose.** If you find a significant difference, trace where it came from:
+- **Historical bias** — does the data still describe the current situation, or does it reflect outdated patterns?
+- **Representation bias** — is the training data representative of the entire target population?
+- **Measurement bias** — do your input variables actually measure what they claim to, or are they crude proxies?
+- **Automation bias or confirmation bias** — does the bias only emerge in the human review step that follows the algorithm?
+
+This step explicitly requires involving a broad group of stakeholders — the causes of bias are rarely purely technical; they live in the social and historical reality the data reflects.
+
+## Step 2: Carry Out a Justification Test
+
+An observed difference isn't automatically prohibited — but it always requires an explicit test against four sub-questions:
+
+1. **Does the algorithm pursue a legitimate aim?**
+2. **Is the algorithm suitable for achieving that aim?**
+3. **Is it necessary** — are there no reasonable, less intrusive alternatives?
+4. **Is it, all things considered, proportionate?**
+
+For direct discrimination, there's only room for an exception if the law itself provides one. For indirect discrimination, an objective justification can also suffice — but only if all four questions above are answered affirmatively. Without a valid justification, an observed difference is by definition prohibited discrimination, and the algorithm may not be used. The Netherlands Institute for Human Rights has published a detailed Risk Profiling Assessment Framework specifically addressing discrimination on grounds of race and nationality.
+
+## Step 3: Carry Out an Ethical Desirability Test
+
+This is the step that goes beyond the legal question. Even with a valid, objective justification, an observed difference can still be ethically undesirable. Deliberately involve a broad group of stakeholders here — not just lawyers and data scientists, but also the people the algorithm actually affects — and discuss explicitly: what are the possible adverse effects, do we consider this fair, and are there alternatives? As the Algorithm Framework itself notes, this weighing can ultimately become a political-administrative question — make sure that responsibility is then explicitly assigned there.
+
+## A Concrete Example: Bias Is Already Baked Into the Building Blocks (Word2Vec)
+
+Everything above is about how you *measure* bias in an algorithm's output. But bias often creeps in much earlier — in the language representations a model is built on. A tangible, hands-on illustration of this comes from a tutorial on document representation, and it's exactly why "measurement bias" and "historical bias" (mentioned in Step 1) aren't abstract — they're literally visible in the numbers of a word vector.
+
+**Word2Vec and GloVe** learn dense word vectors based on the distributional hypothesis: a word is characterized by the company it keeps (Firth, 1957). Semantically similar words end up close together in vector space — which works remarkably well for analogies like *king - man + woman ≈ queen*. But the same mechanism also picks up societal stereotypes from the training corpus, with concrete and recognizable consequences:
+
+```
+man : programmer :: woman : ?
+```
+
+Query a GloVe model (trained on Wikipedia plus news articles) with this, and the terms that surface clearly reflect a gender stereotype rather than a neutral translation of the profession. The same happens with `man:doctor :: woman:?` and `father:doctor :: mother:?` — the model hasn't learned what a doctor *is*; it has learned which words tend to co-occur in text that's already saturated with societal assumptions.
+
+Why this doesn't just sneak in but actually stays in: these embeddings are trained on huge amounts of web text, news articles, and books — sources that reflect historical and societal prejudice. When such embeddings then end up in a downstream application — a CV-screening tool, a chatbot, a risk-assessment instrument — they can **pass on and amplify** that discrimination. A résumé screener running on GloVe embeddings that associates "programmer" more strongly with "man" than with "woman" will systematically rank male candidates higher, without "sex" ever being used as an explicit input variable. This is exactly the type of indirect discrimination described in Step 1 above — only arising at the representation level, deeper in the pipeline than most bias audits typically look.
+
+### Making bias measurable and correctable: projection-based debiasing
+
+The most influential technique for this (Bolukbasi et al., 2016) shows that this kind of bias can not only be demonstrated, but also — partially — corrected, in three steps:
+
+1. **Determine the bias direction**: compute a "gender direction" as the average difference between gender-defined word pairs (*he/she*, *man/woman*, *king/queen*, *father/mother*, and so on).
+2. **Project that direction out**: for neutral profession words (*programmer*, *nurse*, *engineer*), remove the component of the vector that lies along that gender direction — mathematically, an orthogonal projection.
+3. **Verify**: confirm that the debiased vectors no longer show a gender association, while the word's actual meaning (the profession itself) is preserved.
+
+This is concretely measurable: compute a "bias score" for a set of neutral profession words (how strongly the word vector points in the gender direction) before and after this projection — the score drops to near zero for almost every word after debiasing, while the word retains its original meaning.
+
+### The limitations — an honest analysis has to include these too
+
+Important not to gloss over: this technique doesn't fully solve the problem.
+
+- **It only addresses one axis at a time.** Debiasing for gender doesn't fix ethnicity, age, or other bias.
+- **Intersectional bias** (for example, the combination of gender and ethnicity) requires considerably more sophisticated approaches than a single projection.
+- **Bias can persist in higher-order statistics** that a simple linear projection doesn't remove (Gonen & Goldberg, 2019) — the direct association is gone, but cluster structures in the vector space can still remain gendered.
+- **Contextual models (BERT, GPT) require different techniques.** Word2Vec and GloVe give each word exactly one fixed vector; a contextual model gives "bank" a different vector depending on the sentence. That doesn't change *whether* bias can occur, but it does change *how* you have to detect and correct it — this connects to XAI methods for transformers.
+
+The lesson here for a bias analysis like the one in Step 1: if you only test an algorithm's final decision, you may miss the point where the bias actually originated. A thorough "explain how the difference arose" step, for language models, therefore also means: look at the underlying word representations, not just the final output.
+
+## How to Operationalize This in an AI/Agent Project
+
+For anyone looking to operationalize this within a larger agentic AI project — as covered in the [earlier post on building sovereign agents](building-sovereign-ai-agents.qmd) and the [governance framework post](governing-the-autonomous-organization.qmd) on this site:
+
+1. **Document the three steps as a standing part of your validation phase** — not as a one-time check at delivery, but as a recurring process, since both data and populations change over time.
+2. **Choose your fairness metrics before you see the results**, together with stakeholders — otherwise the temptation to pick, after the fact, whichever metric happens to look favorable becomes hard to resist.
+3. **Build the bias test in as a separate, repeatable step in your pipeline** — using one of the open-source tools mentioned above — the same way you'd build a fact-checking or guardrail module.
+4. **Document every judgment call explicitly**, including why a given difference was or wasn't found to be justified. This is precisely what a regulator — or a court, if it ever comes to that — will want to see later.
+5. **Keep monitoring after go-live** — through the complaints and objections process, and through periodic repetition of the analysis, especially whenever the underlying population or the model changes.
+
+## A Note on the Scientific Sources
+
+The fairness metrics and concepts mentioned here (demographic parity, equalized odds, equal opportunity, the tension between different fairness definitions, as well as Bolukbasi et al. 2016 and Gonen & Goldberg 2019 on debiasing word embeddings) come from an established, broad line of research within fairness in machine learning. The Word2Vec/GloVe examples and the debiasing code example come directly from a hands-on tutorial on document representation. For the remaining citations, I don't have search access in this conversation to verify exact years and full titles — double-check the precise sources yourself before citing them.
+
+## The Takeaway
+
+Bias analysis isn't a one-time checklist — it's a repeated process of measuring, explaining, justifying, and, where necessary, correcting course. The Dutch cases covered here show this isn't a theoretical exercise: profiles that ran in production for years turned out, on closer inspection, to be insufficiently substantiated and were discontinued. Build these three steps in from the design phase of your algorithm — not as a reaction to an incident after the fact.
+
+*Source: Algorithm Framework (Algoritmekader), Dutch Ministry of the Interior and Kingdom Relations, measure 5-VER-03.*
+
+---
+
+**Further reading on this site**
+
+- [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — the four-phase governance framework that bias testing is part of
+- [What It Takes to Build a Sovereign AI Agent](building-sovereign-ai-agents.qmd) — step 7 of the guide deals with bias validation in practice
+- [Adversarial Attacks: Invisible Pixels and Swapped Words](adversarial-attacks-images-and-text.qmd) — the related category of security vulnerabilities in model inputs
+- [The Institutional Moat](the-institutional-moat.qmd) — why guardrails and compliance architecture matter for institutions
+- [Why NLP Finally Works](why-nlp-finally-works.qmd) — the transformer architecture whose embeddings carry the representational bias discussed here

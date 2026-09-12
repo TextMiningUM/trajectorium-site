@@ -105,4 +105,5 @@ Geen van deze acht stappen is optioneel als het doel werkelijke soevereiniteit i
 - [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — waarom de architectuur er meer toe doet dan het model
 - [Waarom Europa eigen AI-modellen nodig heeft](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) — de geopolitieke case voor stap 1
 - [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd) — het governance-raamwerk achter stappen 7 en 8
+- [Bias-analyse in de praktijk](bias-analyse-in-de-praktijk.qmd) — de stapsgewijze technische gids voor de bias-analyse vereist in stap 7
 - [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — het bewijs achter stap 4

@@ -105,4 +105,5 @@ None of these eight steps is optional if the goal is genuine sovereignty rather 
 - [The Institutional Moat](the-institutional-moat.qmd) — why the architecture matters more than the model
 - [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — the geopolitical case for step 1
 - [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — the governance framework behind steps 7 and 8
+- [Bias Analysis in Practice](bias-analysis-in-practice.qmd) — the step-by-step technical guide to carrying out the bias analysis required in step 7
 - [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — the evidence behind step 4
