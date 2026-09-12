@@ -191,3 +191,101 @@ footer.footer {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+// ── Homepage hero ─────────────────────────────────────────────────────────
+
+.hero-banner {
+  background: linear-gradient(135deg, $um-navy 0%, #0a1628 100%);
+  color: #fff;
+  padding: 4.5rem 2rem 4rem;
+  text-align: center;
+  margin-bottom: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+
+  h1 {
+    color: #fff;
+    font-size: 2.8rem;
+    border: none;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-subtitle {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.2rem;
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+
+  .btn-outline-light {
+    border-color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.9);
+    border-radius: 0;
+    &:hover { background: rgba(255,255,255,0.15); }
+  }
+
+  .btn-primary { border-radius: 0; font-weight: 600; }
+}
+
+// ── Diagram section ───────────────────────────────────────────────────────
+
+.diagram-section {
+  background: $um-light;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+
+  h2 { border: none; color: $um-navy; margin-bottom: 1.5rem; }
+
+  img {
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+
+  .diagram-caption {
+    color: #4a5568;
+    font-style: italic;
+    margin-top: 1.25rem;
+    font-size: 0.95rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// ── Feature cards grid ────────────────────────────────────────────────────
+
+.feature-card {
+  border: 1px solid $um-border;
+  border-top: 4px solid $um-blue;
+  padding: 1.75rem;
+  height: 100%;
+  background: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+
+  &:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+  }
+
+  h3 {
+    color: $um-navy;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    border: none;
+  }
+
+  p { color: #4a5568; font-size: 0.95rem; }
+
+  a {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+}

@@ -1,10 +1,60 @@
 ---
-title: "Welcome"
-description: "AI, agents, and autonomous architectures — research, tutorials, and applied cases."
+title: ""
+page-layout: full
+toc: false
 ---
 
-Welcome to my site on AI, agentic systems, and autonomous architectures.
+::: {.hero-banner}
+# Trajectorium
 
-- [Blog](blog/index.qmd)
-- [Tutorials & Notebooks](notebooks/index.qmd)
-- [Slides](slides/index.qmd)
+<p class="hero-subtitle">Research, tutorials, and applied cases on AI agents and autonomous architectures.</p>
+
+[Explore the Blog &rarr;](blog/index.qmd){.btn .btn-primary .me-2}
+[Tutorials &amp; Notebooks](notebooks/index.qmd){.btn .btn-outline-light}
+:::
+
+::: {.diagram-section}
+## Components of an AI Agent
+
+![Components of an AI Agent](../images/ComponentsofAgent.jpg)
+
+<p class="diagram-caption">An integrated system for autonomous behavior: every modern AI agent combines a core language model with memory, tools, planning, and guardrails.</p>
+:::
+
+<div class="container py-5">
+
+## What is Trajectorium?
+
+Trajectorium is a research and education platform focused on **agentic AI systems** — the next generation of AI that can perceive, plan, remember, and act autonomously. We publish accessible deep-dives, hands-on tutorials, and annotated lecture slides grounded in current research.
+
+<div class="row g-4 mt-2">
+<div class="col-md-4"><div class="feature-card">
+
+### 📝 Blog
+
+In-depth articles on AI architectures, agent frameworks, reasoning patterns, and real-world applications.
+
+[Read articles &rarr;](blog/index.qmd)
+
+</div></div>
+<div class="col-md-4"><div class="feature-card">
+
+### 💻 Tutorials & Notebooks
+
+Hands-on Jupyter notebooks: build agents from scratch, connect tools via APIs, and explore retrieval-augmented generation.
+
+[Open notebooks &rarr;](notebooks/index.qmd)
+
+</div></div>
+<div class="col-md-4"><div class="feature-card">
+
+### 🎬 Slides
+
+Lecture slides used in teaching — openly available for reuse and adaptation in your own courses.
+
+[View slides &rarr;](slides/index.qmd)
+
+</div></div>
+</div>
+
+</div>

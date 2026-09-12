@@ -1,10 +1,60 @@
 ---
-title: "Welkom"
-description: "AI, agents en autonome architecturen — onderzoek, tutorials en toepassingen."
+title: ""
+page-layout: full
+toc: false
 ---
 
-Welkom op mijn site over AI, agentic systemen en autonome architecturen.
+::: {.hero-banner}
+# Trajectorium
 
-- [Blog](blog/index.qmd)
-- [Tutorials & Notebooks](notebooks/index.qmd)
-- [Slides](slides/index.qmd)
+<p class="hero-subtitle">Onderzoek, tutorials en toepassingen rondom AI-agents en autonome architecturen.</p>
+
+[Lees de blog &rarr;](blog/index.qmd){.btn .btn-primary .me-2}
+[Tutorials &amp; Notebooks](notebooks/index.qmd){.btn .btn-outline-light}
+:::
+
+::: {.diagram-section}
+## Componenten van een AI-agent
+
+![Componenten van een AI-agent](../images/ComponentsofAgent.jpg)
+
+<p class="diagram-caption">Een geïntegreerd systeem voor autonoom gedrag: elke moderne AI-agent combineert een kerntaalmodel met geheugen, tools, planning en guardrails.</p>
+:::
+
+<div class="container py-5">
+
+## Wat is Trajectorium?
+
+Trajectorium is een onderzoeks- en onderwijsplatform gericht op **agentic AI-systemen** — de volgende generatie AI die zelfstandig kan waarnemen, plannen, onthouden en handelen. We publiceren toegankelijke verdiepingsartikelen, praktische tutorials en geannoteerde collegesslides op basis van actueel onderzoek.
+
+<div class="row g-4 mt-2">
+<div class="col-md-4"><div class="feature-card">
+
+### 📝 Blog
+
+Uitgebreide artikelen over AI-architecturen, agent-frameworks, redeneerpatronen en praktijktoepassingen.
+
+[Lees artikelen &rarr;](blog/index.qmd)
+
+</div></div>
+<div class="col-md-4"><div class="feature-card">
+
+### 💻 Tutorials & Notebooks
+
+Praktische Jupyter-notebooks: bouw agents van de grond af, koppel tools via API's en verken retrieval-augmented generation.
+
+[Open notebooks &rarr;](notebooks/index.qmd)
+
+</div></div>
+<div class="col-md-4"><div class="feature-card">
+
+### 🎬 Slides
+
+College-slides gebruikt in het onderwijs — vrij beschikbaar voor hergebruik en aanpassing in je eigen cursus.
+
+[Bekijk slides &rarr;](slides/index.qmd)
+
+</div></div>
+</div>
+
+</div>
