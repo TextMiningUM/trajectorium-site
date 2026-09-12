@@ -30,7 +30,7 @@ Trajectorium is a research and education platform focused on **agentic AI system
 <div class="row g-4 mt-2">
 <div class="col-md-4"><div class="feature-card">
 
-### 📝 Blog
+### Blog
 
 In-depth articles on AI architectures, agent frameworks, reasoning patterns, and real-world applications.
 
@@ -39,7 +39,7 @@ In-depth articles on AI architectures, agent frameworks, reasoning patterns, and
 </div></div>
 <div class="col-md-4"><div class="feature-card">
 
-### 💻 Tutorials & Notebooks
+### Tutorials & Notebooks
 
 Hands-on Jupyter notebooks: build agents from scratch, connect tools via APIs, and explore retrieval-augmented generation.
 
@@ -48,7 +48,7 @@ Hands-on Jupyter notebooks: build agents from scratch, connect tools via APIs, a
 </div></div>
 <div class="col-md-4"><div class="feature-card">
 
-### 🎬 Slides
+### Slides
 
 Lecture slides used in teaching — openly available for reuse and adaptation in your own courses.
 

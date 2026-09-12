@@ -30,7 +30,7 @@ Trajectorium is een onderzoeks- en onderwijsplatform gericht op **agentic AI-sys
 <div class="row g-4 mt-2">
 <div class="col-md-4"><div class="feature-card">
 
-### 📝 Blog
+### Blog
 
 Uitgebreide artikelen over AI-architecturen, agent-frameworks, redeneerpatronen en praktijktoepassingen.
 
@@ -39,7 +39,7 @@ Uitgebreide artikelen over AI-architecturen, agent-frameworks, redeneerpatronen 
 </div></div>
 <div class="col-md-4"><div class="feature-card">
 
-### 💻 Tutorials & Notebooks
+### Tutorials & Notebooks
 
 Praktische Jupyter-notebooks: bouw agents van de grond af, koppel tools via API's en verken retrieval-augmented generation.
 
@@ -48,7 +48,7 @@ Praktische Jupyter-notebooks: bouw agents van de grond af, koppel tools via API'
 </div></div>
 <div class="col-md-4"><div class="feature-card">
 
-### 🎬 Slides
+### Slides
 
 College-slides gebruikt in het onderwijs — vrij beschikbaar voor hergebruik en aanpassing in je eigen cursus.
 
