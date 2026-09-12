@@ -7,7 +7,7 @@ toc: false
 ::: {.hero-banner}
 # Trajectorium
 
-<p class="hero-subtitle">Onderzoek, tutorials en toepassingen rondom AI-agents en autonome architecturen.</p>
+<p class="hero-subtitle">Onderzoek, tutorials en toepassingen rondom AI-agents en energiezuinige soevereine architecturen.</p>
 
 [Lees de blog &rarr;](blog/index.qmd){.btn .btn-primary .me-2}
 [Tutorials &amp; Notebooks](notebooks/index.qmd){.btn .btn-outline-light}

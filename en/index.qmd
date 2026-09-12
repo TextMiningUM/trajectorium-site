@@ -7,7 +7,7 @@ toc: false
 ::: {.hero-banner}
 # Trajectorium
 
-<p class="hero-subtitle">Research, tutorials, and applied cases on AI agents and autonomous architectures.</p>
+<p class="hero-subtitle">Research, tutorials, and applied cases on AI agents and energy efficient sovereign architectures.</p>
 
 [Explore the Blog &rarr;](blog/index.qmd){.btn .btn-primary .me-2}
 [Tutorials &amp; Notebooks](notebooks/index.qmd){.btn .btn-outline-light}

@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-description: "Artikelen over AI, agentic systemen en autonome architecturen."
+description: "Artikelen over AI, agentic systemen en energiezuinige soevereine architecturen."
 listing:
   contents: "*.qmd"
   sort: "date desc"
