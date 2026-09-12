@@ -58,6 +58,12 @@ The practical implications extend past the raw numbers:
 
 A handful of percentage points separating an 8-billion-parameter specialist from a multi-trillion-parameter generalist, on a task that actually matters to an organization's operations, is not a coincidence and not a trick — it's the direct, predictable result of trading breadth for depth. Foundation models are built to be good at almost everything; a fine-tuned small model built on an organization's own procedural data only has to be good at one thing. When that one thing is narrow enough and the training data is good enough, the size gap stops being the deciding factor. That's the entire argument for building your own specialized agentic components on top of a commodity foundation model, rather than renting the whole capability from someone else's much bigger, much more expensive, much less controllable system.
 
+**Key papers**
+
+- Hu et al. (2022), *LoRA: Low-Rank Adaptation of Large Language Models* — [arXiv:2106.09685](https://arxiv.org/abs/2106.09685)
+- Sanh et al. (2019), *DistilBERT, a Distilled Version of BERT* — [arXiv:1910.01108](https://arxiv.org/abs/1910.01108)
+- Ouyang et al. (2022), *Training Language Models to Follow Instructions with Human Feedback* — [arXiv:2203.02155](https://arxiv.org/abs/2203.02155)
+
 ---
 
 **Further reading on this site**

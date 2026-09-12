@@ -65,6 +65,12 @@ The technology genuinely works now, after decades of research — that part isn'
 
 *Based on "Exploring the Potential of AI Tutors in Higher Education" (Prof. dr. ir. Jan Scholtes, UM Education Day, June 2025).*
 
+**Key papers**
+
+- Kasneci et al. (2023), *ChatGPT for Good? On Opportunities and Challenges of LLMs for Education* — [Learning and Individual Differences](https://doi.org/10.1016/j.lindif.2023.102274)
+- Bender et al. (2021), *On the Dangers of Stochastic Parrots* — [ACM FAccT 2021](https://doi.org/10.1145/3442188.3445922)
+- Mollick & Mollick (2023), *Assigning AI: Seven Approaches for Students, With Prompts* — [SSRN](https://ssrn.com/abstract=4391243)
+
 ---
 
 **Further reading on this site**

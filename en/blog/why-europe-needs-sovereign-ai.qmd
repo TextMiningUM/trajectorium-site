@@ -63,6 +63,12 @@ Stanford's AI Index doesn't use the phrase "edge computing," but its own soverei
 
 *Source: Stanford HAI, [2026 AI Index Report](https://hai.stanford.edu/ai-index), Chapter 8.3, "AI Sovereignty."*
 
+**Key papers**
+
+- Stanford HAI (2026), *AI Index Report* — [hai.stanford.edu/ai-index](https://hai.stanford.edu/ai-index)
+- Bommasani et al. (2021), *On the Opportunities and Risks of Foundation Models* — [arXiv:2108.07258](https://arxiv.org/abs/2108.07258)
+- European Commission (2024), *EU Artificial Intelligence Act* — [eur-lex.europa.eu](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+
 ---
 
 **Further reading on this site**

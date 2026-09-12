@@ -60,6 +60,12 @@ Step back from the orchard specifically and the pattern generalizes cleanly, and
 
 A logbook entry from 2013, or a farming manual from 1890, was never written with a language model in mind — and that's exactly why it works so well as training data. It's honest, concrete, and grounded in what actually happened, because it was written for someone who'd need to trust and repeat it. Turning that text into structured retrieval data, reranker pairs, instruction examples, preference pairs, and planning templates isn't a reinterpretation of what the knowledge was for — it's the same transfer of expertise from one practitioner to the next, just with a new kind of successor on the receiving end.
 
+**Key papers**
+
+- Lewis et al. (2020), *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks* — [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
+- Rafailov et al. (2023), *Direct Preference Optimization* — [arXiv:2305.18290](https://arxiv.org/abs/2305.18290)
+- Yao et al. (2022), *ReAct: Synergizing Reasoning and Acting in Language Models* — [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
+
 ---
 
 **Further reading on this site**

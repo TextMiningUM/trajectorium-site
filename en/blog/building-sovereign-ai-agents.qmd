@@ -96,6 +96,12 @@ The final step, and arguably the one public-sector deployments can least afford 
 
 None of these eight steps is optional if the goal is genuine sovereignty rather than a thin wrapper around someone else's model. But none of them requires a national government's budget either — the same techniques covered across this site's earlier posts on [agriculture](from-logbooks-to-agent-training-data.qmd), [institutional strategy](the-institutional-moat.qmd), [sovereignty](why-europe-needs-sovereign-ai.qmd), and [model compression](pruning-quantization-distillation.qmd) apply directly, whether the organization building the agent is a cherry orchard cooperative, a hospital, a corporate legal department, or a municipal benefits office. The common thread across every genuinely sovereign deployment is the same: your own data, your own infrastructure, your own explicit standards for what the system is and isn't allowed to decide — with the foundation model reduced to exactly what it should be, a replaceable component at the center of an architecture your organization actually owns.
 
+**Key papers**
+
+- Wang et al. (2023), *A Survey on Large Language Model Based Autonomous Agents* — [arXiv:2308.11432](https://arxiv.org/abs/2308.11432)
+- Lewis et al. (2020), *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks* — [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
+- European Commission (2024), *EU Artificial Intelligence Act* — [eur-lex.europa.eu](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+
 ---
 
 **Further reading on this site**

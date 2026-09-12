@@ -68,6 +68,12 @@ The technology question — does agentic AI actually work? — is behind us. Wha
 
 *Based on "AI en Bestuurlijke Besluitvorming" (Prof. dr. ir. J.C. Scholtes, roundtable session, August 2026).*
 
+**Key papers**
+
+- Jobin et al. (2019), *The Global Landscape of AI Ethics Guidelines* — [Nature Machine Intelligence](https://doi.org/10.1038/s42256-019-0088-2)
+- Doshi-Velez & Kim (2017), *Towards a Rigorous Science of Interpretable Machine Learning* — [arXiv:1702.08608](https://arxiv.org/abs/1702.08608)
+- Cath (2018), *Governing Artificial Intelligence: Ethical, Legal and Technical Opportunities and Challenges* — [Phil. Trans. R. Soc. A](https://doi.org/10.1098/rsta.2018.0080)
+
 ---
 
 **Further reading on this site**

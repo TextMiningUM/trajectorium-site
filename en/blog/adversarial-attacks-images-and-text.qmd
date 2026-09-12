@@ -52,6 +52,12 @@ No single technique fully solves this, which is why real deployments layer sever
 
 Every one of these defenses is really doing the same underlying thing: making the model's decision boundary smoother, less sensitive to tiny or narrowly-targeted changes, and less trusting of any single unverified signal. None of them make a model perfectly unbreakable — this remains a genuinely active arms race between attack and defense research, on both images and text — but layering several of these together (adversarial training plus distillation plus input normalization plus detection) meaningfully raises the cost and difficulty of a successful attack, which in most real deployments is exactly the practical goal.
 
+**Key papers**
+
+- Goodfellow et al. (2014), *Explaining and Harnessing Adversarial Examples* (FGSM) — [arXiv:1412.6572](https://arxiv.org/abs/1412.6572)
+- Madry et al. (2017), *Towards Deep Learning Models Resistant to Adversarial Attacks* (PGD) — [arXiv:1706.06083](https://arxiv.org/abs/1706.06083)
+- Wallace et al. (2019), *Universal Adversarial Triggers for Attacking and Analyzing NLP* — [arXiv:1908.07125](https://arxiv.org/abs/1908.07125)
+
 ---
 
 **Further reading on this site**

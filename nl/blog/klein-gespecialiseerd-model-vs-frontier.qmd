@@ -58,6 +58,12 @@ De praktische implicaties reiken verder dan de ruwe cijfers:
 
 Een handvol procentpunten dat een 8-miljard-parameter specialist scheidt van een multi-triljoen-parameter generalist, op een taak die er werkelijk toe doet voor de operaties van een organisatie, is geen toeval en geen truc — het is het directe, voorspelbare resultaat van het ruilen van breedte voor diepte. Basismodellen zijn gebouwd om goed te zijn in bijna alles; een *fine-tuned* klein model gebouwd op de eigen procedurele data van een organisatie hoeft slechts goed te zijn in één ding. Wanneer dat ene ding eng genoeg is en de trainingsdata goed genoeg, houdt de omvangskloof op de doorslaggevende factor te zijn. Dat is het volledige argument voor het bouwen van je eigen gespecialiseerde agentische componenten bovenop een gestandaardiseerd basismodel, in plaats van de volledige capaciteit te huren van iemand anders' veel grotere, veel duurdere, veel minder beheersbare systeem.
 
+**Kernpublicaties**
+
+- Hu et al. (2022), *LoRA: Low-Rank Adaptation of Large Language Models* — [arXiv:2106.09685](https://arxiv.org/abs/2106.09685)
+- Sanh et al. (2019), *DistilBERT, a Distilled Version of BERT* — [arXiv:1910.01108](https://arxiv.org/abs/1910.01108)
+- Ouyang et al. (2022), *Training Language Models to Follow Instructions with Human Feedback* — [arXiv:2203.02155](https://arxiv.org/abs/2203.02155)
+
 ---
 
 **Verder lezen op deze site**

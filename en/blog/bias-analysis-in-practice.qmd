@@ -123,6 +123,13 @@ Bias analysis isn't a one-time checklist — it's a repeated process of measurin
 
 *Source: Algorithm Framework (Algoritmekader), Dutch Ministry of the Interior and Kingdom Relations, measure 5-VER-03.*
 
+**Key papers**
+
+- Bolukbasi et al. (2016), *Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings* — [arXiv:1607.06520](https://arxiv.org/abs/1607.06520)
+- Gonen & Goldberg (2019), *Lipstick on a Pig: Debiasing Methods Cover up Systematic Gender Biases* — [arXiv:1903.03862](https://arxiv.org/abs/1903.03862)
+- Hardt et al. (2016), *Equality of Opportunity in Supervised Learning* — [arXiv:1610.02413](https://arxiv.org/abs/1610.02413)
+- Barocas, Hardt & Narayanan, *Fairness and Machine Learning* — [fairmlbook.org](https://fairmlbook.org)
+
 ---
 
 **Further reading on this site**

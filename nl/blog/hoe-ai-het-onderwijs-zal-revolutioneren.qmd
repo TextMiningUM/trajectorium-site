@@ -65,6 +65,12 @@ De technologie werkt nu werkelijk, na decennia van onderzoek — dat deel staat 
 
 *Gebaseerd op "Exploring the Potential of AI Tutors in Higher Education" (Prof. dr. ir. Jan Scholtes, UM Education Day, juni 2025).*
 
+**Kernpublicaties**
+
+- Kasneci et al. (2023), *ChatGPT for Good? On Opportunities and Challenges of LLMs for Education* — [Learning and Individual Differences](https://doi.org/10.1016/j.lindif.2023.102274)
+- Bender et al. (2021), *On the Dangers of Stochastic Parrots* — [ACM FAccT 2021](https://doi.org/10.1145/3442188.3445922)
+- Mollick & Mollick (2023), *Assigning AI: Seven Approaches for Students, With Prompts* — [SSRN](https://ssrn.com/abstract=4391243)
+
 ---
 
 **Verder lezen op deze site**

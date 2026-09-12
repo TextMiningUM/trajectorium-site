@@ -63,6 +63,12 @@ De Stanford AI Index gebruikt de term "edge computing" niet, maar zijn eigen soe
 
 *Bron: Stanford HAI, [2026 AI Index Report](https://hai.stanford.edu/ai-index), hoofdstuk 8.3, "AI Sovereignty."*
 
+**Kernpublicaties**
+
+- Stanford HAI (2026), *AI Index Report* — [hai.stanford.edu/ai-index](https://hai.stanford.edu/ai-index)
+- Bommasani et al. (2021), *On the Opportunities and Risks of Foundation Models* — [arXiv:2108.07258](https://arxiv.org/abs/2108.07258)
+- European Commission (2024), *EU Artificial Intelligence Act* — [eur-lex.europa.eu](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+
 ---
 
 **Verder lezen op deze site**

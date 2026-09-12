@@ -91,6 +91,12 @@ An AI agent isn't a chatbot with a longer memory, and it isn't a rebrand of a 19
 
 *This post is a high-level overview. Later posts in this series go deeper into specific components — [RAG architectures and neural reranking](from-text-to-agentic-workflows.qmd), [multi-agent orchestration and governance](governing-the-autonomous-organization.qmd), and [the training data needed to specialize these components for a given domain](from-logbooks-to-agent-training-data.qmd).*
 
+**Key papers**
+
+- Russell & Norvig (2020), *Artificial Intelligence: A Modern Approach* (4th ed.) — [norvig.com/aima.html](http://norvig.com/aima.html)
+- Yao et al. (2022), *ReAct: Synergizing Reasoning and Acting in Language Models* — [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
+- Wang et al. (2023), *A Survey on Large Language Model Based Autonomous Agents* — [arXiv:2308.11432](https://arxiv.org/abs/2308.11432)
+
 ---
 
 **Further reading on this site**

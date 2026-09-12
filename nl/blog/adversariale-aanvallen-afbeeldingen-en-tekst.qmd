@@ -52,6 +52,12 @@ Geen enkele techniek lost dit volledig op, wat verklaart waarom echte implementa
 
 Elke verdediging doet eigenlijk hetzelfde: de beslissingsgrens van het model soepeler maken, minder gevoelig voor kleine of nauwkeurig gerichte veranderingen, en minder vertrouwend op een enkel niet-geverifieerd signaal. Geen van hen maakt een model perfect onbreekbaar — dit blijft een genuanceerd actieve wapenwedloop tussen aanvals- en verdedigingsonderzoek, op zowel afbeeldingen als tekst — maar het combineren van meerdere van deze technieken (adversariale training plus *distillation* plus invoernormalisatie plus detectie) verhoogt de kosten en moeilijkheid van een succesvolle aanval zinvol, wat in de meeste echte implementaties precies het praktische doel is.
 
+**Kernpublicaties**
+
+- Goodfellow et al. (2014), *Explaining and Harnessing Adversarial Examples* (FGSM) — [arXiv:1412.6572](https://arxiv.org/abs/1412.6572)
+- Madry et al. (2017), *Towards Deep Learning Models Resistant to Adversarial Attacks* (PGD) — [arXiv:1706.06083](https://arxiv.org/abs/1706.06083)
+- Wallace et al. (2019), *Universal Adversarial Triggers for Attacking and Analyzing NLP* — [arXiv:1908.07125](https://arxiv.org/abs/1908.07125)
+
 ---
 
 **Verder lezen op deze site**

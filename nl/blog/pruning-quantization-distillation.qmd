@@ -65,6 +65,13 @@ Voor een volledige behandeling van hoe *adversarial attacks* op afbeeldingen en 
 
 *Distillation*, *quantization* en *pruning* worden gewoonlijk gepresenteerd als afzonderlijke kostenoptimalisatietrucs, maar ze delen een rode draad: elk vraagt het model meer te doen met minder — minder parameters, minder bits, minder verbindingen — terwijl het gedrag dat er werkelijk toe doet behouden blijft. Dat is precies het mechanisme achter het "klein gespecialiseerd model dat bijna een frontiermodel evenaart"-resultaat dat eerder op deze site werd behandeld: een model heeft niet de volledige capaciteit van een generalist nodig als het alleen maar één ding goed hoeft te doen, en compressie is het concrete engineeringpad dat "heeft de capaciteit niet nodig" omzet in "heeft de capaciteit niet, en draait op een laptop in plaats van een datacenter." Lagere trainings- en inferentiekosten, echte on-device en edge-implementatie, en — als welkom neveneffect — een kleiner, moeilijker-te-benutten aanvalsoppervlak. Die combinatie is waarom dit een van de meest actieve onderzoeksgebieden in het vakgebied blijft.
 
+**Kernpublicaties**
+
+- Hinton et al. (2015), *Distilling the Knowledge in a Neural Network* — [arXiv:1503.02531](https://arxiv.org/abs/1503.02531)
+- Sanh et al. (2019), *DistilBERT, a Distilled Version of BERT* — [arXiv:1910.01108](https://arxiv.org/abs/1910.01108)
+- Ma et al. (2024), *The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits* (BitNet b1.58) — [arXiv:2402.17764](https://arxiv.org/abs/2402.17764)
+- Hu et al. (2022), *LoRA: Low-Rank Adaptation of Large Language Models* — [arXiv:2106.09685](https://arxiv.org/abs/2106.09685)
+
 ---
 
 **Verder lezen op deze site**

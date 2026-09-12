@@ -91,6 +91,12 @@ Een AI-agent is geen chatbot met een langer geheugen, en het is ook geen rebrand
 
 *Dit artikel is een overzicht op hoog niveau. Latere artikelen in deze reeks gaan dieper in op specifieke componenten — [RAG-architecturen en neurale herrangschikking](van-tekst-naar-agentische-workflows.qmd), [multi-agent-orkestratie en governance](het-autonome-bedrijf-besturen.qmd) en [de trainingsdata die nodig is om deze componenten te specialiseren](van-logboeken-naar-agent-trainingsdata.qmd).*
 
+**Kernpublicaties**
+
+- Russell & Norvig (2020), *Artificial Intelligence: A Modern Approach* (4e druk) — [norvig.com/aima.html](http://norvig.com/aima.html)
+- Yao et al. (2022), *ReAct: Synergizing Reasoning and Acting in Language Models* — [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
+- Wang et al. (2023), *A Survey on Large Language Model Based Autonomous Agents* — [arXiv:2308.11432](https://arxiv.org/abs/2308.11432)
+
 ---
 
 **Verder lezen op deze site**

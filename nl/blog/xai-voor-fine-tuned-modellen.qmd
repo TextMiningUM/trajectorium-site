@@ -81,6 +81,13 @@ Een basismodel via een API lenen betekent iemand anders' uitlegbaarheidsverplich
 
 *Gebaseerd op "XAI for NLP" (Advanced Natural Language Processing-cursus, Department of Advanced Computing Sciences).*
 
+**Kernpublicaties**
+
+- Ribeiro et al. (2016), *"Why Should I Trust You?": Explaining the Predictions of Any Classifier* (LIME) — [arXiv:1602.04938](https://arxiv.org/abs/1602.04938)
+- Lundberg & Lee (2017), *A Unified Approach to Interpreting Model Predictions* (SHAP) — [arXiv:1705.07874](https://arxiv.org/abs/1705.07874)
+- Sundararajan et al. (2017), *Axiomatic Attribution for Deep Networks* (Integrated Gradients) — [arXiv:1703.01365](https://arxiv.org/abs/1703.01365)
+- Vig (2019), *A Multiscale Visualization of Attention in the Transformer Model* (BERTViz) — [arXiv:1906.05714](https://arxiv.org/abs/1906.05714)
+
 ---
 
 **Verder lezen op deze site**

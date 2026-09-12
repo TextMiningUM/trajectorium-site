@@ -96,6 +96,12 @@ De laatste stap, en degene die publieke-sectorimplementaties zich het minst kunn
 
 Geen van deze acht stappen is optioneel als het doel werkelijke soevereiniteit is in plaats van een dunne wrapper rondom iemand anders' model. Maar geen ervan vereist ook het budget van een nationale overheid — dezelfde technieken behandeld in de eerdere artikelen van deze site over [landbouw](van-logboeken-naar-agent-trainingsdata.qmd), [institutionele strategie](de-institutionele-slotgracht.qmd), [soevereiniteit](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) en [modelcompressie](pruning-quantization-distillation.qmd) zijn direct toepasbaar, of de organisatie die de agent bouwt nu een kersenoogstcoöperatie is, een ziekenhuis, een bedrijfsjuridische afdeling of een gemeentelijk uitkeringskantoor. De rode draad in elke werkelijk soevereine implementatie is dezelfde: jouw eigen data, jouw eigen infrastructuur, jouw eigen expliciete normen voor wat het systeem wel en niet mag beslissen — met het basismodel teruggebracht tot precies wat het zou moeten zijn: een vervangbaar component in het midden van een architectuur die jouw organisatie werkelijk bezit.
 
+**Kernpublicaties**
+
+- Wang et al. (2023), *A Survey on Large Language Model Based Autonomous Agents* — [arXiv:2308.11432](https://arxiv.org/abs/2308.11432)
+- Lewis et al. (2020), *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks* — [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
+- European Commission (2024), *EU Artificial Intelligence Act* — [eur-lex.europa.eu](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+
 ---
 
 **Verder lezen op deze site**

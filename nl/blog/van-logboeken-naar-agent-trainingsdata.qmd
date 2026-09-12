@@ -60,6 +60,12 @@ Stap terug van de boomgaard specifiek en het patroon generaliseert schoon, en he
 
 Een logboekinvoer uit 2013, of een landbouwhandleiding uit 1890, werd nooit geschreven met een taalmodel in gedachten — en dat is precies waarom het zo goed werkt als trainingsdata. Het is eerlijk, concreet en verankerd in wat er werkelijk gebeurde, omdat het werd geschreven voor iemand die het zou moeten vertrouwen en herhalen. Die tekst omzetten in gestructureerde *retrieval*-data, *reranker*-paren, instructievoorbeelden, *preference pairs* en planningssjablonen is geen herinterpretatie van waar de kennis voor was — het is dezelfde overdracht van expertise van de ene beoefenaar naar de volgende, alleen met een nieuw soort opvolger aan het ontvangende einde.
 
+**Kernpublicaties**
+
+- Lewis et al. (2020), *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks* — [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
+- Rafailov et al. (2023), *Direct Preference Optimization* — [arXiv:2305.18290](https://arxiv.org/abs/2305.18290)
+- Yao et al. (2022), *ReAct: Synergizing Reasoning and Acting in Language Models* — [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
+
 ---
 
 **Verder lezen op deze site**

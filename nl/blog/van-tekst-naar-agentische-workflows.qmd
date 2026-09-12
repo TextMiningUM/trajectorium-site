@@ -71,6 +71,12 @@ Tekst omzetten in agentische trainingsdata is geen enkele technische truc — he
 
 *Voor een concreet domeinvoorbeeld van deze exacte *pipeline* toegepast op agrarische logboeken en institutionele kennis, zie [Van de volgende boerenknecht naar de volgende AI-agent](van-logboeken-naar-agent-trainingsdata.qmd).*
 
+**Kernpublicaties**
+
+- Lewis et al. (2020), *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks* — [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
+- Ouyang et al. (2022), *Training Language Models to Follow Instructions with Human Feedback* (InstructGPT) — [arXiv:2203.02155](https://arxiv.org/abs/2203.02155)
+- Rafailov et al. (2023), *Direct Preference Optimization* — [arXiv:2305.18290](https://arxiv.org/abs/2305.18290)
+
 ---
 
 **Verder lezen op deze site**

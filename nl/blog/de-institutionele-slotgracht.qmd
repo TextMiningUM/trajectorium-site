@@ -70,6 +70,12 @@ De vraag waarop elke CTO en CIO een eerlijk antwoord nodig heeft, is niet of ze 
 
 *Dit artikel put uit "The Institutional Moat: Beyond the Big Tech AI Trap" (Prof. dr. ir. J.C. Scholtes, Endeit Capital, maart 2026).*
 
+**Kernpublicaties**
+
+- Bommasani et al. (2021), *On the Opportunities and Risks of Foundation Models* — [arXiv:2108.07258](https://arxiv.org/abs/2108.07258)
+- Brown et al. (2020), *Language Models are Few-Shot Learners* (GPT-3) — [arXiv:2005.14165](https://arxiv.org/abs/2005.14165)
+- Ouyang et al. (2022), *Training Language Models to Follow Instructions with Human Feedback* — [arXiv:2203.02155](https://arxiv.org/abs/2203.02155)
+
 ---
 
 **Verder lezen op deze site**

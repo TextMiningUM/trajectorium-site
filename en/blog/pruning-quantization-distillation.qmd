@@ -65,6 +65,13 @@ For a full treatment of what adversarial attacks on images and text actually loo
 
 Distillation, quantization, and pruning are usually presented as separate cost-optimization tricks, but they share a common thread: each one asks the model to do more with less — fewer parameters, fewer bits, fewer connections — while preserving the behavior that actually matters. That's precisely the mechanism behind the ["small specialized model nearly matching a frontier model" result covered in an earlier post on this site](small-specialized-model-vs-frontier.qmd): a model doesn't need the full capacity of a generalist if it's only being asked to do one thing well, and compression is the concrete engineering path that turns "doesn't need the capacity" into "doesn't have the capacity, and runs on a laptop instead of a data center." Lower training and inference cost, genuine on-device and edge deployment, and — as a welcome side effect — a smaller, harder-to-exploit attack surface. That combination is why this remains one of the most active areas of research in the field.
 
+**Key papers**
+
+- Hinton et al. (2015), *Distilling the Knowledge in a Neural Network* — [arXiv:1503.02531](https://arxiv.org/abs/1503.02531)
+- Sanh et al. (2019), *DistilBERT, a Distilled Version of BERT* — [arXiv:1910.01108](https://arxiv.org/abs/1910.01108)
+- Ma et al. (2024), *The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits* (BitNet b1.58) — [arXiv:2402.17764](https://arxiv.org/abs/2402.17764)
+- Hu et al. (2022), *LoRA: Low-Rank Adaptation of Large Language Models* — [arXiv:2106.09685](https://arxiv.org/abs/2106.09685)
+
 ---
 
 **Further reading on this site**
