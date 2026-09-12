@@ -361,7 +361,16 @@ footer.footer {
       opacity: 0.5;
     }
   }
-}
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: rgba(255,255,255,0.5);
+      opacity: 1;
+    }
+  }}
 
 @keyframes ticker-scroll {
   0%   { transform: translateX(0); }

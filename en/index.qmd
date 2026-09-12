@@ -5,18 +5,18 @@ toc: false
 ---
 
 <div class="quote-ticker"><div class="quote-ticker-track">
-<span>If your entire AI strategy is a system prompt on top of GPT, you have a sandbox &mdash; not a moat.</span>
-<span>The moat isn&rsquo;t the model. It&rsquo;s the architecture &mdash; and the data &mdash; you build around it.</span>
-<span>An 8-billion-parameter model gets within 1.2 percentage points of a model 625 times its size. On the task that actually matters.</span>
-<span>&ldquo;The AI decided&rdquo; is not an answer. It&rsquo;s an evasion.</span>
-<span>A logbook written in 2013 to train the next farmhand is now training the next AI agent. The knowledge was always meant to be transferred.</span>
-<span>Your organization&rsquo;s SOPs, case files, and exception logs were written for the next human on the job. They&rsquo;ll work just as well for the next agent.</span>
-<span>If your entire AI strategy is a system prompt on top of GPT, you have a sandbox &mdash; not a moat.</span>
-<span>The moat isn&rsquo;t the model. It&rsquo;s the architecture &mdash; and the data &mdash; you build around it.</span>
-<span>An 8-billion-parameter model gets within 1.2 percentage points of a model 625 times its size. On the task that actually matters.</span>
-<span>&ldquo;The AI decided&rdquo; is not an answer. It&rsquo;s an evasion.</span>
-<span>A logbook written in 2013 to train the next farmhand is now training the next AI agent. The knowledge was always meant to be transferred.</span>
-<span>Your organization&rsquo;s SOPs, case files, and exception logs were written for the next human on the job. They&rsquo;ll work just as well for the next agent.</span>
+<span><a href="blog/the-institutional-moat.html">If your entire AI strategy is a system prompt on top of GPT, you have a sandbox &mdash; not a moat.</a></span>
+<span><a href="blog/the-institutional-moat.html">The moat isn&rsquo;t the model. It&rsquo;s the architecture &mdash; and the data &mdash; you build around it.</a></span>
+<span><a href="blog/small-specialized-model-vs-frontier.html">An 8-billion-parameter model gets within 1.2 percentage points of a model 625 times its size. On the task that actually matters.</a></span>
+<span><a href="blog/governing-the-autonomous-organization.html">&ldquo;The AI decided&rdquo; is not an answer. It&rsquo;s an evasion.</a></span>
+<span><a href="blog/from-logbooks-to-agent-training-data.html">A logbook written in 2013 to train the next farmhand is now training the next AI agent. The knowledge was always meant to be transferred.</a></span>
+<span><a href="blog/from-text-to-agentic-workflows.html">Your organization&rsquo;s SOPs, case files, and exception logs were written for the next human on the job. They&rsquo;ll work just as well for the next agent.</a></span>
+<span><a href="blog/the-institutional-moat.html">If your entire AI strategy is a system prompt on top of GPT, you have a sandbox &mdash; not a moat.</a></span>
+<span><a href="blog/the-institutional-moat.html">The moat isn&rsquo;t the model. It&rsquo;s the architecture &mdash; and the data &mdash; you build around it.</a></span>
+<span><a href="blog/small-specialized-model-vs-frontier.html">An 8-billion-parameter model gets within 1.2 percentage points of a model 625 times its size. On the task that actually matters.</a></span>
+<span><a href="blog/governing-the-autonomous-organization.html">&ldquo;The AI decided&rdquo; is not an answer. It&rsquo;s an evasion.</a></span>
+<span><a href="blog/from-logbooks-to-agent-training-data.html">A logbook written in 2013 to train the next farmhand is now training the next AI agent. The knowledge was always meant to be transferred.</a></span>
+<span><a href="blog/from-text-to-agentic-workflows.html">Your organization&rsquo;s SOPs, case files, and exception logs were written for the next human on the job. They&rsquo;ll work just as well for the next agent.</a></span>
 </div></div>
 
 ::: {.hero-banner}
@@ -31,7 +31,7 @@ toc: false
 ::: {.diagram-section}
 ## Components of an AI Agent
 
-![Components of an AI Agent](../images/ComponentsofAgent.png)
+<a href="blog/what-is-an-ai-agent.html"><img src="../images/ComponentsofAgent.png" alt="Components of an AI Agent" style="max-width:820px;width:100%;box-shadow:0 6px 24px rgba(0,0,0,0.14);" /></a>
 
 <p class="diagram-caption">An integrated system for autonomous behavior: every modern AI agent combines a core language model with memory, tools, planning, and guardrails.</p>
 :::

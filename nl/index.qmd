@@ -5,18 +5,18 @@ toc: false
 ---
 
 <div class="quote-ticker"><div class="quote-ticker-track">
-<span>Als je volledige AI-strategie bestaat uit een systeem-prompt bovenop GPT, heb je een sandbox &mdash; geen slotgracht.</span>
-<span>De slotgracht zit niet in het model. Het zit in de architectuur &mdash; en de data &mdash; die je eromheen bouwt.</span>
-<span>Een model met 8 miljard parameters komt binnen 1,2 procentpunt van een model dat 625 keer zo groot is. Op de taak die er werkelijk toe doet.</span>
-<span>&ldquo;De AI heeft besloten&rdquo; is geen antwoord. Het is een ontwijking.</span>
-<span>Een logboek uit 2013 geschreven voor de volgende boerenknecht traint nu de volgende AI-agent. De kennis was altijd bedoeld om over te dragen.</span>
-<span>De procedures en dossiers van jouw organisatie zijn geschreven voor de volgende mens op het werk. Ze werken net zo goed voor de volgende agent.</span>
-<span>Als je volledige AI-strategie bestaat uit een systeem-prompt bovenop GPT, heb je een sandbox &mdash; geen slotgracht.</span>
-<span>De slotgracht zit niet in het model. Het zit in de architectuur &mdash; en de data &mdash; die je eromheen bouwt.</span>
-<span>Een model met 8 miljard parameters komt binnen 1,2 procentpunt van een model dat 625 keer zo groot is. Op de taak die er werkelijk toe doet.</span>
-<span>&ldquo;De AI heeft besloten&rdquo; is geen antwoord. Het is een ontwijking.</span>
-<span>Een logboek uit 2013 geschreven voor de volgende boerenknecht traint nu de volgende AI-agent. De kennis was altijd bedoeld om over te dragen.</span>
-<span>De procedures en dossiers van jouw organisatie zijn geschreven voor de volgende mens op het werk. Ze werken net zo goed voor de volgende agent.</span>
+<span><a href="blog/de-institutionele-slotgracht.html">Als je volledige AI-strategie bestaat uit een systeem-prompt bovenop GPT, heb je een sandbox &mdash; geen slotgracht.</a></span>
+<span><a href="blog/de-institutionele-slotgracht.html">De slotgracht zit niet in het model. Het zit in de architectuur &mdash; en de data &mdash; die je eromheen bouwt.</a></span>
+<span><a href="blog/klein-gespecialiseerd-model-vs-frontier.html">Een model met 8 miljard parameters komt binnen 1,2 procentpunt van een model dat 625 keer zo groot is. Op de taak die er werkelijk toe doet.</a></span>
+<span><a href="blog/het-autonome-bedrijf-besturen.html">&ldquo;De AI heeft besloten&rdquo; is geen antwoord. Het is een ontwijking.</a></span>
+<span><a href="blog/van-logboeken-naar-agent-trainingsdata.html">Een logboek uit 2013 geschreven voor de volgende boerenknecht traint nu de volgende AI-agent. De kennis was altijd bedoeld om over te dragen.</a></span>
+<span><a href="blog/van-tekst-naar-agentische-workflows.html">De procedures en dossiers van jouw organisatie zijn geschreven voor de volgende mens op het werk. Ze werken net zo goed voor de volgende agent.</a></span>
+<span><a href="blog/de-institutionele-slotgracht.html">Als je volledige AI-strategie bestaat uit een systeem-prompt bovenop GPT, heb je een sandbox &mdash; geen slotgracht.</a></span>
+<span><a href="blog/de-institutionele-slotgracht.html">De slotgracht zit niet in het model. Het zit in de architectuur &mdash; en de data &mdash; die je eromheen bouwt.</a></span>
+<span><a href="blog/klein-gespecialiseerd-model-vs-frontier.html">Een model met 8 miljard parameters komt binnen 1,2 procentpunt van een model dat 625 keer zo groot is. Op de taak die er werkelijk toe doet.</a></span>
+<span><a href="blog/het-autonome-bedrijf-besturen.html">&ldquo;De AI heeft besloten&rdquo; is geen antwoord. Het is een ontwijking.</a></span>
+<span><a href="blog/van-logboeken-naar-agent-trainingsdata.html">Een logboek uit 2013 geschreven voor de volgende boerenknecht traint nu de volgende AI-agent. De kennis was altijd bedoeld om over te dragen.</a></span>
+<span><a href="blog/van-tekst-naar-agentische-workflows.html">De procedures en dossiers van jouw organisatie zijn geschreven voor de volgende mens op het werk. Ze werken net zo goed voor de volgende agent.</a></span>
 </div></div>
 
 ::: {.hero-banner}
@@ -31,7 +31,7 @@ toc: false
 ::: {.diagram-section}
 ## Componenten van een AI-agent
 
-![Componenten van een AI-agent](../images/ComponentsofAgent.png)
+<a href="blog/wat-is-een-ai-agent.html"><img src="../images/ComponentsofAgent.png" alt="Componenten van een AI-agent" style="max-width:820px;width:100%;box-shadow:0 6px 24px rgba(0,0,0,0.14);" /></a>
 
 <p class="diagram-caption">Een geïntegreerd systeem voor autonoom gedrag: elke moderne AI-agent combineert een kerntaalmodel met geheugen, tools, planning en guardrails.</p>
 :::
