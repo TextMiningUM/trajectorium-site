@@ -47,6 +47,21 @@ Never use emoji or emoticons in any `.qmd` content file, page titles, navigation
 ## Rule: consistent styling
 All new pages must follow the same layout patterns as the homepage: use CSS classes from `custom.scss` (`.feature-card`, `.hero-banner`, `.diagram-section`, etc.). Never add page-specific inline `<style>` blocks or override styles outside `custom.scss`.
 
+## Rule: blog cross-linking
+Every new blog post must be cross-linked with existing posts at publication time. Never publish a post in isolation.
+
+**When publishing a new post:**
+1. Add inline links within the new post's text wherever it references a concept already covered in another post (e.g. "as covered earlier on this site" becomes an actual link).
+2. Add a **"Further reading on this site" / "Verder lezen op deze site"** section at the end of the new post with 3–6 bullet links to the most relevant existing posts, each with a one-line description.
+3. Add a link back to the new post in the "Further reading" section of the 2–4 most thematically related existing posts (EN + NL simultaneously).
+
+**Structural consistency:** Every blog post must end with:
+- A horizontal rule (`---`)
+- A `**Further reading on this site**` / `**Verder lezen op deze site**` heading
+- 3–6 bullet links with one-line descriptions
+
+**NL cross-link filenames:** Always use the NL filename in NL posts (e.g. `de-institutionele-slotgracht.qmd`, not `the-institutional-moat.qmd`).
+
 ## Rule: NL translation of technical terms
 When writing Dutch (NL) translations of blog posts or other content, keep established AI and NLP technical terms in English and render them in *italics*. Do not force Dutch translations for terms that would read as unnatural or pedantic. Examples of terms to keep in English (italicised):
 
