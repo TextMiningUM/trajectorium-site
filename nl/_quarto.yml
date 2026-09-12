@@ -9,8 +9,13 @@ website:
   site-url: "https://trajectorium.ai/nl"
   site-map: true
   search: true
-  open-graph: true
-  twitter-card: true
+  open-graph:
+    description: "Onderzoek, tutorials en toepassingen op het gebied van AI-agents, energiezuinige soevereine architecturen en verantwoorde AI."
+    image: "/images/ComponentsofAgent.png"
+  twitter-card:
+    description: "Onderzoek, tutorials en toepassingen op het gebied van AI-agents, energiezuinige soevereine architecturen en verantwoorde AI."
+    image: "/images/ComponentsofAgent.png"
+    card-style: summary_large_image
   navbar:
     left:
       - text: "Home"

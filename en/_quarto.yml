@@ -9,8 +9,13 @@ website:
   site-url: "https://trajectorium.ai/en"
   site-map: true
   search: true
-  open-graph: true
-  twitter-card: true
+  open-graph:
+    description: "Research, tutorials, and applied cases on AI agents, energy-efficient sovereign architectures, and responsible AI."
+    image: "/images/ComponentsofAgent.png"
+  twitter-card:
+    description: "Research, tutorials, and applied cases on AI agents, energy-efficient sovereign architectures, and responsible AI."
+    image: "/images/ComponentsofAgent.png"
+    card-style: summary_large_image
   navbar:
     left:
       - text: "Home"
