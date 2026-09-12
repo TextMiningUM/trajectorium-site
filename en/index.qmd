@@ -36,7 +36,7 @@ toc: false
 <p class="diagram-caption">An integrated system for autonomous behavior: every modern AI agent combines a core language model with memory, tools, planning, and guardrails.</p>
 :::
 
-<div class="container py-5">
+<div class="container py-3">
 
 ## What is Trajectorium?
 

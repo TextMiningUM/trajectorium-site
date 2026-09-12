@@ -36,7 +36,7 @@ toc: false
 <p class="diagram-caption">Een geïntegreerd systeem voor autonoom gedrag: elke moderne AI-agent combineert een kerntaalmodel met geheugen, tools, planning en guardrails.</p>
 :::
 
-<div class="container py-5">
+<div class="container py-3">
 
 ## Wat is Trajectorium?
 
