@@ -1,0 +1,69 @@
+---
+title: "Het autonome bedrijf besturen: wie is verantwoordelijk als AI beslist?"
+description: "AI werkt eindelijk. Nu komt de moeilijkere vraag: hoe bestuur je een organisatie waarin AI analyseert, adviseert en handelt — terwijl de eindverantwoordelijkheid bij een mens blijft?"
+date: 2026-10-17
+categories: [governance]
+lang: nl
+---
+
+Na ongeveer veertig jaar "AI is er bijna" is het er eindelijk. Schaken in 1997, Jeopardy in 2011, Go in 2016, poker en DOTA 2 kort daarna, transformers in 2017, en nu agentische systemen die niet alleen vragen beantwoorden maar er ook op handelen. De technische vraag — kunnen we het laten werken? — is grotendeels beantwoord. De vraag die overblijft, en het is de moeilijkere, is organisatorisch: **hoe bestuur je een instelling waarin AI analyseert, adviseert en handelt, terwijl de eindverantwoordelijkheid nog steeds bij een mens ligt?**
+
+Dit is geen hypothetisch scenario voor een toekomstige bestuursvergadering. Het is al de operationele werkelijkheid op plaatsen die het verst zijn gegaan met agentische AI — waaronder, misschien verrassend, de Amerikaanse marine.
+
+## Het bestuursraamwerk dat niemand heeft opgeschreven (tot nu)
+
+Een nuttige manier om na te denken over het besturen van een AI-agent is de levenscyclus in vier fasen in te delen, elk met een eigen bestuursvraag — en elk met een bijbehorende evaluatiestandaard, zoals Stanford's HELM-benchmarksuite, die je iets concreets geeft om te meten in plaats van een vaag vertrouwensgevoel.
+
+**1. Training — is de basis solide?**
+Dit is de fase van pre-training en instructie-afstemming waarin het model patronen, taal en basistaken leert. De bestuursvraag hier is eenvoudig maar fundamenteel: heeft dit systeem voldoende nauwkeurigheid en kenniskwaliteit voor de scenario's die het daadwerkelijk zal tegenkomen? Als de basis zwak is, zal niets wat erop wordt gebouwd betrouwbaar zijn, hoe geavanceerd de toezichtlagen ook zijn.
+
+**2. Validatie — gedraagt het zich consistent onder druk?**
+Een agent testen in gesimuleerde omgevingen — kan het betrouwbaar API's aanroepen en code uitvoeren zonder te breken? — onthult twee governance-kritieke eigenschappen: robuustheid (veroorzaakt een kleine variatie in invoer een grote variatie in gedrag?) en kalibratie (weet het systeem hoe zeker het zou moeten zijn?). Een model dat tegelijkertijd fout en zelfverzekerd is, is veel gevaarlijker te besturen dan een model dat fout is maar dat ook zegt.
+
+**3. Reflectie — onderschept het zijn eigen fouten?**
+Agentische raamwerken zoals ReAct en Reflexion geven een systeem de mogelijkheid om naar de uitkomst van zijn eigen handeling te kijken — een foutmelding van een tool, een onverwacht resultaat — erover na te denken en zijn eigen plan te corrigeren. Vanuit een bestuursperspectief beoordeel je hier de aanpassingsvermogen: blijft de agent een logische, verdedigbare reeks stappen volgen, of ontspoort het onder onzekerheid? Dit is de laag die problemen opvangt voordat een mens dat ooit hoeft te doen.
+
+**4. Uitleg — kan het zijn werk laten zien?**
+Dit is Explainable AI (XAI): waarom koos de agent actie A in plaats van actie B? Een bestuurde agent moet zijn interne beslissingsboom blootleggen, het gewicht dat het aan concurrerende overwegingen gaf, of op zijn minst een duidelijk logboek — aan de menselijke toezichthouder die verantwoordelijk blijft voor de uitkomst. Dit is ook waar eerlijkheid en vermindering van vooringenomenheid in de praktijk worden afgedwongen, want je kunt niet controleren wat je niet kunt zien. Zonder deze laag is "de AI heeft besloten" geen antwoord — het is een uitvlucht.
+
+Samen zijn deze vier fasen niet alleen een engineeringpijplijn. Ze vormen een bestuursraamwerk: elke fase beantwoordt een specifieke vraag die een raad van bestuur, een toezichthouder of een auditor uiteindelijk zal stellen, en elke fase heeft een meetbare standaard achter zich in plaats van een handgebaar.
+
+## Hoe dit er in de praktijk uitziet: de Amerikaanse marine
+
+Abstracte raamwerken zijn gemakkelijker te vertrouwen als je kunt aantonen dat ze werken onder echte operationele druk. De recente agentische AI-implementaties van de Amerikaanse marine zijn instructief, precies omdat de inzet — veiligheid, kosten, inzetbereidheid van de missie — geen ruimte laat voor governance als bijzaak.
+
+**MyNavy HR: bureaucratie elimineren, niet alleen automatiseren.** Interne administratie was een van de grootste bronnen van verspilde tijd en frustratie voor matrozen, wat direct bijdroeg aan lagere retentie. Het antwoord van de marine was AI-agents te plaatsen als een onzichtbare vertaler tussen de matroos en de logge ERP-systemen van de marine — een matroos dient een HR-, salaris- of verlofwijziging in via een radicaal eenvoudige interface, en de agent werkt de backendsystemen autonoom bij. Het resultaat: honderdduizenden bespaarde arbeidsuren per jaar, een verminderd HR-personeelsbestand en operationele bemanningen bevrijd van papierwerk. De bestuursles hier is dat de matroos de AI nooit direct hoeft te begrijpen of te vertrouwen — ze vertrouwen erop dat de uitkomst correct is, omdat de governance één laag verder terug zit, in hoe de acties van de agent worden gevalideerd tegen HR-beleid.
+
+**Condition-Based Maintenance Plus (CBM+): soevereiniteit als bestuurseis, niet als voorkeur.** De marine stapt af van reactief of puur op kalender gebaseerd onderhoud op schepen en onderzeeërs, met behulp van wat zij Sovereign Edge AI noemen — modellen die fysiek en lokaal op het schip draaien, onafhankelijk van een satellietverbinding. Sensoren voeden een lokaal model; wanneer het een abnormaal patroon detecteert, genereert de agent niet alleen een rapport — het bestelt autonoom het benodigde reserveonderdeel en plant de reparatie voor de volgende havenbezoek. Het resultaat: enorme besparingen door het minimaliseren van "Wachten op onderdelen"-stilstand — een miljardenschip staat niet langer stil omdat een klep van honderd dollar ontbreekt. Let op wat hier het bestuurswerk doet: de AI is gemachtigd om te *handelen* (onderdelen bestellen, reparaties plannen) precies omdat het draait op infrastructuur die de marine volledig beheert, met een begrensd, goed getest actiebereik. Autonomie en soevereiniteit zijn geen afzonderlijke zorgen — de eerste hangt af van de tweede.
+
+**NAVSUP: predictieve logistiek die behoeften anticipeert.** Het Naval Supply Systems Command beheert wereldwijde depots en moet vloten op zee bevoorraden, waar bureaucratische vertraging daadwerkelijk gevaarlijk kan zijn. De AI koppelt een missieprofiel aan logistiek: als een vloot opereert in zwaar weer, berekent het systeem proactief verhoogde slijtage en positioneert de benodigde onderdelen vooruit in het dichtstbijzijnde depot — voordat de bemanning er zelfs om vraagt. Het resultaat is een bijna-eliminatie van dure noodlogistiekvluchten en een scherpe verlaging van overtollige "dode" voorraad die in havens ligt.
+
+Bij alle drie is het patroon hetzelfde: AI krijgt echte besluitvormings- en handelingsbevoegdheid, maar alleen binnen een strak bestuurde envelop — begrensde acties, lokale/soevereine infrastructuur waar de inzet dat vereist, en een duidelijke keten terug naar een mens die verantwoordelijk is voor de uitkomst.
+
+## Digitale soevereiniteit is onderdeel van governance, geen apart onderwerp
+
+Het is verleidelijk om "wie de beslissingen van de AI bestiert" en "wie de infrastructuur beheert waarop de AI draait" als twee verschillende gesprekken te behandelen. De CBM+-casus van de marine laat zien waarom het hetzelfde gesprek is. Het besturen van een autonoom besluitvormingssysteem vereist controle over:
+
+- **Trainingsinfrastructuur** — wie bepaalt wat het model leert
+- **Inferentie-infrastructuur**, inclusief edge-implementatie — waar en hoe het model werkelijk draait wanneer het een beslissing neemt
+- **Betrouwbare, vaak kleinere modellen** die je volledig kunt valideren, in plaats van een ondoorzichtig general-purpose model dat je alleen kunt aansturen via prompts
+- **Fine-tuning, RAG, RLHF en reflectie** — de mechanismen waarmee je gedrag daadwerkelijk kunt vormgeven in plaats van er alleen maar op te hopen
+- **Compressie, pruning en distillatie** — de technieken die het haalbaar maken om een bestuurbaar model lokaal, aan de edge, te draaien in plaats van afhankelijk te zijn van een externe API die je niet beheert
+
+Een organisatie die alleen de promptlaag bestiert, terwijl elke daadwerkelijke inferentie-aanroep naar infrastructuur gaat die ze niet beheert, heeft het governanceprobleem niet echt opgelost — ze heeft een deel ervan uitbesteed aan een partij buiten de verantwoordingsketen.
+
+## De open vraag: gecentraliseerde of gedecentraliseerde governance?
+
+Dit is waar het raamwerk geen gemakkelijke antwoorden meer heeft, en dat is eerlijk gezegd ook terecht. Moet AI-governance in een grote organisatie gecentraliseerd zijn — één orgaan dat standaarden, validatiedrempels en uitlegbaarheidsvereisten stelt voor elk AI-systeem in de organisatie — of gedecentraliseerd, waarbij elke afdeling of elk schip, in het geval van de marine, zijn eigen agents bestiert aan de hand van een gedeelde basislijn?
+
+Er valt voor beide een redelijk argument te maken. Gecentraliseerde governance geeft je consistentie, een enkel auditiepunt en schaalvoordelen in validatie- en XAI-tooling. Gedecentraliseerde governance geeft je snelheid en domeinspecifiek oordeel — het team dat AI voor scheepsonderhoud beheert begrijpt storingscondities die een centrale AI-ethietraad nooit in dezelfde diepte zal begrijpen. De meeste organisaties die het verst zijn gegaan met agentische AI lijken te convergeren op een hybride: centraal gedefinieerde *standaarden* (het vierfasenraamwerk hierboven, minimale XAI-vereisten, escalatiedrempels voor menselijke goedkeuring) gecombineerd met gedecentraliseerde *implementatie en monitoring* dicht bij waar de beslissingen daadwerkelijk worden genomen. Soevereiniteit en verantwoordelijkheid worden centraal vastgesteld; dagelijks oordeel blijft lokaal.
+
+## Waar te beginnen: HR, juridisch en financiën
+
+Als het besturen van agentische AI over een hele organisatie ontmoedigend aanvoelt, is er een gevestigde plek om de capaciteit op te bouwen voordat je die uitbreidt naar domeinen met hogere inzet: HR, interne juridische zaken en financiën. Deze functies opereren bijna volledig in een digitale en papieren realiteit — geen onvoorspelbare fysieke wereld van slecht weer, kapotte pompen of fysieke afstand om mee om te gaan. Ze werken met tekst en cijfers in kantoorbestanden, volgen strikte regels en protocollen, en vertegenwoordigen doorgaans een trage, dure flessenhals voor de rest van de organisatie. Die combinatie — hoge regeldichtheid, hoog volume, lage fysieke onvoorspelbaarheid — maakt ze de ideale laagrisico-proeflocatie voor het bovenstaande bestuursraamwerk: je kunt de vier fasen valideren, je uitlegbaarheidstooling testen en je escalatiedrempels vaststellen op een plek waar de kosten van een vroege fout een vertraagde factuur zijn, niet een gestrand schip.
+
+## De conclusie
+
+De technologievraag — werkt agentische AI daadwerkelijk? — ligt achter ons. Wat overblijft is de bestuursvraag, en die heeft nog geen enkel vaststaand antwoord, maar wel een werkbare vorm: train en valideer aan de hand van meetbare standaarden, bouw reflectie in zodat het systeem zijn eigen fouten onderschept, eis echte uitlegbaarheid zodat een mens de beslissing daadwerkelijk kan controleren, beheers de infrastructuur waarop de beslissingen worden genomen, en besluit bewust — niet per ongeluk — hoeveel ervan centraal staat versus dicht bij waar het werk plaatsvindt. Organisaties die dit behandelen als een engineeringbijzaak, zullen op de harde manier ontdekken dat "de AI heeft besloten" geen aanvaardbaar antwoord is voor een raad van bestuur, een toezichthouder of een matroos wiens schip in de haven staat.
+
+*Gebaseerd op "AI en Bestuurlijke Besluitvorming" (Prof. dr. ir. J.C. Scholtes, rondetafelsessie, augustus 2026).*
