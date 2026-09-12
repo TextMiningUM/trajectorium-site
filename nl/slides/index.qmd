@@ -37,15 +37,35 @@ toc: false
 
 </div>
 
-<div class="coming-soon-block">
+<div class="slide-block">
 
 ### Advanced Natural Language Processing
 
-<p class="course-meta" style="font-style:normal;">ANLP &mdash; DACS, Universiteit Maastricht &mdash; 2026&ndash;2027</p>
+<p class="course-meta">ANLP &mdash; DACS, Universiteit Maastricht &mdash; 2026&ndash;2027</p>
 
-De college-slides voor de ANLP-cursus worden momenteel toegevoegd. Bekijk de GitHub-repository voor de laatste aanvullingen.
+<table class="lecture-table">
+<tr><td class="lec-num">01</td><td class="lec-title">The Problem with NLP</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_01_The_Problem_with_NLP_2026-2027_ANNOTATED.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">02</td><td class="lec-title">Tokenization</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_02_Tokenization_2026-2027_ANNOTATED.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">03</td><td class="lec-title">Text and Document Representation</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_03_Text_and_Document_Representation_2026-2027_ANNOTATED.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">04</td><td class="lec-title">Measuring Quality in NLP</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_04_Measuring_Quality_in_NLP_2026-2027_ANNOTATED.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">05</td><td class="lec-title">Syntax and Semantics</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_05_Syntax_and_Semantics_2026-2027_ANNOTATED.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">06</td><td class="lec-title">Statistical NLP</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_06_Statistical_NLP_2025-2026_ANNOTATED.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">07</td><td class="lec-title">A History of Deep Learning</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_07_A_History_of_Deep_Learning_2026-2027_ANNOTATED.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">08</td><td class="lec-title">Deep Learning &mdash; Transfer Learning, Encoder-Decoder &amp; Attention</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_08_Deep_Learning_-_Transfer_Learning_Encoder-Decoder_Attention_2026-2027_ANNOTATED.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">09</td><td class="lec-title">Deep Learning &mdash; Self-Attention &amp; Transformers</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2009%20Deep%20Learning%20-%20Self-Attention%20Transformers%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">10</td><td class="lec-title">Deep Learning &mdash; BERT</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2010%20Deep%20Learning%20-%20BERT%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">11</td><td class="lec-title">GPT</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2011%20GPT%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">12</td><td class="lec-title">XAI for NLP</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2012%20XAI%20for%20NLP%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">13</td><td class="lec-title">Fine-Tuning LLMs</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2013%20Fine%20Tuning%20LLM%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">14</td><td class="lec-title">Distillation, Compression &amp; Pruning</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2014%20Distillation%20Compression%20Pruning%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">15</td><td class="lec-title">Speech Recognition</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Course%2015%20Speech%20Recognition%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">16</td><td class="lec-title">Multi-Modal Models</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2016%20Multi%20Modal%20Models%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">17</td><td class="lec-title">LLM as Agents</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2017%20LLM%20as%20Agents%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">18</td><td class="lec-title">Multi-Agent Orchestration</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2018%20Multi-Agent%20Orchestration%202026-2027.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">19</td><td class="lec-title">Examples of Applications</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2019%20Examples%20of%20Applications%20ANLP.pdf" target="_blank">Bekijk PDF &rarr;</a></td></tr>
+</table>
 
-[Bekijk Course Materials op GitHub &rarr;](https://github.com/TextMiningUM/ANLP-Student/tree/main/Course%20Materials){target="_blank" .btn .btn-primary style="font-style:normal;"}
+[Alle bestanden bekijken &rarr;](https://github.com/TextMiningUM/ANLP-Student/tree/main/Course%20Materials){target="_blank"}
 
 </div>
 
