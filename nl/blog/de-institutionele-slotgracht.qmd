@@ -2,6 +2,7 @@
 title: "De institutionele slotgracht: waarom CTO's niet kunnen stoppen bij prompts en skill files"
 description: "Prompts en Markdown-skill files bovenop Claude, GPT of Gemini zijn een vertrekpunt, geen strategie. Wat CTO's en CIO's daadwerkelijk moeten bouwen — en waarom de EU een extra reden heeft om niet te wachten."
 date: 2026-10-10
+author: "Jan Scholtes"
 categories: [enterprise-strategie]
 lang: nl
 ---

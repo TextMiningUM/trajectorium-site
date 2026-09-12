@@ -2,6 +2,7 @@
 title: "Van tekst naar actie: NLP-pipelines omzetten in agentische workflows"
 description: "Hoe ruwe, ongestructureerde tekst de trainingsdata wordt achter het geheugen, de tools, de redenering en de guardrails van een agent — en waarom die omzetting het echte concurrentievoordeel oplevert."
 date: 2026-09-26
+author: "Jan Scholtes"
 categories: [tekst-naar-actie]
 lang: nl
 ---

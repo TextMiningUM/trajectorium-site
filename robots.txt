@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trajectorium.ai/en/sitemap.xml
+Sitemap: https://trajectorium.ai/nl/sitemap.xml

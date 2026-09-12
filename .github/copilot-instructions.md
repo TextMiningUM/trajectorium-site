@@ -30,8 +30,9 @@ The assemble step in `.github/workflows/publish.yml` must always produce:
 ```
 _publish/
   index.html          ← root redirect
-  en/                 ← compiled EN site
-  nl/                 ← compiled NL site
+  robots.txt          ← allow all crawlers + sitemap references
+  en/                 ← compiled EN site (includes sitemap.xml)
+  nl/                 ← compiled NL site (includes sitemap.xml)
   images/             ← shared images (cp -r images _publish/images)
 ```
 If new shared asset folders are added to the repo root, add them here too.
