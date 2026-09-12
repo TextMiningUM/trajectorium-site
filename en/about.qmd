@@ -28,6 +28,22 @@ The posts on this site draw on that accumulated record: forty years of building 
 [textmining.nu](https://textmining.nu){.btn .btn-outline-primary target="_blank"}
 
 </div>
+
+---
+
+<div class="col-md-10 mx-auto mt-4">
+
+## The Name
+
+The Latin name for Maastricht is *Trajectum ad Mosam* — "the crossing at the Meuse." From *Traject*, add *-orium* as in *auditorium* or *laboratorium*, and you get *Trajectorium*: an institute for trajectories.
+
+The double meaning is intentional. A trajectory is a path through space and time — the route an object follows, the course a system traces, the chain of decisions an AI agent works through from observation to action. The word bridges classical Latin and contemporary AI in a single name, grounded in the city where the work happens.
+
+The metaphors run deeper than the etymology. The posts on this site argue that the most valuable trajectory in modern AI is the one from unstructured text — written by one generation of practitioners, for the benefit of the next — to training data for agents that carry that knowledge forward. A farming logbook written to train the next farmhand. A legal SOP written to train the next caseworker. A clinical note written for the next doctor on the ward. The knowledge was always meant to travel forward in time. What changed is who receives it at the other end.
+
+That trajectory — from human-readable to machine-learnable, from institutional memory to sovereign, energy-efficient AI that runs on infrastructure an organization actually controls — is the practical and intellectual concern this site exists to map.
+
+</div>
 <div class="col-md-4">
 
 <div class="slide-block">

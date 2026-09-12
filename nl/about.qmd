@@ -28,6 +28,22 @@ De bijdragen op deze site bouwen voort op die veertig jaar ervaring: het bouwen 
 [textmining.nu](https://textmining.nu){.btn .btn-outline-primary target="_blank"}
 
 </div>
+
+---
+
+<div class="col-md-10 mx-auto mt-4">
+
+## De naam
+
+De Latijnse naam voor Maastricht is *Trajectum ad Mosam* — "de oversteekplaats aan de Maas." Van *Traject*, voeg *-orium* toe zoals in *auditorium* of *laboratorium*, en je krijgt *Trajectorium*: een instituut voor trajecten.
+
+De dubbele betekenis is bewust. Een traject is een baan door ruimte en tijd — de route die een object volgt, de koers die een systeem beschrijft, de keten van beslissingen die een AI-agent doorwerkt van observatie naar handeling. Het woord verbindt klassiek Latijn en hedendaags AI-onderzoek in één naam, verankerd in de stad waar het werk plaatsvindt.
+
+De metaforen gaan dieper dan de etymologie. De artikelen op deze site betogen dat het meest waardevolle traject in moderne AI het traject is van ongestructureerde tekst — geschreven door één generatie beoefenaars, voor de volgende — naar trainingsdata voor agents die die kennis verder dragen. Een logboek geschreven om de volgende boerenknecht te trainen. Een juridische procedure geschreven voor de volgende dossierbeheerder. Een klinische notitie geschreven voor de volgende arts op de afdeling. De kennis was altijd bedoeld om vooruit te reizen in de tijd. Wat veranderde, is wie die aan het andere einde ontvangt.
+
+Dat traject — van menselijk-leesbaar naar machine-leerbaar, van institutioneel geheugen naar soevereine, energiezuinige AI die draait op infrastructuur die een organisatie werkelijk beheert — is de praktische en intellectuele zorg die deze site in kaart brengt.
+
+</div>
 <div class="col-md-4">
 
 <div class="slide-block">
