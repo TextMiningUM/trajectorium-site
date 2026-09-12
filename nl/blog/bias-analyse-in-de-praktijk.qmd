@@ -117,10 +117,6 @@ Voor iedereen die dit wil operationaliseren binnen een groter agentisch AI-proje
 4. **Documenteer elke oordeelsvraag expliciet**, inclusief waarom een bepaald verschil wel of niet gerechtvaardigd werd geacht.
 5. **Blijf monitoren na de livegang** — via het bezwaar- en klachtenproces, en door periodieke herhaling van de analyse.
 
-## Een noot over de wetenschappelijke bronnen
-
-De *fairness*-maatstaven en -concepten die hier worden genoemd (demographic parity, equalized odds, equal opportunity, de spanning tussen verschillende fairness-definities, alsmede Bolukbasi et al. 2016 en Gonen & Goldberg 2019 over het ontbevooroordeeld maken van woordvectoren) komen uit een gevestigde, brede onderzoekslijn binnen *fairness in machine learning*. De Word2Vec/GloVe-voorbeelden komen direct uit een hands-on tutorial over documentrepresentatie. Voor de overige citaten heb ik in dit gesprek geen zoektoegang om exacte jaren en volledige titels te verifiëren — controleer de precieze bronnen zelf voordat je ze citeert.
-
 ## De conclusie
 
 *Bias*-analyse is geen eenmalige checklist — het is een herhaald proces van meten, verklaren, rechtvaardigen en, waar nodig, bijsturen. De Nederlandse casussen hier laten zien dat dit geen theoretische oefening is: profielen die jaren in productie draaiden, bleken bij nader inzien onvoldoende onderbouwd en werden stopgezet. Bouw deze drie stappen in vanaf de ontwerpfase van je algoritme — niet als reactie op een incident achteraf.

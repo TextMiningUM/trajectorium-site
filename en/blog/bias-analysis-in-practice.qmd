@@ -117,10 +117,6 @@ For anyone looking to operationalize this within a larger agentic AI project —
 4. **Document every judgment call explicitly**, including why a given difference was or wasn't found to be justified. This is precisely what a regulator — or a court, if it ever comes to that — will want to see later.
 5. **Keep monitoring after go-live** — through the complaints and objections process, and through periodic repetition of the analysis, especially whenever the underlying population or the model changes.
 
-## A Note on the Scientific Sources
-
-The fairness metrics and concepts mentioned here (demographic parity, equalized odds, equal opportunity, the tension between different fairness definitions, as well as Bolukbasi et al. 2016 and Gonen & Goldberg 2019 on debiasing word embeddings) come from an established, broad line of research within fairness in machine learning. The Word2Vec/GloVe examples and the debiasing code example come directly from a hands-on tutorial on document representation. For the remaining citations, I don't have search access in this conversation to verify exact years and full titles — double-check the precise sources yourself before citing them.
-
 ## The Takeaway
 
 Bias analysis isn't a one-time checklist — it's a repeated process of measuring, explaining, justifying, and, where necessary, correcting course. The Dutch cases covered here show this isn't a theoretical exercise: profiles that ran in production for years turned out, on closer inspection, to be insufficiently substantiated and were discontinued. Build these three steps in from the design phase of your algorithm — not as a reaction to an incident after the fact.
