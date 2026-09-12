@@ -332,7 +332,57 @@ footer.footer {
   color: #4a5568;
   font-style: italic;
 }
+// ── Insights / quotes section ─────────────────────────────────────────────
 
+.insights-section {
+  background: $um-navy;
+  padding: 3.5rem 2rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-bottom: 0;
+}
+
+.insight-card {
+  border-left: 3px solid $um-blue;
+  padding: 1.25rem 1.25rem 1.25rem 1.75rem;
+  background: rgba(255,255,255,0.05);
+  height: 100%;
+  position: relative;
+  transition: background 0.2s;
+
+  &:hover { background: rgba(255,255,255,0.09); }
+
+  &::before {
+    content: '\201C';
+    font-size: 3rem;
+    color: $um-blue;
+    opacity: 0.6;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.4rem;
+    line-height: 1;
+    font-family: Georgia, serif;
+  }
+
+  p {
+    font-style: italic;
+    font-size: 0.97rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 0.75rem;
+    line-height: 1.65;
+    padding-top: 0.5rem;
+  }
+
+  .insight-source {
+    font-size: 0.75rem;
+    color: $um-blue;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    a { color: $um-blue; text-decoration: none; &:hover { color: lighten($um-blue, 20%); } }
+  }
+}
 // ── Course cards (notebooks / tutorials section) ────────────────────────
 
 .course-card {

@@ -21,6 +21,44 @@ toc: false
 <p class="diagram-caption">An integrated system for autonomous behavior: every modern AI agent combines a core language model with memory, tools, planning, and guardrails.</p>
 :::
 
+::: {.insights-section}
+<div class="container">
+<div class="row g-4">
+
+<div class="col-md-6"><div class="insight-card">
+<p>If your entire AI strategy is a system prompt on top of GPT, you have a sandbox &mdash; not a moat.</p>
+<div class="insight-source"><a href="blog/the-institutional-moat.qmd">The Institutional Moat</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>The moat isn&rsquo;t the model. It&rsquo;s the architecture &mdash; and the data &mdash; you build around it.</p>
+<div class="insight-source"><a href="blog/the-institutional-moat.qmd">The Institutional Moat</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>An 8-billion-parameter model gets within 1.2 percentage points of a model 625 times its size. On the task that actually matters.</p>
+<div class="insight-source"><a href="blog/small-specialized-model-vs-frontier.qmd">David vs. Goliath: Small Model vs. Frontier</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>&ldquo;The AI decided&rdquo; is not an answer. It&rsquo;s an evasion.</p>
+<div class="insight-source"><a href="blog/governing-the-autonomous-organization.qmd">Governing the Autonomous Organization</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>A logbook written in 2013 to train the next farmhand is now training the next AI agent. The knowledge was always meant to be transferred.</p>
+<div class="insight-source"><a href="blog/from-logbooks-to-agent-training-data.qmd">From Logbooks to Agent Training Data</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>Your organization&rsquo;s SOPs, case files, and exception logs were written for the next human on the job. They&rsquo;ll work just as well for the next agent.</p>
+<div class="insight-source"><a href="blog/from-text-to-agentic-workflows.qmd">From Text to Action</a></div>
+</div></div>
+
+</div>
+</div>
+:::
+
 <div class="container py-5">
 
 ## What is Trajectorium?

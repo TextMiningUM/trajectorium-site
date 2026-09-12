@@ -21,6 +21,44 @@ toc: false
 <p class="diagram-caption">Een geïntegreerd systeem voor autonoom gedrag: elke moderne AI-agent combineert een kerntaalmodel met geheugen, tools, planning en guardrails.</p>
 :::
 
+::: {.insights-section}
+<div class="container">
+<div class="row g-4">
+
+<div class="col-md-6"><div class="insight-card">
+<p>Als je volledige AI-strategie bestaat uit een systeem-prompt bovenop GPT, heb je een sandbox &mdash; geen slotgracht.</p>
+<div class="insight-source"><a href="blog/de-institutionele-slotgracht.qmd">De institutionele slotgracht</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>De slotgracht zit niet in het model. Het zit in de architectuur &mdash; en de data &mdash; die je eromheen bouwt.</p>
+<div class="insight-source"><a href="blog/de-institutionele-slotgracht.qmd">De institutionele slotgracht</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>Een model met 8 miljard parameters komt binnen 1,2 procentpunt van een model dat 625 keer zo groot is. Op de taak die er werkelijk toe doet.</p>
+<div class="insight-source"><a href="blog/klein-gespecialiseerd-model-vs-frontier.qmd">David tegen Goliath: klein model versus frontier</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>&ldquo;De AI heeft besloten&rdquo; is geen antwoord. Het is een ontwijking.</p>
+<div class="insight-source"><a href="blog/het-autonome-bedrijf-besturen.qmd">Het autonome bedrijf besturen</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>Een logboek geschreven in 2013 om de volgende boerenknecht te trainen, traint nu de volgende AI-agent. De kennis was altijd bedoeld om over te dragen.</p>
+<div class="insight-source"><a href="blog/van-logboeken-naar-agent-trainingsdata.qmd">Van logboeken naar agent-trainingsdata</a></div>
+</div></div>
+
+<div class="col-md-6"><div class="insight-card">
+<p>De procedures, dossiers en uitzonderingslogboeken van jouw organisatie zijn geschreven voor de volgende mens op het werk. Ze werken net zo goed voor de volgende agent.</p>
+<div class="insight-source"><a href="blog/van-tekst-naar-agentische-workflows.qmd">Van tekst naar actie</a></div>
+</div></div>
+
+</div>
+</div>
+:::
+
 <div class="container py-5">
 
 ## Wat is Trajectorium?
