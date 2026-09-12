@@ -14,7 +14,7 @@ toc: false
 <div class="row g-4">
 <div class="col-md-6"><div class="course-card">
 
-### Information Retrieval & Text Mining
+### Agentic Conversational Search
 
 <p class="course-meta">IRTM &mdash; DACS, Universiteit Maastricht</p>
 
