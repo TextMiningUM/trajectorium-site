@@ -16,7 +16,7 @@ toc: false
 ::: {.diagram-section}
 ## Components of an AI Agent
 
-![Components of an AI Agent](../images/ComponentsofAgent.jpg)
+![Components of an AI Agent](../images/ComponentsofAgent.png)
 
 <p class="diagram-caption">An integrated system for autonomous behavior: every modern AI agent combines a core language model with memory, tools, planning, and guardrails.</p>
 :::

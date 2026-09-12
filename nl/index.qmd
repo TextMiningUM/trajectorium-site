@@ -16,7 +16,7 @@ toc: false
 ::: {.diagram-section}
 ## Componenten van een AI-agent
 
-![Componenten van een AI-agent](../images/ComponentsofAgent.jpg)
+![Componenten van een AI-agent](../images/ComponentsofAgent.png)
 
 <p class="diagram-caption">Een geïntegreerd systeem voor autonoom gedrag: elke moderne AI-agent combineert een kerntaalmodel met geheugen, tools, planning en guardrails.</p>
 :::
