@@ -258,6 +258,81 @@ footer.footer {
   }
 }
 
+// ── Slide / lecture list ──────────────────────────────────────────────────────
+
+.slide-block {
+  border: 1px solid $um-border;
+  border-top: 4px solid $um-navy;
+  padding: 2rem;
+  background: #fff;
+  margin-bottom: 2.5rem;
+
+  h3 {
+    color: $um-navy;
+    font-size: 1.2rem;
+    border: none;
+    margin-bottom: 0.25rem;
+  }
+
+  .course-meta {
+    color: $um-blue;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.lecture-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+
+  tr {
+    border-bottom: 1px solid $um-border;
+
+    &:last-child { border-bottom: none; }
+    &:hover { background: $um-light; }
+  }
+
+  td {
+    padding: 0.6rem 0.5rem;
+    vertical-align: middle;
+
+    &.lec-num {
+      width: 2.5rem;
+      color: $um-blue;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    &.lec-title { color: $um-navy; }
+
+    &.lec-link {
+      width: 6rem;
+      text-align: right;
+
+      a {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+    }
+  }
+}
+
+.coming-soon-block {
+  border: 1px dashed $um-border;
+  border-left: 5px solid $um-border;
+  padding: 1.75rem 2rem;
+  background: $um-light;
+  color: #4a5568;
+  font-style: italic;
+}
+
 // ── Course cards (notebooks / tutorials section) ────────────────────────
 
 .course-card {
