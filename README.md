@@ -1,17 +1,18 @@
-# Tweetalige Quarto-site — structuur
+# Trajectorium — Bilingual Quarto Site
 
-## Waarom twee subprojecten in plaats van één?
+## Why two sub-projects instead of one?
 
-Quarto heeft geen ingebouwde i18n voor websites. Het gangbare patroon is daarom
-**twee losse Quarto-projecten** (`/en` en `/nl`), elk met een eigen `_quarto.yml`,
-navbar en `lang:`-instelling. Een `index.html` op de root stuurt bezoekers door
-of laat ze kiezen.
+Quarto has no built-in i18n support for websites. The standard pattern is therefore
+**two separate Quarto projects** (`/en` and `/nl`), each with its own `_quarto.yml`,
+navbar, and `lang:` setting. A root `index.html` redirects visitors to `/en/` by default.
 
 ```
-quarto-site/
-├── index.html              ← taalkeuze / redirect naar /en
+trajectorium-site/
+├── index.html              ← language redirect to /en
+├── images/                 ← shared images for both language sites
+├── custom.scss             ← shared theme, referenced as ../custom.scss
 ├── en/
-│   ├── _quarto.yml         ← eigen navbar, site-url, hreflang
+│   ├── _quarto.yml         ← navbar, site-url, hreflang for EN
 │   ├── index.qmd
 │   ├── blog/
 │   │   └── what-is-an-ai-agent.qmd
@@ -26,51 +27,43 @@ quarto-site/
     └── slides/
 ```
 
-## Bouwen — automatisch via GitHub Actions (aanbevolen)
+## Building — automatically via GitHub Actions (recommended)
 
-Er staat al een workflow klaar op `.github/workflows/publish.yml`. Deze:
+A workflow is already configured at `.github/workflows/publish.yml`. It:
 
-1. Rendert `en/` en `nl/` apart met Quarto
-2. Verzamelt de output samen met `index.html` in één `_publish`-map
-3. Publiceert die map naar GitHub Pages
+1. Renders `en/` and `nl/` separately with Quarto
+2. Assembles the output together with `index.html` and `images/` into a single `_publish/` folder
+3. Publishes that folder to GitHub Pages
 
-**Wat je zelf moet doen om dit te activeren:**
+**Steps to activate:**
 
-1. In je repo: **Settings → Pages → Source** → kies **"GitHub Actions"**
-   (niet "Deploy from a branch" — die optie is voor Jekyll en niet relevant hier)
-2. Pas het `CNAME`-bestand in de root aan met jouw eigen domein
-   (staat nu op `balyzai.nl`, wijzig dit zodra je naar `trajectorium.ai` overstapt)
-3. Commit en push alles naar de `main`-branch — de workflow start automatisch
-4. Volg de voortgang onder het tabblad **Actions** in je repo
-5. Zodra de eerste run succesvol is, verschijnt bij Settings → Pages ook de
-   "Enforce HTTPS"-optie — vink die aan
+1. In the repo: **Settings → Pages → Source** → select **"GitHub Actions"**
+2. The `CNAME` file is already set to `balyzai.nl`
+3. Commit and push to the `main` branch — the workflow starts automatically
+4. Monitor progress under the **Actions** tab in the repo
+5. Once the first run succeeds, enable **"Enforce HTTPS"** under Settings → Pages
 
-## Handmatig bouwen (optioneel, voor lokaal testen)
+## Building locally (optional)
 
 ```bash
 cd en && quarto render
 cd ../nl && quarto render
 ```
 
-Beide outputs komen terecht in `_site/en` en `_site/nl` (zie `output-dir` in
-de `_quarto.yml`'s) — handig om lokaal te previewen (`quarto preview` vanuit
-elke taalmap) voordat je pusht.
+Outputs are written to `_site/en` and `_site/nl` (see `output-dir` in each `_quarto.yml`).
+Use `quarto preview` from within a language folder to preview locally before pushing.
 
-## SEO-checklist per taalversie
+## SEO checklist per language version
 
-- [ ] `lang:` correct gezet in elke `_quarto.yml` (en/nl)
-- [ ] `hreflang` alternate-tags wijzen naar elkaar (al opgenomen in `include-in-header`)
-- [ ] `canonical` tag wijst naar de eigen taalversie (niet naar de andere taal)
-- [ ] Eigen `site-url` per taal, zodat sitemap.xml per taal correct genereert
-- [ ] Content is herschreven per taal (niet 1-op-1 machinevertaald) — andere
-      zoekintentie, andere keywords per taal
-- [ ] Interne links binnen een taalversie blijven binnen die taalversie
+- [ ] `lang:` correctly set in each `_quarto.yml` (en / nl)
+- [ ] `hreflang` alternate tags point to each other (already included in `include-in-header`)
+- [ ] `canonical` tag points to the correct language version
+- [ ] Separate `site-url` per language so each sitemap.xml generates correctly
+- [ ] Content is rewritten per language — not machine-translated 1:1
+- [ ] Internal links within a language version stay within that language version
 
-## Vervolgstappen
+## Next steps
 
-1. Vervang `yourdomain.com` / `jouwdomein.nl` door je echte domein in beide
-   `_quarto.yml`-bestanden.
-2. Vul de voorbeeld-blogposts aan met echte content (zie content-plan).
-3. Voeg `notebooks/index.qmd` en `slides/index.qmd` toe per taal zodra je
-   die content hebt.
-4. Koppel je TransIP-domein via DNS aan GitHub Pages (CNAME/A-records).
+1. Fill in the example blog posts with real content.
+2. Add notebooks and slides as content becomes available.
+3. Connect your domain via DNS to GitHub Pages (CNAME / A-records).
