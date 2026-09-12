@@ -332,6 +332,42 @@ footer.footer {
   color: #4a5568;
   font-style: italic;
 }
+// ── Quote ticker (between navbar and hero) ────────────────────────────────
+
+.quote-ticker {
+  background: $um-blue;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0.55rem 0;
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.quote-ticker-track {
+  display: inline-block;
+  animation: ticker-scroll 90s linear infinite;
+
+  span {
+    margin: 0 2.5rem;
+    opacity: 0.92;
+
+    &::before {
+      content: '\2014\00A0';  /* em dash + space */
+      opacity: 0.5;
+    }
+  }
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 // ── Insights / quotes section ─────────────────────────────────────────────
 
 .insights-section {
