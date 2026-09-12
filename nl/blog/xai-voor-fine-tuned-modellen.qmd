@@ -1,0 +1,93 @@
+---
+title: "Waarom je een model niet kunt fine-tunen, trainen of destilleren zonder XAI"
+description: "Op het moment dat je begint met fine-tunen, trainen of destilleren van je eigen modellen, neem je volledige verantwoordelijkheid voor hoe ze redeneren — niet alleen voor wat ze uitvoeren. Explainable AI is wat je in staat stelt dat werkelijk te verifiëren."
+date: 2026-08-22
+categories: [fundamenten, governance]
+lang: nl
+---
+
+Als je de API van een basismodel aanroept, leen je iemand anders' redenering en iemand anders' verantwoordelijkheid. Op het moment dat je het *fine-tunet* op je eigen data, het destilleert in een kleiner studentmodel, of een gespecialiseerd component helemaal opnieuw traint — zoals behandeld in de eerdere artikelen op deze site over [soevereine agents bouwen](een-soevereine-ai-agent-bouwen.qmd) en [modellen comprimeren voor lokale implementatie](pruning-quantization-distillation.qmd) — verdwijnt die geleende verantwoordelijkheid. Het gedrag van het model is nu *jouw* gedrag. En een model dat goed presteert op je validatieset kan nog steeds redeneren op manieren die je nooit zou goedkeuren als je ze werkelijk kon zien. Dit artikel behandelt wat XAI (*eXplainable AI*) eigenlijk is, de concrete gereedschapskist om in een model te kijken, en waarom dit niet langer optioneel is op het moment dat jij degene bent die het traint.
+
+## Drie woorden die geen synoniemen zijn
+
+Beoefenaars gebruiken "transparantie", "interpreteerbaarheid" en "uitlegbaarheid" vaak door elkaar, maar ze betekenen werkelijk verschillende dingen:
+
+- **Transparantie** bestaat wanneer het proces dat modelparameters extraheert uit trainingsdata, en labels genereert uit testdata, kan worden beschreven en gerechtvaardigd door de persoon die de aanpak ontwierp.
+- **Interpreteerbaarheid** is het vermogen het model te begrijpen en de basis voor zijn besluitvorming te presenteren op een manier die een mens werkelijk kan volgen.
+- **Uitlegbaarheid** — een term waarover nog geen volledige consensus bestaat in het vakgebied — is het best te begrijpen als de set kenmerken uit een interpreteerbaar domein die bijdroegen aan een specifieke beslissing voor een specifiek voorbeeld.
+
+Het onderscheid doet er praktisch toe: je kunt een transparant proces hebben (je weet precies welk algoritme je gebruikte en waarom) zonder een interpreteerbaar model te hebben (je kunt nog steeds geen enkele individuele beslissing uitleggen).
+
+## Wat telt werkelijk als een geldige uitleg?
+
+Dit verdient serieuze aandacht als een werkelijk menselijke, sociale vraag, niet alleen een technische. Een geldige uitleg is onderdeel van een sociale interactie — die moet deugdelijk, overtuigend en begrijpelijk zijn, en vertrouwen wekken bij de ontvanger, gegeven als een stapsgewijze overdracht van kennis die ze werkelijk kunnen volgen. Daarnaast moet een goede uitleg het verschil laten zien tussen mogelijke uitkomsten (waarom *dit* antwoord in plaats van dat), relevant zijn voor wat de persoon werkelijk wil weten, en — belangrijk — mag onvolledig zijn. Het benadrukken van een paar relevante voorbeelden is vaak voldoende; een uitleg hoeft niet volledig uitputtend te zijn om nuttig te zijn.
+
+## De fundamentele afruil: nauwkeurigheid versus uitlegbaarheid
+
+Er bestaat een bekende, ruwe hiërarchie van modelfamilies, van sterk interpreteerbaar maar vaak minder krachtig (beslisbomen, lineaire/logistische modellen, eenvoudige statistische modellen) tot sterk nauwkeurig maar veel moeilijker te interpreteren (deep learning, ensemblemethoden, grote neurale netwerken). Drie brede strategieën bestaan om met deze afruil om te gaan:
+
+1. **Interpreteerbare modellen** — technieken die inherent gestructureerde, causale, interpreteerbare modellen leren.
+2. **Diepe uitleg** — aangepaste *deep learning*-technieken die specifiek ontworpen zijn om uitlegbare kenmerken te leren als onderdeel van training.
+3. ***Model induction*** — technieken die een uitlegbaar model afleiden van elk ander model, puur behandeld als een *black box*.
+
+De meeste praktische tools hieronder vallen in de derde categorie — ze vereisen niet dat je je architectuur wijzigt, alleen dat je die achteraf ondervraagt.
+
+## De praktische XAI-gereedschapskist
+
+### *Attention*-visualisatie: BERTViz en exBERT
+
+**BERTViz** biedt een interactieve manier om *attention*-gewichten te visualiseren in *transformer*-modellen (BERT, GPT-2, T5 en de meeste Huggingface-modellen). De ***head view*** toont *attention* van het ene *token* naar het andere binnen één laag, waarbij lijngewicht de *attention*-sterkte weergeeft en kleur de *head* identificeert. De ***model view*** geeft een overzicht over het hele model — elke laag en elke *head* tegelijk. **exBERT** gaat verder door *attention*-visualisatie te combineren met contextueel *embedding*-zoeken, waarmee je andere contexten in een *corpus* kunt vinden die vergelijkbare *embeddings* produceerden voor een gegeven *token*.
+
+### Kenmerktoeschrijving: *gradient*-gebaseerde *saliency* en Integrated Gradients
+
+*Saliency*-methoden scoren hoe belangrijk elk invoer-*token* was voor een specifieke uitvoer. Het mechanisme: de uiteindelijke verborgen toestand van het model wordt geprojecteerd op zijn woordenschat, waardoor een score per mogelijk volgend *token* ontstaat; na het selecteren van het gegenereerde *token* bereken je de *gradient* van dat geselecteerde logit ten opzichte van elk invoer-*token*, terugpropagerend tot aan de invoer.
+
+In de praktijk, met een bibliotheek zoals **Inseq** met Integrated Gradients, kun je dit letterlijk zien werken: GPT-2 vragen "Heathrow airport is located in the city of" te voltooien en zien op welke invoer-*tokens* het model daadwerkelijk steunde om "London" te produceren. Een opvallende demonstratie: het verwisselen van één woord kan de sentimentvoorspelling van het model volledig omdraaien, wat precies het soort kwetsbaarheid is dat *saliency*-analyse blootlegt maar een eenvoudig nauwkeurigheidsgetal nooit zou onthullen.
+
+### Perturbatiemethoden: LIME en SHAP
+
+**LIME** (Local Interpretable Model-agnostic Explanations, Ribeiro, Singh & Guestrin, 2016) behandelt het model als een *black box* en vraagt: wat gebeurt er met de voorspelling als ik de invoer verstoor? Het genereert een nieuwe dataset van verstoorde samples plus de voorspellingen van het *black box*-model erop, en traint vervolgens een eenvoudig, interpreteerbaar lokaal model gewogen naar nabijheid bij de oorspronkelijke instantie. De echte zwakheden zijn het vermelden waard: het definiëren van de juiste "buurt" voor verstoring is een onopgelost probleem, uitleggen kunnen instabiel zijn, en — het meest zorgwekkend voor alles wat compliance-gerelateerd is — LIME-uitleggen kunnen opzettelijk gemanipuleerd worden om *bias* te verbergen.
+
+**SHAP** (SHapley Additive exPlanations) neemt een wiskundig meer gefundeerde route, waarbij Shapley-waarden uit de coöperatieve speltheorie worden geleend: elk kenmerk wordt behandeld als een "speler" en zijn bijdrage is zijn gemiddeld marginaal effect over elke mogelijke combinatie van kenmerken. Een SHAP-plot toont typisch de gemiddelde voorspelling van het model over een dataset als basislijn, waarna precies wordt getoond hoeveel elk individueel kenmerk de voorspelling omhoog of omlaag duwde. De eerlijke afruil ten opzichte van LIME: SHAP is veel computationeel duurder, maar heeft een veel sterkere theoretische garantie van consistentie.
+
+### Verder kijken dan *attention*: neuronactivaties en de straatlantaarnfout
+
+Hier is een werkelijk belangrijk en ondergewaardeerd punt. Het *feed-forward*-netwerk (FFN) boven het *self-attention*-blok in een *transformer* bevat ruwweg **twee derde van alle parameters van het model** — het is de primaire opslag van de geleerde capaciteit van het model. Toch richten de overgrote meerderheid van populaire NLP-uitlegbaarheidshulpmiddelen (BERTViz, *self-attention*-warmtekaarten) zich bijna uitsluitend op het *attention*-mechanisme, grotendeels omdat *attention*-gewichten gemakkelijk te visualiseren zijn als lijnen die woorden verbinden. Dat is de moeite waard te benoemen voor wat het werkelijk is: een versie van de straatlantaarnfout — zoeken waar het licht gemakkelijk schijnt, in plaats van waar de berekening daadwerkelijk plaatsvindt.
+
+## Waarom dit niet langer optioneel is als je zelf het model traint
+
+Alles hierboven is nuttig voor het begrijpen van elk model, inclusief een model dat je alleen via een API aanroept. Het wordt een werkelijke vereiste — geen nice-to-have — op het moment dat je zelf *fine-tunet*, destilleert of een component traint, om meerdere concrete redenen.
+
+***Fine-tuning* en *distillation* kunnen veranderen *hoe* een model beslist zonder te veranderen *of* het het juiste antwoord geeft.** Zoals behandeld in het [eerdere artikel over *pruning*, *quantization* en *distillation*](pruning-quantization-distillation.qmd), is een gedestilleerd studentmodel getraind om de verzachte uitvoerdistributie van een *teacher* te matchen — maar het matchen van de uitvoerdistributie garandeert niet dat de student via dezelfde redeneerroute aankwam. Een validatienauwkeurigheidsscore die identiek lijkt voor en na *distillation* kan een werkelijk ander — en mogelijk minder betrouwbaar — beslissingsproces verbergen. XAI-tools zijn hoe je dit daadwerkelijk controleert.
+
+**Dit verbindt direct met de "getrouwheid versus plausibiliteit"-val.** Een methode als LIME is specifiek gebouwd om een vereenvoudigde, voor mensen aangenaam lokale benadering te produceren. Dat roept een ongemakkelijke vraag op: als je de uitleggen van je *fine-tuned* model controleert en ze redelijk lijken, verifieer je dan dat het model werkelijk op die manier redeneerde, of genereer je gewoon een geruststellende post-hoc rationalisatie? Dit is precies waarom een serieus verificatieproces voor een zelf-getraind model meer dan één XAI-methode nodig heeft.
+
+***Fine-tuning* kan nieuwe adversariale kwetsbaarheid introduceren die een schone validatieset niet zal onthullen.** Zoals behandeld in het [eerdere artikel over adversariale aanvallen](adversariale-aanvallen-afbeeldingen-en-tekst.qmd), kan een model dat *fine-tuned* is op een engere dataset gevoeliger worden voor kleine, betekenisbehoudende verstoringen. Er is een concrete detectiemethode die het waard is als standaardstap te adopteren: voer LIME uit op een voorbeeld vóór een adversariale verstoring, pas de verstoring toe, voer dan LIME opnieuw uit. Als de uitleg sterk verschuift, is dat een direct signaal van adversariale gevoeligheid.
+
+**Regelgevings- en governance-kaders vereisen dit expliciet.** Zoals behandeld in de eerdere artikelen over [AI-governance](het-autonome-bedrijf-besturen.qmd) en [bias-analyse onder het Algoritmekader](bias-analyse-in-de-praktijk.qmd), is het kunnen tonen *waarom* een specifieke beslissing werd genomen — niet alleen dat het systeem gemiddeld goed presteert — vaak een wettelijke vereiste. Een *fine-tuned* of gedestilleerd model dat wordt ingezet in een publieke-sector-, medische of financiële context moet precies dit soort per-beslissing-uitleg ondersteunen.
+
+## Een praktische checklist voor wie zelf *fine-tunet* of destilleert
+
+1. **Voer *attention*-visualisatie (BERTViz) uit vóór en ná *fine-tuning*** op een vaste set representatieve voorbeelden.
+2. **Voer SHAP of LIME uit op dezelfde validatievoorbeelden vóór en ná *distillation***, en vergelijk niet alleen het voorspelde label maar welke kenmerken het aandreven.
+3. **Gebruik *saliency* of Integrated Gradients om kwetsbaarheid te spotten**, met name enkelvoudige woordvervangingen die een voorspelling omdraaien.
+4. **Test expliciet op adversariale gevoeligheid geïntroduceerd door training**, met de vóór/ná LIME-vergelijkingsmethode.
+5. **Kijk verder dan *attention* naar neuronactivaties en verborgen-toestandsevolutie**, aangezien twee derde van de capaciteit van een *transformer* zit in de *feed-forward*-lagen die de meeste standaardtools negeren.
+6. **Documenteer dit alles**, op dezelfde manier als de eerdere artikelen over [governance](het-autonome-bedrijf-besturen.qmd) en [bias-analyse](bias-analyse-in-de-praktijk.qmd) pleiten voor het documenteren van eerlijkheidstests.
+
+## De conclusie
+
+Een basismodel via een API lenen betekent iemand anders' uitlegbaarheidsverplichtingen lenen samen met zijn capaciteit. Op het moment dat je het *fine-tunet*, destilleert of een gespecialiseerd component zelf traint — precies het pad dat deze site herhaaldelijk heeft bepleit als de route naar echte soevereiniteit en specialisatie — gaat die verplichting volledig op jou over. Een model dat goed scoort op een gehouden testset heeft je verteld *wat* het doet. Alleen XAI vertelt je *hoe* — en zonder dat implementeer je een systeem dat je hebt gebouwd maar werkelijk niet kunt verantwoorden.
+
+*Gebaseerd op "XAI for NLP" (Advanced Natural Language Processing-cursus, Department of Advanced Computing Sciences).*
+
+---
+
+**Verder lezen op deze site**
+
+- [Waarom NLP eindelijk werkt](waarom-nlp-eindelijk-werkt.qmd) — de *transformer*-architectuur waarvan XAI-tools de interne werking openen
+- [De gigant inkrimpen: *pruning*, *quantization* en *distillation*](pruning-quantization-distillation.qmd) — waar de behoefte aan XAI tijdens *distillation* vandaan komt
+- [Adversariale aanvallen: onzichtbare pixels en omgewisselde woorden](adversariale-aanvallen-afbeeldingen-en-tekst.qmd) — de kwetsbaarheid die LIME-gebaseerde adversariale testen detecteert
+- [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd) — het governance-raamwerk dat uitlegbaarheid een wettelijke vereiste maakt
+- [Bias-analyse in de praktijk](bias-analyse-in-de-praktijk.qmd) — de complementaire eerlijkheidstests die XAI mogelijk maakt
+- [Wat er nodig is om een soevereine AI-agent te bouwen](een-soevereine-ai-agent-bouwen.qmd) — stap 7 (validatie) is waar de XAI-checklist in dit artikel thuishoort

@@ -59,6 +59,7 @@ Elke verdediging doet eigenlijk hetzelfde: de beslissingsgrens van het model soe
 **Verder lezen op deze site**
 
 - [De gigant inkrimpen: *pruning*, *quantization* en *distillation*](pruning-quantization-distillation.qmd) — hoe modelcompressie als neveneffect een hele klasse *adversarial attacks* buitensluit
+- [Waarom je een model niet kunt fine-tunen of destilleren zonder XAI](xai-voor-fine-tuned-modellen.qmd) — hoe LIME-gebaseerde vóór/ná-testen adversariale kwetsbaarheid detecteert die door *fine-tuning* is geïntroduceerd
 - [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd) — de governance-laag die beveiligingsdreigingen in institutionele AI-implementaties aanpakt
 - [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — waarom deterministische *guardrails* rondom een model er meer toe doen dan een model vragen zichzelf te bewaken
 - [Wat is een AI-agent?](wat-is-een-ai-agent.qmd) — de agentische architectuur waar *prompt injection* specifiek een bedreiging wordt

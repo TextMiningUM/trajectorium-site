@@ -70,6 +70,7 @@ Distillation, quantization, and pruning are usually presented as separate cost-o
 **Further reading on this site**
 
 - [Adversarial Attacks: Invisible Pixels and Swapped Words](adversarial-attacks-images-and-text.qmd) — the full treatment of attack types and defenses that compression partially addresses
+- [Why You Can't Fine-Tune or Distill Without XAI](xai-for-fine-tuned-models.qmd) — why distillation specifically makes explainability a requirement, not a nice-to-have
 - [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — compression and specialization together: what a small, task-focused model can actually do
 - [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — why edge and on-device deployment matters geopolitically, not just for cost
 - [Why NLP Finally Works](why-nlp-finally-works.qmd) — the transformer architecture whose weights are being compressed here

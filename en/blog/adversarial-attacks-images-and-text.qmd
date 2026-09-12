@@ -59,6 +59,7 @@ Every one of these defenses is really doing the same underlying thing: making th
 **Further reading on this site**
 
 - [Shrinking the Giant: Pruning, Quantization, and Distillation](pruning-quantization-distillation.qmd) — how model compression closes off a whole class of adversarial attacks as a side effect
+- [Why You Can't Fine-Tune or Distill Without XAI](xai-for-fine-tuned-models.qmd) — how LIME-based before/after testing detects adversarial brittleness introduced by fine-tuning
 - [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — the governance layer that handles security threats in institutional AI deployments
 - [The Institutional Moat](the-institutional-moat.qmd) — why deterministic guardrails around a model matter more than trusting a model to police itself
 - [What Is an AI Agent?](what-is-an-ai-agent.qmd) — the agentic architecture where prompt injection specifically becomes a threat

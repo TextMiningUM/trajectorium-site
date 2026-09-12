@@ -70,6 +70,7 @@ Voor een volledige behandeling van hoe *adversarial attacks* op afbeeldingen en 
 **Verder lezen op deze site**
 
 - [Adversariale aanvallen: onzichtbare pixels en omgewisselde woorden](adversariale-aanvallen-afbeeldingen-en-tekst.qmd) — de volledige behandeling van aanvalstypen en verdedigingen die compressie gedeeltelijk aanpakt
+- [Waarom je een model niet kunt fine-tunen of destilleren zonder XAI](xai-voor-fine-tuned-modellen.qmd) — waarom *distillation* specifiek uitlegbaarheid een vereiste maakt, niet een nice-to-have
 - [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — compressie en specialisatie samen: wat een klein, taakgericht model daadwerkelijk kan doen
 - [Waarom Europa eigen AI-modellen nodig heeft](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) — waarom edge- en on-device-implementatie er geopolitiek toe doet, niet alleen voor kosten
 - [Waarom NLP eindelijk werkt](waarom-nlp-eindelijk-werkt.qmd) — de *transformer*-architectuur waarvan de gewichten hier worden gecomprimeerd
