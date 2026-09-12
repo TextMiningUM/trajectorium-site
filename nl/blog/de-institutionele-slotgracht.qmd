@@ -78,4 +78,4 @@ De vraag waarop elke CTO en CIO een eerlijk antwoord nodig heeft, is niet of ze 
 - [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) — de concrete *pipeline* voor het bouwen van de propriëtaire architectuur beschreven hier
 - [Waarom Europa eigen AI-modellen nodig heeft](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) — de geopolitieke dimensie van waarom deze architectuur niet op buitenlandse infrastructuur kan rusten
 - [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd) — de governance-laag die er bovenop zit
-- [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — empirisch bewijs voor de gespecialiseerde-model-these
+- [Wat er nodig is om een soevereine AI-agent te bouwen](een-soevereine-ai-agent-bouwen.qmd) — de stapsgewijze gids die alles uit dit artikel in de praktijk brengt

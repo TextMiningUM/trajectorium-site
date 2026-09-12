@@ -70,4 +70,4 @@ Stanford's AI Index doesn't use the phrase "edge computing," but its own soverei
 - [The Institutional Moat](the-institutional-moat.qmd) — how to build architecture that survives a model swap or export-control decision
 - [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — sovereignty and governance as one question, not two
 - [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — the evidence that small, local models can nearly match frontier performance on specific tasks
-- [Shrinking the Giant: Pruning, Quantization, and Distillation](pruning-quantization-distillation.qmd) — compression as the concrete engineering path to edge and sovereign deployment
+- [What It Takes to Build a Sovereign AI Agent](building-sovereign-ai-agents.qmd) — the practical eight-step guide to building a system your organization actually owns

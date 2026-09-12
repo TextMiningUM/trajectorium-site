@@ -75,4 +75,4 @@ De technologievraag — werkt agentische AI daadwerkelijk? — ligt achter ons. 
 - [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — de architectuurlaag waarop governance rust
 - [Waarom Europa eigen AI-modellen nodig heeft](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd) — soevereiniteit als infrastructuurvoorwaarde voor echte governance
 - [Wat is een AI-agent?](wat-is-een-ai-agent.qmd) — wat het systeem dat wordt bestuurd eigenlijk is
-- [Adversariale aanvallen: onzichtbare pixels en omgewisselde woorden](adversariale-aanvallen-afbeeldingen-en-tekst.qmd) — de beveiligingsdreigingen die een governance-laag moet adresseren
+- [Wat er nodig is om een soevereine AI-agent te bouwen](een-soevereine-ai-agent-bouwen.qmd) — de end-to-end praktische gids die dit governance-raamwerk toepast

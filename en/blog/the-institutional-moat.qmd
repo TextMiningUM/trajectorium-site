@@ -78,4 +78,4 @@ The question every CTO and CIO needs an honest answer to isn't whether to use Cl
 - [From Text to Action](from-text-to-agentic-workflows.qmd) — the concrete pipeline for building the proprietary architecture described here
 - [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — the geopolitical dimension of why this architecture cannot rest on foreign infrastructure
 - [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — the governance layer that sits on top
-- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — empirical evidence for the specialized-model thesis
+- [What It Takes to Build a Sovereign AI Agent](building-sovereign-ai-agents.qmd) — the step-by-step guide putting everything in this post into practice

@@ -75,4 +75,4 @@ The technology question — does agentic AI actually work? — is behind us. Wha
 - [The Institutional Moat](the-institutional-moat.qmd) — the architecture layer that governance sits on top of
 - [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — sovereignty as the infrastructure prerequisite for real governance
 - [What Is an AI Agent?](what-is-an-ai-agent.qmd) — what the system being governed actually is
-- [Adversarial Attacks: Invisible Pixels and Swapped Words](adversarial-attacks-images-and-text.qmd) — the security threats a governance layer has to address
+- [What It Takes to Build a Sovereign AI Agent](building-sovereign-ai-agents.qmd) — the end-to-end practical guide that applies this governance framework

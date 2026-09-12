@@ -70,4 +70,4 @@ De Stanford AI Index gebruikt de term "edge computing" niet, maar zijn eigen soe
 - [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — hoe je architectuur bouwt die een modelwissel of exportcontrolebeslissing overleeft
 - [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd) — soevereiniteit en governance als één vraag, niet twee
 - [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — het bewijs dat kleine, lokale modellen bijna frontier-prestaties kunnen halen op specifieke taken
-- [De gigant inkrimpen: *pruning*, *quantization* en *distillation*](pruning-quantization-distillation.qmd) — compressie als het concrete engineeringpad naar edge- en soevereine implementatie
+- [Wat er nodig is om een soevereine AI-agent te bouwen](een-soevereine-ai-agent-bouwen.qmd) — de praktische achtstapdsgids voor het bouwen van een systeem dat jouw organisatie werkelijk bezit
