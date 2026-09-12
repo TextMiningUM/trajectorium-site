@@ -7,8 +7,6 @@ lang: en
 website:
   title: "Trajectorium — AI, Agents & Energy-Efficient Sovereign Architectures"
   site-url: "https://trajectorium.ai/en"
-  site-map: true
-  search: true
   navbar:
     left:
       - text: "Home"
