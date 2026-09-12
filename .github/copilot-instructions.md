@@ -47,6 +47,13 @@ Never use emoji or emoticons in any `.qmd` content file, page titles, navigation
 ## Rule: consistent styling
 All new pages must follow the same layout patterns as the homepage: use CSS classes from `custom.scss` (`.feature-card`, `.hero-banner`, `.diagram-section`, etc.). Never add page-specific inline `<style>` blocks or override styles outside `custom.scss`.
 
+## Rule: NL translation of technical terms
+When writing Dutch (NL) translations of blog posts or other content, keep established AI and NLP technical terms in English and render them in *italics*. Do not force Dutch translations for terms that would read as unnatural or pedantic. Examples of terms to keep in English (italicised):
+
+*fine-tuned*, *fine-tuning*, *graph* (in computational context), *transformer*, *token*, *tokenization*, *embedding*, *attention*, *self-attention*, *pipeline*, *chunk*, *chunking*, *reranker*, *reranking*, *RAG*, *guardrails*, *hallucination*, *gradient*, *bottleneck*, *benchmark*, *corpus*, *SFT*, *DPO*, *RLHF*, *preference learning*, *instruction-following*, *training signal*, *reinforcement learning*, *OCR*, *critic agent*, *deduplicated*
+
+Dutch translations are fine for general concepts: *taalmodel* (language model), *geheugen* (memory), *redenering* (reasoning), *laag/lagen* (layer/layers), *beoordeling* (assessment), *bestuur* (governance).
+
 ## Rule: project documentation language
 All project documentation (README, copilot-instructions, workflow comments, `.qmd` front matter comments) must be written in English.
 
