@@ -1,0 +1,61 @@
+---
+title: "Van de volgende boerenknecht naar de volgende AI-agent: generatiekennis omzetten in trainingsdata"
+description: "150 jaar lang schreven boeren logboeken zodat de volgende persoon op het werk zou weten wat te doen. Diezelfde tekst — geschreven voor een menselijke opvolger — blijkt precies te zijn wat een AI-agent nodig heeft om het werk in plaats daarvan te leren."
+date: 2026-11-21
+categories: [tekst-naar-actie]
+lang: nl
+---
+
+Ergens in een Nederlandse kersenoogst bevindt zich een logboek uit 2013. Een pagina leest, ruwweg: *8 april — koperbemesting oxychloride, een halve liter op 200 liter water, 7:30 's ochtends, ongeveer 7°C, wind uit het noordoosten, een lange koude lente met een maand wind en geen regen.* Wie die notitie schreef, schreef niet voor een machine. Ze schreven voor de volgende persoon die in die boomgaard zou staan — misschien zichzelf het jaar erna, misschien een opvolger nadat ze met pensioen gingen — zodat die persoon zou weten wat er was gedaan, wanneer, onder welke omstandigheden, en impliciet, waarom.
+
+Dat is de stille verschuiving die benoemd verdient te worden: tekst die tientallen jaren werd geschreven om de *volgende mens* op het werk te trainen, kan nu de *volgende agent* op het werk trainen. Dit artikel loopt door hoe dat er in de praktijk uitziet, aan de hand van een echt project gebouwd rondom precies dit soort data.
+
+## De kennis was altijd bedoeld om doorgegeven te worden
+
+De moderne landbouw — fruitteelt in het bijzonder — verliest iets wat niet gemakkelijk teruggewonnen kan worden: een verouderd personeelsbestand gaat met pensioen, en daarmee gaat tientallen jaren empirische kennis over microklimaten, plaagdruk en gewascycli verloren die nooit ergens anders was geformaliseerd dan in handgeschreven logboeken en mondelinge traditie. Die kennis was altijd bedoeld om over te dragen aan een opvolger. Het logboek was het overdrachtsm echanisme.
+
+Tegelijkertijd staan boeren nu voor een genuanceerde afweging: toenemende druk richting biologische methoden en minder gebruik van chemicaliën, afgezet tegen de economische realiteit van het moeten beschermen van opbrengst en kwaliteit. Een general-purpose chatbot kan hier niet verantwoord helpen — een fout bestrijdingsmiddelenadvies kan gewasuitval, milieuschade of het verlies van biologische certificering betekenen, en generieke modellen getraind op het open internet hebben geen toegang tot wat er werkelijk gebeurde, en werkte, in *deze* boomgaard, onder *deze* omstandigheden.
+
+De kennis die daadwerkelijk zou helpen bestaat al. Ze zit alleen in een vorm die gebouwd is voor een menselijke lezer, niet voor een machine.
+
+## Dezelfde data, anders gelezen
+
+Hier is de herformulering die dit mogelijk maakt: elke invoer in een landbouwlogboek is al, structureel, een **observatie → actie → gevolg**-record. Bewolkt, geen wind, na de bloei (observatie) → ureum, borium, zink toegepast (actie) → maximale bladopname zonder verdamping (beoogd gevolg). Dat is geen toeval — het is hoe iemand een beslissing documenteert die hij wil dat een opvolger kan vertrouwen en herhalen. En een observatie-actie-gevolg-drieluik is, niet toevallig, precies de datastructuur waarop *reinforcement learning* is gebouwd: toestand, actie, beloning, volgende toestand. Het formaat dat een boer gebruikte om een menselijke leerling te onderwijzen, blijkt het formaat te zijn dat nodig is om een AI-agent te onderwijzen.
+
+De praktische *pipeline* ziet er zo uit:
+
+1. **Digitaliseren.** *OCR* en multimodale modellen zetten handgeschreven pagina's — datums, doseringen, weer, uitkomsten, allemaal in de eigen steno van een boer — om in machine-leesbare tekst.
+2. **Structureren in JSON.** Vrije-vorm, tabelmatige handschriften worden geserialiseerd in een consistent schema: datum, weersomstandigheden, toegepaste stof, hoeveelheid, timing en (waar geregistreerd) de uitkomst. Deze gestructureerde laag is waar elke downstream *training pipeline* op voortbouwt.
+3. **Component-specifieke trainingsdata extraheren.** Dit is het deel dat de moeite waard is om in detail door te lopen, omdat één logboekvermelding kan worden omgezet in verschillende soorten *training signal*, elk voedend aan een ander deel van een agentische architectuur:
+
+## Één logboekinvoer, vijf verschillende soorten trainingsdata
+
+Neem diezelfde aprilinvoer en zie wat het wordt voor elk component van een agent:
+
+**Voor *retrieval* (RAG):** de invoer wordt een semantisch gechunked feit dat de agent later kan opzoeken — "op deze boomgaard werd koperooxychloride op deze dosis toegepast onder deze specifieke weersomstandigheden" — *embedded* en opgeslagen zodat een toekomstige query het direct kan ophalen, met bronvermelding.
+
+**Voor *reranking*:** gecombineerd met de vraag die een boer in werkelijkheid zou stellen ("hoe behandel ik het risico op vruchtrot tijdens een natte koude lente"), wordt dezelfde invoer een query-antwoord-paar dat wordt gebruikt om een *reranker* te trainen om *deze* historische interventie te herkennen als de relevante, in plaats van een generiek vergelijkbaar maar fout resultaat — precies het "lost in the middle"-probleem oplossend waarbij een agent verdrinkt in twintig breed vergelijkbare opgehaalde passages en de ene mist die er werkelijk toe doet.
+
+**Voor *instruction-following* (SFT):** de ruwe invoer wordt herschreven als een gestructureerd instructie-respons-paar — *"Het is eind mei, lichte regen en de boomgaard loopt risico op vruchtrot. Wat is de historische interventie?"* → *"Historisch werd Signum (0,25 kg) gecombineerd met een bladmix toegepast om vruchtrot bij lichte regen te voorkomen."* Dit is wat een model leert de terminologie, toon en redeneerst ijl van een echte agronoom aan te nemen in plaats van een generieke assistent.
+
+**Voor *preference learning* (DPO):** hetzelfde scenario, gecombineerd met een *afgewezen* alternatief — een zware chemische bespuiting die technisch zou werken maar de huidige biologische certificering schendt — leert het model dat niet elk feitelijk correct antwoord het *geprefereerde* is. Dit is waar een agent leert standaard naar de duurzame, conforme optie te gaan in plaats van naar wat het meest direct effectief lijkt.
+
+**Voor planning en multi-hop-redenering:** een meerweekse reeks uit het logboek — bloemrijpheid beoordelen, bijen bestellen, kasten op een specifieke datum plaatsen, kasten verwijderen voor het spuiten drie weken later — wordt een taakdecompositie-voorbeeld: hoe een enkel seizoensdoel ("bestuiving beheren") uiteenvalt in een geordende reeks afhankelijke subtaken, elk met zijn eigen tijdsbeperking.
+
+Één pagina handschrift, vijf verschillende downstream-capaciteiten — en niets ervan vereiste dat de oorspronkelijke boer ook maar aan AI dacht. Ze deden gewoon wat boeren altijd hebben gedaan: opschrijven wat er was gebeurd zodat iemand anders ervan kon leren.
+
+## Waarom de oudste tekst misschien de meest waardevolle is
+
+Hier is een genuanceerd contra-intuïtief punt verborgen in deze aanpak: de meest nuttige historische documenten voor het bouwen van een *moderne, biologisch-gerichte* landbouwagent zijn misschien landbouwteksten uit **1850 tot 1930** — voordat synthetische pesticiden überhaupt bestonden. Deze archieven, gedigitaliseerd in collecties zoals Cornell's Core Historical Literature of Agriculture en de National Agricultural Library van de USDA, beschrijven ecologisch plaagbeheer en bodembewerkingstechnieken die simpelweg vergeten werden nadat goedkope synthetische chemicaliën het grootste deel van de 20e eeuw overnamen. Nu de landbouw teruggaat naar biologische methoden, is die "verouderde" pre-chemische kennis plotseling weer direct relevant — en ze bestaat in precies dezelfde vorm als het persoonlijke logboek: tekst geschreven door één generatie beoefenaars voor het voordeel van de volgende, die toevallig een generatie of twee oversloeg voordat ze haar beoogde lezer vond.
+
+## De *guardrails* moeten van dezelfde plek komen
+
+Niets hiervan werkt veilig zonder een even serieuze investering in wat *niet* te doen, en — passend — die data komt van dezelfde soort bron. Een "*critic agent*" die een conceptaanbeveling controleert, heeft concrete negatieve voorbeelden nodig: een logboekinvoer uit 2020 die een chemicalie noemt (zeg, Calypso) die toen legaal was maar nu beperkt is, gecombineerd met het gecorrigeerde, momenteel conforme alternatief, en — cruciaal — een vermelde redenering ("afgewezen: schendt EU Biologische Verordening 2018/848, artikel 9"). Die redenering is wat een *critic*-model leert niet alleen *dat* iets fout is, maar *waarom*, in een vorm waaruit het kan generaliseren. Historische logboeken en huidige wetgeving, kruiselings gerefereerd aan elkaar, worden het ruwe materiaal voor de veiligheidslaag net zo goed als voor de advieslaag.
+
+## Het grotere patroon
+
+Stap terug van de boomgaard specifiek en het patroon generaliseert schoon, en het verbindt direct met iets wat eerder op deze site aan bod is gekomen: de interne handleidingen, standaard operationele procedures, incidentlogboeken en overdrachtsnota's van elke organisatie werden altijd geschreven met een impliciete lezer in gedachten — de volgende persoon die het werk doet. Dat kader is stilletjes het hele punt geweest van werkplekdocumentatie zolang werkplekken bestaan. Wat er veranderd is, is wie die "volgende persoon" nu kan zijn. Dezelfde discipline die een goede logboekinvoer nuttig maakte voor een menselijke opvolger — concreet zijn over omstandigheden, acties en uitkomsten, in plaats van vaag — is precies wat het bruikbaar maakt als trainingsdata voor een agent. Goede documentatie ging nooit echt over naleving of registratie omwille van zichzelf. Het ging over het overdraagbaar maken van impliciete expertise. Het blijkt alleen dat de ontvanger niet langer menselijk hoeft te zijn.
+
+## De conclusie
+
+Een logboekinvoer uit 2013, of een landbouwhandleiding uit 1890, werd nooit geschreven met een taalmodel in gedachten — en dat is precies waarom het zo goed werkt als trainingsdata. Het is eerlijk, concreet en verankerd in wat er werkelijk gebeurde, omdat het werd geschreven voor iemand die het zou moeten vertrouwen en herhalen. Die tekst omzetten in gestructureerde *retrieval*-data, *reranker*-paren, instructievoorbeelden, *preference pairs* en planningssjablonen is geen herinterpretatie van waar de kennis voor was — het is dezelfde overdracht van expertise van de ene beoefenaar naar de volgende, alleen met een nieuw soort opvolger aan het ontvangende einde.
