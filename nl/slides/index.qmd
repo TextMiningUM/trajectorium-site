@@ -1,0 +1,9 @@
+---
+title: "Slides"
+description: "Presentatieslides over AI, agents en autonome architecturen."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+page-layout: full
+---

@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: ../_site/nl
+
+lang: nl
+
+website:
+  title: "Trajectorium — AI, Agents & Autonome Architecturen"
+  site-url: "https://balyzai.nl/nl"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "Tutorials"
+        href: notebooks/index.qmd
+      - text: "Slides"
+        href: slides/index.qmd
+    right:
+      - text: "EN"
+        href: "https://balyzai.nl/en/"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    include-in-header:
+      text: |
+        <link rel="alternate" hreflang="en" href="https://balyzai.nl/en/" />
+        <link rel="canonical" href="https://balyzai.nl/nl/" />

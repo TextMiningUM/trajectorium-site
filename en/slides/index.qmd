@@ -1,0 +1,9 @@
+---
+title: "Slides"
+description: "Presentation slides on AI, agents, and autonomous architectures."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+page-layout: full
+---

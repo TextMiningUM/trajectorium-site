@@ -1,0 +1,13 @@
+---
+title: "Wat is een AI-agent? Van chatbot naar autonoom systeem"
+description: "Een praktische introductie in agentic AI: wat verandert er als een taalmodel geheugen, tools en handelingsvermogen krijgt."
+date: 2026-09-19
+categories: [fundamenten]
+lang: nl
+---
+
+*Concept — vervang met je eigen content.*
+
+## Inleiding
+
+...

@@ -1,0 +1,10 @@
+---
+title: "Welcome"
+description: "AI, agents, and autonomous architectures — research, tutorials, and applied cases."
+---
+
+Welcome to my site on AI, agentic systems, and autonomous architectures.
+
+- [Blog](blog/index.qmd)
+- [Tutorials & Notebooks](notebooks/index.qmd)
+- [Slides](slides/index.qmd)

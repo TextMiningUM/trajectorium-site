@@ -1,0 +1,10 @@
+---
+title: "Welkom"
+description: "AI, agents en autonome architecturen — onderzoek, tutorials en toepassingen."
+---
+
+Welkom op mijn site over AI, agentic systemen en autonome architecturen.
+
+- [Blog](blog/index.qmd)
+- [Tutorials & Notebooks](notebooks/index.qmd)
+- [Slides](slides/index.qmd)

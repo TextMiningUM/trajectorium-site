@@ -1,0 +1,11 @@
+---
+title: "Blog"
+description: "Articles on AI, agentic systems, and autonomous architectures."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+page-layout: full
+---
