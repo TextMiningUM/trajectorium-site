@@ -14,7 +14,7 @@ toc: false
 
 **Prof. dr. ir. Johannes (Jan) C. Scholtes** werkt al meer dan veertig jaar op het snijvlak van kunstmatige intelligentie en menselijke taal — lang voordat een van beide vakgebieden populair werd. Zijn eerste publicaties dateren uit 1987, toen hij aan de TU Delft een kennisgebaseerd systeem voor optische tekenherkenning bouwde. Zijn proefschrift aan de Universiteit van Amsterdam uit 1993 — *Neural Networks in Natural Language Processing and Information Retrieval* — voorafschaduwde met decennia de architecturen die nu centraal staan in moderne AI.
 
-Sinds 2009 bekleedt hij de **Bijzondere Leerstoel Text Mining** aan de [Vakgroep Advanced Computing Sciences](https://www.maastrichtuniversity.nl/research/department-advanced-computing-sciences) van de Universiteit Maastricht, waar hij de cursussen Advanced NLP en Agentic Conversational Search doceert en promotieonderzoek begeleidt op het gebied van juridische AI, klinische NLP, fraudedetectie en agentische systemen. Hij is **Fellow van de SIKS School** van de Koninklijke Nederlandse Akademie van Wetenschappen (KNAW).
+Sinds 2009 bekleedt hij de **Endowed Chair of Text Mining** aan de [Vakgroep Advanced Computing Sciences](https://www.maastrichtuniversity.nl/research/department-advanced-computing-sciences) van de Universiteit Maastricht, waar hij de cursussen Advanced NLP en Agentic Conversational Search doceert en promotieonderzoek begeleidt op het gebied van juridische AI, klinische NLP, fraudedetectie en agentische systemen. Hij is **Fellow van de SIKS School** van de Koninklijke Nederlandse Akademie van Wetenschappen (KNAW).
 
 Zijn toegepaste werk bestrijkt een aantal van de veeleisendste professionele omgevingen waarin taal-AI wordt ingezet. Als een gezaghebbende stem op het gebied van **eDiscovery en LegalTech** heeft hij gewerkt met en voor grote advocatenkantoren, auditinstellingen en multinationale ondernemingen op het gebied van grootschalige documentreview, fraudeonderzoek en naleving van regelgeving. Zijn werk aan *text mining* voor auditing werd gepubliceerd in het *European Court of Auditors Journal*; hij presenteerde op de International Conference on Artificial Intelligence and Law (ICAIL) en aan de Faculteit Rechtsgeleerdheid van de Universiteit Leiden. Hij is co-auteur van twee boeken over het onderwerp: *Big Data Analytics for eDiscovery* (Edgar Publishing, 2021) en *The LegalTech Bridge* (Meesterlijk, 2021).
 
@@ -34,7 +34,7 @@ De bijdragen op deze site bouwen voort op die veertig jaar ervaring: het bouwen 
 
 ### Functies
 
-**Bijzonder Hoogleraar Text Mining**
+**Endowed Chair of Text Mining**
 Vakgroep Advanced Computing Sciences, Universiteit Maastricht
 
 **Fellow**
