@@ -40,7 +40,11 @@ toc: false
 
 ## What is Trajectorium?
 
-Trajectorium is a research and education platform focused on **agentic AI systems** — the next generation of AI that can perceive, plan, remember, and act autonomously. We publish accessible deep-dives, hands-on tutorials, and annotated lecture slides grounded in current research.
+Trajectorium is a research and education platform focused on **agentic AI systems** — the next generation of AI that can perceive, plan, remember, and act autonomously. Our focus is on how to build these systems responsibly: training them on an organization's own text and institutional knowledge, deploying them on sovereign infrastructure an organization actually controls, keeping energy consumption within realistic bounds, and making autonomous behavior safe, explainable, and auditable.
+
+The central conviction is that the most important problems in agentic AI are not technical but organisational: who owns the training data, who governs the decisions the system makes, and whether the architecture is built to last — without depending on infrastructure, pricing, or policy choices made entirely outside your control.
+
+We publish accessible deep-dives, hands-on tutorials, and annotated lecture slides grounded in current research.
 
 <div class="row g-4 mt-2">
 <div class="col-md-4"><div class="feature-card">
