@@ -5,14 +5,14 @@ toc: false
 ---
 
 <div class="quote-ticker"><div class="quote-ticker-track">
-<span><a href="blog/de-institutionele-slotgracht.html">Als je volledige AI-strategie bestaat uit een systeem-prompt bovenop GPT, heb je een sandbox &mdash; geen slotgracht.</a></span>
-<span><a href="blog/de-institutionele-slotgracht.html">De slotgracht zit niet in het model. Het zit in de architectuur &mdash; en de data &mdash; die je eromheen bouwt.</a></span>
+<span><a href="blog/de-institutionele-slotgracht.html">Als je volledige AI-strategie bestaat uit een systeem-prompt bovenop GPT, heb je een sandbox, geen slotgracht.</a></span>
+<span><a href="blog/de-institutionele-slotgracht.html">De slotgracht zit niet in het model. Het zit in de architectuur, en de data, die je eromheen bouwt.</a></span>
 <span><a href="blog/klein-gespecialiseerd-model-vs-frontier.html">Een model met 8 miljard parameters komt binnen 1,2 procentpunt van een model dat 625 keer zo groot is. Op de taak die er werkelijk toe doet.</a></span>
 <span><a href="blog/het-autonome-bedrijf-besturen.html">&ldquo;De AI heeft besloten&rdquo; is geen antwoord. Het is een ontwijking.</a></span>
 <span><a href="blog/van-logboeken-naar-agent-trainingsdata.html">Een logboek uit 2013 geschreven voor de volgende boerenknecht traint nu de volgende AI-agent. De kennis was altijd bedoeld om over te dragen.</a></span>
 <span><a href="blog/van-tekst-naar-agentische-workflows.html">De procedures en dossiers van jouw organisatie zijn geschreven voor de volgende mens op het werk. Ze werken net zo goed voor de volgende agent.</a></span>
-<span><a href="blog/de-institutionele-slotgracht.html">Als je volledige AI-strategie bestaat uit een systeem-prompt bovenop GPT, heb je een sandbox &mdash; geen slotgracht.</a></span>
-<span><a href="blog/de-institutionele-slotgracht.html">De slotgracht zit niet in het model. Het zit in de architectuur &mdash; en de data &mdash; die je eromheen bouwt.</a></span>
+<span><a href="blog/de-institutionele-slotgracht.html">Als je volledige AI-strategie bestaat uit een systeem-prompt bovenop GPT, heb je een sandbox, geen slotgracht.</a></span>
+<span><a href="blog/de-institutionele-slotgracht.html">De slotgracht zit niet in het model. Het zit in de architectuur, en de data, die je eromheen bouwt.</a></span>
 <span><a href="blog/klein-gespecialiseerd-model-vs-frontier.html">Een model met 8 miljard parameters komt binnen 1,2 procentpunt van een model dat 625 keer zo groot is. Op de taak die er werkelijk toe doet.</a></span>
 <span><a href="blog/het-autonome-bedrijf-besturen.html">&ldquo;De AI heeft besloten&rdquo; is geen antwoord. Het is een ontwijking.</a></span>
 <span><a href="blog/van-logboeken-naar-agent-trainingsdata.html">Een logboek uit 2013 geschreven voor de volgende boerenknecht traint nu de volgende AI-agent. De kennis was altijd bedoeld om over te dragen.</a></span>
@@ -40,9 +40,9 @@ toc: false
 
 ## Wat is Trajectorium?
 
-Trajectorium is een onderzoeks- en onderwijsplatform gericht op **agentic AI-systemen** — de volgende generatie AI die zelfstandig kan waarnemen, plannen, onthouden en handelen. Onze focus ligt op hoe je die systemen verantwoord bouwt: ze trainen op de eigen tekst en institutionele kennis van een organisatie, ze implementeren op soevereine infrastructuur die een organisatie werkelijk beheert, het energieverbruik binnen realistische grenzen houden, en autonoom gedrag veilig, uitlegbaar en controleerbaar maken.
+Trajectorium is een onderzoeks- en onderwijsplatform gericht op **agentic AI-systemen**, de volgende generatie AI die zelfstandig kan waarnemen, plannen, onthouden en handelen. Onze focus ligt op hoe je die systemen verantwoord bouwt: ze trainen op de eigen tekst en institutionele kennis van een organisatie, ze implementeren op soevereine infrastructuur die een organisatie werkelijk beheert, het energieverbruik binnen realistische grenzen houden, en autonoom gedrag veilig, uitlegbaar en controleerbaar maken.
 
-De centrale overtuiging is dat de belangrijkste problemen in agentic AI niet technisch maar organisatorisch zijn: wie de trainingsdata bezit, wie de beslissingen van het systeem beheert, en of de architectuur gebouwd is om te blijven — zonder afhankelijk te zijn van infrastructuur, prijsstelling of beleidskeuzes die volledig buiten jouw beheer worden gemaakt.
+De centrale overtuiging is dat de belangrijkste problemen in agentic AI niet technisch maar organisatorisch zijn: wie de trainingsdata bezit, wie de beslissingen van het systeem beheert, en of de architectuur gebouwd is om te blijven, zonder afhankelijk te zijn van infrastructuur, prijsstelling of beleidskeuzes die volledig buiten jouw beheer worden gemaakt.
 
 We publiceren toegankelijke verdiepingsartikelen, praktische tutorials en geannoteerde collegeslides op basis van actueel onderzoek.
 
@@ -69,7 +69,7 @@ Praktische Jupyter-notebooks: bouw agents van de grond af, koppel tools via API'
 
 ### Slides
 
-College-slides gebruikt in het onderwijs — vrij beschikbaar voor hergebruik en aanpassing in je eigen cursus.
+College-slides gebruikt in het onderwijs, vrij beschikbaar voor hergebruik en aanpassing in je eigen cursus.
 
 [Bekijk slides &rarr;](slides/index.qmd)
 

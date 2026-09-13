@@ -5,14 +5,14 @@ toc: false
 ---
 
 <div class="quote-ticker"><div class="quote-ticker-track">
-<span><a href="blog/the-institutional-moat.html">If your entire AI strategy is a system prompt on top of GPT, you have a sandbox &mdash; not a moat.</a></span>
-<span><a href="blog/the-institutional-moat.html">The moat isn&rsquo;t the model. It&rsquo;s the architecture &mdash; and the data &mdash; you build around it.</a></span>
+<span><a href="blog/the-institutional-moat.html">If your entire AI strategy is a system prompt on top of GPT, you have a sandbox, not a moat.</a></span>
+<span><a href="blog/the-institutional-moat.html">The moat isn&rsquo;t the model. It&rsquo;s the architecture, and the data, you build around it.</a></span>
 <span><a href="blog/small-specialized-model-vs-frontier.html">An 8-billion-parameter model gets within 1.2 percentage points of a model 625 times its size. On the task that actually matters.</a></span>
 <span><a href="blog/governing-the-autonomous-organization.html">&ldquo;The AI decided&rdquo; is not an answer. It&rsquo;s an evasion.</a></span>
 <span><a href="blog/from-logbooks-to-agent-training-data.html">A logbook written in 2013 to train the next farmhand is now training the next AI agent. The knowledge was always meant to be transferred.</a></span>
 <span><a href="blog/from-text-to-agentic-workflows.html">Your organization&rsquo;s SOPs, case files, and exception logs were written for the next human on the job. They&rsquo;ll work just as well for the next agent.</a></span>
-<span><a href="blog/the-institutional-moat.html">If your entire AI strategy is a system prompt on top of GPT, you have a sandbox &mdash; not a moat.</a></span>
-<span><a href="blog/the-institutional-moat.html">The moat isn&rsquo;t the model. It&rsquo;s the architecture &mdash; and the data &mdash; you build around it.</a></span>
+<span><a href="blog/the-institutional-moat.html">If your entire AI strategy is a system prompt on top of GPT, you have a sandbox, not a moat.</a></span>
+<span><a href="blog/the-institutional-moat.html">The moat isn&rsquo;t the model. It&rsquo;s the architecture, and the data, you build around it.</a></span>
 <span><a href="blog/small-specialized-model-vs-frontier.html">An 8-billion-parameter model gets within 1.2 percentage points of a model 625 times its size. On the task that actually matters.</a></span>
 <span><a href="blog/governing-the-autonomous-organization.html">&ldquo;The AI decided&rdquo; is not an answer. It&rsquo;s an evasion.</a></span>
 <span><a href="blog/from-logbooks-to-agent-training-data.html">A logbook written in 2013 to train the next farmhand is now training the next AI agent. The knowledge was always meant to be transferred.</a></span>
@@ -40,9 +40,9 @@ toc: false
 
 ## What is Trajectorium?
 
-Trajectorium is a research and education platform focused on **agentic AI systems** — the next generation of AI that can perceive, plan, remember, and act autonomously. Our focus is on how to build these systems responsibly: training them on an organization's own text and institutional knowledge, deploying them on sovereign infrastructure an organization actually controls, keeping energy consumption within realistic bounds, and making autonomous behavior safe, explainable, and auditable.
+Trajectorium is a research and education platform focused on **agentic AI systems**, the next generation of AI that can perceive, plan, remember, and act autonomously. Our focus is on how to build these systems responsibly: training them on an organization's own text and institutional knowledge, deploying them on sovereign infrastructure an organization actually controls, keeping energy consumption within realistic bounds, and making autonomous behavior safe, explainable, and auditable.
 
-The central conviction is that the most important problems in agentic AI are not technical but organisational: who owns the training data, who governs the decisions the system makes, and whether the architecture is built to last — without depending on infrastructure, pricing, or policy choices made entirely outside your control.
+The central conviction is that the most important problems in agentic AI are not technical but organisational: who owns the training data, who governs the decisions the system makes, and whether the architecture is built to last, without depending on infrastructure, pricing, or policy choices made entirely outside your control.
 
 We publish accessible deep-dives, hands-on tutorials, and annotated lecture slides grounded in current research.
 
@@ -69,7 +69,7 @@ Hands-on Jupyter notebooks: build agents from scratch, connect tools via APIs, a
 
 ### Slides
 
-Lecture slides used in teaching — openly available for reuse and adaptation in your own courses.
+Lecture slides used in teaching, openly available for reuse and adaptation in your own courses.
 
 [View slides &rarr;](slides/index.qmd)
 

@@ -1,20 +1,20 @@
 ---
 title: "Shrinking the Giant: How Pruning, Quantization, and Distillation Make LLMs Small, Cheap, and Safer"
-description: "Training a custom GPT-4-class model now costs an estimated 2-3 million dollars in compute alone. Here's how pruning, quantization, and distillation take that same capability and put it on hardware you own — while incidentally closing off a whole class of attacks."
+description: "Training a custom GPT-4-class model now costs an estimated 2-3 million dollars in compute alone. Here's how pruning, quantization, and distillation take that same capability and put it on hardware you own, while incidentally closing off a whole class of attacks."
 date: 2026-11-28
 author: "Jan Scholtes"
 categories: [fundamentals, efficiency]
 lang: en
 ---
 
-Training GPT-2 cost an estimated 100-200 thousand dollars in compute. GPT-3 jumped to somewhere in the 1-10 million range. GPT-4-class training runs are estimated at 10-100 million. A custom GPT-4-class model today is estimated at 2-3 million dollars just for the training compute — and that's before you've deployed it anywhere, let alone somewhere with a battery. If you're building for an implanted medical device, a smartwatch, or any system where power budget is a hard constraint (as one lecture on this puts it, bluntly: "the US Army runs on batteries"), that scale of model is simply the wrong tool. This post covers the three main techniques — pruning, quantization, and knowledge distillation — that let you take a giant, expensively-trained model and compress it into something that runs on hardware you actually own, with only a small, usually acceptable, loss in capability. And, as a bonus most people don't expect, these same techniques make a model measurably harder to attack.
+Training GPT-2 cost an estimated 100-200 thousand dollars in compute. GPT-3 jumped to somewhere in the 1-10 million range. GPT-4-class training runs are estimated at 10-100 million. A custom GPT-4-class model today is estimated at 2-3 million dollars just for the training compute, and that's before you've deployed it anywhere, let alone somewhere with a battery. If you're building for an implanted medical device, a smartwatch, or any system where power budget is a hard constraint (as one lecture on this puts it, bluntly: "the US Army runs on batteries"), that scale of model is simply the wrong tool. This post covers the three main techniques, pruning, quantization, and knowledge distillation, that let you take a giant, expensively-trained model and compress it into something that runs on hardware you actually own, with only a small, usually acceptable, loss in capability. And, as a bonus most people don't expect, these same techniques make a model measurably harder to attack.
 
 ## Why This Matters Beyond Cost
 
 Three separate motivations converge on the same set of techniques:
 
-1. **Energy and battery life.** On-device and edge deployment — implanted medical devices, mobile phones, military hardware — simply cannot run a full-size frontier model. Every watt matters.
-2. **Local, sovereign deployment.** As covered in [an earlier post on this site](why-europe-needs-sovereign-ai.qmd), a specialized model fine-tuned on your own data and run on your own hardware can get remarkably close to frontier-model performance *on a specific task* — but only if that specialized model is actually small enough to run locally at reasonable cost. Compression is what makes that "David vs. Goliath" story physically possible.
+1. **Energy and battery life.** On-device and edge deployment, implanted medical devices, mobile phones, military hardware, simply cannot run a full-size frontier model. Every watt matters.
+2. **Local, sovereign deployment.** As covered in [an earlier post on this site](why-europe-needs-sovereign-ai.qmd), a specialized model fine-tuned on your own data and run on your own hardware can get remarkably close to frontier-model performance *on a specific task*, but only if that specialized model is actually small enough to run locally at reasonable cost. Compression is what makes that "David vs. Goliath" story physically possible.
 3. **Security.** Somewhat counter-intuitively, a smaller, distilled or pruned model can be *more* robust to certain attacks, because compression removes exactly the kind of redundant, unused connections that adversarial attacks tend to exploit.
 
 Let's go through the three main techniques in turn.
@@ -29,9 +29,9 @@ The training mechanics are worth understanding, because they explain why this wo
 total loss = (alpha * student loss) + ((1 - alpha) * distillation loss)
 ```
 
-The distillation loss is computed using **KL-divergence** between the teacher's and student's softmax outputs — but crucially, using a softened temperature (t > 1) so the outputs aren't just hard 0/1 labels but "soft labels" carrying the teacher's relative confidence across all classes, not just the winning one. That soft signal is where most of the useful information actually lives: it tells the student not just *what* the right answer is, but *how* the teacher weighs the alternatives — an implicit signal a hard label alone can never carry. DistilBERT specifically combines this distillation loss with a masked-language-modeling loss and a cosine-embedding loss (to align the direction of the teacher's and student's hidden vectors), and initializes the student by taking every other layer directly from the teacher rather than starting from scratch.
+The distillation loss is computed using **KL-divergence** between the teacher's and student's softmax outputs, but crucially, using a softened temperature (t > 1) so the outputs aren't just hard 0/1 labels but "soft labels" carrying the teacher's relative confidence across all classes, not just the winning one. That soft signal is where most of the useful information actually lives: it tells the student not just *what* the right answer is, but *how* the teacher weighs the alternatives, an implicit signal a hard label alone can never carry. DistilBERT specifically combines this distillation loss with a masked-language-modeling loss and a cosine-embedding loss (to align the direction of the teacher's and student's hidden vectors), and initializes the student by taking every other layer directly from the teacher rather than starting from scratch.
 
-Other notable examples in the same family include **TinyBERT**, which pushes distillation further for even smaller footprints. This is very much an active area of research — see the *Nature* coverage of ongoing model-compression work for a sense of how fast the field is still moving.
+Other notable examples in the same family include **TinyBERT**, which pushes distillation further for even smaller footprints. This is very much an active area of research, see the *Nature* coverage of ongoing model-compression work for a sense of how fast the field is still moving.
 
 ## 2. Quantization: Fewer Bits, Almost the Same Answer
 
@@ -39,46 +39,46 @@ A standard neural network stores its weights as 32-bit floating point numbers. Q
 
 There are two main flavors:
 
-- **Post-Training Quantization (PTQ)** — take an already-trained model and quantize its weights afterward.
-- **Quantization-Aware Training (QAT)** — train the model *while simulating* the effects of quantization, so it learns to be robust to the reduced precision from the start.
+- **Post-Training Quantization (PTQ)**, take an already-trained model and quantize its weights afterward.
+- **Quantization-Aware Training (QAT)**, train the model *while simulating* the effects of quantization, so it learns to be robust to the reduced precision from the start.
 
-The most striking recent example of QAT taken to its logical extreme is **BitNet b1.58** (a 2024 paper), which restricts every weight to just **three possible values: {-1, 0, 1}** — technically 1.58 bits per weight (since log₂(3) ≈ 1.585). Remarkably, this achieves performance comparable to a standard LLaMA model of equivalent size, while requiring dramatically less energy — the paper reports roughly **1/71.4 of the energy consumption** of the equivalent full-precision model, and it's efficient enough to run on ordinary CPUs rather than requiring specialized accelerator hardware at all.
+The most striking recent example of QAT taken to its logical extreme is **BitNet b1.58** (a 2024 paper), which restricts every weight to just **three possible values: {-1, 0, 1}**, technically 1.58 bits per weight (since log₂(3) ≈ 1.585). Remarkably, this achieves performance comparable to a standard LLaMA model of equivalent size, while requiring dramatically less energy, the paper reports roughly **1/71.4 of the energy consumption** of the equivalent full-precision model, and it's efficient enough to run on ordinary CPUs rather than requiring specialized accelerator hardware at all.
 
-The obvious challenges are quantization error and numerical overflow/underflow, which is exactly why QAT exists — training the model to be well-behaved under low precision from the start, rather than hoping a post-hoc rounding step doesn't break anything important.
+The obvious challenges are quantization error and numerical overflow/underflow, which is exactly why QAT exists, training the model to be well-behaved under low precision from the start, rather than hoping a post-hoc rounding step doesn't break anything important.
 
 ## 3. Pruning: Deleting What the Model Doesn't Need
 
-Where quantization makes every number smaller, **pruning** removes numbers entirely — introducing zeros (sparsity) into weight matrices so that whole connections, or in some cases entire neurons, simply stop existing. Sparse matrices are cheaper to store and, on the right hardware, cheaper to compute with, since operations on zero-valued weights can often be skipped outright.
+Where quantization makes every number smaller, **pruning** removes numbers entirely, introducing zeros (sparsity) into weight matrices so that whole connections, or in some cases entire neurons, simply stop existing. Sparse matrices are cheaper to store and, on the right hardware, cheaper to compute with, since operations on zero-valued weights can often be skipped outright.
 
-Pruning and quantization aren't mutually exclusive — a real deployment pipeline typically combines several of these techniques at once: distill a smaller student model, quantize its weights, and prune unnecessary connections, often alongside **Low-Rank Adaptation (LoRA)** for efficient fine-tuning (and its quantized cousin, **QLoRA**) so that adapting the compressed model to a specific domain remains cheap too.
+Pruning and quantization aren't mutually exclusive, a real deployment pipeline typically combines several of these techniques at once: distill a smaller student model, quantize its weights, and prune unnecessary connections, often alongside **Low-Rank Adaptation (LoRA)** for efficient fine-tuning (and its quantized cousin, **QLoRA**) so that adapting the compressed model to a specific domain remains cheap too.
 
 ## Why Smaller Models Can Be *More* Secure, Not Less
 
-Here's the connection that doesn't get made often enough: compression isn't just a cost-and-energy story — it's also a security story. Adversarial attacks on neural networks frequently exploit **unused or redundant capacity**: connections and parameters that don't contribute meaningfully to the model's actual task, but that an attacker can manipulate to produce a targeted misclassification or an unwanted output while leaving the input looking normal to a human.
+Here's the connection that doesn't get made often enough: compression isn't just a cost-and-energy story, it's also a security story. Adversarial attacks on neural networks frequently exploit **unused or redundant capacity**: connections and parameters that don't contribute meaningfully to the model's actual task, but that an attacker can manipulate to produce a targeted misclassification or an unwanted output while leaving the input looking normal to a human.
 
-Pruning removes exactly this kind of slack. If a connection has been eliminated because it wasn't contributing to genuine task performance, it's no longer available as an attack surface either — the model's decision boundary gets forced to depend only on the features that actually matter, rather than on incidental correlations an attacker can nudge. Knowledge distillation does something related: because the student model is trained to reproduce the teacher's *softened, generalized* decision boundary rather than to memorize the training data directly, it tends to inherit a smoother, less exploitable response surface. This specific idea has its own name in the adversarial-robustness literature — **defensive distillation**, and a closely related family of techniques called **feature squeezing**, which reduces the input's degrees of freedom in a way that echoes exactly what pruning does to a model's internal degrees of freedom.
+Pruning removes exactly this kind of slack. If a connection has been eliminated because it wasn't contributing to genuine task performance, it's no longer available as an attack surface either, the model's decision boundary gets forced to depend only on the features that actually matter, rather than on incidental correlations an attacker can nudge. Knowledge distillation does something related: because the student model is trained to reproduce the teacher's *softened, generalized* decision boundary rather than to memorize the training data directly, it tends to inherit a smoother, less exploitable response surface. This specific idea has its own name in the adversarial-robustness literature, **defensive distillation**, and a closely related family of techniques called **feature squeezing**, which reduces the input's degrees of freedom in a way that echoes exactly what pruning does to a model's internal degrees of freedom.
 
-None of this means a compressed model is *immune* to adversarial attacks — it isn't, and dedicated adversarial training remains necessary on top of compression, not instead of it. But it does mean that shrinking a model for cost and energy reasons is not a security trade-off you're forced to accept. Done well, it can move in the opposite direction.
+None of this means a compressed model is *immune* to adversarial attacks, it isn't, and dedicated adversarial training remains necessary on top of compression, not instead of it. But it does mean that shrinking a model for cost and energy reasons is not a security trade-off you're forced to accept. Done well, it can move in the opposite direction.
 
-For a full treatment of what adversarial attacks on images and text actually look like — and the concrete defenses, beyond compression, that address each type — see the earlier post in this series: [Adversarial Attacks: How a Few Invisible Pixels or One Swapped Word Can Fool an AI](adversarial-attacks-images-and-text.qmd).
+For a full treatment of what adversarial attacks on images and text actually look like, and the concrete defenses, beyond compression, that address each type, see the earlier post in this series: [Adversarial Attacks: How a Few Invisible Pixels or One Swapped Word Can Fool an AI](adversarial-attacks-images-and-text.qmd).
 
 ## Bringing It Together
 
-Distillation, quantization, and pruning are usually presented as separate cost-optimization tricks, but they share a common thread: each one asks the model to do more with less — fewer parameters, fewer bits, fewer connections — while preserving the behavior that actually matters. That's precisely the mechanism behind the ["small specialized model nearly matching a frontier model" result covered in an earlier post on this site](small-specialized-model-vs-frontier.qmd): a model doesn't need the full capacity of a generalist if it's only being asked to do one thing well, and compression is the concrete engineering path that turns "doesn't need the capacity" into "doesn't have the capacity, and runs on a laptop instead of a data center." Lower training and inference cost, genuine on-device and edge deployment, and — as a welcome side effect — a smaller, harder-to-exploit attack surface. That combination is why this remains one of the most active areas of research in the field.
+Distillation, quantization, and pruning are usually presented as separate cost-optimization tricks, but they share a common thread: each one asks the model to do more with less, fewer parameters, fewer bits, fewer connections, while preserving the behavior that actually matters. That's precisely the mechanism behind the ["small specialized model nearly matching a frontier model" result covered in an earlier post on this site](small-specialized-model-vs-frontier.qmd): a model doesn't need the full capacity of a generalist if it's only being asked to do one thing well, and compression is the concrete engineering path that turns "doesn't need the capacity" into "doesn't have the capacity, and runs on a laptop instead of a data center." Lower training and inference cost, genuine on-device and edge deployment, and, as a welcome side effect, a smaller, harder-to-exploit attack surface. That combination is why this remains one of the most active areas of research in the field.
 
 **Key papers**
 
-- Hinton et al. (2015), *Distilling the Knowledge in a Neural Network* — [arXiv:1503.02531](https://arxiv.org/abs/1503.02531)
-- Sanh et al. (2019), *DistilBERT, a Distilled Version of BERT* — [arXiv:1910.01108](https://arxiv.org/abs/1910.01108)
-- Ma et al. (2024), *The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits* (BitNet b1.58) — [arXiv:2402.17764](https://arxiv.org/abs/2402.17764)
-- Hu et al. (2022), *LoRA: Low-Rank Adaptation of Large Language Models* — [arXiv:2106.09685](https://arxiv.org/abs/2106.09685)
+- Hinton et al. (2015), *Distilling the Knowledge in a Neural Network*, [arXiv:1503.02531](https://arxiv.org/abs/1503.02531)
+- Sanh et al. (2019), *DistilBERT, a Distilled Version of BERT*, [arXiv:1910.01108](https://arxiv.org/abs/1910.01108)
+- Ma et al. (2024), *The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits* (BitNet b1.58), [arXiv:2402.17764](https://arxiv.org/abs/2402.17764)
+- Hu et al. (2022), *LoRA: Low-Rank Adaptation of Large Language Models*, [arXiv:2106.09685](https://arxiv.org/abs/2106.09685)
 
 ---
 
 **Further reading on this site**
 
-- [Adversarial Attacks: Invisible Pixels and Swapped Words](adversarial-attacks-images-and-text.qmd) — the full treatment of attack types and defenses that compression partially addresses
-- [Why You Can't Fine-Tune or Distill Without XAI](xai-for-fine-tuned-models.qmd) — why distillation specifically makes explainability a requirement, not a nice-to-have
-- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — compression and specialization together: what a small, task-focused model can actually do
-- [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — why edge and on-device deployment matters geopolitically, not just for cost
-- [Why NLP Finally Works](why-nlp-finally-works.qmd) — the transformer architecture whose weights are being compressed here
+- [Adversarial Attacks: Invisible Pixels and Swapped Words](adversarial-attacks-images-and-text.qmd), the full treatment of attack types and defenses that compression partially addresses
+- [Why You Can't Fine-Tune or Distill Without XAI](xai-for-fine-tuned-models.qmd), why distillation specifically makes explainability a requirement, not a nice-to-have
+- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd), compression and specialization together: what a small, task-focused model can actually do
+- [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd), why edge and on-device deployment matters geopolitically, not just for cost
+- [Why NLP Finally Works](why-nlp-finally-works.qmd), the transformer architecture whose weights are being compressed here

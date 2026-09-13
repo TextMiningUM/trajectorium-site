@@ -1,6 +1,6 @@
 ---
 title: "What Is an AI Agent? From Chatbot to Autonomous System"
-description: "A grounded introduction to agentic AI: what changes when a language model gains memory, tools, and the ability to act — and why that shift matters."
+description: "A grounded introduction to agentic AI: what changes when a language model gains memory, tools, and the ability to act, and why that shift matters."
 date: 2026-09-12
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/ComponentsofAgent.png"
@@ -8,7 +8,7 @@ categories: [fundamentals]
 lang: en
 ---
 
-Ask ten people what an "AI agent" is and you'll get ten different answers — some confidently wrong. Part of the confusion is that the word isn't new. Part of it is that "agent" has quietly become a marketing label slapped on anything with a chat interface. This post cuts through that: what an agent actually is, why the idea failed in the 1990s, why it's working now, and what's actually inside one.
+Ask ten people what an "AI agent" is and you'll get ten different answers, some confidently wrong. Part of the confusion is that the word isn't new. Part of it is that "agent" has quietly become a marketing label slapped on anything with a chat interface. This post cuts through that: what an agent actually is, why the idea failed in the 1990s, why it's working now, and what's actually inside one.
 
 ## Agents Are Older Than You Think
 
@@ -19,22 +19,22 @@ Long before ChatGPT, *Artificial Intelligence: A Modern Approach* (Russell & Nor
 3. reasons about those inputs, and
 4. acts upon the environment through its actions.
 
-That definition doesn't mention language models at all — it includes thermostats, robots, web crawlers, and self-driving cars. What separates a mere "computer program" from an agent is that an agent operates *autonomously*, persists over time, adapts to change, and pursues goals rather than simply executing one instruction and stopping.
+That definition doesn't mention language models at all, it includes thermostats, robots, web crawlers, and self-driving cars. What separates a mere "computer program" from an agent is that an agent operates *autonomously*, persists over time, adapts to change, and pursues goals rather than simply executing one instruction and stopping.
 
-In the late 1990s, "agent" was everywhere — intelligent agents, software agents, personal digital assistants. They were built on symbolic AI, expert systems, and rule-based reasoning. And they mostly failed to live up to the hype. APIs were primitive, the web was barely accessible programmatically, memory was static, and language understanding amounted to keyword spotting. The concepts — memory, goals, planning, an interface to the world — were sound. The technology to make them work simply wasn't there yet.
+In the late 1990s, "agent" was everywhere, intelligent agents, software agents, personal digital assistants. They were built on symbolic AI, expert systems, and rule-based reasoning. And they mostly failed to live up to the hype. APIs were primitive, the web was barely accessible programmatically, memory was static, and language understanding amounted to keyword spotting. The concepts, memory, goals, planning, an interface to the world, were sound. The technology to make them work simply wasn't there yet.
 
 ## What Changed: The LLM Is the Missing Engine
 
 A useful mental model: **think of a stand-alone LLM as a brain in a jar.** It can reason in language, but it has no body, no senses beyond the text you feed it, and no memory once the conversation ends. An agent gives that brain:
 
-- a **body** — tools it can call to act on the world,
-- **senses** — retrieval systems and APIs that bring in fresh information,
-- **memory** — context windows and external databases, and
-- **goals** — a planner that decides what to do next.
+- a **body**, tools it can call to act on the world,
+- **senses**, retrieval systems and APIs that bring in fresh information,
+- **memory**, context windows and external databases, and
+- **goals**, a planner that decides what to do next.
 
 That's the moment a language model stops being a very articulate autocomplete and starts being something that can act.
 
-This matters because stand-alone LLMs have real, well-documented limitations: they hallucinate confidently, their knowledge has a cutoff date, their context window is finite, they cannot browse the web or call an API on their own, they reason poorly in a single pass on multi-step problems, and they have no built-in way to notice or correct their own mistakes. Agentic architecture doesn't eliminate these limitations — but it gives you the scaffolding to manage them.
+This matters because stand-alone LLMs have real, well-documented limitations: they hallucinate confidently, their knowledge has a cutoff date, their context window is finite, they cannot browse the web or call an API on their own, they reason poorly in a single pass on multi-step problems, and they have no built-in way to notice or correct their own mistakes. Agentic architecture doesn't eliminate these limitations, but it gives you the scaffolding to manage them.
 
 ## The Seven Things an Agent Architecture Needs
 
@@ -48,62 +48,62 @@ Whether you're looking at a 1990s symbolic system or a 2026 LLM-based one, a wor
 - **Verification & guardrails**
 - **A user/system interface**
 
-What's changed isn't the list — it's the horsepower behind each item. Let's walk through the ones that matter most in practice.
+What's changed isn't the list, it's the horsepower behind each item. Let's walk through the ones that matter most in practice.
 
 ### Memory: More Than a Chat History
 
-A stand-alone LLM is stateless — once the prompt ends, it forgets everything. A working agent needs several *kinds* of memory: short-term (the conversation history in the context window), long-term (external vector databases and knowledge bases), episodic (logs of past interactions), and semantic (knowledge retrieved via RAG). Retrieval-Augmented Generation, in particular, acts as the agent's factual anchor — it's the verified database the reasoning engine is forced to consult rather than guess.
+A stand-alone LLM is stateless, once the prompt ends, it forgets everything. A working agent needs several *kinds* of memory: short-term (the conversation history in the context window), long-term (external vector databases and knowledge bases), episodic (logs of past interactions), and semantic (knowledge retrieved via RAG). Retrieval-Augmented Generation, in particular, acts as the agent's factual anchor, it's the verified database the reasoning engine is forced to consult rather than guess.
 
-That distinction matters more than it sounds: an LLM's neural network is excellent at *generalizing* patterns to handle situations it's never explicitly seen. But you do not want it generalizing — that is, guessing — about a specific fact. A hallucinated IP address, legal clause, or medical dosage isn't a quirky error; in a professional setting it's a serious failure. RAG, and the neural reranking that sits alongside it, exist precisely to keep generalization and factual precision in balance: reranking acts like a senior partner reviewing 50–100 retrieved candidates and forcing the one true answer to the top, rather than letting the model drown in "lost in the middle" noise.
+That distinction matters more than it sounds: an LLM's neural network is excellent at *generalizing* patterns to handle situations it's never explicitly seen. But you do not want it generalizing, that is, guessing, about a specific fact. A hallucinated IP address, legal clause, or medical dosage isn't a quirky error; in a professional setting it's a serious failure. RAG, and the neural reranking that sits alongside it, exist precisely to keep generalization and factual precision in balance: reranking acts like a senior partner reviewing 50–100 retrieved candidates and forcing the one true answer to the top, rather than letting the model drown in "lost in the middle" noise.
 
 ### Action Interface: Doing, Not Just Talking
 
-The defining difference between an LLM and an agent is that an agent *does things*. Without tool access, an LLM can only reply to "cancel my order #99887" with "I can't do that, please contact support." With a tool interface — API calls, function calling, database queries, code execution — the same model can actually cancel the order.
+The defining difference between an LLM and an agent is that an agent *does things*. Without tool access, an LLM can only reply to "cancel my order #99887" with "I can't do that, please contact support." With a tool interface, API calls, function calling, database queries, code execution, the same model can actually cancel the order.
 
-This typically follows the **ReAct** pattern: the model reasons about what it needs to do, then issues a tool call, then waits for the real-world result before taking its next step. That waiting is unavoidable — an LLM cannot execute an API call and use the result within a single unbroken stream of text. Complex tasks are therefore inherently **multi-hop**: plan, act, observe, reflect, act again, closer each time to a resolution.
+This typically follows the **ReAct** pattern: the model reasons about what it needs to do, then issues a tool call, then waits for the real-world result before taking its next step. That waiting is unavoidable, an LLM cannot execute an API call and use the result within a single unbroken stream of text. Complex tasks are therefore inherently **multi-hop**: plan, act, observe, reflect, act again, closer each time to a resolution.
 
 ### Goal Management: Harder Than It Looks
 
-LLM-based agents let users express goals in plain language ("plan my trip for under €500") and decompose that into subgoals — budget, flights, hotels, activities. Some frameworks dynamically re-evaluate priorities at every loop iteration, combining hard rule-based constraints with scoring functions and, when goals are ambiguous, a human in the loop.
+LLM-based agents let users express goals in plain language ("plan my trip for under €500") and decompose that into subgoals, budget, flights, hotels, activities. Some frameworks dynamically re-evaluate priorities at every loop iteration, combining hard rule-based constraints with scoring functions and, when goals are ambiguous, a human in the loop.
 
 Even with all that, goal management remains genuinely hard. Models aren't inherently good at resolving trade-offs without explicit scoring systems. Agents can drift off a goal mid-process if it isn't reinforced. And a vague goal ("make me successful") tends to make an agent spin in circles rather than act.
 
 ### Critics, Reflection, and Guardrails: Building in Self-Doubt
 
-Here's an underappreciated problem: LLMs are sycophantic. Because they're fine-tuned via RLHF to be agreeable and helpful, they tend to tell you what you want to hear — including about their own plans. Left unchecked, this makes an agent overconfident in its own bad ideas.
+Here's an underappreciated problem: LLMs are sycophantic. Because they're fine-tuned via RLHF to be agreeable and helpful, they tend to tell you what you want to hear, including about their own plans. Left unchecked, this makes an agent overconfident in its own bad ideas.
 
-The fix is architectural, not motivational: give a **Critic agent** a separate, adversarial mandate — find the holes, play devil's advocate, refuse to be agreeable. Pair it with a **Reflection agent** that periodically stops and asks, "does this step still solve the original problem, or did we lose the plot?" Together, these turn a linear, error-prone pipeline into a self-correcting loop: an Actor proposes, a Critic tears it apart, a Reflector synthesizes concrete adjustments, and the Actor tries again — until the Critic is satisfied.
+The fix is architectural, not motivational: give a **Critic agent** a separate, adversarial mandate, find the holes, play devil's advocate, refuse to be agreeable. Pair it with a **Reflection agent** that periodically stops and asks, "does this step still solve the original problem, or did we lose the plot?" Together, these turn a linear, error-prone pipeline into a self-correcting loop: an Actor proposes, a Critic tears it apart, a Reflector synthesizes concrete adjustments, and the Actor tries again, until the Critic is satisfied.
 
-On top of that sits a layer of **guardrails** that should never be left entirely to another LLM, because probabilistic systems eventually fail in probabilistic ways. Deterministic, hard-coded checks — semantic routing to catch jailbreaks and injections before they reach the main agent, strict output parsers that reject malformed responses — provide a non-negotiable backstop. Some teams add a "constitution": a set of immutable principles a separate model checks the final output against, decoupled entirely from the task-execution logic.
+On top of that sits a layer of **guardrails** that should never be left entirely to another LLM, because probabilistic systems eventually fail in probabilistic ways. Deterministic, hard-coded checks, semantic routing to catch jailbreaks and injections before they reach the main agent, strict output parsers that reject malformed responses, provide a non-negotiable backstop. Some teams add a "constitution": a set of immutable principles a separate model checks the final output against, decoupled entirely from the task-execution logic.
 
 ## Why This Matters Now
 
 None of this is achievable with simple retrieval alone. Consider four examples of what agentic architectures make possible that plain RAG cannot:
 
-- **Autonomous research and synthesis** — planning multi-hop queries across medical, legal, and financial domains, identifying conflicting studies, and producing a structured report without a human directing each step.
-- **End-to-end troubleshooting** — diagnosing an issue through conversation, calling diagnostic APIs to check system logs, and autonomously executing a fix.
-- **Strategic decision support** — decomposing a broad question like "analyze our market expansion risk" into sub-queries, pulling live competitive data, running calculations, and adapting strategy as findings come in.
-- **Forensics and compliance monitoring** — continuously watching logs or communications for patterns of concerning behavior and triggering escalation when thresholds are crossed.
+- **Autonomous research and synthesis**, planning multi-hop queries across medical, legal, and financial domains, identifying conflicting studies, and producing a structured report without a human directing each step.
+- **End-to-end troubleshooting**, diagnosing an issue through conversation, calling diagnostic APIs to check system logs, and autonomously executing a fix.
+- **Strategic decision support**, decomposing a broad question like "analyze our market expansion risk" into sub-queries, pulling live competitive data, running calculations, and adapting strategy as findings come in.
+- **Forensics and compliance monitoring**, continuously watching logs or communications for patterns of concerning behavior and triggering escalation when thresholds are crossed.
 
 None of these are single-shot text generation tasks. They require memory across steps, tools that reach into the real world, a plan that can be revised, and a mechanism to catch the system's own mistakes before they become someone else's problem.
 
 ## The Takeaway
 
-An AI agent isn't a chatbot with a longer memory, and it isn't a rebrand of a 1990s rule-based system either. It's what happens when a language model — genuinely capable of open-ended reasoning for the first time — gets wrapped in the same seven components AI researchers identified thirty years ago: memory, knowledge access, tool use, planning, goal management, verification, and an interface to act through. The concepts haven't changed. What changed is that we finally have an engine powerful enough to make them work.
+An AI agent isn't a chatbot with a longer memory, and it isn't a rebrand of a 1990s rule-based system either. It's what happens when a language model, genuinely capable of open-ended reasoning for the first time, gets wrapped in the same seven components AI researchers identified thirty years ago: memory, knowledge access, tool use, planning, goal management, verification, and an interface to act through. The concepts haven't changed. What changed is that we finally have an engine powerful enough to make them work.
 
-*This post is a high-level overview. Later posts in this series go deeper into specific components — [RAG architectures and neural reranking](from-text-to-agentic-workflows.qmd), [multi-agent orchestration and governance](governing-the-autonomous-organization.qmd), and [the training data needed to specialize these components for a given domain](from-logbooks-to-agent-training-data.qmd).*
+*This post is a high-level overview. Later posts in this series go deeper into specific components, [RAG architectures and neural reranking](from-text-to-agentic-workflows.qmd), [multi-agent orchestration and governance](governing-the-autonomous-organization.qmd), and [the training data needed to specialize these components for a given domain](from-logbooks-to-agent-training-data.qmd).*
 
 **Key papers**
 
-- Russell & Norvig (2020), *Artificial Intelligence: A Modern Approach* (4th ed.) — [norvig.com/aima.html](http://norvig.com/aima.html)
-- Yao et al. (2022), *ReAct: Synergizing Reasoning and Acting in Language Models* — [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
-- Wang et al. (2023), *A Survey on Large Language Model Based Autonomous Agents* — [arXiv:2308.11432](https://arxiv.org/abs/2308.11432)
+- Russell & Norvig (2020), *Artificial Intelligence: A Modern Approach* (4th ed.), [norvig.com/aima.html](http://norvig.com/aima.html)
+- Yao et al. (2022), *ReAct: Synergizing Reasoning and Acting in Language Models*, [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
+- Wang et al. (2023), *A Survey on Large Language Model Based Autonomous Agents*, [arXiv:2308.11432](https://arxiv.org/abs/2308.11432)
 
 ---
 
 **Further reading on this site**
 
-- [From Text to Action: Turning NLP Pipelines into Agentic Workflows](from-text-to-agentic-workflows.qmd) — how to build the training data behind each of these components
-- [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd) — who is accountable when the agent acts
-- [Why NLP Finally Works](why-nlp-finally-works.qmd) — the transformer architecture that made agents possible
-- [The Institutional Moat](the-institutional-moat.qmd) — why the architecture around the model matters more than the model itself
+- [From Text to Action: Turning NLP Pipelines into Agentic Workflows](from-text-to-agentic-workflows.qmd), how to build the training data behind each of these components
+- [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd), who is accountable when the agent acts
+- [Why NLP Finally Works](why-nlp-finally-works.qmd), the transformer architecture that made agents possible
+- [The Institutional Moat](the-institutional-moat.qmd), why the architecture around the model matters more than the model itself

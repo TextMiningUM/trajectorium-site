@@ -1,6 +1,6 @@
 ---
 title: "Slides"
-description: "Lecture slides from the Advanced Natural Language Processing (ANLP) and Agentic Conversational Search courses at the Department of Advanced Computing Sciences, Maastricht University. Covers everything from tokenization and transformers to multi-agent orchestration, LLM fine-tuning, and speech recognition — openly available for reuse and adaptation."
+description: "Lecture slides from the Advanced Natural Language Processing (ANLP) and Agentic Conversational Search courses at the Department of Advanced Computing Sciences, Maastricht University. Covers everything from tokenization and transformers to multi-agent orchestration, LLM fine-tuning, and speech recognition, openly available for reuse and adaptation."
 page-layout: full
 toc: false
 ---
@@ -15,20 +15,20 @@ toc: false
 
 ### Agentic Conversational Search
 
-<p class="course-meta">IRTM &mdash; DACS, Maastricht University &mdash; 2025&ndash;2026</p>
+<p class="course-meta">IRTM, DACS, Maastricht University, 2025&ndash;2026</p>
 
 <table class="lecture-table">
 <tr><td class="lec-num">01</td><td class="lec-title">Introduction</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2001%20Introduction%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
 <tr><td class="lec-num">02</td><td class="lec-title">Index and Query Optimizations</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2002%20Information%20Retrieval%20Index%20and%20Query%20Optimizations%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
 <tr><td class="lec-num">03</td><td class="lec-title">Relevance</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2003%20Information%20Retrieval%20Relevance%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
 <tr><td class="lec-num">04</td><td class="lec-title">Measuring Quality (incl. Tutorial)</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2004%20Measuring%20Quality%20including%20Tutorial%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">06</td><td class="lec-title">Building Knowledge Graphs from Text &mdash; Part 1</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2006%20Building%20Knowledge%20Graphs%20from%20Text%20-%20Part%201%20-%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">07</td><td class="lec-title">Building Knowledge Graphs from Text &mdash; Part 2</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2007%20Building%20Knowledge%20Graphs%20from%20Text%20-%20Part%202%20-%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">08</td><td class="lec-title">Detecting Patterns and Organizing Text &mdash; Part 1</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2008%20Detecting%20Patterns%20and%20Organizing%20Text%20-%20Part%201%20-%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">09</td><td class="lec-title">Detecting Patterns and Organizing Text &mdash; Part 2</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2009%20Detecting%20Patterns%20and%20Organizing%20Text%20-%202%20-%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">10</td><td class="lec-title">Conversational Search &mdash; The Basics</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2010%20Conversational%20Search%20-%20the%20Basics%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">11</td><td class="lec-title">Conversational Search &mdash; Sticking to the Facts</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2011%20Conversational%20Search%20-%20Sticking%20to%20the%20facts%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">12</td><td class="lec-title">Conversational Search &mdash; Agentic Approaches</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/12%20IRTM%20Conversational%20Search%20-%20Agentic%20Approaches%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">06</td><td class="lec-title">Building Knowledge Graphs from Text, Part 1</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2006%20Building%20Knowledge%20Graphs%20from%20Text%20-%20Part%201%20-%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">07</td><td class="lec-title">Building Knowledge Graphs from Text, Part 2</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2007%20Building%20Knowledge%20Graphs%20from%20Text%20-%20Part%202%20-%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">08</td><td class="lec-title">Detecting Patterns and Organizing Text, Part 1</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2008%20Detecting%20Patterns%20and%20Organizing%20Text%20-%20Part%201%20-%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">09</td><td class="lec-title">Detecting Patterns and Organizing Text, Part 2</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2009%20Detecting%20Patterns%20and%20Organizing%20Text%20-%202%20-%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">10</td><td class="lec-title">Conversational Search, The Basics</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2010%20Conversational%20Search%20-%20the%20Basics%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">11</td><td class="lec-title">Conversational Search, Sticking to the Facts</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%2011%20Conversational%20Search%20-%20Sticking%20to%20the%20facts%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">12</td><td class="lec-title">Conversational Search, Agentic Approaches</td><td class="lec-link"><a href="https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/12%20IRTM%20Conversational%20Search%20-%20Agentic%20Approaches%202025-2026.pdf" target="_blank">View PDF &rarr;</a></td></tr>
 </table>
 
 [Full lecture notes (PDF) &rarr;](https://github.com/TextMiningUM/IRTM-Student/blob/main/Course%20Materials/IRTM%20Lecture%20Notes%20Full%20V9%2020260219.pdf){target="_blank" .me-3}
@@ -41,7 +41,7 @@ toc: false
 
 ### Advanced Natural Language Processing
 
-<p class="course-meta">ANLP &mdash; DACS, Maastricht University &mdash; 2026&ndash;2027</p>
+<p class="course-meta">ANLP, DACS, Maastricht University, 2026&ndash;2027</p>
 
 <table class="lecture-table">
 <tr><td class="lec-num">01</td><td class="lec-title">The Problem with NLP</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_01_The_Problem_with_NLP_2026-2027_ANNOTATED.pdf" target="_blank">View PDF &rarr;</a></td></tr>
@@ -51,9 +51,9 @@ toc: false
 <tr><td class="lec-num">05</td><td class="lec-title">Syntax and Semantics</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_05_Syntax_and_Semantics_2026-2027_ANNOTATED.pdf" target="_blank">View PDF &rarr;</a></td></tr>
 <tr><td class="lec-num">06</td><td class="lec-title">Statistical NLP</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_06_Statistical_NLP_2025-2026_ANNOTATED.pdf" target="_blank">View PDF &rarr;</a></td></tr>
 <tr><td class="lec-num">07</td><td class="lec-title">A History of Deep Learning</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_07_A_History_of_Deep_Learning_2026-2027_ANNOTATED.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">08</td><td class="lec-title">Deep Learning &mdash; Transfer Learning, Encoder-Decoder &amp; Attention</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_08_Deep_Learning_-_Transfer_Learning_Encoder-Decoder_Attention_2026-2027_ANNOTATED.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">09</td><td class="lec-title">Deep Learning &mdash; Self-Attention &amp; Transformers</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2009%20Deep%20Learning%20-%20Self-Attention%20Transformers%202026-2027.pdf" target="_blank">View PDF &rarr;</a></td></tr>
-<tr><td class="lec-num">10</td><td class="lec-title">Deep Learning &mdash; BERT</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2010%20Deep%20Learning%20-%20BERT%202026-2027.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">08</td><td class="lec-title">Deep Learning, Transfer Learning, Encoder-Decoder &amp; Attention</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP_Lecture_08_Deep_Learning_-_Transfer_Learning_Encoder-Decoder_Attention_2026-2027_ANNOTATED.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">09</td><td class="lec-title">Deep Learning, Self-Attention &amp; Transformers</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2009%20Deep%20Learning%20-%20Self-Attention%20Transformers%202026-2027.pdf" target="_blank">View PDF &rarr;</a></td></tr>
+<tr><td class="lec-num">10</td><td class="lec-title">Deep Learning, BERT</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2010%20Deep%20Learning%20-%20BERT%202026-2027.pdf" target="_blank">View PDF &rarr;</a></td></tr>
 <tr><td class="lec-num">11</td><td class="lec-title">GPT</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2011%20GPT%202026-2027.pdf" target="_blank">View PDF &rarr;</a></td></tr>
 <tr><td class="lec-num">12</td><td class="lec-title">XAI for NLP</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2012%20XAI%20for%20NLP%202026-2027.pdf" target="_blank">View PDF &rarr;</a></td></tr>
 <tr><td class="lec-num">13</td><td class="lec-title">Fine-Tuning LLMs</td><td class="lec-link"><a href="https://github.com/TextMiningUM/ANLP-Student/blob/main/Course%20Materials/ANLP%20Lecture%2013%20Fine%20Tuning%20LLM%202026-2027.pdf" target="_blank">View PDF &rarr;</a></td></tr>

@@ -1,6 +1,6 @@
 ---
 title: "Tutorials & Notebooks"
-description: "Publicly available Jupyter notebooks for the Advanced Natural Language Processing (ANLP) and Agentic Conversational Search courses at Maastricht University. Hands-on tutorials covering neural NLP pipelines, transformer fine-tuning, retrieval-augmented generation, and agentic system design — with GPU-ready code and full working examples."
+description: "Publicly available Jupyter notebooks for the Advanced Natural Language Processing (ANLP) and Agentic Conversational Search courses at Maastricht University. Hands-on tutorials covering neural NLP pipelines, transformer fine-tuning, retrieval-augmented generation, and agentic system design, with GPU-ready code and full working examples."
 page-layout: full
 toc: false
 ---
@@ -9,14 +9,14 @@ toc: false
 
 ## Course Tutorials
 
-<p class="section-intro">The tutorials below are hosted as public GitHub repositories. Clone the repo to work through the materials at your own pace — no sign-in required.</p>
+<p class="section-intro">The tutorials below are hosted as public GitHub repositories. Clone the repo to work through the materials at your own pace, no sign-in required.</p>
 
 <div class="row g-4">
 <div class="col-md-6"><div class="course-card">
 
 ### Agentic Conversational Search
 
-<p class="course-meta">IRTM &mdash; DACS, Maastricht University</p>
+<p class="course-meta">IRTM, DACS, Maastricht University</p>
 
 Thirteen hands-on tutorials covering the full text-to-retrieval pipeline: from tokenisation and indexing to TF-IDF ranking, language models, neural retrieval, and systematic evaluation. All materials are implemented in Python and Jupyter Notebook.
 
@@ -29,7 +29,7 @@ Thirteen hands-on tutorials covering the full text-to-retrieval pipeline: from t
 
 ### Advanced Natural Language Processing
 
-<p class="course-meta">ANLP &mdash; DACS, Maastricht University</p>
+<p class="course-meta">ANLP, DACS, Maastricht University</p>
 
 Advanced NLP course covering modern transformer-based approaches: sequence modelling, fine-tuning pre-trained language models, RLHF, and applied NLP tasks. Predominantly Jupyter Notebook with GPU support via CUDA.
 

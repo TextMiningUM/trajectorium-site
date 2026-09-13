@@ -1,6 +1,6 @@
 ---
 title: "Over de auteur"
-description: "Over de auteur van Trajectorium — Jan Scholtes, hoogleraar Text Mining aan de Universiteit Maastricht."
+description: "Over de auteur van Trajectorium, Jan Scholtes, hoogleraar Text Mining aan de Universiteit Maastricht."
 page-layout: full
 toc: false
 ---
@@ -12,7 +12,7 @@ toc: false
 
 ## Jan Scholtes
 
-**Johannes (Jan) C. Scholtes** werkt al meer dan veertig jaar op het snijvlak van kunstmatige intelligentie en menselijke taal — lang voordat een van beide vakgebieden populair werd. Zijn eerste publicaties dateren uit 1987, toen hij aan de TU Delft een kennisgebaseerd systeem voor optische tekenherkenning bouwde. Zijn proefschrift aan de Universiteit van Amsterdam uit 1993 — *Neural Networks in Natural Language Processing and Information Retrieval* — voorafschaduwde met decennia de architecturen die nu centraal staan in moderne AI.
+**Johannes (Jan) C. Scholtes** werkt al meer dan veertig jaar op het snijvlak van kunstmatige intelligentie en menselijke taal, lang voordat een van beide vakgebieden populair werd. Zijn eerste publicaties dateren uit 1987, toen hij aan de TU Delft een kennisgebaseerd systeem voor optische tekenherkenning bouwde. Zijn proefschrift aan de Universiteit van Amsterdam uit 1993, *Neural Networks in Natural Language Processing and Information Retrieval*, voorafschaduwde met decennia de architecturen die nu centraal staan in moderne AI.
 
 Sinds 2008 bekleedt hij de **Endowed Chair of Text Mining** aan de [Vakgroep Advanced Computing Sciences](https://www.maastrichtuniversity.nl/research/department-advanced-computing-sciences) van de Universiteit Maastricht, waar hij de cursussen Advanced NLP en Agentic Conversational Search doceert en promotie- en masteronderzoek begeleidt op het gebied van juridische AI, klinische NLP, fraudedetectie en agentische systemen. Hij is **Fellow van de SIKS School** van de Koninklijke Nederlandse Akademie van Wetenschappen (KNAW).
 
@@ -20,9 +20,9 @@ Zijn toegepaste werk bestrijkt een aantal van de veeleisendste professionele omg
 
 Op bedrijfsmatig vlak is Jan **Venture Partner bij [Endeit Capital](https://www.endeit.com/)**, een toonaangevend Europees *growth-equity* fonds gericht op technologie, en **Board Member bij [IPRally](https://iprally.com/)**, het AI-native octrooianalyticsbedrijf waarvan de zoektechnologie geavanceerde NLP toepast op octrooianalyse op wereldschaal. Zijn leerstoel aan de Universiteit Maastricht werd ingesteld met steun van **[ZyLAB Technologies](https://www.zylab.com/)**, een van 's werelds toonaangevende platformen voor AI-gestuurde review van grote documentcollecties, gebruikt door Fortune 500-bedrijven, overheidsinstanties en internationale strafhoven wereldwijd.
 
-Zijn publicatielijst omvat meer dan vijftig peer-reviewed artikelen en boekhoofdstukken — van het AAAI Spring Symposium en IEEE IJCNN in 1991 tot recent werk over *deep learning* voor klinische NLP, anomaliedetectie in complexe netwerken en conversatieve AI voor toetsing. Hij bezit octrooien op het gebied van *text mining* en *information retrieval*. Een volledige publicatielijst is beschikbaar op [textmining.nu](https://textmining.nu/publications/).
+Zijn publicatielijst omvat meer dan vijftig peer-reviewed artikelen en boekhoofdstukken, van het AAAI Spring Symposium en IEEE IJCNN in 1991 tot recent werk over *deep learning* voor klinische NLP, anomaliedetectie in complexe netwerken en conversatieve AI voor toetsing. Hij bezit octrooien op het gebied van *text mining* en *information retrieval*. Een volledige publicatielijst is beschikbaar op [textmining.nu](https://textmining.nu/publications/).
 
-De bijdragen op deze site bouwen voort op die veertig jaar ervaring: het bouwen van systemen die taal omzetten in kennis, en de overtuiging dat de belangrijkste vraagstukken in AI vandaag niet technisch zijn maar organisatorisch — wie het beheert, wie de data bezit, en of de architectuur gebouwd is om te blijven.
+De bijdragen op deze site bouwen voort op die veertig jaar ervaring: het bouwen van systemen die taal omzetten in kennis, en de overtuiging dat de belangrijkste vraagstukken in AI vandaag niet technisch zijn maar organisatorisch, wie het beheert, wie de data bezit, en of de architectuur gebouwd is om te blijven.
 
 [LinkedIn](https://www.linkedin.com/in/jscholtes/){.btn .btn-primary target="_blank" .me-2}
 [textmining.nu](https://textmining.nu){.btn .btn-outline-primary target="_blank"}
@@ -35,13 +35,13 @@ De bijdragen op deze site bouwen voort op die veertig jaar ervaring: het bouwen 
 
 ## De naam "Trajectorium"
 
-De Latijnse naam voor Maastricht is *Trajectum ad Mosam* — "de oversteekplaats aan de Maas." Van *Traject*, voeg *-orium* toe zoals in *auditorium* of *laboratorium*, en je krijgt *Trajectorium*: een instituut voor trajecten.
+De Latijnse naam voor Maastricht is *Trajectum ad Mosam*, "de oversteekplaats aan de Maas." Van *Traject*, voeg *-orium* toe zoals in *auditorium* of *laboratorium*, en je krijgt *Trajectorium*: een instituut voor trajecten.
 
-De dubbele betekenis is bewust. Een traject is een baan door ruimte en tijd — de route die een object volgt, de koers die een systeem beschrijft, de keten van beslissingen die een AI-agent doorwerkt van observatie naar handeling. Het woord verbindt klassiek Latijn en hedendaags AI-onderzoek in één naam, verankerd in de stad waar het werk plaatsvindt.
+De dubbele betekenis is bewust. Een traject is een baan door ruimte en tijd, de route die een object volgt, de koers die een systeem beschrijft, de keten van beslissingen die een AI-agent doorwerkt van observatie naar handeling. Het woord verbindt klassiek Latijn en hedendaags AI-onderzoek in één naam, verankerd in de stad waar het werk plaatsvindt.
 
-De metaforen gaan dieper dan de etymologie. De artikelen op deze site betogen dat het meest waardevolle traject in moderne AI het traject is van ongestructureerde tekst — geschreven door één generatie beoefenaars, voor de volgende — naar trainingsdata voor agents die die kennis verder dragen. Een logboek geschreven om de volgende boerenknecht te trainen. Een juridische procedure geschreven voor de volgende dossierbeheerder. Een klinische notitie geschreven voor de volgende arts op de afdeling. De kennis was altijd bedoeld om vooruit te reizen in de tijd. Wat veranderde, is wie die aan het andere einde ontvangt.
+De metaforen gaan dieper dan de etymologie. De artikelen op deze site betogen dat het meest waardevolle traject in moderne AI het traject is van ongestructureerde tekst, geschreven door één generatie beoefenaars, voor de volgende, naar trainingsdata voor agents die die kennis verder dragen. Een logboek geschreven om de volgende boerenknecht te trainen. Een juridische procedure geschreven voor de volgende dossierbeheerder. Een klinische notitie geschreven voor de volgende arts op de afdeling. De kennis was altijd bedoeld om vooruit te reizen in de tijd. Wat veranderde, is wie die aan het andere einde ontvangt.
 
-Dat traject — van menselijk-leesbaar naar machine-leerbaar, van institutioneel geheugen naar soevereine, energiezuinige AI die draait op infrastructuur die een organisatie werkelijk beheert — is de praktische en intellectuele zorg die deze site in kaart brengt.
+Dat traject, van menselijk-leesbaar naar machine-leerbaar, van institutioneel geheugen naar soevereine, energiezuinige AI die draait op infrastructuur die een organisatie werkelijk beheert, is de praktische en intellectuele zorg die deze site in kaart brengt.
 
 </div>
 <div class="col-md-4">
@@ -77,11 +77,11 @@ Wiskunde en Informatica
 ### Onderwerpen
 
 AI-agents en autonome architecturen
-— Juridische AI en eDiscovery
-— Klinische NLP
-— Fraude- en anomaliedetectie
-— AI-bestuur en soevereiniteit
-— AI in het onderwijs
+, Juridische AI en eDiscovery
+, Klinische NLP
+, Fraude- en anomaliedetectie
+, AI-bestuur en soevereiniteit
+, AI in het onderwijs
 
 </div>
 

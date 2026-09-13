@@ -1,6 +1,6 @@
 ---
 title: "From Text to Action: Turning NLP Pipelines into Agentic Workflows"
-description: "How raw, unstructured text becomes the training data behind an agent's memory, tools, reasoning, and guardrails — and why that conversion is where the real competitive advantage lives."
+description: "How raw, unstructured text becomes the training data behind an agent's memory, tools, reasoning, and guardrails, and why that conversion is where the real competitive advantage lives."
 date: 2026-09-26
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/AgentSmith.png"
@@ -12,78 +12,78 @@ Most organizations already sit on a mountain of unstructured text: manuals, case
 
 ## Why the Model Isn't Your Moat
 
-It's tempting to think that wiring a system prompt onto a strong LLM *is* building an agent. It isn't. Relying purely on system prompts and Markdown "skill files" gives you only shallow control — you're treating the model as a black box and, more importantly, building a dependency on someone else's roadmap rather than a company. Many teams that claim to have "built an agent" have really just layered instructional text over a general-purpose model. That's the **God-Prompt trap**, and it's brittle: rigid if-then rules can't account for the infinite long tail of exceptions that real-world text mining and operations actually contain.
+It's tempting to think that wiring a system prompt onto a strong LLM *is* building an agent. It isn't. Relying purely on system prompts and Markdown "skill files" gives you only shallow control, you're treating the model as a black box and, more importantly, building a dependency on someone else's roadmap rather than a company. Many teams that claim to have "built an agent" have really just layered instructional text over a general-purpose model. That's the **God-Prompt trap**, and it's brittle: rigid if-then rules can't account for the infinite long tail of exceptions that real-world text mining and operations actually contain.
 
-The real competitive advantage — the "moat" — isn't the underlying LLM at all. Big Tech models are generalists: they own multi-step reasoning chains, native tool integration, and recursive self-improvement, but what you get through their APIs is largely a sandbox — system prompts, function calling, and standard vector search. If your business's value is purely tied to whichever model you're calling, you're standing in the path of a tidal wave: the next model update might simply absorb what you built. The moat is in the **architecture around the model** — and that architecture has to be trained on *your* text.
+The real competitive advantage, the "moat", isn't the underlying LLM at all. Big Tech models are generalists: they own multi-step reasoning chains, native tool integration, and recursive self-improvement, but what you get through their APIs is largely a sandbox, system prompts, function calling, and standard vector search. If your business's value is purely tied to whichever model you're calling, you're standing in the path of a tidal wave: the next model update might simply absorb what you built. The moat is in the **architecture around the model**, and that architecture has to be trained on *your* text.
 
 ## Step One: From Raw Text to Structured JSON
 
-Raw text — especially from PDFs — is built for human eyes, not machine reasoning. An LLM reading a flat text dump can't reliably tell a chapter heading from a technical definition, a warning label from a procedural step. That ambiguity is exactly what breaks downstream agentic components, so the first real engineering step is converting unstructured text into a hierarchical, machine-readable **JSON schema** — a "foundational ontology" that explicitly maps chapters to sub-topics to definitions to procedures.
+Raw text, especially from PDFs, is built for human eyes, not machine reasoning. An LLM reading a flat text dump can't reliably tell a chapter heading from a technical definition, a warning label from a procedural step. That ambiguity is exactly what breaks downstream agentic components, so the first real engineering step is converting unstructured text into a hierarchical, machine-readable **JSON schema**, a "foundational ontology" that explicitly maps chapters to sub-topics to definitions to procedures.
 
 This step matters more than it looks like it should, because errors cascade. If the JSON conversion flattens the hierarchy or merges unrelated paragraphs:
 
-- **RAG chunks lose their parent context** — a retrieved procedure like "terminate the malicious process" might silently lose the fact that it only applies to one specific scenario, and the reranker downstream won't be able to surface the right answer.
-- **Sequential workflows get taught out of order** — if Phase 1/2/3 structure isn't preserved, an agent's fine-tuned planning layer can learn to execute step 3 before step 1.
-- **Knowledge graphs lose their edges** — entity relationships that aren't captured hierarchically can't later support multi-hop reasoning.
-- **RLHF preference pairs lose their justification** — without the surrounding context, a Critic agent can't judge whether an action actually violated a rule.
+- **RAG chunks lose their parent context**, a retrieved procedure like "terminate the malicious process" might silently lose the fact that it only applies to one specific scenario, and the reranker downstream won't be able to surface the right answer.
+- **Sequential workflows get taught out of order**, if Phase 1/2/3 structure isn't preserved, an agent's fine-tuned planning layer can learn to execute step 3 before step 1.
+- **Knowledge graphs lose their edges**, entity relationships that aren't captured hierarchically can't later support multi-hop reasoning.
+- **RLHF preference pairs lose their justification**, without the surrounding context, a Critic agent can't judge whether an action actually violated a rule.
 
 Get the structure right once, early, and every downstream training pipeline benefits. Get it wrong, and every downstream component inherits the flaw.
 
-## Step Two: Memory — RAG and Neural Reranking as Your Corporate Memory
+## Step Two: Memory, RAG and Neural Reranking as Your Corporate Memory
 
 Once your text is structured, it becomes the backbone of the agent's memory. The mechanics are familiar but worth being precise about:
 
-1. **Chunking** — break long documents into semantically coherent sections (roughly 500 words is a common target), not arbitrary fixed-length slices.
-2. **Indexing** — convert chunks into vectors and store them in a vector database (Pinecone, pgvector, Azure AI Search).
-3. **Retrieval** — given a query, pull the most relevant chunks.
-4. **Augmentation** — instruct the model to answer *using only* those retrieved sources.
-5. **Generation** — produce a cited, factual answer.
+1. **Chunking**, break long documents into semantically coherent sections (roughly 500 words is a common target), not arbitrary fixed-length slices.
+2. **Indexing**, convert chunks into vectors and store them in a vector database (Pinecone, pgvector, Azure AI Search).
+3. **Retrieval**, given a query, pull the most relevant chunks.
+4. **Augmentation**, instruct the model to answer *using only* those retrieved sources.
+5. **Generation**, produce a cited, factual answer.
 
-A plain vector search finds things that are *similar*; it doesn't reliably find the thing that's *correct*. That's the job of a **neural reranker** — a fine-tuned cross-encoder trained on your own query/best-answer pairs, which re-examines the top 50–100 candidates and pushes the actual "smoking gun" answer into position one, dramatically cutting hallucinations and solving the "lost in the middle" problem where a model buried in twenty similar-looking chunks misses the one that matters. Building this well requires real infrastructure choices: a strong embedding model (don't skimp here — a bad translator produces bad search), an orchestration framework such as LlamaIndex or LangChain to wire files to database to model, and a reliable document parser for the messy PDFs you're starting from.
+A plain vector search finds things that are *similar*; it doesn't reliably find the thing that's *correct*. That's the job of a **neural reranker**, a fine-tuned cross-encoder trained on your own query/best-answer pairs, which re-examines the top 50–100 candidates and pushes the actual "smoking gun" answer into position one, dramatically cutting hallucinations and solving the "lost in the middle" problem where a model buried in twenty similar-looking chunks misses the one that matters. Building this well requires real infrastructure choices: a strong embedding model (don't skimp here, a bad translator produces bad search), an orchestration framework such as LlamaIndex or LangChain to wire files to database to model, and a reliable document parser for the messy PDFs you're starting from.
 
-## Step Three: Tools — Turning Text into Operational Limbs
+## Step Three: Tools, Turning Text into Operational Limbs
 
-Skills and tools are the "limbs" of an agentic architecture — structured definitions (API schemas, JSON functions, SQL interfaces) that let a model act instead of only talk. Proprietary internal APIs are where this becomes a genuine business moat: a general-purpose model from a big provider is legally and technically blocked from touching your internal systems, however smart it is. An agent wired into your own electronic patient database, CRM, or monitoring tools can pull real historical values, cross-reference them, and act on live context instead of guessing from pre-trained weights.
+Skills and tools are the "limbs" of an agentic architecture, structured definitions (API schemas, JSON functions, SQL interfaces) that let a model act instead of only talk. Proprietary internal APIs are where this becomes a genuine business moat: a general-purpose model from a big provider is legally and technically blocked from touching your internal systems, however smart it is. An agent wired into your own electronic patient database, CRM, or monitoring tools can pull real historical values, cross-reference them, and act on live context instead of guessing from pre-trained weights.
 
-This is also where multi-hop orchestration becomes necessary rather than optional. Complex professional tasks rarely resolve in one lookup — an agent chaining an HR database (who's on call), a monitoring tool (current load), and an execution tool (restart the service) is running an **OODA loop**: observe, orient, decide, act, and repeat until the objective is met, adjusting its plan as each tool call returns new information.
+This is also where multi-hop orchestration becomes necessary rather than optional. Complex professional tasks rarely resolve in one lookup, an agent chaining an HR database (who's on call), a monitoring tool (current load), and an execution tool (restart the service) is running an **OODA loop**: observe, orient, decide, act, and repeat until the objective is met, adjusting its plan as each tool call returns new information.
 
 ## Step Four: Reasoning and a Digital Peer Reviewer
 
-Planning frameworks like Chain-of-Thought, Tree-of-Thought, and Skeleton-of-Thought give a large model room to decompose a task into sub-goals with dependencies rather than answering in one pass. But a large, general model generating a first draft still benefits from a second, much smaller and more specialized model reviewing it — a **Critic** — fine-tuned specifically on your organization's own corrections.
+Planning frameworks like Chain-of-Thought, Tree-of-Thought, and Skeleton-of-Thought give a large model room to decompose a task into sub-goals with dependencies rather than answering in one pass. But a large, general model generating a first draft still benefits from a second, much smaller and more specialized model reviewing it, a **Critic**, fine-tuned specifically on your organization's own corrections.
 
-The training data for that critic is concrete and collectible: the rejected or edited raw outputs, the expert-corrected version, the rationale for the correction ("violates Section 4.2"), and any hard negative constraints or compliance red lines. As a rough scale guide: 50–100 examples gets you a prototype, 500–1,000 a production-grade critic, and 2,000+ starts to approach genuine domain expertise. This is precisely the kind of proprietary, real-world correction data that a general-purpose LLM provider will never have access to — which is exactly why it's a durable advantage rather than a temporary one.
+The training data for that critic is concrete and collectible: the rejected or edited raw outputs, the expert-corrected version, the rationale for the correction ("violates Section 4.2"), and any hard negative constraints or compliance red lines. As a rough scale guide: 50–100 examples gets you a prototype, 500–1,000 a production-grade critic, and 2,000+ starts to approach genuine domain expertise. This is precisely the kind of proprietary, real-world correction data that a general-purpose LLM provider will never have access to, which is exactly why it's a durable advantage rather than a temporary one.
 
-## Step Five: Guardrails — Where Institutional Trust Actually Comes From
+## Step Five: Guardrails, Where Institutional Trust Actually Comes From
 
 Hallucination and compliance risk is the single biggest barrier to real institutional AI adoption, so the architecture needs independent verification layers surrounding the core model, not baked into it:
 
-- **Fact-checking** — compare every draft against the RAG source of truth; every claim needs to be citable.
-- **Safety filters** — enforce legal, ethical, and compliance constraints, blocking outputs that cross defined red lines.
-- **Self-consistency checks** — run the same query through multiple reasoning paths and discard answers that don't agree with each other.
+- **Fact-checking**, compare every draft against the RAG source of truth; every claim needs to be citable.
+- **Safety filters**, enforce legal, ethical, and compliance constraints, blocking outputs that cross defined red lines.
+- **Self-consistency checks**, run the same query through multiple reasoning paths and discard answers that don't agree with each other.
 
-None of these should be delegated entirely to another instance of the same probabilistic model policing itself. Deterministic, hard-coded checks — input guarding before a prompt even reaches the main agent, strict schema enforcement on outputs — provide the backstop that a purely LLM-based critic cannot guarantee.
+None of these should be delegated entirely to another instance of the same probabilistic model policing itself. Deterministic, hard-coded checks, input guarding before a prompt even reaches the main agent, strict schema enforcement on outputs, provide the backstop that a purely LLM-based critic cannot guarantee.
 
 ## The Flywheel
 
-Put these pieces together and something compounding happens. Every real interaction generates a **reasoning triple**: the observation the system saw, the action or tool call it chose, and the consequence — success or failure. That data doesn't just sit there; it refines your rerankers, your critics, and your planners, which produces better outcomes, which drives more usage, which produces more data. This is the flywheel that converts a one-time text-mining project into a compounding, defensible asset — and it's precisely the dataset that later lets you fine-tune around each new generation of foundation model, rather than being replaced by it.
+Put these pieces together and something compounding happens. Every real interaction generates a **reasoning triple**: the observation the system saw, the action or tool call it chose, and the consequence, success or failure. That data doesn't just sit there; it refines your rerankers, your critics, and your planners, which produces better outcomes, which drives more usage, which produces more data. This is the flywheel that converts a one-time text-mining project into a compounding, defensible asset, and it's precisely the dataset that later lets you fine-tune around each new generation of foundation model, rather than being replaced by it.
 
 ## The Takeaway
 
-Converting text into agentic training data isn't a single technical trick — it's a pipeline: structure the text into a faithful JSON hierarchy, use that hierarchy to build a real memory layer (RAG plus reranking), extract the API definitions that give the agent hands, collect the correction data that trains a critic, and wrap all of it in deterministic guardrails. Do this well with your own proprietary text, and you're not renting intelligence from a foundation-model provider — you're building an architecture, and a dataset, that gets more valuable every time it's used.
+Converting text into agentic training data isn't a single technical trick, it's a pipeline: structure the text into a faithful JSON hierarchy, use that hierarchy to build a real memory layer (RAG plus reranking), extract the API definitions that give the agent hands, collect the correction data that trains a critic, and wrap all of it in deterministic guardrails. Do this well with your own proprietary text, and you're not renting intelligence from a foundation-model provider, you're building an architecture, and a dataset, that gets more valuable every time it's used.
 
 *For a concrete domain example of this exact pipeline applied to agricultural logbooks and institutional knowledge, see [From the Next Farmhand to the Next AI Agent](from-logbooks-to-agent-training-data.qmd).*
 
 **Key papers**
 
-- Lewis et al. (2020), *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks* — [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
-- Ouyang et al. (2022), *Training Language Models to Follow Instructions with Human Feedback* (InstructGPT) — [arXiv:2203.02155](https://arxiv.org/abs/2203.02155)
-- Rafailov et al. (2023), *Direct Preference Optimization* — [arXiv:2305.18290](https://arxiv.org/abs/2305.18290)
+- Lewis et al. (2020), *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*, [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
+- Ouyang et al. (2022), *Training Language Models to Follow Instructions with Human Feedback* (InstructGPT), [arXiv:2203.02155](https://arxiv.org/abs/2203.02155)
+- Rafailov et al. (2023), *Direct Preference Optimization*, [arXiv:2305.18290](https://arxiv.org/abs/2305.18290)
 
 ---
 
 **Further reading on this site**
 
-- [What Is an AI Agent?](what-is-an-ai-agent.qmd) — what the seven components being trained here actually are
-- [From Logbooks to Agent Training Data](from-logbooks-to-agent-training-data.qmd) — the same pipeline applied to a real agricultural knowledge base
-- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — what a well-trained specialized model built this way can achieve
-- [The Institutional Moat](the-institutional-moat.qmd) — why building this proprietary architecture matters strategically
+- [What Is an AI Agent?](what-is-an-ai-agent.qmd), what the seven components being trained here actually are
+- [From Logbooks to Agent Training Data](from-logbooks-to-agent-training-data.qmd), the same pipeline applied to a real agricultural knowledge base
+- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd), what a well-trained specialized model built this way can achieve
+- [The Institutional Moat](the-institutional-moat.qmd), why building this proprietary architecture matters strategically

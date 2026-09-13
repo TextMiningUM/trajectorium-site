@@ -1,4 +1,4 @@
-# Trajectorium — Bilingual Quarto Site
+# Trajectorium, Bilingual Quarto Site
 
 ## Why two sub-projects instead of one?
 
@@ -27,7 +27,7 @@ trajectorium-site/
     └── slides/
 ```
 
-## Building — automatically via GitHub Actions (recommended)
+## Building, automatically via GitHub Actions (recommended)
 
 A workflow is already configured at `.github/workflows/publish.yml`. It:
 
@@ -39,7 +39,7 @@ A workflow is already configured at `.github/workflows/publish.yml`. It:
 
 1. In the repo: **Settings → Pages → Source** → select **"GitHub Actions"**
 2. The `CNAME` file is already set to `trajectorium.ai`
-3. Commit and push to the `main` branch — the workflow starts automatically
+3. Commit and push to the `main` branch, the workflow starts automatically
 4. Monitor progress under the **Actions** tab in the repo
 5. Once the first run succeeds, enable **"Enforce HTTPS"** under Settings → Pages
 
@@ -59,7 +59,7 @@ Use `quarto preview` from within a language folder to preview locally before pus
 - [ ] `hreflang` alternate tags point to each other (already included in `include-in-header`)
 - [ ] `canonical` tag points to the correct language version
 - [ ] Separate `site-url` per language so each sitemap.xml generates correctly
-- [ ] Content is rewritten per language — not machine-translated 1:1
+- [ ] Content is rewritten per language, not machine-translated 1:1
 - [ ] Internal links within a language version stay within that language version
 
 ## Next steps

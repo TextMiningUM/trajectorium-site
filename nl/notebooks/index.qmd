@@ -1,6 +1,6 @@
 ---
 title: "Tutorials & Notebooks"
-description: "Openbaar beschikbare Jupyter-notebooks voor de Advanced Natural Language Processing (ANLP)- en Agentic Conversational Search-cursussen aan de Universiteit Maastricht. Praktische tutorials over neurale NLP-pipelines, transformer fine-tuning, retrieval-augmented generation en agentic system design — met GPU-klare code en volledige werkende voorbeelden."
+description: "Openbaar beschikbare Jupyter-notebooks voor de Advanced Natural Language Processing (ANLP)- en Agentic Conversational Search-cursussen aan de Universiteit Maastricht. Praktische tutorials over neurale NLP-pipelines, transformer fine-tuning, retrieval-augmented generation en agentic system design, met GPU-klare code en volledige werkende voorbeelden."
 page-layout: full
 toc: false
 ---
@@ -9,14 +9,14 @@ toc: false
 
 ## Cursus-tutorials
 
-<p class="section-intro">De onderstaande tutorials zijn beschikbaar als publieke GitHub-repositories. Kloon de repo om de materialen in je eigen tempo door te werken &mdash; geen account vereist.</p>
+<p class="section-intro">De onderstaande tutorials zijn beschikbaar als publieke GitHub-repositories. Kloon de repo om de materialen in je eigen tempo door te werken, geen account vereist.</p>
 
 <div class="row g-4">
 <div class="col-md-6"><div class="course-card">
 
 ### Agentic Conversational Search
 
-<p class="course-meta">IRTM &mdash; DACS, Universiteit Maastricht</p>
+<p class="course-meta">IRTM, DACS, Universiteit Maastricht</p>
 
 Dertien praktische tutorials die de volledige pipeline van ruwe tekst naar gerangschikte retrieval behandelen: tokenisatie, indexering, TF-IDF, taalmodellen, neurale retrieval en evaluatie. Alle materialen zijn ge&iuml;mplementeerd in Python en Jupyter Notebook.
 
@@ -29,7 +29,7 @@ Dertien praktische tutorials die de volledige pipeline van ruwe tekst naar geran
 
 ### Advanced Natural Language Processing
 
-<p class="course-meta">ANLP &mdash; DACS, Universiteit Maastricht</p>
+<p class="course-meta">ANLP, DACS, Universiteit Maastricht</p>
 
 Geavanceerde NLP-cursus over moderne transformer-gebaseerde methoden: sequentiemodellering, fine-tuning van voorgetrainde taalmodellen, RLHF en toegepaste NLP-taken. Voornamelijk Jupyter Notebook met GPU-ondersteuning via CUDA.
 

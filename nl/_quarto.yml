@@ -5,7 +5,7 @@ project:
 lang: nl
 
 website:
-  title: "Trajectorium — AI, Agents & Energy Efficient Sovereign Architectures"
+  title: "Trajectorium: AI, Agents & Energy Efficient Sovereign Architectures"
   site-url: "https://trajectorium.ai/nl"
   navbar:
     left:

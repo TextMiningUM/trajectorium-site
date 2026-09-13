@@ -85,7 +85,18 @@ Every blog post must include a `**Key papers**` / `**Kernpublicaties**` section 
 - Always update `custom.scss` for visual changes; never add inline `<style>` blocks.
 
 ## Rule: no emoji
-Never use emoji or emoticons in any `.qmd` content file, page titles, navigation labels, card headings, or button text. Plain text and Unicode symbols (→, —) are allowed.
+Never use emoji or emoticons in any `.qmd` content file, page titles, navigation labels, card headings, or button text. Plain text and Unicode symbols (→) are allowed.
+
+## Rule: no em-dashes
+Never use em-dashes (`—`, U+2014) or their HTML entity (`&mdash;`) anywhere in site content. This includes `.qmd` files, `.md` files, `.yml` config, and `index.html`. Em-dashes are a strong signal of AI-generated text and undermine the site's credibility.
+
+**Instead, use:**
+- **Comma** for parenthetical inserts: "The model, trained on our data, works well."
+- **Colon** for introducing lists or explanations: "The reason is simple: cost."
+- **Period** for hard stops: "The model works. What matters is training data."
+- **Parentheses** for asides: "The result (unsurprising) was a failure."
+
+**En-dashes (`–`, U+2013) are allowed** for number ranges (2020–2024, pages 50–100).
 
 ## Rule: consistent styling
 All new pages must follow the same layout patterns as the homepage: use CSS classes from `custom.scss` (`.feature-card`, `.hero-banner`, `.diagram-section`, etc.). Never add page-specific inline `<style>` blocks or override styles outside `custom.scss`.

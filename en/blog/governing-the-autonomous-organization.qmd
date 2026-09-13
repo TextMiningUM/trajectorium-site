@@ -1,86 +1,86 @@
 ---
 title: "Governing the Autonomous Organization: Who's Accountable When AI Decides?"
-description: "AI finally works. Now comes the harder question: how do you govern an organization where AI analyzes, advises, and acts — while final accountability stays with a human?"
+description: "AI finally works. Now comes the harder question: how do you govern an organization where AI analyzes, advises, and acts, while final accountability stays with a human?"
 date: 2026-10-17
 author: "Jan Scholtes"
 categories: [governance]
 lang: en
 ---
 
-After roughly forty years of "AI is almost there," it's finally there. Chess in 1997, Jeopardy in 2011, Go in 2016, poker and DOTA 2 shortly after, transformers in 2017, and now agentic systems that don't just answer questions but act on them. The technical question — can we make it work? — is largely settled. The question that's left, and it's the harder one, is organizational: **how do you govern an institution where AI analyzes, advises, and acts, while final accountability still sits with a human being?**
+After roughly forty years of "AI is almost there," it's finally there. Chess in 1997, Jeopardy in 2011, Go in 2016, poker and DOTA 2 shortly after, transformers in 2017, and now agentic systems that don't just answer questions but act on them. The technical question, can we make it work?, is largely settled. The question that's left, and it's the harder one, is organizational: **how do you govern an institution where AI analyzes, advises, and acts, while final accountability still sits with a human being?**
 
-This isn't a hypothetical for a future board meeting. It's already the operating reality in places that have gone furthest with agentic AI — including, perhaps surprisingly, the US Navy.
+This isn't a hypothetical for a future board meeting. It's already the operating reality in places that have gone furthest with agentic AI, including, perhaps surprisingly, the US Navy.
 
 ## The Governance Framework Nobody Wrote Down (Until Now)
 
-A useful way to think about governing an AI agent is to map its lifecycle onto four phases, each with its own governance question — and each with a corresponding evaluation standard, such as Stanford's HELM benchmark suite, that gives you something concrete to measure rather than a vague sense of trust.
+A useful way to think about governing an AI agent is to map its lifecycle onto four phases, each with its own governance question, and each with a corresponding evaluation standard, such as Stanford's HELM benchmark suite, that gives you something concrete to measure rather than a vague sense of trust.
 
-**1. Training — is the foundation sound?**
+**1. Training, is the foundation sound?**
 This is the pre-training and instruction-tuning phase where the model learns patterns, language, and baseline tasks. The governance question here is simple but foundational: does this system have adequate baseline accuracy and knowledge quality across the scenarios it will actually face? If the foundation is weak, nothing built on top of it will be trustworthy, no matter how sophisticated the oversight layers are.
 
-**2. Validation — does it behave consistently under pressure?**
-Testing an agent in simulated environments — can it reliably call APIs and execute code without breaking? — surfaces two governance-critical properties: robustness (does small variation in input cause large variation in behavior?) and calibration (does the system actually know how confident it should be?). A model that's simultaneously wrong and confident is far more dangerous to govern than one that's wrong and says so.
+**2. Validation, does it behave consistently under pressure?**
+Testing an agent in simulated environments, can it reliably call APIs and execute code without breaking?, surfaces two governance-critical properties: robustness (does small variation in input cause large variation in behavior?) and calibration (does the system actually know how confident it should be?). A model that's simultaneously wrong and confident is far more dangerous to govern than one that's wrong and says so.
 
-**3. Reflection — does it catch its own mistakes?**
-Agentic frameworks like ReAct and Reflexion give a system the ability to look at the outcome of its own action — an error message from a tool, an unexpected result — think about it, and correct its own plan. From a governance standpoint, this is where you assess adaptivity: does the agent keep following a logical, defensible chain of steps, or does it derail under uncertainty? This is the layer that catches problems before a human ever has to.
+**3. Reflection, does it catch its own mistakes?**
+Agentic frameworks like ReAct and Reflexion give a system the ability to look at the outcome of its own action, an error message from a tool, an unexpected result, think about it, and correct its own plan. From a governance standpoint, this is where you assess adaptivity: does the agent keep following a logical, defensible chain of steps, or does it derail under uncertainty? This is the layer that catches problems before a human ever has to.
 
-**4. Explanation — can it show its work?**
-This is Explainable AI (XAI): why did the agent choose action A instead of action B? A governed agent needs to expose its internal decision tree, the weight it gave to competing considerations, or at minimum a clear log — to the human supervisor who remains accountable for the outcome. This is also where fairness and bias reduction get enforced in practice, because you cannot audit what you cannot see. Without this layer, "the AI decided" is not an answer — it's an evasion.
+**4. Explanation, can it show its work?**
+This is Explainable AI (XAI): why did the agent choose action A instead of action B? A governed agent needs to expose its internal decision tree, the weight it gave to competing considerations, or at minimum a clear log, to the human supervisor who remains accountable for the outcome. This is also where fairness and bias reduction get enforced in practice, because you cannot audit what you cannot see. Without this layer, "the AI decided" is not an answer, it's an evasion.
 
 Together, these four phases aren't just an engineering pipeline. They're a governance framework: each phase answers a specific question a board, a regulator, or an auditor will eventually ask, and each has a measurable standard behind it rather than a hand-wave.
 
 ## What This Looks Like in Practice: The US Navy
 
-Abstract frameworks are easier to trust when you can point to them working under real operational pressure. The US Navy's recent agentic AI deployments are instructive precisely because the stakes — safety, cost, mission readiness — leave no room for governance to be an afterthought.
+Abstract frameworks are easier to trust when you can point to them working under real operational pressure. The US Navy's recent agentic AI deployments are instructive precisely because the stakes, safety, cost, mission readiness, leave no room for governance to be an afterthought.
 
-**MyNavy HR: eliminating bureaucracy, not just automating it.** Internal administration was one of the biggest sources of wasted time and frustration for sailors, contributing directly to lower retention. The Navy's answer was to place AI agents as an invisible translator between the sailor and the Navy's clunky ERP systems — a sailor submits an HR, pay, or leave change through a radically simple interface, and the agent autonomously updates the backend systems. The result: hundreds of thousands of saved labor-hours annually, a reduced HR headcount, and operational crews freed from paperwork. The governance lesson here is that the sailor never has to understand or trust the AI directly — they trust that the outcome is correct, because the governance sits one layer back, in how the agent's actions are validated against HR policy.
+**MyNavy HR: eliminating bureaucracy, not just automating it.** Internal administration was one of the biggest sources of wasted time and frustration for sailors, contributing directly to lower retention. The Navy's answer was to place AI agents as an invisible translator between the sailor and the Navy's clunky ERP systems, a sailor submits an HR, pay, or leave change through a radically simple interface, and the agent autonomously updates the backend systems. The result: hundreds of thousands of saved labor-hours annually, a reduced HR headcount, and operational crews freed from paperwork. The governance lesson here is that the sailor never has to understand or trust the AI directly, they trust that the outcome is correct, because the governance sits one layer back, in how the agent's actions are validated against HR policy.
 
-**Condition-Based Maintenance Plus (CBM+): sovereignty as a governance requirement, not a preference.** The Navy is moving away from reactive or purely calendar-based maintenance on ships and submarines, using what they call Sovereign Edge AI — models that run physically and locally on the ship, independent of a satellite connection. Sensors feed a local model; when it detects an abnormal pattern, the agent doesn't just generate a report — it autonomously orders the needed spare part and schedules the repair for the next port call. The result: massive savings from minimizing "Awaiting Parts" downtime — a billion-dollar ship no longer sits idle because a hundred-dollar valve is missing. Note what's doing the governance work here: the AI is authorized to *act* (order parts, schedule repairs) precisely because it runs on infrastructure the Navy fully controls, with a bounded, well-tested action space. Autonomy and sovereignty aren't separate concerns — the first depends on the second.
+**Condition-Based Maintenance Plus (CBM+): sovereignty as a governance requirement, not a preference.** The Navy is moving away from reactive or purely calendar-based maintenance on ships and submarines, using what they call Sovereign Edge AI, models that run physically and locally on the ship, independent of a satellite connection. Sensors feed a local model; when it detects an abnormal pattern, the agent doesn't just generate a report, it autonomously orders the needed spare part and schedules the repair for the next port call. The result: massive savings from minimizing "Awaiting Parts" downtime, a billion-dollar ship no longer sits idle because a hundred-dollar valve is missing. Note what's doing the governance work here: the AI is authorized to *act* (order parts, schedule repairs) precisely because it runs on infrastructure the Navy fully controls, with a bounded, well-tested action space. Autonomy and sovereignty aren't separate concerns, the first depends on the second.
 
-**NAVSUP: predictive logistics that anticipate need.** The Naval Supply Systems Command manages global depots and must resupply fleets at sea, where bureaucratic delay can be genuinely dangerous. The AI links a mission profile to logistics: if a fleet operates in heavy weather, the system proactively calculates increased wear and positions the needed parts forward in the nearest depot — before the crew even asks. The result is a near-elimination of expensive emergency logistics flights and a sharp reduction in excess "dead" inventory sitting in ports.
+**NAVSUP: predictive logistics that anticipate need.** The Naval Supply Systems Command manages global depots and must resupply fleets at sea, where bureaucratic delay can be genuinely dangerous. The AI links a mission profile to logistics: if a fleet operates in heavy weather, the system proactively calculates increased wear and positions the needed parts forward in the nearest depot, before the crew even asks. The result is a near-elimination of expensive emergency logistics flights and a sharp reduction in excess "dead" inventory sitting in ports.
 
-Across all three, the pattern is the same: AI is given real decision-making and action authority, but only within a tightly governed envelope — bounded actions, local/sovereign infrastructure where the stakes require it, and a clear chain back to a human accountable for the outcome.
+Across all three, the pattern is the same: AI is given real decision-making and action authority, but only within a tightly governed envelope, bounded actions, local/sovereign infrastructure where the stakes require it, and a clear chain back to a human accountable for the outcome.
 
 ## Digital Sovereignty Is Part of Governance, Not a Separate Topic
 
-It's tempting to treat "who governs the AI's decisions" and "who controls the infrastructure the AI runs on" as two different conversations. The Navy's CBM+ case shows why they're the same conversation. [Governing an autonomous system and owning its infrastructure are the same question — as the five-dimension sovereignty framework covered separately on this site makes clear.](why-europe-needs-sovereign-ai.qmd) Governing an autonomous decision-making system requires control over:
+It's tempting to treat "who governs the AI's decisions" and "who controls the infrastructure the AI runs on" as two different conversations. The Navy's CBM+ case shows why they're the same conversation. [Governing an autonomous system and owning its infrastructure are the same question, as the five-dimension sovereignty framework covered separately on this site makes clear.](why-europe-needs-sovereign-ai.qmd) Governing an autonomous decision-making system requires control over:
 
-- **Training infrastructure** — who shapes what the model learns
-- **Inference infrastructure**, including edge deployment — where and how the model actually runs when it makes a decision
+- **Training infrastructure**, who shapes what the model learns
+- **Inference infrastructure**, including edge deployment, where and how the model actually runs when it makes a decision
 - **Reliable, often smaller models** you can fully validate, rather than an opaque general-purpose model you can only prompt
-- **Fine-tuning, RAG, RLHF, and reflection** — the mechanisms that let you actually shape behavior rather than just hope for it
-- **Compression, pruning, and distillation** — the techniques that make it feasible to run a governed model locally, at the edge, instead of depending on a remote API you don't control
+- **Fine-tuning, RAG, RLHF, and reflection**, the mechanisms that let you actually shape behavior rather than just hope for it
+- **Compression, pruning, and distillation**, the techniques that make it feasible to run a governed model locally, at the edge, instead of depending on a remote API you don't control
 
-An organization that governs only the prompt layer, while every actual inference call goes out to infrastructure it doesn't control, hasn't really solved the governance problem — it's outsourced part of it to a party outside the accountability chain.
+An organization that governs only the prompt layer, while every actual inference call goes out to infrastructure it doesn't control, hasn't really solved the governance problem, it's outsourced part of it to a party outside the accountability chain.
 
 ## The Open Question: Centralized or Decentralized Governance?
 
-This is where the framework runs out of easy answers, and honestly should. Should AI governance in a large organization be centralized — one body setting standards, validation thresholds, and explainability requirements for every AI system in the organization — or decentralized, with each department or ship, in the Navy's case, governing its own agents against a shared baseline?
+This is where the framework runs out of easy answers, and honestly should. Should AI governance in a large organization be centralized, one body setting standards, validation thresholds, and explainability requirements for every AI system in the organization, or decentralized, with each department or ship, in the Navy's case, governing its own agents against a shared baseline?
 
-There's a reasonable case for both. Centralized governance gives you consistency, a single point of audit, and economies of scale in validation and XAI tooling. Decentralized governance gives you speed and domain-specific judgment — the team running shipboard maintenance AI understands failure modes that a central AI ethics board never will in the same depth. Most organizations that have gone furthest with agentic AI seem to converge on a hybrid: centrally defined *standards* (the four-phase framework above, minimum XAI requirements, escalation thresholds for human sign-off) paired with decentralized *implementation and monitoring* close to where the decisions actually happen. Sovereignty and accountability get set centrally; day-to-day judgment stays local.
+There's a reasonable case for both. Centralized governance gives you consistency, a single point of audit, and economies of scale in validation and XAI tooling. Decentralized governance gives you speed and domain-specific judgment, the team running shipboard maintenance AI understands failure modes that a central AI ethics board never will in the same depth. Most organizations that have gone furthest with agentic AI seem to converge on a hybrid: centrally defined *standards* (the four-phase framework above, minimum XAI requirements, escalation thresholds for human sign-off) paired with decentralized *implementation and monitoring* close to where the decisions actually happen. Sovereignty and accountability get set centrally; day-to-day judgment stays local.
 
 ## Where to Start: HR, Legal, and Finance
 
-If governing agentic AI across an entire organization feels daunting, there's a well-established place to build the muscle before extending it to higher-stakes domains: HR, in-house legal, and finance. These functions operate almost entirely in a digital and paper reality — no unpredictable physical world of weather, broken pumps, or physical distance to contend with. They deal in text and numbers in office documents, follow strict rules and protocols, and typically represent a slow, expensive bottleneck for the rest of the organization. That combination — high rule-density, high volume, low physical unpredictability — makes them the ideal low-risk proving ground for the governance framework above: you can validate the four phases, test your explainability tooling, and establish your escalation thresholds somewhere the cost of an early mistake is a delayed invoice, not a stranded ship.
+If governing agentic AI across an entire organization feels daunting, there's a well-established place to build the muscle before extending it to higher-stakes domains: HR, in-house legal, and finance. These functions operate almost entirely in a digital and paper reality, no unpredictable physical world of weather, broken pumps, or physical distance to contend with. They deal in text and numbers in office documents, follow strict rules and protocols, and typically represent a slow, expensive bottleneck for the rest of the organization. That combination, high rule-density, high volume, low physical unpredictability, makes them the ideal low-risk proving ground for the governance framework above: you can validate the four phases, test your explainability tooling, and establish your escalation thresholds somewhere the cost of an early mistake is a delayed invoice, not a stranded ship.
 
 ## The Takeaway
 
-The technology question — does agentic AI actually work? — is behind us. What's left is the governance question, and it doesn't have a single settled answer yet, but it does have a workable shape: train and validate against measurable standards, build in reflection so the system catches its own errors, require genuine explainability so a human can actually audit the decision, control the infrastructure the decisions run on, and decide deliberately — not by default — how much of that sits centrally versus close to where the work happens. Organizations that treat this as an engineering afterthought will find out the hard way that "the AI decided" is not an acceptable answer to a board, a regulator, or a sailor whose ship is stuck in port.
+The technology question, does agentic AI actually work?, is behind us. What's left is the governance question, and it doesn't have a single settled answer yet, but it does have a workable shape: train and validate against measurable standards, build in reflection so the system catches its own errors, require genuine explainability so a human can actually audit the decision, control the infrastructure the decisions run on, and decide deliberately, not by default, how much of that sits centrally versus close to where the work happens. Organizations that treat this as an engineering afterthought will find out the hard way that "the AI decided" is not an acceptable answer to a board, a regulator, or a sailor whose ship is stuck in port.
 
 *Based on "AI en Bestuurlijke Besluitvorming" (Prof. dr. ir. J.C. Scholtes, roundtable session, August 2026).*
 
 **Key papers**
 
-- Jobin et al. (2019), *The Global Landscape of AI Ethics Guidelines* — [Nature Machine Intelligence](https://doi.org/10.1038/s42256-019-0088-2)
-- Doshi-Velez & Kim (2017), *Towards a Rigorous Science of Interpretable Machine Learning* — [arXiv:1702.08608](https://arxiv.org/abs/1702.08608)
-- Cath (2018), *Governing Artificial Intelligence: Ethical, Legal and Technical Opportunities and Challenges* — [Phil. Trans. R. Soc. A](https://doi.org/10.1098/rsta.2018.0080)
+- Jobin et al. (2019), *The Global Landscape of AI Ethics Guidelines*, [Nature Machine Intelligence](https://doi.org/10.1038/s42256-019-0088-2)
+- Doshi-Velez & Kim (2017), *Towards a Rigorous Science of Interpretable Machine Learning*, [arXiv:1702.08608](https://arxiv.org/abs/1702.08608)
+- Cath (2018), *Governing Artificial Intelligence: Ethical, Legal and Technical Opportunities and Challenges*, [Phil. Trans. R. Soc. A](https://doi.org/10.1098/rsta.2018.0080)
 
 ---
 
 **Further reading on this site**
 
-- [The Institutional Moat](the-institutional-moat.qmd) — the architecture layer that governance sits on top of
-- [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd) — sovereignty as the infrastructure prerequisite for real governance
-- [What Is an AI Agent?](what-is-an-ai-agent.qmd) — what the system being governed actually is
-- [What It Takes to Build a Sovereign AI Agent](building-sovereign-ai-agents.qmd) — the end-to-end practical guide that applies this governance framework
-- [Bias Analysis in Practice](bias-analysis-in-practice.qmd) — how to carry out the required bias analysis, justification test, and ethical desirability test
+- [The Institutional Moat](the-institutional-moat.qmd), the architecture layer that governance sits on top of
+- [Why Europe Needs Its Own AI Models](why-europe-needs-sovereign-ai.qmd), sovereignty as the infrastructure prerequisite for real governance
+- [What Is an AI Agent?](what-is-an-ai-agent.qmd), what the system being governed actually is
+- [What It Takes to Build a Sovereign AI Agent](building-sovereign-ai-agents.qmd), the end-to-end practical guide that applies this governance framework
+- [Bias Analysis in Practice](bias-analysis-in-practice.qmd), how to carry out the required bias analysis, justification test, and ethical desirability test

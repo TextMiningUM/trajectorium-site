@@ -1,6 +1,6 @@
 ---
 title: "Wat is een AI-agent? Van chatbot naar autonoom systeem"
-description: "Een praktische introductie in agentic AI: wat er verandert als een taalmodel geheugen, tools en handelingsvermogen krijgt — en waarom die verschuiving ertoe doet."
+description: "Een praktische introductie in agentic AI: wat er verandert als een taalmodel geheugen, tools en handelingsvermogen krijgt, en waarom die verschuiving ertoe doet."
 date: 2026-09-12
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/ComponentsofAgent.png"
@@ -8,7 +8,7 @@ categories: [fundamenten]
 lang: nl
 ---
 
-Vraag tien mensen wat een "AI-agent" is en je krijgt tien verschillende antwoorden — sommige zelfverzekerd onjuist. Een deel van de verwarring is dat het woord niet nieuw is. Een ander deel is dat "agent" stilletjes een marketinglabel is geworden dat op alles met een chatinterface wordt geplakt. Dit artikel snijdt daar doorheen: wat een agent feitelijk is, waarom het idee in de jaren negentig mislukte, waarom het nu werkt, en wat er eigenlijk in zo’n systeem zit.
+Vraag tien mensen wat een "AI-agent" is en je krijgt tien verschillende antwoorden, sommige zelfverzekerd onjuist. Een deel van de verwarring is dat het woord niet nieuw is. Een ander deel is dat "agent" stilletjes een marketinglabel is geworden dat op alles met een chatinterface wordt geplakt. Dit artikel snijdt daar doorheen: wat een agent feitelijk is, waarom het idee in de jaren negentig mislukte, waarom het nu werkt, en wat er eigenlijk in zo’n systeem zit.
 
 ## Agents bestaan al langer dan je denkt
 
@@ -19,22 +19,22 @@ Nog voor ChatGPT definieerde *Artificial Intelligence: A Modern Approach* (Russe
 3. over die invoer redeneert, en
 4. via acties op de omgeving inwerkt.
 
-Die definitie vermeldt taalmodellen niet — ze omvat thermostaten, robots, webcrawlers en zelfrijdende auto’s. Wat een gewoon “computerprogramma” onderscheidt van een agent, is dat een agent *autonoom* opereert, voortduurt in de tijd, zich aanpast aan verandering en doelen nastreeft in plaats van simpelweg één instructie uit te voeren en te stoppen.
+Die definitie vermeldt taalmodellen niet, ze omvat thermostaten, robots, webcrawlers en zelfrijdende auto’s. Wat een gewoon “computerprogramma” onderscheidt van een agent, is dat een agent *autonoom* opereert, voortduurt in de tijd, zich aanpast aan verandering en doelen nastreeft in plaats van simpelweg één instructie uit te voeren en te stoppen.
 
-In de late jaren negentig was “agent” overal — intelligente agents, software-agents, persoonlijke digitale assistenten. Ze werden gebouwd op symbolische AI, expertsystemen en regelgebaseerde redenering. En ze slaagden er grotendeels niet in de hype waar te maken. API’s waren primitief, het web was nauwelijks programmatisch toegankelijk, geheugen was statisch en taalbegrip beperkte zich tot het herkennen van trefwoorden. De concepten — geheugen, doelen, planning, een interface met de wereld — waren solide. De technologie om ze te laten werken was er simpelweg nog niet.
+In de late jaren negentig was “agent” overal, intelligente agents, software-agents, persoonlijke digitale assistenten. Ze werden gebouwd op symbolische AI, expertsystemen en regelgebaseerde redenering. En ze slaagden er grotendeels niet in de hype waar te maken. API’s waren primitief, het web was nauwelijks programmatisch toegankelijk, geheugen was statisch en taalbegrip beperkte zich tot het herkennen van trefwoorden. De concepten, geheugen, doelen, planning, een interface met de wereld, waren solide. De technologie om ze te laten werken was er simpelweg nog niet.
 
 ## Wat er veranderde: het LLM is de ontbrekende motor
 
 Een handig mentaal model: **denk aan een losstaand LLM als een hersenen in een pot.** Het kan redeneren in taal, maar heeft geen lichaam, geen zintuigen buiten de tekst die je het geeft, en geen geheugen zodra het gesprek eindigt. Een agent geeft dat brein:
 
-- een **lichaam** — tools die het kan aanroepen om in de wereld te handelen,
-- **zintuigen** — retrievalsystemen en API’s die verse informatie aanleveren,
-- **geheugen** — contextvensters en externe databases, en
-- **doelen** — een planner die bepaalt wat er als volgende moet gebeuren.
+- een **lichaam**, tools die het kan aanroepen om in de wereld te handelen,
+- **zintuigen**, retrievalsystemen en API’s die verse informatie aanleveren,
+- **geheugen**, contextvensters en externe databases, en
+- **doelen**, een planner die bepaalt wat er als volgende moet gebeuren.
 
 Dat is het moment waarop een taalmodel ophoudt een welbespraakte autocomplete te zijn en iets wordt dat kan handelen.
 
-Dit is belangrijk omdat losstaande LLM’s reële, goed gedocumenteerde beperkingen hebben: ze hallucineren zelfverzekerd, hun kennis heeft een afkapdatum, hun contextvenster is eindig, ze kunnen niet zelfstandig het web raadplegen of een API aanroepen, ze redeneren slecht in één stap over meerstapsproblemen, en ze hebben geen ingebouwde manier om hun eigen fouten op te merken of te corrigeren. Agentische architectuur elimineert deze beperkingen niet — maar geeft je wel het raamwerk om ermee om te gaan.
+Dit is belangrijk omdat losstaande LLM’s reële, goed gedocumenteerde beperkingen hebben: ze hallucineren zelfverzekerd, hun kennis heeft een afkapdatum, hun contextvenster is eindig, ze kunnen niet zelfstandig het web raadplegen of een API aanroepen, ze redeneren slecht in één stap over meerstapsproblemen, en ze hebben geen ingebouwde manier om hun eigen fouten op te merken of te corrigeren. Agentische architectuur elimineert deze beperkingen niet, maar geeft je wel het raamwerk om ermee om te gaan.
 
 ## De zeven dingen die een agentarchitectuur nodig heeft
 
@@ -48,62 +48,62 @@ Of je nu naar een symbolisch systeem uit de jaren negentig kijkt of een LLM-geba
 - **Verificatie & guardrails**
 - **Een gebruikers-/systeeminterface**
 
-Wat er veranderd is, is niet de lijst — maar de kracht achter elk onderdeel. Laten we de onderdelen doorlopen die er in de praktijk het meest toe doen.
+Wat er veranderd is, is niet de lijst, maar de kracht achter elk onderdeel. Laten we de onderdelen doorlopen die er in de praktijk het meest toe doen.
 
 ### Geheugen: meer dan een chatgeschiedenis
 
-Een losstaand LLM is stateloos — zodra de prompt eindigt, vergeet het alles. Een werkende agent heeft meerdere *soorten* geheugen nodig: kortetermijn (de gespreksgeschiedenis in het contextvenster), langetermijn (externe vectordatabases en kennisbanken), episodisch (logboeken van eerdere interacties) en semantisch (kennis opgehaald via RAG). Retrieval-Augmented Generation fungeert in het bijzonder als het feitelijke anker van de agent — het is de geverifieerde database die de redeneermotor wordt gedwongen te raadplegen in plaats van te gokken.
+Een losstaand LLM is stateloos, zodra de prompt eindigt, vergeet het alles. Een werkende agent heeft meerdere *soorten* geheugen nodig: kortetermijn (de gespreksgeschiedenis in het contextvenster), langetermijn (externe vectordatabases en kennisbanken), episodisch (logboeken van eerdere interacties) en semantisch (kennis opgehaald via RAG). Retrieval-Augmented Generation fungeert in het bijzonder als het feitelijke anker van de agent, het is de geverifieerde database die de redeneermotor wordt gedwongen te raadplegen in plaats van te gokken.
 
-Dit onderscheid is belangrijker dan het klinkt: het neurale netwerk van een LLM is uitstekend in het *generaliseren* van patronen om situaties aan te pakken die het nooit expliciet heeft gezien. Maar je wilt niet dat het generaliseert — dat wil zeggen: gokt — over een specifiek feit. Een gehallucinereerd IP-adres, een juridische clausule of een medische dosering is geen eigenzinnige fout; in een professionele context is het een ernstige tekortkoming. RAG, en de neurale herrangschikking die daarmee gepaard gaat, bestaat precies om generalisatie en feitelijke precisie in balans te houden: herrangschikking werkt als een senior medewerker die 50–100 opgehaalde kandidaten beoordeelt en het enig juiste antwoord naar boven dwingt, in plaats van het model te laten verdrinken in “lost in the middle”-ruis.
+Dit onderscheid is belangrijker dan het klinkt: het neurale netwerk van een LLM is uitstekend in het *generaliseren* van patronen om situaties aan te pakken die het nooit expliciet heeft gezien. Maar je wilt niet dat het generaliseert, dat wil zeggen: gokt, over een specifiek feit. Een gehallucinereerd IP-adres, een juridische clausule of een medische dosering is geen eigenzinnige fout; in een professionele context is het een ernstige tekortkoming. RAG, en de neurale herrangschikking die daarmee gepaard gaat, bestaat precies om generalisatie en feitelijke precisie in balans te houden: herrangschikking werkt als een senior medewerker die 50–100 opgehaalde kandidaten beoordeelt en het enig juiste antwoord naar boven dwingt, in plaats van het model te laten verdrinken in “lost in the middle”-ruis.
 
 ### Actie-interface: doen, niet alleen praten
 
-Het bepalende verschil tussen een LLM en een agent is dat een agent *dingen doet*. Zonder toegang tot tools kan een LLM alleen reageren op “annuleer mijn bestelling #99887” met “Dat kan ik niet doen, neem contact op met de klantenservice.” Met een tool-interface — API-aanroepen, function calling, databasequery’s, code-uitvoering — kan hetzelfde model de bestelling daadwerkelijk annuleren.
+Het bepalende verschil tussen een LLM en een agent is dat een agent *dingen doet*. Zonder toegang tot tools kan een LLM alleen reageren op “annuleer mijn bestelling #99887” met “Dat kan ik niet doen, neem contact op met de klantenservice.” Met een tool-interface, API-aanroepen, function calling, databasequery’s, code-uitvoering, kan hetzelfde model de bestelling daadwerkelijk annuleren.
 
-Dit volgt doorgaans het **ReAct**-patroon: het model redeneert over wat het moet doen, doet vervolgens een tool-aanroep, wacht op het werkelijke resultaat en zet dan de volgende stap. Dat wachten is onvermijdelijk — een LLM kan geen API-aanroep uitvoeren en het resultaat gebruiken binnen één ononderbroken tekststroom. Complexe taken zijn daardoor inherent **meerstapsprocessen**: plannen, handelen, waarnemen, reflecteren, opnieuw handelen, telkens dichter bij een oplossing.
+Dit volgt doorgaans het **ReAct**-patroon: het model redeneert over wat het moet doen, doet vervolgens een tool-aanroep, wacht op het werkelijke resultaat en zet dan de volgende stap. Dat wachten is onvermijdelijk, een LLM kan geen API-aanroep uitvoeren en het resultaat gebruiken binnen één ononderbroken tekststroom. Complexe taken zijn daardoor inherent **meerstapsprocessen**: plannen, handelen, waarnemen, reflecteren, opnieuw handelen, telkens dichter bij een oplossing.
 
 ### Doelbeheer: moeilijker dan het lijkt
 
-LLM-gebaseerde agents laten gebruikers doelen in gewone taal uitdrukken (“plan mijn reis voor onder de €500”) en splitsen dat op in subdoelen — budget, vluchten, hotels, activiteiten. Sommige frameworks evalueren prioriteiten dynamisch opnieuw bij elke iteratie van de lus, waarbij harde regelgebaseerde beperkingen worden gecombineerd met scoringsfuncties en, wanneer doelen onduidelijk zijn, een mens in de lus.
+LLM-gebaseerde agents laten gebruikers doelen in gewone taal uitdrukken (“plan mijn reis voor onder de €500”) en splitsen dat op in subdoelen, budget, vluchten, hotels, activiteiten. Sommige frameworks evalueren prioriteiten dynamisch opnieuw bij elke iteratie van de lus, waarbij harde regelgebaseerde beperkingen worden gecombineerd met scoringsfuncties en, wanneer doelen onduidelijk zijn, een mens in de lus.
 
 Zelfs met dat alles blijft doelbeheer moeilijk. Modellen zijn van nature niet goed in het oplossen van afwegingen zonder expliciete scoresystemen. Agents kunnen een doel halverwege loslaten als het niet wordt versterkt. En een vaag doel (“maak me succesvol”) zorgt er eerder voor dat een agent rondjes draait dan dat het handelt.
 
 ### Critics, reflectie en guardrails: twijfel inbouwen
 
-Hier is een onderschat probleem: LLM’s zijn sycofantisch. Omdat ze via RLHF zijn *fine-tuned* om vriendelijk en behulpzaam te zijn, neigen ze ernaar te zeggen wat je wilt horen — inclusief over hun eigen plannen. Zonder ingreep maakt dit een agent overmoedig in zijn eigen slechte ideën.
+Hier is een onderschat probleem: LLM’s zijn sycofantisch. Omdat ze via RLHF zijn *fine-tuned* om vriendelijk en behulpzaam te zijn, neigen ze ernaar te zeggen wat je wilt horen, inclusief over hun eigen plannen. Zonder ingreep maakt dit een agent overmoedig in zijn eigen slechte ideën.
 
-De oplossing is architecturaal, niet motivationeel: geef een **Critic-agent** een apart, adversarieel mandaat — zoek de zwakke punten, speel de advocaat van de duivel, weiger vriendelijk te zijn. Combineer dat met een **Reflectie-agent** die periodiek stopt en vraagt: “lost deze stap nog het oorspronkelijke probleem op, of zijn we het spoor kwijt?” Samen maken deze van een lineaire, foutgevoelige pijplijn een zichzelf corrigerende lus: een Actor stelt voor, een Critic breekt het af, een Reflector synthetiseert concrete aanpassingen, en de Actor probeert het opnieuw — totdat de Critic tevreden is.
+De oplossing is architecturaal, niet motivationeel: geef een **Critic-agent** een apart, adversarieel mandaat, zoek de zwakke punten, speel de advocaat van de duivel, weiger vriendelijk te zijn. Combineer dat met een **Reflectie-agent** die periodiek stopt en vraagt: “lost deze stap nog het oorspronkelijke probleem op, of zijn we het spoor kwijt?” Samen maken deze van een lineaire, foutgevoelige pijplijn een zichzelf corrigerende lus: een Actor stelt voor, een Critic breekt het af, een Reflector synthetiseert concrete aanpassingen, en de Actor probeert het opnieuw, totdat de Critic tevreden is.
 
-Daar bovenop zit een laag **guardrails** die nooit volledig aan een ander LLM mag worden overgelaten, omdat probabilistische systemen uiteindelijk op probabilistische wijze falen. Deterministische, hardgecodeerde controles — semantische routering om jailbreaks en injecties te onderscheppen voordat ze de hoofdagent bereiken, strikte uitvoerparsers die misvormde reacties afwijzen — bieden een ononderhandelbaar vangnet. Sommige teams voegen een “grondwet” toe: een set onveranderlijke principes die een apart model controleert in de uiteindelijke uitvoer, volledig losgekoppeld van de taakuitvoeringslogica.
+Daar bovenop zit een laag **guardrails** die nooit volledig aan een ander LLM mag worden overgelaten, omdat probabilistische systemen uiteindelijk op probabilistische wijze falen. Deterministische, hardgecodeerde controles, semantische routering om jailbreaks en injecties te onderscheppen voordat ze de hoofdagent bereiken, strikte uitvoerparsers die misvormde reacties afwijzen, bieden een ononderhandelbaar vangnet. Sommige teams voegen een “grondwet” toe: een set onveranderlijke principes die een apart model controleert in de uiteindelijke uitvoer, volledig losgekoppeld van de taakuitvoeringslogica.
 
 ## Waarom dit er nu toe doet
 
 Niets hiervan is bereikbaar met alleen eenvoudige retrieval. Overweeg vier voorbeelden van wat agentische architecturen mogelijk maken die gewone RAG niet kan:
 
-- **Autonoom onderzoek en synthese** — het plannen van meerstapsquery’s over medische, juridische en financiële domeinen, het identificeren van conflicterende studies, en het produceren van een gestructureerd rapport zonder dat een mens elke stap aanstuurt.
-- **End-to-end probleemoplossing** — een probleem diagnosticeren via gesprek, diagnostische API’s aanroepen om systeemlogboeken te controleren, en autonoom een oplossing uitvoeren.
-- **Strategische beslissingsondersteuning** — een brede vraag zoals “analyseer ons marktuitbreidingsrisico” opsplitsen in subquery’s, live concurrentiedata ophalen, berekeningen uitvoeren en strategie aanpassen naarmate bevindingen binnenkomen.
-- **Forensics en compliancemonitoring** — continu logboeken of communicatie bewaken op patronen van zorgelijk gedrag en escalatie activeren wanneer drempelwaarden worden overschreden.
+- **Autonoom onderzoek en synthese**, het plannen van meerstapsquery’s over medische, juridische en financiële domeinen, het identificeren van conflicterende studies, en het produceren van een gestructureerd rapport zonder dat een mens elke stap aanstuurt.
+- **End-to-end probleemoplossing**, een probleem diagnosticeren via gesprek, diagnostische API’s aanroepen om systeemlogboeken te controleren, en autonoom een oplossing uitvoeren.
+- **Strategische beslissingsondersteuning**, een brede vraag zoals “analyseer ons marktuitbreidingsrisico” opsplitsen in subquery’s, live concurrentiedata ophalen, berekeningen uitvoeren en strategie aanpassen naarmate bevindingen binnenkomen.
+- **Forensics en compliancemonitoring**, continu logboeken of communicatie bewaken op patronen van zorgelijk gedrag en escalatie activeren wanneer drempelwaarden worden overschreden.
 
 Geen van deze taken is eenmalige tekstgeneratie. Ze vereisen geheugen over stappen heen, tools die de echte wereld bereiken, een plan dat kan worden herzien, en een mechanisme om de eigen fouten van het systeem op te vangen voordat ze andermans probleem worden.
 
 ## De conclusie
 
-Een AI-agent is geen chatbot met een langer geheugen, en het is ook geen rebrand van een regelgebaseerd systeem uit de jaren negentig. Het is wat er gebeurt wanneer een taalmodel — voor het eerst werkelijk in staat tot open-ended redenering — wordt gewikkeld in dezelfde zeven componenten die AI-onderzoekers dertig jaar geleden al identificeerden: geheugen, kennistoegang, gebruik van tools, planning, doelbeheer, verificatie en een interface om door te handelen. De concepten zijn niet veranderd. Wat veranderde, is dat we eindelijk een motor hebben die krachtig genoeg is om ze te laten werken.
+Een AI-agent is geen chatbot met een langer geheugen, en het is ook geen rebrand van een regelgebaseerd systeem uit de jaren negentig. Het is wat er gebeurt wanneer een taalmodel, voor het eerst werkelijk in staat tot open-ended redenering, wordt gewikkeld in dezelfde zeven componenten die AI-onderzoekers dertig jaar geleden al identificeerden: geheugen, kennistoegang, gebruik van tools, planning, doelbeheer, verificatie en een interface om door te handelen. De concepten zijn niet veranderd. Wat veranderde, is dat we eindelijk een motor hebben die krachtig genoeg is om ze te laten werken.
 
-*Dit artikel is een overzicht op hoog niveau. Latere artikelen in deze reeks gaan dieper in op specifieke componenten — [RAG-architecturen en neurale herrangschikking](van-tekst-naar-agentische-workflows.qmd), [multi-agent-orkestratie en governance](het-autonome-bedrijf-besturen.qmd) en [de trainingsdata die nodig is om deze componenten te specialiseren](van-logboeken-naar-agent-trainingsdata.qmd).*
+*Dit artikel is een overzicht op hoog niveau. Latere artikelen in deze reeks gaan dieper in op specifieke componenten, [RAG-architecturen en neurale herrangschikking](van-tekst-naar-agentische-workflows.qmd), [multi-agent-orkestratie en governance](het-autonome-bedrijf-besturen.qmd) en [de trainingsdata die nodig is om deze componenten te specialiseren](van-logboeken-naar-agent-trainingsdata.qmd).*
 
 **Kernpublicaties**
 
-- Russell & Norvig (2020), *Artificial Intelligence: A Modern Approach* (4e druk) — [norvig.com/aima.html](http://norvig.com/aima.html)
-- Yao et al. (2022), *ReAct: Synergizing Reasoning and Acting in Language Models* — [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
-- Wang et al. (2023), *A Survey on Large Language Model Based Autonomous Agents* — [arXiv:2308.11432](https://arxiv.org/abs/2308.11432)
+- Russell & Norvig (2020), *Artificial Intelligence: A Modern Approach* (4e druk), [norvig.com/aima.html](http://norvig.com/aima.html)
+- Yao et al. (2022), *ReAct: Synergizing Reasoning and Acting in Language Models*, [arXiv:2210.03629](https://arxiv.org/abs/2210.03629)
+- Wang et al. (2023), *A Survey on Large Language Model Based Autonomous Agents*, [arXiv:2308.11432](https://arxiv.org/abs/2308.11432)
 
 ---
 
 **Verder lezen op deze site**
 
-- [Van tekst naar actie: NLP-pipelines omzetten in agentische workflows](van-tekst-naar-agentische-workflows.qmd) — hoe je de trainingsdata bouwt achter elk van deze componenten
-- [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd) — wie verantwoordelijk is als de agent handelt
-- [Waarom NLP eindelijk werkt](waarom-nlp-eindelijk-werkt.qmd) — de *transformer*-architectuur die agents mogelijk maakte
-- [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — waarom de architectuur rondom het model er meer toe doet dan het model zelf
+- [Van tekst naar actie: NLP-pipelines omzetten in agentische workflows](van-tekst-naar-agentische-workflows.qmd), hoe je de trainingsdata bouwt achter elk van deze componenten
+- [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd), wie verantwoordelijk is als de agent handelt
+- [Waarom NLP eindelijk werkt](waarom-nlp-eindelijk-werkt.qmd), de *transformer*-architectuur die agents mogelijk maakte
+- [De institutionele slotgracht](de-institutionele-slotgracht.qmd), waarom de architectuur rondom het model er meer toe doet dan het model zelf
