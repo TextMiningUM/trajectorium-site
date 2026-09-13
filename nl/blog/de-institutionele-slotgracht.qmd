@@ -46,16 +46,19 @@ Complexe professionele taken worden nooit in één stap opgelost. Een nuttige ar
 
 Hallucinatierisico is de grootste reden waarom institutionele AI-adoptie stokt. De oplossing is geen groter model, het zijn onafhankelijke verificatieagenten rondom de kern-LLM: elke versie controleren tegen jouw RAG-waarheidsbron, veiligheidsfilters die juridische en compliance-grenzen handhaven, en zelfconsistentiecontroles die dezelfde query via meerdere redeneerroutes uitvoeren en antwoorden verwerpen die het niet met elkaar eens zijn. Niets hiervan mag worden overgelaten aan hetzelfde model dat zichzelf bewaakt. Voor een volledige behandeling van de specifieke aanvalstypen waartegen deze *guardrails* verdedigen, zie het [artikel over adversariale aanvallen](adversariale-aanvallen-afbeeldingen-en-tekst.qmd) in deze reeks.
 
-## Het samengestelde voordeel: redeneerdrieluiken
+## Het samengestelde voordeel: redeneer-quintupletten
 
-Zet deze vier samen en er begint iets samen te stellen. Elke echte interactie genereert een **redeneerdrieluik**: de observatie die het systeem zag, de actie of tool-aanroep die het koos, en de consequentie, succes of mislukking. Die data verfijnt je reranker, je critic en je planner, wat betere uitkomsten oplevert, wat meer gebruik stimuleert, wat meer data oplevert. Dit is het vliegwiel dat een eenmalig integratieproject omzet in een werkelijk verdedigbaar bedrijfsmiddel, en het is precies het soort propriëtaire dataset waarmee je later kunt fijnregelen rondom elke nieuwe generatie basismodellen, in plaats van erdoor vervangen te worden.
+Zet deze vier samen en er begint iets samen te stellen. Elke echte interactie genereert een **redeneer-quintuplet**: de observatie die het systeem zag, de redenering achter de genomen actie, de actie of tool-aanroep zelf, het slechtste alternatief dat gekozen had kunnen worden, en de consequentie, succes of mislukking. De redenering-dimensie traint een agent om te denken, niet alleen te kopiëren; de slechtste-alternatief-dimensie is het contrastieve signaal dat DPO en *process reward models* gebruiken om het systeem te leren een slecht plan te verwerpen voordat een mens dat hoeft te doen. Die data verfijnt je *reranker*, je *critic* en je planner, wat betere uitkomsten oplevert, wat meer gebruik stimuleert, wat meer data oplevert. Dit is het vliegwiel dat een eenmalig integratieproject omzet in een werkelijk verdedigbaar bedrijfsmiddel.
 
 ## Wat je maandagochtend kunt doen
 
 Als je als CTO of CIO dit leest en je eigen stack herkent, vereist de oplossing geen maanlandingsproject:
 
 1. **Auditeer je AI-stack.** Als het prompts plus API-aanroepen zijn en verder niets, heb je momenteel geen slotgracht.
-2. **Begin vandaag met het verzamelen van redeneerdrieluiken**, vanuit elke expertinteractie, deze data bestaat alleen vooruitgaand, niet retroactief.
+2. **Begin vandaag met het verzamelen van redeneer-quintupletten**, vanuit elke expertinteractie: observatie, redenering, genomen actie, slechtste alternatief, consequentie. Deze data bestaat alleen vooruitgaand, niet retroactief.
+3. **Implementeer een neurale reranker op je domeindata.** Dit is doorgaans de eerste stap met de hoogste ROI.
+4. **Bouw je eerste Critic-agent.** Vijftig gecureerde voorbeelden zijn voldoende voor een werkend prototype.
+5. **Ontkoppel je architectuur in modulaire, onafhankelijk upgradeable componenten**, reranker, critic, planner en guardrails moeten elk vervangbaar zijn zonder het hele systeem te herbouwen.
 3. **Implementeer een neurale reranker op je domeindata.** Dit is doorgaans de eerste stap met de hoogste ROI.
 4. **Bouw je eerste Critic-agent.** Vijftig gecureerde voorbeelden zijn voldoende voor een werkend prototype.
 5. **Ontkoppel je architectuur in modulaire, onafhankelijk upgradeable componenten**, reranker, critic, planner en guardrails moeten elk vervangbaar zijn zonder het hele systeem te herbouwen.

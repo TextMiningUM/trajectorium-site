@@ -1,0 +1,90 @@
+---
+title: "From Triple to Quintuple: Why the Best Training Data Includes the Worst Decision You Could Have Made"
+description: "The observation-action-consequence record has been the backbone of agent training data for decades. Two missing dimensions, the reasoning behind the action and the worst alternative, are what turn a logbook entry into a model that can actually think."
+date: 2026-08-08
+author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/AgentSmith.png"
+categories: [text-to-action, fundamentals]
+lang: en
+---
+
+*Estimated reading time: 9 minutes*
+
+The idea that experience can be distilled into training data is not new. In reinforcement learning, the canonical unit is the **triple**: a state the agent observed, an action it took, and the reward it received. In the logbook posts on this site, that maps cleanly onto a farmhand's notation: weather conditions, intervention applied, outcome recorded. The triple is honest, minimal, and captures enough to teach a model to reproduce a known good decision.
+
+But reproducing known good decisions is not the same as reasoning well in novel situations. And two dimensions that are routinely present in the head of an experienced practitioner, almost never make it into the written record.
+
+## What the Triple Gets Right, and What It Leaves Out
+
+The triple, observation-action-consequence, correctly captures *what happened*. A farmer who wrote "cold spring, no wind, applied copper oxychloride, good leaf coverage" gave the next person on the job the core facts. An AI trained on thousands of such entries will learn to associate similar conditions with similar interventions.
+
+What it doesn't capture is *why that action and not another*, and *what the worst move in that situation would have been*. Those two missing dimensions are where an agent learns to reason rather than interpolate, and where it learns to catch its own mistakes before a human has to.
+
+## The Second Dimension: Reasoning
+
+Every real decision involves a reasoning step between observation and action. The farmer didn't just notice cold weather and apply copper oxychloride by reflex. There was an intermediate inference: "the cold is prolonged, the moisture risk is rising, and the forecast shows rain in 48 hours, so the application window is narrow." That chain of inference is exactly what Chain-of-Thought training requires. A model trained purely on observation-action pairs learns correlations; a model trained on observation-reasoning-action chains learns *why the correlation holds*, which generalizes to situations the training data never contained.
+
+In practice, this reasoning dimension is already present in many documents, just not labeled as such. A caseworker's file note often reads: "Applicant meets criteria A and B but not C. Based on prior precedent in similar cases (reference: decision 2024-0341), I have interpreted criterion C to include the applicant's situation. Decision: approved." The reasoning is in the sentence between the observation and the conclusion. Extracting and retaining it, rather than collapsing the record to observation-conclusion, is what makes the resulting training data useful for teaching judgment rather than just pattern matching.
+
+## The Third Dimension: The Worst Alternative
+
+Here is the dimension that is almost never written down, and that turns out to be the most valuable for building a model that can self-correct.
+
+Consider the copper oxychloride decision again. The farmer who wrote that entry knew, implicitly, that applying a heavy nitrogen spray at that moment would have burned the leaf surface in the cold and reduced absorption rather than improved it. That knowledge, that a specific alternative would have been bad *for a specific, nameable reason*, is the contrastive signal that Direct Preference Optimization and process reward models are built around.
+
+In DPO, you train a model not just on "this is the preferred response" but on "this is the preferred response, *and* this is the rejected alternative." The difference between them encodes the judgment. A model trained only on preferred responses learns to produce fluent, plausible output. A model trained on preferred-versus-rejected pairs learns to *discriminate*, which is what you need when the stakes are a crop failure, a rejected benefits application, or a misdiagnosed clinical condition.
+
+The practical consequence is that a logbook written with even one sentence of the form "I did X rather than Y because Z" is substantially more valuable as training data than a logbook that records only "I did X." The Y is the worst alternative; the Z is the reasoning. Together they give the downstream model both the chain-of-thought to justify the action and the contrastive boundary to reject the bad alternative.
+
+## The Full Quintuple
+
+The complete record that turns practitioner experience into agentic training data is not a triple but a **quintuple**:
+
+1. **Observation** — what the system (or practitioner) perceived: conditions, context, relevant facts
+2. **Reasoning** — the inference chain connecting observation to action: *why this action, given these conditions*
+3. **Action** — what was done
+4. **Worst alternative** — the most plausible bad choice, and *why it would have been bad*
+5. **Consequence** — what happened as a result: success, partial success, or failure
+
+This structure is not hypothetical. It maps directly onto five concrete uses in the training pipeline, each covered in earlier posts on this site:
+
+- The **observation** becomes a RAG chunk, indexed for future retrieval.
+- The **reasoning** becomes the Chain-of-Thought trace in an SFT training pair.
+- The **action** is the response label.
+- The **worst alternative** is the rejected response in a DPO pair, with the accompanying "why" as the rationale that teaches the critic what to flag.
+- The **consequence** is the reward signal for a process reward model, evaluated at the step level rather than only at the final output.
+
+## Why the Worst Decision Is the Hardest to Collect
+
+The reasoning dimension is already latent in most professional documentation. It's the sentence that begins "because," "given that," or "in light of." Extracting it is largely a structuring problem.
+
+The worst-alternative dimension is different. It is almost never written down, because experts don't document what they *didn't* do. A caseworker who correctly approved an application doesn't note the scenario in which they would have wrongly rejected it. A surgeon who chose the right intervention doesn't dictate a description of the wrong one.
+
+This means that worst-alternative data has to be generated, not just extracted. Three sources are practical:
+
+1. **Expert annotation**: ask practitioners, when reviewing real decisions, to name the most tempting wrong move and explain why they avoided it. This is slow but produces the highest-quality contrastive data.
+2. **Automated generation from criteria violations**: in rule-governed domains (benefits eligibility, contract compliance, clinical protocols), any decision that passed a review will have a set of criteria it met. Automatically generating a "near miss" version that violates exactly one criterion produces a structured worst-alternative at low cost.
+3. **Critic agent output**: once a critic model is trained, it can be run against its own decisions to surface the alternatives it ranked as near-plausible but ultimately rejected, providing a continuous source of contrastive pairs as the system operates.
+
+## The Practical Starting Point
+
+For any organization building the kind of sovereign agentic architecture described in the [earlier post on building sovereign agents](building-sovereign-ai-agents.qmd), the implication is concrete:
+
+**Every process you document from now on should capture five things, not three.** The observation, the reasoning, the action taken, the worst alternative, and the consequence. The first three are what most documentation systems already encourage. The fourth is the one that almost nobody captures and that makes the biggest difference to whether a trained model reasons or merely interpolates.
+
+Starting from existing records, the quickest wins come from processes where the reasoning is already written in the body of case notes or decision memos, and where criteria violations can be used to generate automated near-misses. For greenfield data collection, training the humans who generate the documentation to add a single sentence, "I considered X but rejected it because Y," is a small change to practice with a large downstream effect on training data quality.
+
+## The Takeaway
+
+A logbook triple is sufficient to teach reproduction. A quintuple is what teaches reflection. The difference is the reasoning that connects what was seen to what was done, and the worst alternative that marks the boundary of what should never be done. Both dimensions are within reach for any organization that takes documentation seriously, and both are what separate an agent that copies from an agent that actually reasons.
+
+*This post extends the observation-action-consequence framework introduced in [From Logbooks to Agent Training Data](from-logbooks-to-agent-training-data.qmd) and connects directly to the DPO and process reward model concepts in [From Text to Action](from-text-to-agentic-workflows.qmd) and [David vs. Goliath](small-specialized-model-vs-frontier.qmd).*
+
+---
+
+**Further reading on this site**
+
+- [From Logbooks to Agent Training Data](from-logbooks-to-agent-training-data.qmd) — the agricultural example that introduced the observation-action-consequence framework
+- [From Text to Action: Turning NLP Pipelines into Agentic Workflows](from-text-to-agentic-workflows.qmd) — how the full quintuple feeds each component of the training pipeline
+- [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd) — how process reward models trained on step-level quintuples work in practice
+- [The Institutional Moat](the-institutional-moat.qmd) — why collecting this data from your own operations is the durable competitive advantage

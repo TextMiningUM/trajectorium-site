@@ -69,7 +69,7 @@ None of these should be delegated entirely to another instance of the same proba
 
 ## The Flywheel
 
-Put these pieces together and something compounding happens. Every real interaction generates a **reasoning triple**: the observation the system saw, the action or tool call it chose, and the consequence, success or failure. That data doesn't just sit there; it refines your rerankers, your critics, and your planners, which produces better outcomes, which drives more usage, which produces more data. This is the flywheel that converts a one-time text-mining project into a compounding, defensible asset, and it's precisely the dataset that later lets you fine-tune around each new generation of foundation model, rather than being replaced by it.
+Put these pieces together and something compounding happens. Every real interaction generates a **reasoning quintuple**: the observation the system saw, the reasoning behind the chosen action, the action or tool call itself, the worst alternative it could have taken, and the consequence, success or failure. That data doesn't just sit there; it refines your rerankers, your critics, and your planners. The reasoning dimension trains Chain-of-Thought logic; the worst-alternative dimension is the contrastive signal that DPO and process reward models need to learn *not* to take a bad step before a human has to flag it. This is the flywheel that converts a one-time text-mining project into a compounding, defensible asset, and it's precisely the dataset that later lets you fine-tune around each new generation of foundation model, rather than being replaced by it.
 
 ## The Takeaway
 

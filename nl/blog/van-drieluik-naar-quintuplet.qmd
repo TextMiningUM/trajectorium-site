@@ -1,0 +1,90 @@
+---
+title: "Van drieluik naar quintuplet: waarom de beste trainingsdata ook de slechtste beslissing bevat die je had kunnen nemen"
+description: "Het observatie-actie-gevolg-record is al decennia de ruggengraat van agent-trainingsdata. Twee ontbrekende dimensies, de redenering achter de actie en het slechtste alternatief, zijn wat een logboekregel omzet in een model dat werkelijk kan redeneren."
+date: 2026-08-08
+author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/AgentSmith.png"
+categories: [tekst-naar-actie, fundamenten]
+lang: nl
+---
+
+*Geschatte leestijd: 9 minuten*
+
+Het idee dat ervaring kan worden gedestilleerd tot trainingsdata is niet nieuw. In *reinforcement learning* is de canonieke eenheid het **drieluik**: een toestand die de agent waarnam, een actie die het ondernam, en de beloning die het ontving. In de logboekartikelen op deze site vertaalt dat zich direct naar de notitie van een boerenknecht: weersomstandigheden, toegepaste interventie, geregistreerd resultaat. Het drieluik is eerlijk, minimaal en bevat genoeg om een model te leren een bekende goede beslissing te reproduceren.
+
+Maar bekende goede beslissingen reproduceren is niet hetzelfde als goed redeneren in nieuwe situaties. En twee dimensies die routinematig aanwezig zijn in het hoofd van een ervaren beoefenaar komen bijna nooit in het schriftelijke verslag terecht.
+
+## Wat het drieluik goed doet, en wat het mist
+
+Het drieluik, observatie-actie-gevolg, legt correct vast *wat er is gebeurd*. Een boer die "koude lente, geen wind, koperooxychloride toegepast, goede bladbedekking" schreef, gaf de volgende persoon op het werk de kernfeiten. Een AI getraind op duizenden van dergelijke vermeldingen leert vergelijkbare omstandigheden te associëren met vergelijkbare interventies.
+
+Wat het niet vastlegt is *waarom die actie en niet een andere*, en *wat de slechtste zet in die situatie zou zijn geweest*. Die twee ontbrekende dimensies zijn waar een agent leert redeneren in plaats van interpoleren, en waar het leert zijn eigen fouten te onderscheppen voordat een mens dat moet doen.
+
+## De tweede dimensie: redenering
+
+Elke echte beslissing omvat een redeneerstap tussen observatie en actie. De boer merkte niet gewoon koude temperaturen op en paste reflexmatig koperooxychloride toe. Er was een tussenliggende gevolgtrekking: "de kou duurt voort, het vochtrisico stijgt, en de weersverwachting toont regen over 48 uur, dus het behandelingsvenster is smal." Die keten van gevolgtrekking is precies wat *Chain-of-Thought*-training vereist. Een model getraind puur op observatie-actie-paren leert correlaties; een model getraind op observatie-redenering-actie-ketens leert *waarom de correlatie geldt*, wat generaliseert naar situaties die de trainingsdata nooit bevatte.
+
+In de praktijk is deze redenering-dimensie al aanwezig in veel documenten, alleen niet als zodanig gelabeld. Een aantekening van een klantbeheerder leest vaak: "Aanvrager voldoet aan criteria A en B maar niet aan C. Op basis van eerder precedent in vergelijkbare gevallen (referentie: beslissing 2024-0341) heb ik criterium C zo geïnterpreteerd dat de situatie van de aanvrager eronder valt. Beslissing: goedgekeurd." De redenering zit in de zin tussen de observatie en de conclusie. Die extraheren en behouden, in plaats van het record te reduceren tot observatie-conclusie, is wat de resulterende trainingsdata nuttig maakt voor het aanleren van oordeelsvermogen in plaats van alleen patroonherkenning.
+
+## De derde dimensie: het slechtste alternatief
+
+Hier is de dimensie die bijna nooit wordt opgeschreven, en die het waardevolst blijkt te zijn voor het bouwen van een model dat zichzelf kan corrigeren.
+
+Overweeg de koperooxychloride-beslissing opnieuw. De boer die die vermelding schreef wist impliciet dat het toepassen van een zware stikstofbespuiting op dat moment het bladoppervlak in de kou had verbrand en de opname had verminderd in plaats van verbeterd. Die kennis, dat een specifiek alternatief slecht zou zijn geweest *om een specifieke, benoembare reden*, is het contrastieve signaal waarop Direct Preference Optimization en *process reward models* zijn gebouwd.
+
+In DPO train je een model niet alleen op "dit is de geprefereerde respons" maar op "dit is de geprefereerde respons, *en* dit is het afgewezen alternatief." Het verschil tussen beide codeert het oordeel. Een model getraind alleen op geprefereerde responsen leert vloeiende, plausibele uitvoer te produceren. Een model getraind op geprefereerd-versus-afgewezen-paren leert *te discrimineren*, wat je nodig hebt als de inzet een gewasuitval is, een afgewezen uitkeringsaanvraag, of een verkeerd gediagnosticeerde klinische aandoening.
+
+De praktische consequentie is dat een logboek geschreven met zelfs één zin van de vorm "ik deed X in plaats van Y omdat Z" aanzienlijk waardevoller is als trainingsdata dan een logboek dat alleen "ik deed X" vastlegt. De Y is het slechtste alternatief; de Z is de redenering. Samen geven ze het downstream-model zowel de *chain of thought* om de actie te rechtvaardigen als de contrastieve grens om het slechte alternatief te verwerpen.
+
+## Het volledige quintuplet
+
+Het volledige record dat praktijkervaring omzet in agentische trainingsdata is geen drieluik maar een **quintuplet**:
+
+1. **Observatie** — wat het systeem (of de beoefenaar) waarnam: omstandigheden, context, relevante feiten
+2. **Redenering** — de gevolgtrekkingsketen die observatie verbindt met actie: *waarom deze actie, gegeven deze omstandigheden*
+3. **Actie** — wat er werd gedaan
+4. **Slechtste alternatief** — de meest plausibele slechte keuze, en *waarom die slecht zou zijn geweest*
+5. **Gevolg** — wat er als resultaat is gebeurd: succes, gedeeltelijk succes of mislukking
+
+Deze structuur is niet hypothetisch. Ze vertaalt direct naar vijf concrete toepassingen in de trainingspijplijn, elk behandeld in eerdere artikelen op deze site:
+
+- De **observatie** wordt een *RAG*-*chunk*, geïndexeerd voor toekomstige *retrieval*.
+- De **redenering** wordt het *Chain-of-Thought*-spoor in een SFT-trainingspaar.
+- De **actie** is het responsielabel.
+- Het **slechtste alternatief** is de afgewezen respons in een DPO-paar, met de bijbehorende "waarom" als redenering die de *critic* leert wat te markeren.
+- Het **gevolg** is het beloningssignaal voor een *process reward model*, geëvalueerd op stapniveau in plaats van alleen bij de einduitvoer.
+
+## Waarom de slechtste beslissing het moeilijkst te verzamelen is
+
+De redenering-dimensie is al latent aanwezig in de meeste professionele documentatie. Het is de zin die begint met "omdat," "gezien het feit dat," of "in het licht van." Die extraheren is grotendeels een structureringsprobleem.
+
+De slechtste-alternatief-dimensie is anders. Die wordt bijna nooit opgeschreven, omdat experts niet documenteren wat ze *niet* deden. Een klantbeheerder die een aanvraag correct goedkeurde, noteert niet het scenario waarin ze die ten onrechte hadden afgewezen.
+
+Dit betekent dat slechtste-alternatief-data gegenereerd moet worden, niet alleen geëxtraheerd. Drie bronnen zijn praktisch:
+
+1. **Expertannotatie**: vraag beoefenaars, bij het beoordelen van echte beslissingen, de meest verleidelijke verkeerde zet te benoemen en uit te leggen waarom ze die vermeden. Dit is traag maar produceert de hoogste kwaliteit contrastieve data.
+2. **Geautomatiseerde generatie uit criteria-schendingen**: in regelgestuurde domeinen (uitkeringsgeschiktheid, contractnaleving, klinische protocollen) heeft elke beslissing die een beoordeling doorstond een set criteria waaraan die voldeed. Automatisch een "bijna-fout"-versie genereren die precies één criterium schendt, produceert een gestructureerd slechtste alternatief tegen lage kosten.
+3. **Critic-agent-uitvoer**: zodra een *critic*-model is getraind, kan het worden uitgevoerd tegen zijn eigen beslissingen om de alternatieven te vinden die het bijna plausibel achtte maar uiteindelijk afwees, waardoor een continue bron van contrastieve paren ontstaat terwijl het systeem opereert.
+
+## Het praktische startpunt
+
+Voor elke organisatie die de soort soevereine agentische architectuur bouwt beschreven in het [eerdere artikel over soevereine agents](een-soevereine-ai-agent-bouwen.qmd), is de implicatie concreet:
+
+**Elk proces dat je vanaf nu documenteert moet vijf dingen vastleggen, niet drie.** De observatie, de redenering, de genomen actie, het slechtste alternatief en het gevolg. De eerste drie zijn wat de meeste documentatiesystemen al aanmoedigen. De vierde is de enige die bijna niemand vastlegt en die het grootste verschil maakt voor de vraag of een getraind model redeneert of slechts interpoleert.
+
+Beginnend vanuit bestaande records komen de snelste winsten uit processen waarbij de redenering al is geschreven in de hoofdtekst van dossiernotities of beslismemo's, en waarbij criteria-schendingen kunnen worden gebruikt om geautomatiseerde bijna-fouten te genereren. Voor het verzamelen van nieuwe data is het trainen van de mensen die de documentatie genereren om één zin toe te voegen, "ik heb X overwogen maar verworpen omdat Y," een kleine verandering in praktijk met een groot downstream-effect op de kwaliteit van trainingsdata.
+
+## De conclusie
+
+Een logboek-drieluik is voldoende om reproductie te leren. Een quintuplet is wat reflectie leert. Het verschil is de redenering die verbindt wat er werd gezien met wat er werd gedaan, en het slechtste alternatief dat de grens markeert van wat nooit gedaan zou mogen worden. Beide dimensies zijn binnen bereik voor elke organisatie die documentatie serieus neemt, en beide zijn wat een agent die kopieert scheidt van een agent die werkelijk redeneert.
+
+*Dit artikel breidt het observatie-actie-gevolg-raamwerk uit dat werd geïntroduceerd in [Van logboeken naar agent-trainingsdata](van-logboeken-naar-agent-trainingsdata.qmd) en verbindt direct met de DPO- en process reward model-concepten in [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) en [David tegen Goliath](klein-gespecialiseerd-model-vs-frontier.qmd).*
+
+---
+
+**Verder lezen op deze site**
+
+- [Van logboeken naar agent-trainingsdata](van-logboeken-naar-agent-trainingsdata.qmd) — het agrarische voorbeeld dat het observatie-actie-gevolg-raamwerk introduceerde
+- [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) — hoe het volledige quintuplet elk component van de trainingspijplijn voedt
+- [David tegen Goliath: klein model versus frontier](klein-gespecialiseerd-model-vs-frontier.qmd) — hoe *process reward models* getraind op stap-niveau quintupletten in de praktijk werken
+- [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — waarom het verzamelen van deze data vanuit je eigen operaties het duurzame concurrentievoordeel is

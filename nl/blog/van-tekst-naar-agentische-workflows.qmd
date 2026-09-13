@@ -69,7 +69,7 @@ Niets hiervan mag volledig worden gedelegeerd aan een andere instantie van hetze
 
 ## Het vliegwiel
 
-Zet deze onderdelen samen en er gebeurt iets samengesteld. Elke echte interactie genereert een **redeneerdrieluik**: de observatie die het systeem zag, de actie of tool-aanroep die het koos, en de consequentie, succes of mislukking. Die data blijft niet liggen; ze verfijnt je rerankers, je critics en je planners, wat betere uitkomsten oplevert, wat meer gebruik stimuleert, wat meer data oplevert. Dit is het vliegwiel dat een eenmalig tekstminingproject omzet in een samengesteld, verdedigbaar bedrijfsmiddel, en het is precies de dataset die je later in staat stelt om te fijnregelen rondom elke nieuwe generatie basismodellen, in plaats van erdoor vervangen te worden.
+Zet deze onderdelen samen en er begint iets samen te stellen. Elke echte interactie genereert een **redeneer-quintuplet**: de observatie die het systeem zag, de redenering achter de gekozen actie, de actie of tool-aanroep zelf, het slechtste alternatief dat genomen had kunnen worden, en de consequentie, succes of mislukking. Die data blijft niet liggen; ze verfijnt je *rerankers*, je *critics* en je planners. De redenering-dimensie traint *Chain-of-Thought*-logica; de slechtste-alternatief-dimensie is het contrastieve signaal dat DPO en *process reward models* nodig hebben om te leren een slechte stap *niet* te zetten voordat een mens dat hoeft te markeren. Dit is het vliegwiel dat een eenmalig tekstminingproject omzet in een samengesteld, verdedigbaar bedrijfsmiddel.
 
 ## De conclusie
 

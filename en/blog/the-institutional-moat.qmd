@@ -46,16 +46,16 @@ Complex professional tasks are never solved in one step. A useful architecture r
 
 Hallucination risk is the number one reason institutional AI adoption stalls. The fix isn't a bigger model, it's independent verification agents surrounding the core LLM: fact-checking every draft against your RAG source of truth, safety filters enforcing legal and compliance red lines, and self-consistency checks that run the same query through multiple reasoning paths and discard answers that don't agree with each other. None of this should be left to the same model policing itself. For a full treatment of the specific attack types these guardrails defend against, see the [post on adversarial attacks](adversarial-attacks-images-and-text.qmd) in this series.
 
-## The Compounding Advantage: Reasoning Triples
+## The Compounding Advantage: Reasoning Quintuples
 
-Put these four together and something compounding starts to happen. Every real interaction generates a **reasoning triple**: the observation the system saw, the action or tool call it chose, and the consequence, success or failure. That data refines your reranker, your critic, and your planner, which produces better outcomes, which drives more usage, which produces more data. This is the flywheel that turns a one-off integration project into a genuinely defensible asset, and, notably, it's exactly the kind of proprietary dataset that later lets you fine-tune around each new generation of foundation model rather than being replaced by it.
+Put these four together and something compounding starts to happen. Every real interaction generates a **reasoning quintuple**: the observation the system saw, the reasoning behind the action taken, the action or tool call itself, the worst alternative that could have been chosen, and the consequence, success or failure. The reasoning dimension is what trains an agent to think, not just to copy; the worst-alternative dimension is the contrastive signal that DPO and process reward models use to teach the system to reject a bad plan before a human has to. That data refines your reranker, your critic, and your planner, which produces better outcomes, which drives more usage, which produces more data. This is the flywheel that turns a one-off integration project into a genuinely defensible asset.
 
 ## What to Do Monday Morning
 
 If you're a CTO or CIO reading this and recognizing your own stack, the fix doesn't require a moonshot:
 
 1. **Audit your AI stack.** If it's prompts plus API calls and nothing else, you currently have no moat.
-2. **Start collecting reasoning triples today**, from every expert interaction, this data only exists going forward, not retroactively.
+2. **Start collecting reasoning quintuples today**, from every expert interaction: observation, reasoning, action taken, worst alternative, consequence. This data only exists going forward, not retroactively.
 3. **Implement a neural reranker on your domain data.** This is usually the highest-ROI first step.
 4. **Build your first Critic agent.** Fifty curated examples is enough for a working prototype.
 5. **Decouple your architecture into modular, independently upgradable components**, reranker, critic, planner, and guardrails should each be replaceable without rebuilding the whole system.
