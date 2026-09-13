@@ -19,6 +19,8 @@ website:
         href: slides/index.qmd
       - text: "Over"
         href: about.qmd
+      - text: "Publicaties"
+        href: publications.qmd
     right:
       - text: "EN"
         href: "https://trajectorium.ai/en/"

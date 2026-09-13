@@ -1,0 +1,106 @@
+---
+title: "Publications"
+description: "Complete publication list of Jan C. Scholtes — books, journal articles, and conference papers spanning text mining, NLP, information retrieval, LegalTech, and agentic AI systems."
+page-layout: full
+toc: true
+---
+
+<div class="container py-4">
+
+*Also published as Johannes Scholtes, J.C. Scholtes, J. Scholtes, Johannes C. Scholtes.*
+
+A curated overview of the most significant contributions is available at [textmining.nu/publications](https://textmining.nu/publications/). Full citation verification recommended before citing specific references.
+
+---
+
+## Books and Book Chapters
+
+- Scholtes, J.C. (2021). *The LegalTech Bridge* (in Dutch). In *Meesterlijk. Liber Amicorum Prof. dr. H.J. van den Herik*. H.M. Custers, F. Dechesne & S. van der Hof (Eds.).
+- Scholtes, J.C., & van den Herik, H.J. (2021). Big Data Analytics for eDiscovery. In R. Vögl (Ed.), *Big Data Law*. Edgar Publishing. [ISBN 978-1-78897-281-9](https://www.e-elgar.com/shop/gbp/research-handbook-on-big-data-law-9781788972819.html)
+- Scholtes, J.C., & van den Herik, H.J. (2019). Big Data Analytics for Legal Fact Finding. In L.R. van den Berg et al. (Eds.), *Recht en Technology, vraagstukken van de digitale revolutie*. Boom Juridisch.
+- Scholtes, J.C. (2009). *Text Mining, the next step in search technology; Finding what doesn't seem to be there, or finding who doesn't want to be found*. Inaugural lecture, Maastricht University.
+- Scholtes, J.C. (1995). *Artificial Neural Networks in Information Retrieval in a Libraries Context*. EC DG-XIII.
+- Scholtes, J.C. (1993). *Neural Networks in Natural Language Processing and Information Retrieval*. PhD Thesis, University of Amsterdam. [Download](https://textminingum.wordpress.com/neural-networks-in-natural-language-processing-and-information-retrieval/)
+
+---
+
+## Journal Articles and Preprints
+
+- Celebi, R., Shingjergji, K., Scholtes, J., & Dumontier, M. (2021). Relation extraction from DailyMed structured product labels by optimally combining crowd, experts and machines. *Journal of Biomedical Informatics, 122*, 103902. [doi.org/10.1016/j.jbi.2021.103902](https://doi.org/10.1016/j.jbi.2021.103902)
+- Scholtes, J.C., van der Zee, Y., & Westerhoud, M. (2021). Science helps auditors take on the data challenge. *European Court of Auditors Journal, 2021*(1), 170–177.
+- van der Zee, Y., Scholtes, J.C., Westerhoud, M., & Rossi, J. (2021). Code Word Detection in Fraud Investigations using a Deep-Learning Approach. *arXiv preprint*. [arXiv:2103.09606](https://arxiv.org/abs/2103.09606)
+- Scholtes, J.C. (2020). Text-Mining and eDiscovery for Big-Data Audits. *European Court of Auditors Journal, 2020*(1), 133–140.
+- Celebi, R. et al. (incl. Scholtes, J.) (2024). Automated identification of healthier food substitutions through a combination of graph neural networks and nutri-scores. *Journal of Food Composition and Analysis, 125*, Article 105829.
+- (Co-authors incl. Scholtes, J.) (2024). Cleaning nursing notes improves the correlation between notes and SOFA score. *De Intensivist, 32*(4).
+
+---
+
+## Conference Papers
+
+### 2025
+
+- Kats, T., van der Putten, P., & Scholtes, J. (2025). Relevance Feedback Strategies for Reducing Review Effort in Recall-Oriented Neural Information Retrieval. In F.A. Oliehoek, M. Kok, & S. Verwer (Eds.), *Artificial Intelligence and Machine Learning — BNAIC/Benelearn 2023, Revised Selected Papers*.
+- Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). You Are What You Train: Effects of Data Composition on Training Context-aware Machine Translation Models. *EMNLP 2025*, pp. 27414–27437.
+- Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). Analyzing the Attention Heads for Pronoun Disambiguation in Context-aware Machine Translation Models.
+
+### 2024
+
+- Hornig, B., Pera, M.S., & Scholtes, J. (2024). Misinformation in video recommendations: an exploration of Top-N recommendation algorithms. *CEUR Workshop Proceedings, 3677*, 54–67.
+- Maka, P., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2024). Sequence Shortening for Context-Aware Machine Translation.
+- Semerci, Y.C., Scholtes, J., & Spanakis, G. (2024). Fixed and Adaptive Simultaneous Machine Translation Strategies Using Adapters.
+
+### 2021
+
+- Carranza-Tejada, G., Scholtes, J.C., & Spanakis, G. (2021). A study of BERT's processing of negations to determine sentiment. *BNAIC/Benelearn*, Luxembourg, November 2021.
+
+### 2019
+
+- Enendu, S., Scholtes, J., Smeets, J., Hiemstra, D., & Theune, M. (2019). Predicting Semantic Labels of Text Regions in Heterogeneous Document Images. *DIR 2019*, Amsterdam.
+- Enendu, S., Scholtes, J., Smeets, J., Hiemstra, D., & Theune, M. (2019). Predicting Semantic Labels of Text Regions in Heterogeneous Document Images. *KONVENS 2019*, Erlangen-Nürnberg.
+- Gerolemou, Z., & Scholtes, J. (2019). Target-Based Sentiment Analysis as a Sequence-Tagging Task. *BNAIC*, Brussels, November 2019.
+- Scholtes, J.C., & van den Herik, H.J. (2019). Big Data Analytics for Legal Fact-Finding. *Mordenate Lustrum Congress*, Leiden University, May 2019.
+
+### 2018
+
+- Helling, T.J., Takes, F.W., & Scholtes, J.C. (2018). A community-aware approach for identifying node anomalies in complex networks. *7th International Conference on Complex Networks and Their Applications*, Cambridge, December 2018.
+- Heinrichs, B., & Scholtes, J.C. (2018). Detecting Anomalous Events over Time Using RDF Triple Extraction and a Dynamic Implementation of OddBall. *BNAIC*, Den Bosch, November 2018.
+
+### 2016
+
+- Borggrewe, K., & Scholtes, J.C. (2016). Domain-Independent Method for Entity Resolution by determining Textual Similarities with a Support Vector Machine. *BNAIC*, Amsterdam, November 2016.
+- Smeets, J., Scholtes, J.C., Rasterhoff, C., & Schravemaker, M. (2016). SMTP: Stedelijk Museum Text Mining Project. *Digital Humanities Conference*, Kraków, July 2016.
+- Smeets, J., Scholtes, J.C., Rasterhoff, C., & Schravemaker, M. (2016). SMTP: Stedelijk Museum Text Mining Project. *DHBenelux*, Luxembourg, June 2016.
+
+### 2015
+
+- Tannenbaum, M., Fischer, A., & Scholtes, J.C. (2015). Dynamic Topic Detection and Tracking using Non-Negative Matrix Factorization. *BNAIC*, Hasselt, November 2015.
+
+### 2013
+
+- Scholtes, J.C., van Cann, T.H.W., & Mack, M. (2013). The Impact of Incorrect Training Sets and Rolling Collections on Technology-Assisted Review. *ICAIL 2013, DESI V Workshop*, Rome, June 2013.
+- Scholtes, J.C., & van Cann, T.H.W. (2013). Improving Machine Learning Input for Automatic Document Classification with Natural Language Processing. *BNAIC*, Delft, November 2013.
+
+### 2012
+
+- Maghsoodi, A., Sevenster, M., Scholtes, J., & Nabaltov, G. (2012). Automatic Sentence-based Classification of Free-text Breast Cancer Radiology Reports. *25th IEEE CBMS 2012*.
+- Maes, F., & Scholtes, J.C. (2012). Authorship Disambiguation and Alias Resolution in Email Data. *BNAIC*, Maastricht, October 2012.
+
+### 2009–2008
+
+- Scholtes, J.C. (2009). Text Mining: The next step in Search Technology. *ICAIL 2009/DESI III Workshop*, Barcelona, June 2009.
+- Scholtes, J.C. (2008). Is there a role for Sentiment Mining in Robot-Human Communications? *1st International Conference on Human-Robots Personal Relationships*, June 2008.
+
+### 1990–1992
+
+- Scholtes, J.C. (1992). Resolving Linguistic Ambiguities with a Neural Data-Oriented Parsing (DOP) System. *Artificial Neural Networks 2*, Vol. 2, pp. 1347–1350. Elsevier.
+- Scholtes, J.C. (1992). Neural Nets versus Statistics in Information Retrieval. *SPIE Conference on Applications of Artificial Neural Networks III*, Orlando, FL.
+- Scholtes, J.C., & Bloembergen, S. (1992). The Design of a Neural Data-Oriented Parsing (DOP) Model. *IJCNN*, Baltimore.
+- Scholtes, J.C., & Bloembergen, S. (1992). Corpus Based Parsing with a Self-Organizing Neural Net. *IJCNN*, Beijing.
+- Scholtes, J.C. (1991). Unsupervised Context Learning in Natural Language Processing. *IJCNN*, Seattle, Vol. 1, pp. 107–112.
+- Scholtes, J.C. (1991). Learning Simple Semantics by Self-Organization. *AAAI Spring Symposium on Connectionist Natural Language Processing*, Palo Alto, pp. 78–83.
+- Scholtes, J.C. (1991). Recurrent Kohonen Self-Organization in Natural Language Processing. *Artificial Neural Networks* (T. Kohonen et al., Eds.), pp. 1751–1754. Elsevier.
+- Scholtes, J.C. (1990). Trends in Neurolinguistics. *IEEE Symposium on Neural Networks*, Delft, pp. 69–86.
+- van den Herik, H.J., Scholtes, J.C., & Verhoest, C.R.J. (1988). The Design of a Knowledge-Based Optical-Character Recognition System. *SCS*, Nice, pp. 350–358.
+- Henseler, J., van den Herik, H.J., Kerckhoffs, E.J.H., Koppelaar, H., Scholtes, J.C., & Verhoest, C.R.J. (1988). Knowledge-Based Parallelism in Optical Character Recognition. *Summer Computer Simulation Conference*, Seattle, pp. 14–20.
+
+</div>
