@@ -1,7 +1,7 @@
 ---
 title: "Shrinking the Giant: How Pruning, Quantization, and Distillation Make LLMs Small, Cheap, and Safer"
 description: "Training a custom GPT-4-class model now costs an estimated 2-3 million dollars in compute alone. Here's how pruning, quantization, and distillation take that same capability and put it on hardware you own, while incidentally closing off a whole class of attacks."
-date: 2026-11-28
+date: 2026-07-25
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/Distillation.png"
 categories: [fundamentals, efficiency]

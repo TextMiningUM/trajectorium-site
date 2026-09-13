@@ -1,7 +1,7 @@
 ---
 title: "David tegen Goliath: een *fine-tuned* 8B-model evenaart bijna een triljoen-parameter-gigant, op één taak"
 description: "Recent onderzoek toont aan dat een klein, lokaal draaiend model binnen een paar procentpunten van een frontier-basismodel kan komen op een specifieke taak. De reden is geen magie, het is specialisatie."
-date: 2026-10-31
+date: 2026-07-04
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/Goliath.png"
 categories: [tekst-naar-actie]

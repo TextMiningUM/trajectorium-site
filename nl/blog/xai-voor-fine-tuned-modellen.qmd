@@ -1,7 +1,7 @@
 ---
 title: "Waarom je een model niet kunt fine-tunen, trainen of destilleren zonder XAI"
 description: "Op het moment dat je begint met fine-tunen, trainen of destilleren van je eigen modellen, neem je volledige verantwoordelijkheid voor hoe ze redeneren, niet alleen voor wat ze uitvoeren. Explainable AI is wat je in staat stelt dat werkelijk te verifiëren."
-date: 2026-08-22
+date: 2026-05-09
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/XAIDarpa.png"
 categories: [fundamenten, governance]

@@ -1,7 +1,7 @@
 ---
 title: "What It Takes to Build a Sovereign AI Agent for Your Organization"
 description: "From a customer service agent to a caseworker assistant helping citizens navigate bureaucracy, a practical, step-by-step guide to building an agentic AI system your organization actually owns, on infrastructure it actually controls."
-date: 2026-12-12
+date: 2026-08-01
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/SovereignAgent.png"
 categories: [sovereignty-edge, enterprise-strategy]

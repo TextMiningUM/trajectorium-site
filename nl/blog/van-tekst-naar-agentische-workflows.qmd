@@ -1,7 +1,7 @@
 ---
 title: "Van tekst naar actie: NLP-pipelines omzetten in agentische workflows"
 description: "Hoe ruwe, ongestructureerde tekst de trainingsdata wordt achter het geheugen, de tools, de redenering en de guardrails van een agent, en waarom die omzetting het echte concurrentievoordeel oplevert."
-date: 2026-09-26
+date: 2026-05-30
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/AgentSmith.png"
 categories: [tekst-naar-actie]

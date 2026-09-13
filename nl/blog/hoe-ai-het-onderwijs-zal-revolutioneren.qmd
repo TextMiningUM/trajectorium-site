@@ -1,7 +1,7 @@
 ---
 title: "Hoe AI het onderwijs zal revolutioneren, en waar het dat echt niet zou moeten doen"
 description: "24/7 tutors, instant readers gegenereerd uit slides, sokratische dialogen op aanvraag, generatieve AI herschrijft het hoger onderwijs al. Maar dezelfde technologie heeft een vals-speelwapenwedloop veroorzaakt, en het eerlijke beeld is genuanceerder dan zowel de hype als de paniek doet vermoeden."
-date: 2026-10-24
+date: 2026-06-27
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/EducationHomeWorkMachine.png"
 categories: [onderwijs]

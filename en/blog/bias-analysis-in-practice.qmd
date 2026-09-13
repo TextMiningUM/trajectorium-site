@@ -1,7 +1,7 @@
 ---
 title: "Bias Analysis in Practice: How Do You Actually Test an Algorithm for Discrimination?"
 description: "The Dutch government's Algorithm Framework requires a bias analysis, a justification test, and an ethical desirability test for every algorithm that treats people. Here's how to actually carry that out, with tools, real cases, and the underlying science."
-date: 2026-08-15
+date: 2026-05-02
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/Bias.png"
 categories: [governance]

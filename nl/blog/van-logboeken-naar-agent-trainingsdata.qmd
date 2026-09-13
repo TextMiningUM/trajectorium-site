@@ -1,7 +1,7 @@
 ---
 title: "Van de volgende boerenknecht naar de volgende AI-agent: generatiekennis omzetten in trainingsdata"
 description: "150 jaar lang schreven boeren logboeken zodat de volgende persoon op het werk zou weten wat te doen. Diezelfde tekst, geschreven voor een menselijke opvolger, blijkt precies te zijn wat een AI-agent nodig heeft om het werk in plaats daarvan te leren."
-date: 2026-11-21
+date: 2026-07-18
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/OrchardFarmhand.png"
 categories: [tekst-naar-actie]

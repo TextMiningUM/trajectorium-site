@@ -1,7 +1,7 @@
 ---
 title: "Waarom NLP eindelijk werkt: wat transformers goed deden dat vijftig jaar grammatica's, statistiek en RNN's niet lukte"
 description: "Van handgeschreven grammatica's tot statistische modellen tot LSTM's, elke generatie NLP loste één probleem op en liep tegen een nieuwe muur. Transformers zijn de eerste architectuur die alle lagen van taal tegelijk aanpakt en alles uit data afleidt."
-date: 2026-11-07
+date: 2026-07-11
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/NLPFinallyWorks.png"
 categories: [fundamenten]

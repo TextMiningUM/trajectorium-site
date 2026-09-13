@@ -1,7 +1,7 @@
 ---
 title: "How AI Will Revolutionize Education, And Where It Genuinely Shouldn't"
 description: "24/7 tutors, instant readers generated from slides, Socratic dialogues on demand, generative AI is already reshaping higher education. But the same technology has triggered a cheating arms race, and the honest picture is more nuanced than either the hype or the panic suggests."
-date: 2026-10-24
+date: 2026-06-27
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/EducationHomeWorkMachine.png"
 categories: [education]
