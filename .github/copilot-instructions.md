@@ -37,6 +37,48 @@ _publish/
 ```
 If new shared asset folders are added to the repo root, add them here too.
 
+## Rule: blog post SEO frontmatter
+Every new blog post (EN and NL) must include the following in the YAML frontmatter, in this order:
+
+```yaml
+---
+title: "..."
+description: "..."          # 1-2 sentences, used as OG description and search snippet
+date: YYYY-MM-DD
+author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/<filename>"   # optional but recommended; use absolute URL
+categories: [category1, category2]
+lang: en                    # or nl
+---
+```
+
+- **`author`**: always `"Jan Scholtes"` — required for E-E-A-T signal and author-page aggregation.
+- **`image`**: absolute URL only (`https://trajectorium.ai/images/...`). Never relative paths — Quarto builds EN and NL as separate projects and relative paths break the listing and Open Graph previews. Omit the field if no matching image exists.
+- **`description`**: written to work as both meta description and Open Graph description. First 160 characters must be self-contained.
+- **`categories`**: use existing categories where possible (`fundamentals`, `governance`, `text-to-action`, `sovereignty-edge`, `enterprise-strategy`, `education`, `efficiency`) to keep the taxonomy consistent.
+
+## Rule: Key papers section
+Every blog post must include a `**Key papers**` / `**Kernpublicaties**` section immediately after the closing italic source line and before the horizontal rule that introduces "Further reading". Format:
+
+```markdown
+*Based on "..." (Prof. dr. ir. J.C. Scholtes, ...).*
+
+**Key papers**
+
+- Author et al. (Year), *Paper Title* — [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)
+- Author et al. (Year), *Paper Title* — [DOI or journal link](https://...)
+
+---
+
+**Further reading on this site**
+...
+```
+
+- 3-5 papers per post, most seminal or directly cited first.
+- Always link to arXiv, DOI, or the original publisher — never to blog posts or news articles.
+- Papers in italics, links inline with the paper reference.
+- NL posts use `**Kernpublicaties**` with identical formatting.
+
 ## Rule: styling
 - Theme file: `custom.scss` at repo root.
 - Both `_quarto.yml` files reference it as `../custom.scss` under `format.html.theme`.
