@@ -1,0 +1,69 @@
+---
+title: "Er is geen data zoals vreemde data: AI-training voor agents herdenken"
+description: "In 1993 luidde de gulden regel van AI: 'er is geen data zoals meer data.' Voor het bouwen van agentische architecturen vereist dit vandaag het tegenovergestelde instinct: stop met het najagen van volume, begin met het najagen van het onverwachte."
+date: 2026-09-20
+author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/whatIsGoodData.png"
+categories: [tekst-naar-actie]
+lang: nl
+---
+
+![](https://trajectorium.ai/images/whatIsGoodData.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
+*Geschatte leestijd: 7 minuten*
+
+In 1993 citeerde ik Fred Jelinek, de IBM-spraakherkennispionier wiens statistische aanpak het hele vakgebied stilletjes herprogrammeerde, in mijn eigen proefschrift. Zijn zin is zo vaak herhaald dat die in machine learning-kringen praktisch heilige schrift is geworden: **"there is no data like more data."** Decennialang was dat gewoon waar. Grotere *corpora* betekenden betere statistische modellen. Grotere trainingssets betekenden betere basis-LLM's. Schaal was het hele spel.
+
+Dat is het nog steeds, voor een basismodel. Maar als je [agentische architecturen](wat-is-een-ai-agent.qmd) bouwt, systemen die betrouwbaar moeten handelen in de echte, rommelige, door mensen gerunde wereld, is dat instinct actief misleidend geworden. Volume is niet langer de flessenhals. **Uniekheid is.**
+
+## De Tesla-val: waarom 'saaie' data nutteloos is
+
+Hier is de illusie die het benoemen waard is: data hamsteren voelt als vooruitgang omdat de getallen omhoog gaan. Laat een Tesla 15.000 kilometer over een rechte, lege snelweg rijden zonder dat er iets gebeurt, en je verzamelt terabytes aan sensordata. Prachtig schoon. Volmaakt consistent. En de autonome rijagent leert er eigenlijk niets nieuws van. Het zijn **lege calorieën voor AI**: data die de eetlust naar volume bevredigt terwijl het model wordt uitgehongerd van alles wat het nog niet wist.
+
+Dit is ook, niet toevallig, waarom **synthetische data**, modeluitvoer gebruikt om het volgende model te trainen, een doodlopende weg is voor echte agentische groei. Twee LLM's die met elkaar praten, of één LLM die zijn eigen uitvoer beoordeelt, creëert gewoon een echokamer: vloeiend, intern consistent, en losgekoppeld van alles wat het wereldmodel nog niet bevatte. Recente research heeft aangetoond dat modellen die recursief op hun eigen gegenereerde uitvoer worden getraind meetbaar degraderen over opeenvolgende generaties, een verschijnsel dat inmiddels algemeen **model collapse** wordt genoemd. Wat een decennium geleden werkte als datastrategie, terug in het pre-*transformer*, pre-LLM-tijdperk toen 'meer tekst' betrouwbaar 'beter model' betekende, het spel is veranderd. Het dataprobleem van vandaag aanpakken met het draaiboek van gisteren is hoe je eindigt met een agent die heerlijk zelfverzekerd en stilletjes nutteloos is.
+
+## Het menselijke element: onvoorspelbaarheid is de goudmijn
+
+Agents opereren niet in een schone simulatie. Ze opereren in een wereld gerund door mensen, en mensen doen vreemde dingen: op briljante, hardnekkige, structureel onvoorspelbare manieren. We maken fouten. We nemen rare shortcuts (ik noem ze graag 'salto's': de plotselinge, onlogische sprong die op de een of andere manier toch werkt). We vertrouwen op algemene intuïtie die de nette logica trotseert waarvan elk protocol aanneemt dat we die volgen.
+
+Een agent die uitsluitend getraind is op sterk gesanitiseerde, regelvolgende data presteert prachtig, tot het moment dat een mens iets irrationeels doet, waarna hij bevriest, of erger, zelfverzekerd het verkeerde doet. Als jouw trainingsdata nooit een mens bevatte die afweek van het script, heeft je agent geen model van hoe een afwijking er überhaupt uitziet, laat staan hoe je erop reageert. **De onvoorspelbaarheid is geen ruis die uit je dataset gefilterd moet worden: het is het eigenlijke signaal dat je probeert te vangen.**
+
+Dit verbindt direct met het [observatie-redenering-actie-slechtste-alternatief-gevolg-kader](van-drieluik-naar-quintuplet.qmd) dat eerder op deze site is behandeld: de 'slechtste alternatief'-dimensie is alleen leerbaar uit data waar dingen daadwerkelijk mis gingen of bijna mis gingen. Je kunt hem niet genereren uit synthetische regelvolgende uitvoer.
+
+## Wat telt eigenlijk als goede data voor agentische architecturen?
+
+Goede data voor een agent ligt niet netjes opgeslagen in de standaard operationele procedure. Je begint met het protocol, absoluut: een agent moet de regel kennen voordat hij nuttig kan zijn. Maar de echte waarde, het deel dat een agent daadwerkelijk leert redeneren onder druk en te generaliseren, leeft in de data gegenereerd **waar de regels niet werkten of niet van toepassing waren**.
+
+**Voorbeeld 1: De IC.** Routinematige hartslaglogboeken, minuut voor minuut genomen bij een stabiele patiënt, zijn prima als basislijn, maar dat is niet waar het leren plaatsvindt. De ongelukken, de incidenten, de randgevallen op een intensive care zijn waar levensreddende agentische redenering daadwerkelijk wordt getest. Hoe reageert een arts op het moment dat het protocol niet dekt wat er voor hem ligt? Die reactie, de improvisatie, de oordeelsvraag, de afwijking van het stroomschema, is precies het soort redeneerspoor dat een werkelijk nuttige klinische agent van tevoren gezien moet hebben.
+
+**Voorbeeld 2: Gameplay-clips als uitzonderingsfilter.** **General Intuition**, een onderzoekslab voortgekomen uit het clip-deelplatform **Medal**, traint agents op circa twee miljard door gebruikers geüploade gamingvideo's per jaar, afkomstig van zo'n tien miljoen maandelijkse gebruikers in tienduizenden games. Het interessante is niet het volume, het is het curatiemechanisme ervoor. Niemand clipt de vier rustige uren; mensen clippen de onmogelijke redding en de catastrofale blunder. Pim de Witte, de CEO van het bedrijf, heeft dit beschreven als een selectiebias naar precies het soort data dat je eigenlijk wilt voor training: het platform is in feite een geautomatiseerd uitzonderingsfilter dat zijn gebruikers gratis onderhouden, en niemand heeft het ontworpen. De overdraagbare les heeft niets met games te maken: overal waar mensen al de moeite nemen om het moment te registreren dat dingen vreemd werden, heeft iemand zonder het te beseffen een vreemd-data-*corpus* voor je gebouwd. Vind die, en je hebt het moeilijkste deel van het verzamelprobleem overgeslagen.
+
+**Voorbeeld 3: Autonome scheepspiloten.** Dit is een bijzonder heldere illustratie van het hele argument. Begin een autonome scheepspilootgagent met **COLREGs**, de Internationale Voorschriften ter Voorkoming van Aanvaringen op Zee, en je krijgt een competente regelvolger. Maar COLREGs beschrijven een geïdealiseerde wereld van twee vaartuigen die rationeel gedragen in heldere omstandigheden, en echte aanvaringen vinden bijna nooit plaats in die wereld. Ze vinden plaats in het gat tussen de regel en de werkelijkheid: een vissersboot zonder werkend AIS-transponder, een uitkijk op een vrachtschip precies op het verkeerde moment afgeleid, twee vaartuigen die elk correct de regel volgen voor een *andere* interpretatie van de situatie. Dit is precies waar de rapporten van de **Marine Accident Investigation Branch (MAIB)** van het VK onschatbaar trainingsmateriaal worden: gedetailleerde, openbare, incident-voor-incident reconstructies van precies de situaties waar het regelboek en het water het oneens waren, inclusief de menselijke redenering (en misrekening) die tot de aanvaring leidde. Een agent die alleen op schone COLREGs-scenario's is getraind, heeft de vissersboot die zich niet gedraagt zoals COLREGs aanneemt nooit gezien. Een agent die ook heeft geleerd uit een decennium MAIB-incidentrapporten heeft tenminste de vorm van de uitzondering gezien voordat die er op zee één tegenkomt.
+
+Dit is precies de logica achter de [logboek-naar-trainingsdata-aanpak](van-logboeken-naar-agent-trainingsdata.qmd) die eerder op deze site is beschreven: de landbouwlogboeken die het meest waardevol zijn, zijn niet de vermeldingen die routineinterventies registreren, maar de vermeldingen waarbij het protocol niet van toepassing was en iemand moest improviseren.
+
+**De werkdefinitie, dan:** goede data voor een agentische architectuur is data die uitzonderingen, fouten en werkelijk nieuwe situaties belicht. Het is de data die de architectuur dwingt zich aan te passen, in plaats van de data die haar comfortabel laat herhalen.
+
+## De uitzonderingen cureren
+
+Nu we de volgende generatie autonome agents bouwen, moet het instinct om te obsesseren over datasetomvang plaatsmaken voor een andere obsessie: de **dichtheid van de onbekenden** die werkelijk in die data vervat zit. Een terabyte aan rechte-snelwegrijden en een middagvullende improvisatie van een verpleegkundige rondom een mislukt protocol zijn qua trainingswaarde niet te vergelijken, ongeacht wat de bytetellingen zeggen.
+
+Het argument verbindt direct met [wat er nodig is om een soevereine agent te bouwen](een-soevereine-ai-agent-bouwen.qmd): stap 2 van die handleiding, het verzamelen en structureren van de eigen data van je organisatie, is alleen nuttig als wat je verzamelt de uitzonderingen, de randgevallen en de afwijkingen omvat, niet alleen de schone procedureschrijvingen. En [de institutionele slotgracht](de-institutionele-slotgracht.qmd) die het bouwen waard is, is geen slotgracht gemaakt van volume; het is een slotgracht gemaakt van het specifieke, onvervangbare vreemde-data-*corpus* dat alleen jouw organisatie ooit reden heeft gehad te registreren.
+
+Jelinek had gelijk, voor zijn tijd en voor het probleem dat hij oploste. Maar voor agentische AI vandaag? Er is geen data zoals meer data. **Er is geen data zoals vreemde data.**
+
+**Kernpublicaties**
+
+- Sorscher, B., Geirhos, R., Shekhar, S., Ganguli, S., & Morcos, A. (2022), *Beyond Neural Scaling Laws: Beating Power Law Scaling via Data Pruning* — [arXiv:2206.14486](https://arxiv.org/abs/2206.14486)
+- Shumailov, I. et al. (2024), *AI models collapse when trained on recursively generated data* — [Nature](https://doi.org/10.1038/s41586-024-07566-y) / [arXiv:2305.17493](https://arxiv.org/abs/2305.17493)
+- Halevy, A., Norvig, P., & Pereira, F. (2009), *The Unreasonable Effectiveness of Data* — [IEEE Intelligent Systems, 24(2), 8–12](https://doi.org/10.1109/MIS.2009.36)
+
+---
+
+**Verder lezen op deze site**
+
+- [Van logboeken naar agent-trainingsdata](van-logboeken-naar-agent-trainingsdata.qmd) — hoe hetzelfde 'uitzonderingsdata'-principe van toepassing is op agrarische en institutionele logboeken
+- [Van drieluik naar quintuplet](van-drieluik-naar-quintuplet.qmd) — waarom de slechtste-alternatief-dimensie van trainingsdata alleen leerbaar is uit echte uitzonderingen, niet uit synthetische uitvoer
+- [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) — de volledige *pipeline* voor het omzetten van uitzonderingsrijke tekst in gestructureerd trainingssignaal
+- [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — waarom de vreemde data van je organisatie, niet het volume, het duurzame concurrentievoordeel is
+- [Wat er nodig is om een soevereine AI-agent te bouwen](een-soevereine-ai-agent-bouwen.qmd) — stap 2 van die handleiding gaat precies over het cureren van de juiste data, niet alleen de meeste data

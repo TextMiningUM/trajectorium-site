@@ -76,7 +76,8 @@ A logbook entry from 2013, or a farming manual from 1890, was never written with
 
 **Further reading on this site**
 
-- [From Text to Action](from-text-to-agentic-workflows.qmd), the general pipeline this agricultural example instantiates
+- [There Is No Data Like Strange Data](there-is-no-data-like-strange-data.qmd) — why the exceptional entries in a logbook are worth more than all the routine ones combined
+- [From Text to Action](from-text-to-agentic-workflows.qmd) — the general *pipeline* this agricultural example instantiates
 - [What Is an AI Agent?](what-is-an-ai-agent.qmd), what the trained agent this data is meant to power actually is
 - [David vs. Goliath: Small Model vs. Frontier](small-specialized-model-vs-frontier.qmd), what a domain-specialized model built on this kind of data can achieve
 - [The Institutional Moat](the-institutional-moat.qmd), why proprietary training data like this is the real competitive advantage

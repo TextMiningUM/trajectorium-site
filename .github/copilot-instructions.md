@@ -145,7 +145,8 @@ All project documentation (README, copilot-instructions, workflow comments, `.qm
 ## Rule: git workflow
 - Branch: `main` — push directly, no PRs needed for content changes.
 - Commit messages: concise, imperative, e.g. `Add: NL blog post on RAG`.
-- After every change: `git add`, `git commit`, `git push`.
+- **After every change: always `git add`, `git commit`, `git push` immediately.** Never leave changes uncommitted.
+- After pushing, the GitHub Action rebuilds the site automatically. No manual rebuild is needed.
 
 ## Domain & config
 - Live URL: `https://trajectorium.ai`

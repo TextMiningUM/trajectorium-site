@@ -1,0 +1,69 @@
+---
+title: "There Is No Data Like Strange Data: Rethinking AI Training for Agents"
+description: "In 1993, the golden rule of AI was 'there is no data like more data.' Building agentic architectures today requires the opposite instinct: stop chasing volume, start chasing the unexpected."
+date: 2026-09-20
+author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/whatIsGoodData.png"
+categories: [text-to-action]
+lang: en
+---
+
+![](https://trajectorium.ai/images/whatIsGoodData.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
+*Estimated reading time: 7 minutes*
+
+In 1993, I quoted Fred Jelinek, the IBM speech-recognition pioneer whose statistical approach quietly rewired the entire field, in my own PhD thesis. His line has been repeated so often it's practically scripture in machine learning circles: **"there is no data like more data."** For decades, that was simply true. Bigger corpora meant better statistical models. Bigger training sets meant better base LLMs. Scale was the whole game.
+
+It still is, for a foundation model. But if you're building [agentic architectures](what-is-an-ai-agent.qmd), systems meant to act reliably in the real, messy, human-run world, that instinct has become actively misleading. Volume is no longer the bottleneck. **Uniqueness is.**
+
+## The Tesla Trap: Why "Boring" Data Is Useless
+
+Here's the illusion worth naming directly: data hoarding feels like progress because the numbers go up. Let a Tesla drive 10,000 miles down a straight, empty highway with nothing happening, and you'll collect terabytes of sensor data. Beautifully clean. Perfectly consistent. And the autonomous driving agent learns essentially nothing new from any of it. It's **empty calories for AI**: data that satisfies the appetite for volume while starving the model of anything it didn't already know.
+
+This is also, not coincidentally, why **synthetic data**, model output used to train the next model, is a dead end for genuine agentic growth. Two LLMs talking to each other, or one LLM grading its own outputs, just creates an echo chamber: smooth, internally consistent, and disconnected from anything the world model didn't already contain. It doesn't expand the boundary of what the system understands; it just polishes what's already inside it. And this isn't a hypothetical concern: recent research has shown that models trained recursively on their own generated output measurably degrade over successive generations, a phenomenon now commonly called **model collapse**. Whatever worked as a data strategy a decade ago, back in the pre-transformer, pre-LLM era when "more text" reliably meant "better model", the game has changed. Treating today's data problem with yesterday's playbook is how you end up with an agent that's superbly confident and quietly useless.
+
+## The Human Element: Unpredictability Is the Goldmine
+
+Agents don't operate in a clean simulation. They operate in a world run by humans, and humans do strange things: brilliantly, persistently, structurally unpredictable things. We make errors. We take weird shortcuts (I like to call them "saltos": the sudden, illogical leap that somehow gets the job done anyway). We rely on general intuition that defies the tidy logic any protocol assumes we're following.
+
+An agent trained exclusively on highly sanitized, rule-following data will perform beautifully, right up until a human does something irrational, at which point it freezes, or worse, confidently does the wrong thing. If your training data never contained a human deviating from the script, your agent has no model of what a deviation even looks like, let alone how to respond to one. **The unpredictability isn't noise to be filtered out of your dataset: it's the actual signal you're trying to capture.**
+
+This connects directly to the [observation-reasoning-action-worst-alternative-consequence framework](from-triple-to-quintuple.qmd) covered earlier on this site: the "worst alternative" dimension is only learnable from data where things actually went wrong or nearly wrong. You can't generate it from synthetic rule-following outputs.
+
+## So What Actually Counts as Good Data for Agentic Architectures?
+
+Good data for an agent isn't sitting neatly inside the standard operating procedure. You start with the protocol, absolutely: an agent needs to know the rule before it can be useful. But the real value, the part that actually teaches an agent to reason under pressure and to generalize, lives in the data generated **where the rules didn't work or didn't apply**.
+
+**Example 1: The ICU.** Routine heart-rate logs, taken minute by minute on a stable patient, are fine as a baseline, but they're not where the learning happens. The accidents, the incidents, the edge cases in an intensive care unit are where life-and-death agentic reasoning actually gets tested. How does a doctor react the moment the protocol fails to cover what's in front of them? That reaction, the improvisation, the judgment call, the deviation from the flowchart, is exactly the kind of reasoning trace a genuinely useful clinical agent needs to have seen before.
+
+**Example 2: Gameplay clips as an exception filter.** **General Intuition**, a research lab spun out of the clip-sharing platform **Medal**, trains agents on roughly two billion user-uploaded gaming videos a year, drawn from some ten million monthly users across tens of thousands of games. The interesting part isn't the volume, it's the curation mechanism sitting in front of it. Nobody clips the four uneventful hours; people clip the impossible save and the catastrophic blunder. Pim de Witte, the company's CEO, has described this as a selection bias toward precisely the kind of data you actually want for training: the platform is, in effect, an automated exception filter that its users maintain for free, and nobody had to design it. What the agent learns from is a stream of moments where something went unexpectedly right or unexpectedly wrong. The transferable lesson has nothing to do with games: wherever humans already bother to record the moment things got strange, someone has built you a strange-data corpus without meaning to. Find those, and you have skipped the hardest part of the collection problem.
+
+**Example 3: Autonomous vessel pilots.** This one is a particularly clean illustration of the whole argument. Start an autonomous ship-piloting agent with **COLREGs**, the International Regulations for Preventing Collisions at Sea, and you get a competent rule-follower. But COLREGs describe an idealized world of two vessels behaving rationally in clear conditions, and real collisions almost never happen in that world. They happen in the gap between the rule and reality: a fishing boat with no functioning AIS transponder, a cargo ship's lookout distracted at the exact wrong moment, two vessels each correctly following the rule for a *different* interpretation of the encounter. This is precisely where the **UK's Marine Accident Investigation Branch (MAIB)** reports become invaluable training material: detailed, public, incident-by-incident reconstructions of exactly the situations where the rulebook and the water disagreed, including the human reasoning (and misjudgment) that led up to the collision. An agent trained only on clean COLREGs scenarios has never seen the fishing boat that doesn't behave like COLREGs assumes it will. An agent that has also learned from a decade of MAIB incident reports has at least seen the shape of the exception before it meets one at sea.
+
+This is exactly the logic behind the [logbook-to-training-data approach](from-logbooks-to-agent-training-data.qmd) described earlier on this site: the agricultural logbooks that are most valuable aren't the entries recording routine interventions, but the ones where the protocol didn't apply and someone had to improvise.
+
+**The working definition, then:** good data for an agentic architecture is data that highlights exceptions, errors, and genuinely novel situations. It's the data that forces the architecture to adapt, rather than the data that lets it comfortably repeat.
+
+## Curating the Exceptions
+
+As we build the next generation of autonomous agents, the instinct to obsess over dataset size needs to give way to a different obsession: the **density of the unknowns** actually contained inside that data. A terabyte of straight-highway driving and a single afternoon of a nurse improvising around a failed protocol are not remotely comparable in training value, no matter what the byte counts say.
+
+The argument connects directly to [what it takes to build a sovereign agent](building-sovereign-ai-agents.qmd): step 2 of that guide, collecting and structuring your organization's own data, is only useful if what you collect includes the exceptions, the edge cases, and the deviations, not just the clean procedure descriptions. And [the institutional moat](the-institutional-moat.qmd) worth building isn't a moat made of volume; it's a moat made of the specific, irreplaceable strange-data corpus that only your organization has ever had reason to record.
+
+Jelinek was right, for his time, and for the problem he was solving. But for agentic AI today? There is no data like more data. **There is no data like strange data.**
+
+**Key papers**
+
+- Sorscher, B., Geirhos, R., Shekhar, S., Ganguli, S., & Morcos, A. (2022), *Beyond Neural Scaling Laws: Beating Power Law Scaling via Data Pruning* — [arXiv:2206.14486](https://arxiv.org/abs/2206.14486)
+- Shumailov, I. et al. (2024), *AI models collapse when trained on recursively generated data* — [Nature](https://doi.org/10.1038/s41586-024-07566-y) / [arXiv:2305.17493](https://arxiv.org/abs/2305.17493)
+- Halevy, A., Norvig, P., & Pereira, F. (2009), *The Unreasonable Effectiveness of Data* — [IEEE Intelligent Systems, 24(2), 8–12](https://doi.org/10.1109/MIS.2009.36)
+
+---
+
+**Further reading on this site**
+
+- [From Logbooks to Agent Training Data](from-logbooks-to-agent-training-data.qmd) — how the same "exception data" principle applies to agricultural and institutional logbooks
+- [From Triple to Quintuple](from-triple-to-quintuple.qmd) — why the worst-alternative dimension of training data is only learnable from real exceptions, not synthetic outputs
+- [From Text to Action: Turning NLP Pipelines into Agentic Workflows](from-text-to-agentic-workflows.qmd) — the full pipeline for turning exception-rich text into structured training signal
+- [The Institutional Moat](the-institutional-moat.qmd) — why your organization's strange data, not its volume, is the durable competitive advantage
+- [What It Takes to Build a Sovereign AI Agent](building-sovereign-ai-agents.qmd) — step 2 of that guide is exactly about curating the right data, not just the most data
