@@ -10,6 +10,8 @@ lang: en
 
 Most organizations already sit on a mountain of unstructured text: manuals, case files, log books, contracts, years of internal correspondence. The question this post answers is a very practical one: how do you turn that raw text into the actual training data that powers an agent's memory, tools, reasoning, and safety checks? And why does that conversion pipeline matter more than which foundation model you plug in behind it?
 
+![](https://trajectorium.ai/images/AgentSmith.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## Why the Model Isn't Your Moat
 
 It's tempting to think that wiring a system prompt onto a strong LLM *is* building an agent. It isn't. Relying purely on system prompts and Markdown "skill files" gives you only shallow control, you're treating the model as a black box and, more importantly, building a dependency on someone else's roadmap rather than a company. Many teams that claim to have "built an agent" have really just layered instructional text over a general-purpose model. That's the **God-Prompt trap**, and it's brittle: rigid if-then rules can't account for the infinite long tail of exceptions that real-world text mining and operations actually contain.

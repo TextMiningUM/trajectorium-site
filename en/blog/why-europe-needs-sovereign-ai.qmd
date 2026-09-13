@@ -10,6 +10,8 @@ lang: en
 
 For years, "just call the API" was a perfectly reasonable AI strategy. Stanford's *2026 AI Index Report* suggests that era is ending, not because the APIs got worse, but because governments and organizations increasingly realize that dependence on someone else's model, running on someone else's infrastructure, is a strategic liability. The report devotes an entire section to what it calls **AI sovereignty**, and the data behind it makes an unusually concrete case for why Europe, in particular, needs to run its own models on its own infrastructure, down to the edge.
 
+![](https://trajectorium.ai/images/DigitalSovereigntyEurope.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## What "AI Sovereignty" Actually Means
 
 The Index defines AI sovereignty as a state's, or, by extension, an organization's, "capacity to act deliberately and make independent decisions over the development, deployment, and governance of AI systems" rather than depending on external actors for critical capability. Crucially, the report breaks this down into five distinct layers, and each one maps directly onto a decision your own organization has to make, not just a government:

@@ -10,6 +10,8 @@ lang: nl
 
 Jarenlang was "gewoon de API aanroepen" een volkomen redelijke AI-strategie. Het *Stanford AI Index Report 2026* suggereert dat dat tijdperk ten einde loopt, niet omdat de API's slechter zijn geworden, maar omdat overheden en organisaties steeds meer inzien dat afhankelijkheid van iemand anders' model, draaiend op iemand anders' infrastructuur, een strategisch risico is. Het rapport wijdt een volledig hoofdstuk aan wat het **AI-soevereiniteit** noemt, en de data daarin maakt een ongewoon concreet geval voor waarom Europa, in het bijzonder, zijn eigen modellen op eigen infrastructuur moet draaien, tot aan de edge.
 
+![](https://trajectorium.ai/images/DigitalSovereigntyEurope.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## Wat "AI-soevereiniteit" werkelijk betekent
 
 De Index definieert AI-soevereiniteit als het vermogen van een staat, of, in bredere zin, een organisatie, om "bewust te handelen en onafhankelijke beslissingen te nemen over de ontwikkeling, het gebruik en het beheer van AI-systemen", in plaats van voor kritieke capaciteit afhankelijk te zijn van externe partijen. Het rapport splitst dit op in vijf afzonderlijke lagen, en elke laag komt direct overeen met een beslissing die jouw eigen organisatie moet nemen, niet alleen een overheid:

@@ -10,6 +10,8 @@ lang: en
 
 Ask ten people what an "AI agent" is and you'll get ten different answers, some confidently wrong. Part of the confusion is that the word isn't new. Part of it is that "agent" has quietly become a marketing label slapped on anything with a chat interface. This post cuts through that: what an agent actually is, why the idea failed in the 1990s, why it's working now, and what's actually inside one.
 
+![](https://trajectorium.ai/images/Brain_in_a_jar_LLM_to_Agents.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## Agents Are Older Than You Think
 
 Long before ChatGPT, *Artificial Intelligence: A Modern Approach* (Russell & Norvig, 1995) defined an agent as anything that:

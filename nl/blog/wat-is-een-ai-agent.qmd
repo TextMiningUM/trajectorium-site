@@ -10,6 +10,8 @@ lang: nl
 
 Vraag tien mensen wat een "AI-agent" is en je krijgt tien verschillende antwoorden, sommige zelfverzekerd onjuist. Een deel van de verwarring is dat het woord niet nieuw is. Een ander deel is dat "agent" stilletjes een marketinglabel is geworden dat op alles met een chatinterface wordt geplakt. Dit artikel snijdt daar doorheen: wat een agent feitelijk is, waarom het idee in de jaren negentig mislukte, waarom het nu werkt, en wat er eigenlijk in zo’n systeem zit.
 
+![](https://trajectorium.ai/images/Brain_in_a_jar_LLM_to_Agents.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## Agents bestaan al langer dan je denkt
 
 Nog voor ChatGPT definieerde *Artificial Intelligence: A Modern Approach* (Russell & Norvig, 1995) een agent als alles wat:

@@ -12,6 +12,8 @@ Somewhere in a Dutch cherry orchard there's a logbook from 2013. A page reads, r
 
 That's the quiet shift worth naming: text written for decades to train the *next human* on the job can now train the *next agent* on the job instead. This post walks through what that actually looks like in practice, using a real project built around exactly this kind of data.
 
+![](https://trajectorium.ai/images/OrchardFarmhand.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## The Knowledge Was Always Meant to Be Passed On
 
 Modern agriculture, fruit farming especially, is losing something it can't easily get back: an aging workforce is retiring, and with it goes decades of empirical knowledge about micro-climates, pest pressure, and crop cycles that was never formalized anywhere except in handwritten logbooks and oral tradition. That knowledge was always meant to transfer to a successor. The logbook was the transfer mechanism.

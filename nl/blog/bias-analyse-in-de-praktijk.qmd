@@ -10,6 +10,8 @@ lang: nl
 
 Elk algoritme dat mensen of bedrijven anders behandelt, brengt een risico op discriminatie met zich mee, soms flagrant, vaker verborgen in een ogenschijnlijk neutraal variabele zoals een postcode. Het Algoritmekader van de Nederlandse overheid (maatregel VER-03) vereist een gestructureerde bias-analyse voor elk algoritme dat natuurlijke personen raakt. Dit is geen papieren exercitie, het is een concrete, technische en juridische toets die je stap voor stap kunt doorlopen. Dit artikel behandelt de drie vereiste stappen, bias-analyse, rechtvaardigingstoets, ethische wenselijkheidstoets, met praktische tools, echte Nederlandse casussen en de wetenschap erachter.
 
+![](https://trajectorium.ai/images/Bias.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## Waarom dit meer is dan een compliance-vinkje
 
 Het Algoritmekader koppelt dit aan een verplichting vanuit de Autoriteit Persoonsgegevens rond geautomatiseerde besluitvorming: het risico op discriminerende verwerking moet worden onderzocht *en* gemitigeerd. Twee recente Nederlandse casussen laten zien wat er misgaat als dit niet gebeurt:

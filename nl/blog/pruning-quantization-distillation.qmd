@@ -10,6 +10,8 @@ lang: nl
 
 Het trainen van GPT-2 kostte naar schatting 100-200 duizend dollar aan rekenkracht. GPT-3 sprong naar ergens in de 1-10 miljoen range. GPT-4-klasse trainingsruns worden geschat op 10-100 miljoen. Een custom GPT-4-klasse model kost vandaag naar schatting 2-3 miljoen dollar alleen al voor de trainingsrekenkracht, en dat is voordat je het ergens hebt geïmplementeerd, laat staan ergens met een batterij. Als je bouwt voor een geïmplanteerd medisch apparaat, een smartwatch, of elk systeem waarbij stroombudget een harde beperking is (zoals één college hierover het bot formuleert: "the US Army runs on batteries"), is dat formaat model simpelweg het verkeerde gereedschap. Dit artikel behandelt de drie hoofdtechnieken, *pruning*, *quantization* en *knowledge distillation*, die je in staat stellen een grote, duur getraind model te comprimeren tot iets dat draait op hardware die je werkelijk bezit, met slechts een klein, meestal acceptabel capaciteitsverlies. En, als bonus die de meeste mensen niet verwachten, maken diezelfde technieken een model aantoonbaar moeilijker aanvalbaar.
 
+![](https://trajectorium.ai/images/Distillation.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## Waarom dit verder gaat dan kosten
 
 Drie afzonderlijke motivaties convergeren op dezelfde set technieken:

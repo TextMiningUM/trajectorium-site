@@ -10,6 +10,8 @@ lang: nl
 
 Natural language processing is al ongeveer vijftig jaar "bijna klaar". Elke generatie onderzoekers loste een echt probleem op en liep meteen tegen een nieuw aan. *Transformers* zijn de eerste architectuur die niet alleen het volgende probleem in de rij oplost, ze pakken eindelijk alle lagen van taal tegelijk aan, en leiden alles af uit blootstelling aan data in plaats van uit wat een mens opschrijft. Begrijpen waarom dat zo is, vereist dat je doorloopt wat er aan voorafging, want het contrast is het hele verhaal.
 
+![](https://trajectorium.ai/images/NLPFinallyWorks.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## Het probleem dat nooit verdween: taal volgt regels niet netjes
 
 Natuurlijke taal is op elk niveau ambigu. "Ik zag de man op de heuvel met een telescoop" heeft minstens vijf geldige lezingen, afhankelijk van wie de telescoop heeft en wie op de heuvel staat. Woorden als "lopen" dragen een dozijn gerelateerde betekenissen (*polysemy*); woorden als "bank" dragen twee volledig ongerelateerde (*homonymy*). Negatiebereik, pronomenresolutie, ironie, sarcasme, discoursstructuur, elk voegt een extra dimensie van ambiguïteit toe die moet worden opgelost met context, niet alleen met grammatica.

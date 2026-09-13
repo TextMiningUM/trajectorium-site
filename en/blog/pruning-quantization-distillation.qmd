@@ -10,6 +10,8 @@ lang: en
 
 Training GPT-2 cost an estimated 100-200 thousand dollars in compute. GPT-3 jumped to somewhere in the 1-10 million range. GPT-4-class training runs are estimated at 10-100 million. A custom GPT-4-class model today is estimated at 2-3 million dollars just for the training compute, and that's before you've deployed it anywhere, let alone somewhere with a battery. If you're building for an implanted medical device, a smartwatch, or any system where power budget is a hard constraint (as one lecture on this puts it, bluntly: "the US Army runs on batteries"), that scale of model is simply the wrong tool. This post covers the three main techniques, pruning, quantization, and knowledge distillation, that let you take a giant, expensively-trained model and compress it into something that runs on hardware you actually own, with only a small, usually acceptable, loss in capability. And, as a bonus most people don't expect, these same techniques make a model measurably harder to attack.
 
+![](https://trajectorium.ai/images/Distillation.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## Why This Matters Beyond Cost
 
 Three separate motivations converge on the same set of techniques:

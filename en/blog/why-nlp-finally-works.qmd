@@ -10,6 +10,8 @@ lang: en
 
 Natural language processing has been "almost working" for roughly fifty years. Every generation of researchers solved a real problem and ran headlong into a new one. Transformers are the first architecture that doesn't just solve the next problem in line, they finally take on every layer of language at once, and derive all of it from exposure to data rather than from a human writing it down. Understanding why requires walking through what came before, because the contrast is the whole story.
 
+![](https://trajectorium.ai/images/NLPFinallyWorks.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## The Problem That Never Went Away: Language Doesn't Follow Rules Cleanly
 
 Natural language is ambiguous at every level. "I saw the man on the hill with a telescope" has at least five valid readings depending on who has the telescope and who's on the hill. Words like "run" carry a dozen related senses (polysemy); words like "bank" carry two entirely unrelated ones (homonymy). Negation scope, pronoun resolution, irony, sarcasm, discourse structure, each adds another dimension of ambiguity that has to be resolved using context, not just grammar.

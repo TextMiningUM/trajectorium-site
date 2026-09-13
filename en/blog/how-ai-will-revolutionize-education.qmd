@@ -10,6 +10,8 @@ lang: en
 
 "Since 1985 I have been wondering how we can teach computers to use human language. And now, after all these years, it finally works." That's a fair summary of where higher education finds itself with generative AI, the technology finally works, and the harder question has shifted to how we responsibly fold it into teaching and learning. This post walks through both sides honestly: what's genuinely transformative, and where the same technology creates problems education hasn't fully solved yet.
 
+![](https://trajectorium.ai/images/EducationHomeWorkMachine.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## The Kissinger Warning, Applied to the Classroom
 
 Before getting to the exciting use cases, it's worth sitting with an uncomfortable observation from Henry Kissinger, writing about AI and chess: *"AI is likely to win any game assigned to it. But for our purposes as humans, the games are not only about winning; they are about thinking... By treating a mathematical process as if it were a thought process, and either trying to mimic that process ourselves or merely accepting the results, we are in danger of losing the capacity that has been the essence of human cognition."*

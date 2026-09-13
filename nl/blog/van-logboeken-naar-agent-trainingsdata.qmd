@@ -12,6 +12,8 @@ Ergens in een Nederlandse kersenoogst bevindt zich een logboek uit 2013. Een pag
 
 Dat is de stille verschuiving die benoemd verdient te worden: tekst die tientallen jaren werd geschreven om de *volgende mens* op het werk te trainen, kan nu de *volgende agent* op het werk trainen. Dit artikel loopt door hoe dat er in de praktijk uitziet, aan de hand van een echt project gebouwd rondom precies dit soort data.
 
+![](https://trajectorium.ai/images/OrchardFarmhand.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
 ## De kennis was altijd bedoeld om doorgegeven te worden
 
 De moderne landbouw, fruitteelt in het bijzonder, verliest iets wat niet gemakkelijk teruggewonnen kan worden: een verouderd personeelsbestand gaat met pensioen, en daarmee gaat tientallen jaren empirische kennis over microklimaten, plaagdruk en gewascycli verloren die nooit ergens anders was geformaliseerd dan in handgeschreven logboeken en mondelinge traditie. Die kennis was altijd bedoeld om over te dragen aan een opvolger. Het logboek was het overdrachtsm echanisme.
