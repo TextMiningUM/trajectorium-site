@@ -3,7 +3,7 @@ title: "From Triple to Quintuple: Why the Best Training Data Includes the Worst 
 description: "The observation-action-consequence record has been the backbone of agent training data for decades. Two missing dimensions, the reasoning behind the action and the worst alternative, are what turn a logbook entry into a model that can actually think."
 date: 2026-08-08
 author: "Jan Scholtes"
-image: "https://trajectorium.ai/images/AgentSmith.png"
+image: "https://trajectorium.ai/images/ReasoningTripletoQuintuple.png"
 categories: [text-to-action, fundamentals]
 lang: en
 ---
@@ -13,6 +13,10 @@ lang: en
 The idea that experience can be distilled into training data is not new. In reinforcement learning, the canonical unit is the **triple**: a state the agent observed, an action it took, and the reward it received. In the logbook posts on this site, that maps cleanly onto a farmhand's notation: weather conditions, intervention applied, outcome recorded. The triple is honest, minimal, and captures enough to teach a model to reproduce a known good decision.
 
 But reproducing known good decisions is not the same as reasoning well in novel situations. And two dimensions that are routinely present in the head of an experienced practitioner, almost never make it into the written record.
+
+![](https://trajectorium.ai/images/ReasoningTripletoQuintuple.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
+*Estimated reading time: 9 minutes*
 
 ## What the Triple Gets Right, and What It Leaves Out
 

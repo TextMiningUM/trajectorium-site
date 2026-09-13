@@ -3,7 +3,7 @@ title: "Van drieluik naar quintuplet: waarom de beste trainingsdata ook de slech
 description: "Het observatie-actie-gevolg-record is al decennia de ruggengraat van agent-trainingsdata. Twee ontbrekende dimensies, de redenering achter de actie en het slechtste alternatief, zijn wat een logboekregel omzet in een model dat werkelijk kan redeneren."
 date: 2026-08-08
 author: "Jan Scholtes"
-image: "https://trajectorium.ai/images/AgentSmith.png"
+image: "https://trajectorium.ai/images/ReasoningTripletoQuintuple.png"
 categories: [tekst-naar-actie, fundamenten]
 lang: nl
 ---
@@ -13,6 +13,10 @@ lang: nl
 Het idee dat ervaring kan worden gedestilleerd tot trainingsdata is niet nieuw. In *reinforcement learning* is de canonieke eenheid het **drieluik**: een toestand die de agent waarnam, een actie die het ondernam, en de beloning die het ontving. In de logboekartikelen op deze site vertaalt dat zich direct naar de notitie van een boerenknecht: weersomstandigheden, toegepaste interventie, geregistreerd resultaat. Het drieluik is eerlijk, minimaal en bevat genoeg om een model te leren een bekende goede beslissing te reproduceren.
 
 Maar bekende goede beslissingen reproduceren is niet hetzelfde als goed redeneren in nieuwe situaties. En twee dimensies die routinematig aanwezig zijn in het hoofd van een ervaren beoefenaar komen bijna nooit in het schriftelijke verslag terecht.
+
+![](https://trajectorium.ai/images/ReasoningTripletoQuintuple.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
+*Geschatte leestijd: 9 minuten*
 
 ## Wat het drieluik goed doet, en wat het mist
 
