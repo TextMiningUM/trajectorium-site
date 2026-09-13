@@ -12,6 +12,8 @@ De meeste enterprise "AI-strategieën" zien er vandaag hetzelfde uit: kies een b
 
 ![](https://trajectorium.ai/images/BraininaJar.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 9 minuten*
+
 ## De sandbox waar je werkelijk in bouwt
 
 Aanbieders van basismodellen verschepen niet langer alleen slimmere chatbots, ze bouwen volledig geïntegreerde, gesloten agentische ecosystemen: meerstapsredeneerketens, native tool-integratie, propriëtaire kennisgrafen, neurale rerankers getraind op miljarden queries en toenemend recursieve zelfverbetering. Wat ze externe ontwikkelaars geven, is daarentegen een gecontroleerde sandbox: systeem-prompts (oppervlakkige controle), function calling om tools te activeren, standaard RAG (basis vectorzoekopdracht) en kant-en-klare sjablonen. Je krijgt geen toegang tot hun RLHF-lagen, hun modelgewichten of hun interne herrangschikking. Je mag *op* het platform bouwen, niet *erin*.

@@ -12,6 +12,8 @@ Een afbeelding van een panda, correct geclassificeerd door een neuraal netwerk m
 
 ![](https://trajectorium.ai/images/Adversarial.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 8 minuten*
+
 ## Waarom dit überhaupt mogelijk is
 
 Elk getraind model trekt een beslissingsgrens door een extreem hoog-dimensionale ruimte, die "panda" scheidt van "gibbon," of "positieve recensie" van "negatieve recensie." Die grens wordt geleerd uit data en wordt gevormd door welke correlaties er toevallig bestaan in de trainingsset, niet noodzakelijk door dezelfde kenmerken die een mens zou gebruiken om hetzelfde onderscheid te maken. Een *adversarial attack* werkt door het kortste mogelijke pad over die grens te vinden: een kleine, bewust berekende verstoring van de invoer die die net voorbij de andere kant duwt, zonder iets te veranderen wat een mens zou opmerken. De kwetsbaarheid is geen bug in één bepaald model, het is een structureel gevolg van hoe deze beslissingsgrenzen in de eerste plaats worden geleerd, wat verklaart waarom het probleem opduikt in verschillende modeltypes en domeinen.

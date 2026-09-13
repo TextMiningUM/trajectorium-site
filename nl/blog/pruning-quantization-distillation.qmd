@@ -12,6 +12,8 @@ Het trainen van GPT-2 kostte naar schatting 100-200 duizend dollar aan rekenkrac
 
 ![](https://trajectorium.ai/images/Distillation.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 9 minuten*
+
 ## Waarom dit verder gaat dan kosten
 
 Drie afzonderlijke motivaties convergeren op dezelfde set technieken:

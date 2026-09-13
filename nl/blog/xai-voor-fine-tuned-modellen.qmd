@@ -12,6 +12,8 @@ Als je de API van een basismodel aanroept, leen je iemand anders' redenering en 
 
 ![](https://trajectorium.ai/images/XAIDarpa.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 11 minuten*
+
 ## Drie woorden die geen synoniemen zijn
 
 Beoefenaars gebruiken "transparantie", "interpreteerbaarheid" en "uitlegbaarheid" vaak door elkaar, maar ze betekenen werkelijk verschillende dingen:

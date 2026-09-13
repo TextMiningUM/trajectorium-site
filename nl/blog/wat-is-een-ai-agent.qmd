@@ -12,6 +12,8 @@ Vraag tien mensen wat een "AI-agent" is en je krijgt tien verschillende antwoord
 
 ![](https://trajectorium.ai/images/Brain_in_a_jar_LLM_to_Agents.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 8 minuten*
+
 ## Agents bestaan al langer dan je denkt
 
 Nog voor ChatGPT definieerde *Artificial Intelligence: A Modern Approach* (Russell & Norvig, 1995) een agent als alles wat:

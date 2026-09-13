@@ -12,6 +12,8 @@ De meeste organisaties beschikken al over een enorme hoeveelheid ongestructureer
 
 ![](https://trajectorium.ai/images/AgentSmith.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 8 minuten*
+
 ## Waarom het model niet jouw slotgracht is
 
 Het is verleidelijk te denken dat een sterk LLM koppelen aan een systeem-prompt *bouwen* aan een agent is. Dat is het niet. Volledig vertrouwen op systeem-prompts en Markdown-"skill files" geeft je slechts oppervlakkige controle, je behandelt het model als een black box en bouwt, nog belangrijker, een afhankelijkheid op van iemand anders' roadmap in plaats van van een eigen systeem. Veel teams die beweren een agent te hebben "gebouwd", hebben in werkelijkheid alleen instructietekst over een general-purpose model gelegd. Dat is de **God-Prompt-val**, en die is kwetsbaar: rigide als-dan-regels kunnen de oneindige lange staart van uitzonderingen die echte tekstmining en operaties bevatten, niet omvatten.

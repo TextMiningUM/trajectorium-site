@@ -14,6 +14,8 @@ That's the quiet shift worth naming: text written for decades to train the *next
 
 ![](https://trajectorium.ai/images/OrchardFarmhand.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Estimated reading time: 8 minutes*
+
 ## The Knowledge Was Always Meant to Be Passed On
 
 Modern agriculture, fruit farming especially, is losing something it can't easily get back: an aging workforce is retiring, and with it goes decades of empirical knowledge about micro-climates, pest pressure, and crop cycles that was never formalized anywhere except in handwritten logbooks and oral tradition. That knowledge was always meant to transfer to a successor. The logbook was the transfer mechanism.

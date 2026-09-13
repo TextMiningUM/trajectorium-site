@@ -14,6 +14,8 @@ This isn't a hypothetical for a future board meeting. It's already the operating
 
 ![](https://trajectorium.ai/images/GovernanceAIOrganization.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Estimated reading time: 9 minutes*
+
 ## The Governance Framework Nobody Wrote Down (Until Now)
 
 A useful way to think about governing an AI agent is to map its lifecycle onto four phases, each with its own governance question, and each with a corresponding evaluation standard, such as Stanford's HELM benchmark suite, that gives you something concrete to measure rather than a vague sense of trust.

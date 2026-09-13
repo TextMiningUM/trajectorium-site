@@ -12,6 +12,8 @@ For years, "just call the API" was a perfectly reasonable AI strategy. Stanford'
 
 ![](https://trajectorium.ai/images/DigitalSovereigntyEurope.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Estimated reading time: 7 minutes*
+
 ## What "AI Sovereignty" Actually Means
 
 The Index defines AI sovereignty as a state's, or, by extension, an organization's, "capacity to act deliberately and make independent decisions over the development, deployment, and governance of AI systems" rather than depending on external actors for critical capability. Crucially, the report breaks this down into five distinct layers, and each one maps directly onto a decision your own organization has to make, not just a government:

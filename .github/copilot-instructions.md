@@ -52,6 +52,17 @@ lang: en                    # or nl
 ---
 ```
 
+After the YAML frontmatter, include the image (if present) and immediately after it the reading time estimate:
+
+```markdown
+![](https://trajectorium.ai/images/<filename>){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+
+*Estimated reading time: X minutes*   <!-- EN -->
+*Geschatte leestijd: X minuten*       <!-- NL -->
+```
+
+Calculate reading time at 200 words per minute, rounded up to the nearest minute.
+
 - **`author`**: always `"Jan Scholtes"` — required for E-E-A-T signal and author-page aggregation.
 - **`image`**: absolute URL only (`https://trajectorium.ai/images/...`). Never relative paths — Quarto builds EN and NL as separate projects and relative paths break the listing and Open Graph previews. Omit the field if no matching image exists.
 - **`description`**: written to work as both meta description and Open Graph description. First 160 characters must be self-contained.

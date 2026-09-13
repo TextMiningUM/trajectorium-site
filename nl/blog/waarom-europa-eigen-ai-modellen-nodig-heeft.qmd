@@ -12,6 +12,8 @@ Jarenlang was "gewoon de API aanroepen" een volkomen redelijke AI-strategie. Het
 
 ![](https://trajectorium.ai/images/DigitalSovereigntyEurope.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 7 minuten*
+
 ## Wat "AI-soevereiniteit" werkelijk betekent
 
 De Index definieert AI-soevereiniteit als het vermogen van een staat, of, in bredere zin, een organisatie, om "bewust te handelen en onafhankelijke beslissingen te nemen over de ontwikkeling, het gebruik en het beheer van AI-systemen", in plaats van voor kritieke capaciteit afhankelijk te zijn van externe partijen. Het rapport splitst dit op in vijf afzonderlijke lagen, en elke laag komt direct overeen met een beslissing die jouw eigen organisatie moet nemen, niet alleen een overheid:

@@ -12,6 +12,8 @@ De meeste organisaties die zeggen dat ze een "AI-agent hebben gebouwd", hebben i
 
 ![](https://trajectorium.ai/images/SovereignAgent.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 12 minuten*
+
 ## Eerst: waar hebben we het eigenlijk over?
 
 Voordat we bij de stappen komen, helpt het te zien wat een soevereine agent werkelijk kan doen, want "AI-agent" betekent heel verschillende dingen afhankelijk van de context.

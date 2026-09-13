@@ -12,6 +12,8 @@ A picture of a panda, correctly classified by a neural network with 57% confiden
 
 ![](https://trajectorium.ai/images/Adversarial.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Estimated reading time: 8 minutes*
+
 ## Why This Is Possible at All
 
 Every trained model draws a decision boundary through an extremely high-dimensional space, separating "panda" from "gibbon," or "positive review" from "negative review." That boundary is learned from data, and it's shaped by whatever correlations happen to exist in the training set, not necessarily by the same features a human would use to make the same distinction. An adversarial attack works by finding the shortest possible path across that boundary: a tiny, deliberately calculated perturbation to the input that pushes it just barely to the other side, without changing anything a human would notice. The vulnerability isn't a bug in one particular model, it's a structural consequence of how these decision boundaries get learned in the first place, which is why the problem shows up across model types and domains.

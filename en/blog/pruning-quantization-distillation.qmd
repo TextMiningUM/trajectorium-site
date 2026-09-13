@@ -12,6 +12,8 @@ Training GPT-2 cost an estimated 100-200 thousand dollars in compute. GPT-3 jump
 
 ![](https://trajectorium.ai/images/Distillation.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Estimated reading time: 9 minutes*
+
 ## Why This Matters Beyond Cost
 
 Three separate motivations converge on the same set of techniques:

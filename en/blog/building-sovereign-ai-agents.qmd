@@ -12,6 +12,8 @@ Most organizations that say they've "built an AI agent" have really just written
 
 ![](https://trajectorium.ai/images/SovereignAgent.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Estimated reading time: 12 minutes*
+
 ## First: What Are We Actually Talking About?
 
 Before the steps, it helps to see the range of what a sovereign agent can actually do, because "AI agent" means very different things depending on the setting.

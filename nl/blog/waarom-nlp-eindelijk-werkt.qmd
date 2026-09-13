@@ -12,6 +12,8 @@ Natural language processing is al ongeveer vijftig jaar "bijna klaar". Elke gene
 
 ![](https://trajectorium.ai/images/NLPFinallyWorks.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 8 minuten*
+
 ## Het probleem dat nooit verdween: taal volgt regels niet netjes
 
 Natuurlijke taal is op elk niveau ambigu. "Ik zag de man op de heuvel met een telescoop" heeft minstens vijf geldige lezingen, afhankelijk van wie de telescoop heeft en wie op de heuvel staat. Woorden als "lopen" dragen een dozijn gerelateerde betekenissen (*polysemy*); woorden als "bank" dragen twee volledig ongerelateerde (*homonymy*). Negatiebereik, pronomenresolutie, ironie, sarcasme, discoursstructuur, elk voegt een extra dimensie van ambiguïteit toe die moet worden opgelost met context, niet alleen met grammatica.

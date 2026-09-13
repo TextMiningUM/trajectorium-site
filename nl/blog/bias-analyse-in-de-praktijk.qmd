@@ -12,6 +12,8 @@ Elk algoritme dat mensen of bedrijven anders behandelt, brengt een risico op dis
 
 ![](https://trajectorium.ai/images/Bias.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 12 minuten*
+
 ## Waarom dit meer is dan een compliance-vinkje
 
 Het Algoritmekader koppelt dit aan een verplichting vanuit de Autoriteit Persoonsgegevens rond geautomatiseerde besluitvorming: het risico op discriminerende verwerking moet worden onderzocht *en* gemitigeerd. Twee recente Nederlandse casussen laten zien wat er misgaat als dit niet gebeurt:

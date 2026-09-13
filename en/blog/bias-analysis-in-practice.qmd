@@ -12,6 +12,8 @@ Any algorithm that treats people or businesses differently carries a risk of dis
 
 ![](https://trajectorium.ai/images/Bias.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Estimated reading time: 12 minutes*
+
 ## Why This Is More Than a Compliance Checkbox
 
 The Algorithm Framework frames this as fulfilling a requirement from the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) around automated decision-making: the risk of discriminatory processing has to be investigated *and* mitigated. Two recent Dutch cases show what goes wrong when this doesn't happen:

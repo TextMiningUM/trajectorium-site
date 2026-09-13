@@ -12,6 +12,8 @@ lang: nl
 
 ![](https://trajectorium.ai/images/EducationHomeWorkMachine.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 9 minuten*
+
 ## De waarschuwing van Kissinger, toegepast op het klaslokaal
 
 Voordat we bij de opwindende toepassingen komen, is het de moeite waard stil te staan bij een ongemakkelijke observatie van Henry Kissinger, schrijvend over AI en schaken: *"AI zal waarschijnlijk elk spel winnen dat het wordt gegeven. Maar voor ons als mensen gaan de spelen niet alleen over winnen; ze gaan over denken... Door een wiskundig proces te behandelen alsof het een denkproces is, en ofwel te proberen dat proces zelf na te bootsen ofwel de resultaten gewoon te accepteren, lopen we het risico de capaciteit te verliezen die de kern van menselijke cognitie is geweest."*

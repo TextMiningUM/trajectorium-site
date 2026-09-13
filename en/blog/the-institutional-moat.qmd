@@ -12,6 +12,8 @@ Most enterprise "AI strategies" today look the same: pick a foundation model, Cl
 
 ![](https://trajectorium.ai/images/BraininaJar.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Estimated reading time: 9 minutes*
+
 ## The Sandbox You're Actually Building In
 
 Foundation model providers aren't just shipping smarter chatbots anymore, they're building fully integrated, closed-loop agentic ecosystems: multi-step reasoning chains, native tool integration, proprietary knowledge graphs, neural rerankers trained on billions of queries, and increasingly recursive self-improvement. What they hand external developers, by contrast, is a controlled sandbox: system prompts (shallow control), function calling to trigger tools, standard RAG (basic vector search), and pre-built templates. You do not get access to their RLHF layers, their model weights, or their internal reranking. You get to build *on* the platform, not *into* it.

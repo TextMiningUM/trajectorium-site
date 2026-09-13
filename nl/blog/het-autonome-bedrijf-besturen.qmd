@@ -14,6 +14,8 @@ Dit is geen hypothetisch scenario voor een toekomstige bestuursvergadering. Het 
 
 ![](https://trajectorium.ai/images/GovernanceAIOrganization.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
 
+*Geschatte leestijd: 9 minuten*
+
 ## Het bestuursraamwerk dat niemand heeft opgeschreven (tot nu)
 
 Een nuttige manier om na te denken over het besturen van een AI-agent is de levenscyclus in vier fasen in te delen, elk met een eigen bestuursvraag, en elk met een bijbehorende evaluatiestandaard, zoals Stanford's HELM-benchmarksuite, die je iets concreets geeft om te meten in plaats van een vaag vertrouwensgevoel.
