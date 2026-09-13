@@ -1,15 +1,11 @@
 ---
 title: "Publicaties"
-description: "Volledige publicatielijst van Jan C. Scholtes, boeken, tijdschriftartikelen en conferentiebijdragen op het gebied van text mining, NLP, information retrieval, LegalTech en agentische AI-systemen."
+description: "Geselecteerde publicatielijst van Jan C. Scholtes, boeken, tijdschriftartikelen en conferentiebijdragen op het gebied van text mining, NLP, information retrieval, LegalTech en agentische AI-systemen."
 page-layout: full
 toc: true
 ---
 
 <div class="container py-4">
-
-*Ook gepubliceerd als Johannes Scholtes, J.C. Scholtes, J. Scholtes, Johannes C. Scholtes.*
-
-Een gecureerd overzicht van de meest significante bijdragen is beschikbaar op [textmining.nu/publications](https://textmining.nu/publications/). Verificatie van citaties aanbevolen voordat u specifieke referenties citeert.
 
 ---
 
@@ -90,7 +86,7 @@ Een gecureerd overzicht van de meest significante bijdragen is beschikbaar op [t
 - Scholtes, J.C. (2009). Text Mining: The next step in Search Technology. *ICAIL 2009/DESI III Workshop*, Barcelona, juni 2009.
 - Scholtes, J.C. (2008). Is there a role for Sentiment Mining in Robot-Human Communications? *1st International Conference on Human-Robots Personal Relationships*, juni 2008.
 
-### 1990–1992
+### 1987–1992
 
 - Scholtes, J.C. (1992). Resolving Linguistic Ambiguities with a Neural Data-Oriented Parsing (DOP) System. *Artificial Neural Networks 2*, Vol. 2, pp. 1347–1350. Elsevier.
 - Scholtes, J.C. (1992). Neural Nets versus Statistics in Information Retrieval. *SPIE Conference on Applications of Artificial Neural Networks III*, Orlando.
