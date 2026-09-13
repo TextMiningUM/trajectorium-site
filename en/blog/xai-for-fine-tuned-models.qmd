@@ -3,6 +3,7 @@ title: "Why You Can't Fine-Tune, Train, or Distill a Model Without XAI"
 description: "The moment you start fine-tuning, training, or distilling your own models, you inherit full responsibility for how they reason, not just what they output. Explainable AI is what lets you actually verify that."
 date: 2026-08-22
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/XAIDarpa.png"
 categories: [fundamentals, governance]
 lang: en
 ---

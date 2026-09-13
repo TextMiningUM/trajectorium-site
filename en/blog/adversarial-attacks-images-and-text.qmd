@@ -3,6 +3,7 @@ title: "Adversarial Attacks: How a Few Invisible Pixels or One Swapped Word Can 
 description: "Adversarial examples exploit the exact mathematical boundaries a model draws to make decisions. Here's what these attacks actually look like in images and text, and the concrete defenses that address each one."
 date: 2026-08-29
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/Adversarial.png"
 categories: [fundamentals, efficiency]
 lang: en
 ---

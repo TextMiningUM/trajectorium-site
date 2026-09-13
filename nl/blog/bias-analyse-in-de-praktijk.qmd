@@ -3,6 +3,7 @@ title: "Bias-analyse in de praktijk: hoe test je een algoritme eigenlijk op disc
 description: "Het Algoritmekader van de Nederlandse overheid vereist een bias-analyse, een rechtvaardigingstoets en een ethische wenselijkheidstoets voor elk algoritme dat mensen behandelt. Zo voer je dat daadwerkelijk uit, met tools, echte casussen en de onderliggende wetenschap."
 date: 2026-08-15
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/Bias.png"
 categories: [governance]
 lang: nl
 ---

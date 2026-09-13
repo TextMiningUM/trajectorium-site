@@ -3,6 +3,7 @@ title: "Adversariale aanvallen: hoe een paar onzichtbare pixels of één omgewis
 description: "Adversariale voorbeelden benutten de wiskundige grenzen die een model trekt om beslissingen te nemen. Hier zien deze aanvallen er daadwerkelijk uit in afbeeldingen en tekst, en de concrete verdedigingen die elk adresseren."
 date: 2026-08-29
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/Adversarial.png"
 categories: [fundamenten, efficiëntie]
 lang: nl
 ---
