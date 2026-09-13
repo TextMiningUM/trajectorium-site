@@ -80,6 +80,12 @@ A logbook triple is sufficient to teach reproduction. A quintuple is what teache
 
 *This post extends the observation-action-consequence framework introduced in [From Logbooks to Agent Training Data](from-logbooks-to-agent-training-data.qmd) and connects directly to the DPO and process reward model concepts in [From Text to Action](from-text-to-agentic-workflows.qmd) and [David vs. Goliath](small-specialized-model-vs-frontier.qmd).*
 
+**Key papers**
+
+- Rafailov et al. (2023), *Direct Preference Optimization: Your Language Model is Secretly a Reward Model* (DPO) — [arXiv:2305.18290](https://arxiv.org/abs/2305.18290)
+- Wei et al. (2022), *Chain-of-Thought Prompting Elicits Reasoning in Large Language Models* — [arXiv:2201.11903](https://arxiv.org/abs/2201.11903)
+- Lightman et al. (2023), *Let's Verify Step by Step* (Process Reward Models) — [arXiv:2305.20050](https://arxiv.org/abs/2305.20050)
+
 ---
 
 **Further reading on this site**

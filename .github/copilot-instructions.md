@@ -89,6 +89,7 @@ Every blog post must include a `**Key papers**` / `**Kernpublicaties**` section 
 - Always link to arXiv, DOI, or the original publisher — never to blog posts or news articles.
 - Papers in italics, links inline with the paper reference.
 - NL posts use `**Kernpublicaties**` with identical formatting.
+- **This section is mandatory for every new blog post, including short posts.** Use arXiv where possible; always verify paper titles before publishing.
 
 ## Rule: styling
 - Theme file: `custom.scss` at repo root.

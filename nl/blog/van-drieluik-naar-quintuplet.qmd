@@ -80,6 +80,12 @@ Een logboek-drieluik is voldoende om reproductie te leren. Een quintuplet is wat
 
 *Dit artikel breidt het observatie-actie-gevolg-raamwerk uit dat werd geïntroduceerd in [Van logboeken naar agent-trainingsdata](van-logboeken-naar-agent-trainingsdata.qmd) en verbindt direct met de DPO- en process reward model-concepten in [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) en [David tegen Goliath](klein-gespecialiseerd-model-vs-frontier.qmd).*
 
+**Kernpublicaties**
+
+- Rafailov et al. (2023), *Direct Preference Optimization: Your Language Model is Secretly a Reward Model* (DPO) — [arXiv:2305.18290](https://arxiv.org/abs/2305.18290)
+- Wei et al. (2022), *Chain-of-Thought Prompting Elicits Reasoning in Large Language Models* — [arXiv:2201.11903](https://arxiv.org/abs/2201.11903)
+- Lightman et al. (2023), *Let's Verify Step by Step* (Process Reward Models) — [arXiv:2305.20050](https://arxiv.org/abs/2305.20050)
+
 ---
 
 **Verder lezen op deze site**
