@@ -3,6 +3,7 @@ title: "From the Next Farmhand to the Next AI Agent: Turning Generational Knowle
 description: "For 150 years, farmers wrote logbooks so the next person on the job would know what to do. That same text, written for a human successor, turns out to be exactly what an AI agent needs to learn the job instead."
 date: 2026-11-21
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/OrchardFarmhand.png"
 categories: [text-to-action]
 lang: en
 ---

@@ -3,6 +3,7 @@ title: "Why NLP Finally Works: What Transformers Got Right That Fifty Years of G
 description: "From hand-written grammars to statistical models to LSTMs, each generation of NLP solved one problem and hit a new wall. Transformers are the first architecture to take on every layer of language at once, and derive it all from data."
 date: 2026-11-07
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/NLPFinallyWorks.png"
 categories: [fundamentals]
 lang: en
 ---

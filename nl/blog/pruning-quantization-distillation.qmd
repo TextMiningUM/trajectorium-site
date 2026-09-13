@@ -3,6 +3,7 @@ title: "De gigant inkrimpen: hoe pruning, quantization en distillation LLM's kle
 description: "Het trainen van een custom GPT-4-klasse model kost tegenwoordig een geschat 2-3 miljoen dollar aan rekenkracht. Zo nemen pruning, quantization en distillation diezelfde capaciteit en zetten die op hardware die je zelf bezit, terwijl ze tegelijkertijd een hele klasse aanvallen buitensluiten."
 date: 2026-11-28
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/Distillation.png"
 categories: [fundamenten, efficiëntie]
 lang: nl
 ---
