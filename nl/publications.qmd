@@ -26,8 +26,8 @@ toc: true
 - Scholtes, J.C., van der Zee, Y., & Westerhoud, M. (2021). Science helps auditors take on the data challenge. *European Court of Auditors Journal, 2021*(1), 170–177.
 - van der Zee, Y., Scholtes, J.C., Westerhoud, M., & Rossi, J. (2021). Code Word Detection in Fraud Investigations using a Deep-Learning Approach. *arXiv preprint*. [arXiv:2103.09606](https://arxiv.org/abs/2103.09606)
 - Scholtes, J.C. (2020). Text-Mining and eDiscovery for Big-Data Audits. *European Court of Auditors Journal, 2020*(1), 133–140.
-- Loesch, J., van Lier, I., de Boer, A., Scholtes, J., Dumontier, M., & Celebi, R. (2024). Automated identification of healthier food substitutions through a combination of graph neural networks and nutri-scores. *Journal of Food Composition and Analysis, 125*, artikel 105829.
-- Sheth, S., de Kok, J., Imkamp, M., Scholtes, J., van der Horst, I., van Bussel, B., & van Rosmalen, F. (2024). Cleaning nursing notes improves the correlation between notes and SOFA score. *De Intensivist, 32*(4).
+- Loesch, J., van Lier, I., de Boer, A., Scholtes, J., Dumontier, M., & Celebi, R. (2024). Automated identification of healthier food substitutions through a combination of graph neural networks and nutri-scores. *Journal of Food Composition and Analysis, 125*, artikel 105829. [doi.org/10.1016/j.jfca.2023.105829](https://doi.org/10.1016/j.jfca.2023.105829)
+- Sheth, S., de Kok, J., Imkamp, M., Scholtes, J., van der Horst, I., van Bussel, B., & van Rosmalen, F. (2024). Cleaning nursing notes improves the correlation between notes and SOFA score. *De Intensivist, 32*(4). [de-intensivist.nl](https://de-intensivist.nl/het-opschonen-van-verpleegkundige-notities-verbetert-de-correlatie-tussen-notities-en-sofa-score/)
 
 ---
 
@@ -35,17 +35,17 @@ toc: true
 
 ### 2025
 
-- Kats, T., van der Putten, P., & Scholtes, J. (2025). Relevance Feedback Strategies for Reducing Review Effort in Recall-Oriented Neural Information Retrieval. In F.A. Oliehoek, M. Kok, & S. Verwer (Red.), *BNAIC/Benelearn 2023, Revised Selected Papers*.
-- Maka, P., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). You Are What You Train: Effects of Data Composition on Training Context-aware Machine Translation Models. *EMNLP 2025*, pp. 27414–27437.
-- Maka, P., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). Analyzing the Attention Heads for Pronoun Disambiguation in Context-aware Machine Translation Models. *COLING 2025 — 31st International Conference on Computational Linguistics*, pp. 6348–6377.
-- Issam, A., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). A Representation Level Analysis of NMT Model Robustness to Grammatical Errors. *Findings of ACL 2025*, Wenen, pp. 8579–8601.
-- Issam, A., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). DTW-Align: Bridging the Modality Gap in End-to-End Speech Translation with Dynamic Time Warping Alignment. *Proceedings of the 10th Conference on Machine Translation (WMT 2025)*, Suzhou, pp. 191–199.
+- Kats, T., van der Putten, P., & Scholtes, J. (2025). Relevance Feedback Strategies for Reducing Review Effort in Recall-Oriented Neural Information Retrieval. In F.A. Oliehoek, M. Kok, & S. Verwer (Red.), *BNAIC/Benelearn 2023, Revised Selected Papers*. Springer, Vol. 2187 CCIS, pp. 22–39. [doi.org/10.1007/978-3-031-74650-5_2](https://doi.org/10.1007/978-3-031-74650-5_2)
+- Maka, P., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). You Are What You Train: Effects of Data Composition on Training Context-aware Machine Translation Models. *EMNLP 2025*, pp. 27414–27437. [doi.org/10.18653/v1/2025.emnlp-main.1394](https://doi.org/10.18653/v1/2025.emnlp-main.1394)
+- Maka, P., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). Analyzing the Attention Heads for Pronoun Disambiguation in Context-aware Machine Translation Models. *COLING 2025*, pp. 6348–6377. [doi.org/10.48550/arXiv.2412.11187](https://doi.org/10.48550/arXiv.2412.11187)
+- Issam, A., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). A Representation Level Analysis of NMT Model Robustness to Grammatical Errors. *Findings of ACL 2025*, Wenen, pp. 8579–8601. [doi.org/10.18653/v1/2025.findings-acl.451](https://doi.org/10.18653/v1/2025.findings-acl.451)
+- Issam, A., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2025). DTW-Align: Bridging the Modality Gap in End-to-End Speech Translation with Dynamic Time Warping Alignment. *Proceedings of the 10th Conference on Machine Translation (WMT 2025)*, Suzhou, pp. 191–199. [doi.org/10.18653/v1/2025.wmt-1.11](https://doi.org/10.18653/v1/2025.wmt-1.11)
 
 ### 2024
 
-- Hornig, B., Pera, M.S., & Scholtes, J. (2024). Misinformation in video recommendations: an exploration of Top-N recommendation algorithms. *CEUR Workshop Proceedings, 3677*, 54–67.
+- Hornig, B., Pera, M.S., & Scholtes, J. (2024). Misinformation in video recommendations: an exploration of Top-N recommendation algorithms. *CEUR Workshop Proceedings, 3677*, 54–67. [ceur-ws.org](https://ceur-ws.org/Vol-3677/paper5.pdf)
 - Maka, P., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2024). Sequence Shortening for Context-Aware Machine Translation.
-- Issam, A., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2024). Fixed and Adaptive Simultaneous Machine Translation Strategies Using Adapters. *IWSLT 2024 — 21st International Conference on Spoken Language Translation*, pp. 346–358.
+- Issam, A., Semerci, Y.C., Scholtes, J., & Spanakis, G. (2024). Fixed and Adaptive Simultaneous Machine Translation Strategies Using Adapters. *IWSLT 2024*, pp. 346–358. [aclanthology.org/2024.iwslt-1.36](https://aclanthology.org/2024.iwslt-1.36/)
 
 ### 2021
 
