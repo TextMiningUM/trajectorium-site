@@ -88,4 +88,27 @@ AI-agents en autonome architecturen
 </div>
 </div>
 
+---
+
+<div class="col-md-10 mx-auto mt-4">
+
+## AI bij dit platform
+
+Deze site gaat over de toepassingen en mogelijkheden van AI, en verantwoord gebruik van AI is een van de centrale thema's. Het zou inconsistent zijn om dat niet te hebben gedaan.
+
+**Waar we dat hebben gedaan:**
+
+- Alle originele teksten zijn in het Engels geschreven door de auteur.
+- Foutcontrole over alle teksten werd ondersteund door AI.
+- Nederlandse vertalingen van alle artikelen en pagina's zijn gegenereerd door AI en daarna nagekeken door de auteur.
+- Websitecode (configuratie, HTML, CSS) is grotendeels gegenereerd door AI.
+- Cursusmateriaal: AI is gebruikt voor het genereren van code, tekstopmaak en wiskundige notatie in de tutorials.
+- Didactisch ontwerp: AI is gebruikt om voorstellen te maken voor socratische dialogen en feedback te geven op lesstructuur en kwaliteit.
+
+**Wat AI niet heeft gedaan:**
+
+- Alle teksten zijn door een mens gelezen en gecontroleerd op volledigheid, nauwkeurigheid en inhoud.
+- Alle wetenschappelijke referenties en externe links zijn gecontroleerd op correctheid.
+- Alle beweringen, argumenten en wetenschappelijke standpunten weerspiegelen de eigen kennis en het oordeel van de auteur.
+
 </div>
