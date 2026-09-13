@@ -3,6 +3,7 @@ title: "Why Europe Needs Its Own AI Models on Its Own AI Infrastructure"
 description: "What Stanford's 2026 AI Index reveals about the five dimensions of AI sovereignty, and why running models on domestic, edge-capable infrastructure isn't a luxury for Europe, it's a competitive necessity."
 date: 2026-10-03
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/DigitalSovereigntyEurope.png"
 categories: [sovereignty-edge]
 lang: en
 ---

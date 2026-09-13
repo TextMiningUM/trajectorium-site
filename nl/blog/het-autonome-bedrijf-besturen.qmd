@@ -3,6 +3,7 @@ title: "Het autonome bedrijf besturen: wie is verantwoordelijk als AI beslist?"
 description: "AI werkt eindelijk. Nu komt de moeilijkere vraag: hoe bestuur je een organisatie waarin AI analyseert, adviseert en handelt, terwijl de eindverantwoordelijkheid bij een mens blijft?"
 date: 2026-10-17
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/GovernanceAIOrganization.png"
 categories: [governance]
 lang: nl
 ---

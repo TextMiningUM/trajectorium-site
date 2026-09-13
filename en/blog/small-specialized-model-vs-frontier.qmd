@@ -3,6 +3,7 @@ title: "David vs. Goliath: A Fine-Tuned 8B Model Nearly Matches a Trillion-Param
 description: "Recent research shows a small, locally-run model can get within a few points of a frontier foundation model on a specific job. The reason isn't magic, it's specialization."
 date: 2026-10-31
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/Goliath.png"
 categories: [text-to-action]
 lang: en
 ---

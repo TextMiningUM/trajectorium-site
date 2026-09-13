@@ -3,6 +3,7 @@ title: "Governing the Autonomous Organization: Who's Accountable When AI Decides
 description: "AI finally works. Now comes the harder question: how do you govern an organization where AI analyzes, advises, and acts, while final accountability stays with a human?"
 date: 2026-10-17
 author: "Jan Scholtes"
+image: "https://trajectorium.ai/images/GovernanceAIOrganization.png"
 categories: [governance]
 lang: en
 ---

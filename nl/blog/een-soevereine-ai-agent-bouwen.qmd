@@ -3,7 +3,7 @@ title: "Wat er nodig is om een soevereine AI-agent te bouwen voor jouw organisat
 description: "Van een klantenserviceagent tot een klantbegeleidingsassistent die burgers helpt door bureaucratie te navigeren, een praktische, stapsgewijze gids voor het bouwen van een agentisch AI-systeem dat jouw organisatie werkelijk bezit, op infrastructuur die ze werkelijk beheert."
 date: 2026-12-12
 author: "Jan Scholtes"
-image: "https://trajectorium.ai/images/ComponentsofAgent.png"
+image: "https://trajectorium.ai/images/SovereignAgent.png"
 categories: [soevereiniteit-edge, enterprise-strategie]
 lang: nl
 ---
