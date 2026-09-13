@@ -1,7 +1,7 @@
 ---
 title: "Er is geen data zoals vreemde data: AI-training voor agents herdenken"
 description: "In 1993 luidde de gulden regel van AI: 'er is geen data zoals meer data.' Voor het bouwen van agentische architecturen vereist dit vandaag het tegenovergestelde instinct: stop met het najagen van volume, begin met het najagen van het onverwachte."
-date: 2026-09-20
+date: 2026-08-15
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/whatIsGoodData.png"
 categories: [tekst-naar-actie]

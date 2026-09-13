@@ -1,7 +1,7 @@
 ---
 title: "There Is No Data Like Strange Data: Rethinking AI Training for Agents"
 description: "In 1993, the golden rule of AI was 'there is no data like more data.' Building agentic architectures today requires the opposite instinct: stop chasing volume, start chasing the unexpected."
-date: 2026-09-20
+date: 2026-08-15
 author: "Jan Scholtes"
 image: "https://trajectorium.ai/images/whatIsGoodData.png"
 categories: [text-to-action]
