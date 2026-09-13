@@ -14,7 +14,7 @@ toc: true
 - Scholtes, J.C. (2021). *The LegalTech Bridge* (in het Nederlands). In *Meesterlijk. Liber Amicorum Prof. dr. H.J. van den Herik*. H.M. Custers, F. Dechesne & S. van der Hof (Red.).
 - Scholtes, J.C., & van den Herik, H.J. (2021). Big Data Analytics for eDiscovery. In R. Vögl (Red.), *Big Data Law*. Edgar Publishing. [ISBN 978-1-78897-281-9](https://www.e-elgar.com/shop/gbp/research-handbook-on-big-data-law-9781788972819.html)
 - Scholtes, J.C., & van den Herik, H.J. (2019). Big Data Analytics for Legal Fact Finding. In L.R. van den Berg et al. (Red.), *Recht en Technology, vraagstukken van de digitale revolutie*. Boom Juridisch.
-- Scholtes, J.C. (2009). *Text Mining, de volgende stap in zoektechnologie; Vinden wat er niet lijkt te zijn, of vinden wie niet gevonden wil worden*. Inaugurele rede, Universiteit Maastricht.
+- Scholtes, J.C. (2009). *Text Mining, de volgende stap in zoektechnologie; Vinden wat er niet lijkt te zijn, of vinden wie niet gevonden wil worden*. Inaugurele rede, Universiteit Maastricht. [Download (1535 downloads)](https://cris.maastrichtuniversity.nl/en/publications/text-mining-de-volgende-stap-in-zoektechnologie-vinden-zonder-pre)
 - Scholtes, J.C. (1995). *Artificial Neural Networks in Information Retrieval in a Libraries Context*. EC DG-XIII.
 - Scholtes, J.C. (1993). *Neural Networks in Natural Language Processing and Information Retrieval*. Proefschrift, Universiteit van Amsterdam. [Download](https://textminingum.wordpress.com/neural-networks-in-natural-language-processing-and-information-retrieval/)
 
@@ -22,12 +22,12 @@ toc: true
 
 ## Tijdschriftartikelen en preprints
 
-- Celebi, R., Shingjergji, K., Scholtes, J., & Dumontier, M. (2021). Relation extraction from DailyMed structured product labels by optimally combining crowd, experts and machines. *Journal of Biomedical Informatics, 122*, 103902. [doi.org/10.1016/j.jbi.2021.103902](https://doi.org/10.1016/j.jbi.2021.103902)
+- Shingjergji, K., Celebi, R., Scholtes, J., & Dumontier, M. (2021). Relation extraction from DailyMed structured product labels by optimally combining crowd, experts and machines. *Journal of Biomedical Informatics, 122*, 103902. [doi.org/10.1016/j.jbi.2021.103902](https://doi.org/10.1016/j.jbi.2021.103902)
 - Scholtes, J.C., van der Zee, Y., & Westerhoud, M. (2021). Science helps auditors take on the data challenge. *European Court of Auditors Journal, 2021*(1), 170–177.
 - van der Zee, Y., Scholtes, J.C., Westerhoud, M., & Rossi, J. (2021). Code Word Detection in Fraud Investigations using a Deep-Learning Approach. *arXiv preprint*. [arXiv:2103.09606](https://arxiv.org/abs/2103.09606)
 - Scholtes, J.C. (2020). Text-Mining and eDiscovery for Big-Data Audits. *European Court of Auditors Journal, 2020*(1), 133–140.
-- Celebi, R. et al. (incl. Scholtes, J.) (2024). Automated identification of healthier food substitutions through a combination of graph neural networks and nutri-scores. *Journal of Food Composition and Analysis, 125*, artikel 105829.
-- (Mede-auteurs incl. Scholtes, J.) (2024). Cleaning nursing notes improves the correlation between notes and SOFA score. *De Intensivist, 32*(4).
+- Loesch, J., van Lier, I., de Boer, A., Scholtes, J., Dumontier, M., & Celebi, R. (2024). Automated identification of healthier food substitutions through a combination of graph neural networks and nutri-scores. *Journal of Food Composition and Analysis, 125*, artikel 105829.
+- Sheth, S., de Kok, J., Imkamp, M., Scholtes, J., van der Horst, I., van Bussel, B., & van Rosmalen, F. (2024). Cleaning nursing notes improves the correlation between notes and SOFA score. *De Intensivist, 32*(4).
 
 ---
 
@@ -54,6 +54,7 @@ toc: true
 ### 2019
 
 - Enendu, S., Scholtes, J., Smeets, J., Hiemstra, D., & Theune, M. (2019). Predicting Semantic Labels of Text Regions in Heterogeneous Document Images. *DIR 2019*, Amsterdam.
+- Hiemstra, D., Scholtes, J., Smeets, J., Enendu, S., & Theune, M. (2019). Predicting Semantic Labels of Text Regions in Heterogeneous Document Images. Poster, *DIR 2019*, 29 november, Amsterdam.
 - Enendu, S., Scholtes, J., Smeets, J., Hiemstra, D., & Theune, M. (2019). Predicting Semantic Labels of Text Regions in Heterogeneous Document Images. *KONVENS 2019*, Erlangen-Nürnberg.
 - Gerolemou, Z., & Scholtes, J. (2019). Target-Based Sentiment Analysis as a Sequence-Tagging Task. *BNAIC*, Brussel, november 2019.
 - Scholtes, J.C., & van den Herik, H.J. (2019). Big Data Analytics for Legal Fact-Finding. *Mordenate Lustrum Congres*, Universiteit Leiden, mei 2019.
@@ -93,6 +94,7 @@ toc: true
 ## Werkpublicaties en preprints
 
 - Sibirtsev, A., & Scholtes, J.C. (2015). Advanced Methods for Fraud Detection. Werkpublicatie.
+- Smeets, J., Scholtes, J.C., Rasterfoff, C., & Schravemaker, M. (2015). SMTP: Stedelijk Museum Text Mining Project. Werkpublicatie.
 - Trinnes, O., & Scholtes, J.C. (2014). Visualization and Interactive Navigation for Search Result Lists in Law Enforcement and Investigations Applications. Werkpublicatie.
 - Kruif, J., Rooijackers, M.L.M., & Scholtes, J. (2013). Van Fruin naar Frijhoff: Een netwerkanalyse van 135 jaar vaktijdschrift. Werkpublicatie.
 - Küppers, B., & Scholtes, J. (2012). Application of Artificial Intelligence search techniques to cryptanalysis. Werkpublicatie.
