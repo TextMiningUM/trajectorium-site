@@ -111,3 +111,4 @@ An AI agent isn't a chatbot with a longer memory, and it isn't a rebrand of a 19
 - [Governing the Autonomous Organization](governing-the-autonomous-organization.qmd), who is accountable when the agent acts
 - [Why NLP Finally Works](why-nlp-finally-works.qmd), the transformer architecture that made agents possible
 - [The Institutional Moat](the-institutional-moat.qmd), why the architecture around the model matters more than the model itself
+- [Think Alien, Act Human](think-alien-act-human.qmd), how to split the training of those seven components between machine-checkable reward and human judgment

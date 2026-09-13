@@ -67,3 +67,4 @@ Jelinek had gelijk, voor zijn tijd en voor het probleem dat hij oploste. Maar vo
 - [Van tekst naar actie](van-tekst-naar-agentische-workflows.qmd) — de volledige *pipeline* voor het omzetten van uitzonderingsrijke tekst in gestructureerd trainingssignaal
 - [De institutionele slotgracht](de-institutionele-slotgracht.qmd) — waarom de vreemde data van je organisatie, niet het volume, het duurzame concurrentievoordeel is
 - [Wat er nodig is om een soevereine AI-agent te bouwen](een-soevereine-ai-agent-bouwen.qmd) — stap 2 van die handleiding gaat precies over het cureren van de juiste data, niet alleen de meeste data
+- [Denk als alien, handel als mens: de AlphaGo Zero-les](denk-als-alien-handel-als-mens.qmd) — waarom de externe beoordelaar, niet menselijk gevormde redenering, het verschil maakt tussen productief zelfspel en model collapse

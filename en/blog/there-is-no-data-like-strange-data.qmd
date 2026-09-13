@@ -67,3 +67,4 @@ Jelinek was right, for his time, and for the problem he was solving. But for age
 - [From Text to Action: Turning NLP Pipelines into Agentic Workflows](from-text-to-agentic-workflows.qmd) — the full pipeline for turning exception-rich text into structured training signal
 - [The Institutional Moat](the-institutional-moat.qmd) — why your organization's strange data, not its volume, is the durable competitive advantage
 - [What It Takes to Build a Sovereign AI Agent](building-sovereign-ai-agents.qmd) — step 2 of that guide is exactly about curating the right data, not just the most data
+- [Think Alien, Act Human: The AlphaGo Zero Lesson for Agentic Architectures](think-alien-act-human.qmd) — why the external judge, not human-shaped reasoning, is the thing that separates productive self-play from model collapse

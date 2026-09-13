@@ -89,3 +89,4 @@ The technology question, does agentic AI actually work?, is behind us. What's le
 - [What Is an AI Agent?](what-is-an-ai-agent.qmd), what the system being governed actually is
 - [What It Takes to Build a Sovereign AI Agent](building-sovereign-ai-agents.qmd), the end-to-end practical guide that applies this governance framework
 - [Bias Analysis in Practice](bias-analysis-in-practice.qmd), how to carry out the required bias analysis, justification test, and ethical desirability test
+- [Think Alien, Act Human](think-alien-act-human.qmd), why the alignment layer specifically requires human judgment, and what happens when the reward function tries to replace it

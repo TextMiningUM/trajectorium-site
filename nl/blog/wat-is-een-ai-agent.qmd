@@ -111,3 +111,4 @@ Een AI-agent is geen chatbot met een langer geheugen, en het is ook geen rebrand
 - [Het autonome bedrijf besturen](het-autonome-bedrijf-besturen.qmd), wie verantwoordelijk is als de agent handelt
 - [Waarom NLP eindelijk werkt](waarom-nlp-eindelijk-werkt.qmd), de *transformer*-architectuur die agents mogelijk maakte
 - [De institutionele slotgracht](de-institutionele-slotgracht.qmd), waarom de architectuur rondom het model er meer toe doet dan het model zelf
+- [Denk als alien, handel als mens](denk-als-alien-handel-als-mens.qmd), hoe je de training van die zeven componenten splitst tussen machinaal controleerbare beloning en menselijk oordeel

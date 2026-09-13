@@ -89,3 +89,4 @@ De technologievraag, werkt agentische AI daadwerkelijk?, ligt achter ons. Wat ov
 - [Wat is een AI-agent?](wat-is-een-ai-agent.qmd), wat het systeem dat wordt bestuurd eigenlijk is
 - [Wat er nodig is om een soevereine AI-agent te bouwen](een-soevereine-ai-agent-bouwen.qmd), de end-to-end praktische gids die dit governance-raamwerk toepast
 - [Bias-analyse in de praktijk](bias-analyse-in-de-praktijk.qmd), hoe je de vereiste bias-analyse, rechtvaardigingstoets en ethische wenselijkheidstoets uitvoert
+- [Denk als alien, handel als mens](denk-als-alien-handel-als-mens.qmd), waarom de afstemmingslaag specifiek menselijk oordeel vereist, en wat er gebeurt als de beloningsfunctie dat probeert te vervangen
