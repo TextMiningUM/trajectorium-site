@@ -7,12 +7,58 @@
   <link rel="canonical" href="https://trajectorium.ai/en/">
   <link rel="alternate" hreflang="en" href="https://trajectorium.ai/en/">
   <link rel="alternate" hreflang="nl" href="https://trajectorium.ai/nl/">
+  <style>
+    /* Minimal on-brand fallback styling for the brief moment before the redirect fires */
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f4f6f9;
+      font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+      color: #1a1a2e;
+    }
+    .redirect-box {
+      text-align: center;
+      padding: 2.5rem 3rem;
+      background: #ffffff;
+      border: 1px solid #dde2ea;
+    }
+    .redirect-box p {
+      margin: 0 0 1.25rem;
+      font-size: 1.05rem;
+    }
+    .redirect-box ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .redirect-box a {
+      color: #005bac;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-bottom: 2px solid #005bac;
+      padding-bottom: 2px;
+    }
+    .redirect-box a:hover {
+      color: #003d78;
+      border-bottom-color: #003d78;
+    }
+  </style>
 </head>
 <body>
-  <p>Choose your language / Kies je taal:</p>
-  <ul>
-    <li><a href="https://trajectorium.ai/en/">English</a></li>
-    <li><a href="https://trajectorium.ai/nl/">Nederlands</a></li>
-  </ul>
+  <div class="redirect-box">
+    <p>Choose your language / Kies je taal:</p>
+    <ul>
+      <li><a href="https://trajectorium.ai/en/">English</a></li>
+      <li><a href="https://trajectorium.ai/nl/">Nederlands</a></li>
+    </ul>
+  </div>
 </body>
 </html>
