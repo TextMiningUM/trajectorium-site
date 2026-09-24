@@ -10,7 +10,7 @@ lang: nl
 
 Hier is een getal om even bij stil te staan: een *fine-tuned* 8-miljard-parameter-model, klein genoeg om op een enkele consument-GPU te draaien, behaalde onlangs een resultaat binnen **1,2 procentpunt** van een frontier-basismodel op stap-validiteit, en binnen **6,1 punten** op taakvoltooiing, op een werkelijk moeilijke taak: het betrouwbaar van begin tot einde volgen van complexe, vertakkende procedures (denk aan standaard operationele procedures, reparatiehandleidingen, meerstaps-bedrijfsworkflows). Het basismodel waarmee het werd vergeleken, heeft een geschatte omvang van **625 keer groter**. Dit artikel loopt door wat er werkelijk werd gebouwd, wat de cijfers laten zien, en, het meest belangrijk, waarom dit resultaat geen toeval is. Het is een direct gevolg van wat specialisatie oplevert.
 
-![](https://trajectorium.ai/images/Goliath.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/Goliath.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 8 minuten*
 

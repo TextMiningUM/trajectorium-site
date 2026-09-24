@@ -10,7 +10,7 @@ lang: nl
 
 Jarenlang was "gewoon de API aanroepen" een volkomen redelijke AI-strategie. Het *Stanford AI Index Report 2026* suggereert dat dat tijdperk ten einde loopt, niet omdat de API's slechter zijn geworden, maar omdat overheden en organisaties steeds meer inzien dat afhankelijkheid van iemand anders' model, draaiend op iemand anders' infrastructuur, een strategisch risico is. Het rapport wijdt een volledig hoofdstuk aan wat het **AI-soevereiniteit** noemt, en de data daarin maakt een ongewoon concreet geval voor waarom Europa, in het bijzonder, zijn eigen modellen op eigen infrastructuur moet draaien, tot aan de edge.
 
-![](https://trajectorium.ai/images/DigitalSovereigntyEurope.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/DigitalSovereigntyEurope.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 7 minuten*
 

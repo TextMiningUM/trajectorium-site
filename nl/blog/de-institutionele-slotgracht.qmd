@@ -10,7 +10,7 @@ lang: nl
 
 De meeste enterprise "AI-strategieën" zien er vandaag hetzelfde uit: kies een basismodel, Claude, GPT, Gemini, schrijf een systeem-prompt, wikkel het in een paar skill files, koppel wat function calling en noem het een agent. Het werkt, het demonstreert goed en het wordt snel geleverd. Maar het is op zichzelf geen slotgracht. Als jouw CTO-briefing daarbij stopt, is dit artikel voor jou.
 
-![](https://trajectorium.ai/images/BraininaJar.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/BraininaJar.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 9 minuten*
 

@@ -10,7 +10,7 @@ lang: en
 
 Most organizations that say they've "built an AI agent" have really just written a system prompt on top of Claude, GPT, or Gemini and called it a day. That's a starting point, not a sovereign system, as [earlier posts on this site have covered](the-institutional-moat.qmd), it leaves your organization renting intelligence rather than owning it, dependent on infrastructure, pricing, and export-control decisions made entirely outside your control. This post pulls together everything this site has covered so far, [text-to-agentic-workflows](from-text-to-agentic-workflows.qmd), [the institutional moat](the-institutional-moat.qmd), [sovereignty](why-europe-needs-sovereign-ai.qmd), [model compression](pruning-quantization-distillation.qmd), and [governance](governing-the-autonomous-organization.qmd), into one practical answer to a single question: what does it actually take to build your own sovereign agent, end to end?
 
-![](https://trajectorium.ai/images/SovereignAgent.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/SovereignAgent.png){fig-align="center" .blog-hero-image}
 
 *Estimated reading time: 12 minutes*
 

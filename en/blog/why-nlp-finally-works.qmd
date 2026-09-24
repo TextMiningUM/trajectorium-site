@@ -10,7 +10,7 @@ lang: en
 
 Natural language processing has been "almost working" for roughly fifty years. Every generation of researchers solved a real problem and ran headlong into a new one. Transformers are the first architecture that doesn't just solve the next problem in line, they finally take on every layer of language at once, and derive all of it from exposure to data rather than from a human writing it down. Understanding why requires walking through what came before, because the contrast is the whole story.
 
-![](https://trajectorium.ai/images/NLPFinallyWorks.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/NLPFinallyWorks.png){fig-align="center" .blog-hero-image}
 
 *Estimated reading time: 8 minutes*
 

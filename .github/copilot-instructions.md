@@ -55,7 +55,7 @@ lang: en                    # or nl
 After the YAML frontmatter, include the image (if present) and immediately after it the reading time estimate:
 
 ```markdown
-![](https://trajectorium.ai/images/<filename>){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/<filename>){fig-align="center" .blog-hero-image}
 
 *Estimated reading time: X minutes*   <!-- EN -->
 *Geschatte leestijd: X minuten*       <!-- NL -->

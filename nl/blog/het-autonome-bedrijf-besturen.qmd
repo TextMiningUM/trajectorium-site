@@ -12,7 +12,7 @@ Na ongeveer veertig jaar "AI is er bijna" is het er eindelijk. Schaken in 1997, 
 
 Dit is geen hypothetisch scenario voor een toekomstige bestuursvergadering. Het is al de operationele werkelijkheid op plaatsen die het verst zijn gegaan met agentische AI, waaronder, misschien verrassend, de Amerikaanse marine.
 
-![](https://trajectorium.ai/images/GovernanceAIOrganization.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/GovernanceAIOrganization.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 9 minuten*
 

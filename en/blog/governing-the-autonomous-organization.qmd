@@ -12,7 +12,7 @@ After roughly forty years of "AI is almost there," it's finally there. Chess in 
 
 This isn't a hypothetical for a future board meeting. It's already the operating reality in places that have gone furthest with agentic AI, including, perhaps surprisingly, the US Navy.
 
-![](https://trajectorium.ai/images/GovernanceAIOrganization.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/GovernanceAIOrganization.png){fig-align="center" .blog-hero-image}
 
 *Estimated reading time: 9 minutes*
 

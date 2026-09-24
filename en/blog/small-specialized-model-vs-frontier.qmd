@@ -10,7 +10,7 @@ lang: en
 
 Here's a number worth sitting with: a fine-tuned 8-billion-parameter model, small enough to run on a single consumer GPU, recently landed within **1.2 percentage points** of a frontier foundation model on step-validity, and within **6.1 points** on task completion, on a genuinely hard task: following complex, branching procedures (think SOPs, repair manuals, multi-step business workflows) reliably from start to finish. The foundation model it was compared against is estimated at **625 times its size**. This post walks through what was actually built, what the numbers show, and, most importantly, why this result isn't a fluke. It's a direct consequence of what specialization buys you.
 
-![](https://trajectorium.ai/images/Goliath.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/Goliath.png){fig-align="center" .blog-hero-image}
 
 *Estimated reading time: 8 minutes*
 

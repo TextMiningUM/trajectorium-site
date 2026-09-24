@@ -10,7 +10,7 @@ lang: nl
 
 Een afbeelding van een panda, correct geclassificeerd door een neuraal netwerk met 57% zekerheid, krijgt een kleine hoeveelheid zorgvuldig berekend ruis toegevoegd, onzichtbaar voor het menselijk oog, de afbeelding ziet er nog precies uit als een panda, en hetzelfde netwerk classificeert het nu als een gibbon met meer dan 99% zekerheid. Dit is geen hypothetisch scenario; het is een van de grondleggende demonstraties van wat een ***adversarial attack*** wordt genoemd, en de onderliggende kwetsbaarheid blijkt tekstmodellen net zo goed te treffen als beeldmodellen, als je weet waar je moet duwen. Dit artikel behandelt hoe deze aanvallen er daadwerkelijk uitzien in beide domeinen, en wat werkelijk werkt als verdediging, voortbouwend op het [eerdere artikel over modelcompressie](pruning-quantization-distillation.qmd), dat deel van het antwoord blijkt te zijn, maar lang niet alles.
 
-![](https://trajectorium.ai/images/Adversarial.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/Adversarial.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 8 minuten*
 

@@ -8,7 +8,7 @@ categories: [text-to-action]
 lang: en
 ---
 
-![](https://trajectorium.ai/images/AlphaGoRLversusRLHF.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/AlphaGoRLversusRLHF.png){fig-align="center" .blog-hero-image}
 
 *Estimated reading time: 10 minutes*
 

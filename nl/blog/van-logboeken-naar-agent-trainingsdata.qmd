@@ -12,7 +12,7 @@ Ergens in een Nederlandse kersenoogst bevindt zich een logboek uit 2013. Een pag
 
 Dat is de stille verschuiving die benoemd verdient te worden: tekst die tientallen jaren werd geschreven om de *volgende mens* op het werk te trainen, kan nu de *volgende agent* op het werk trainen. Dit artikel loopt door hoe dat er in de praktijk uitziet, aan de hand van een echt project gebouwd rondom precies dit soort data.
 
-![](https://trajectorium.ai/images/OrchardFarmhand.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/OrchardFarmhand.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 8 minuten*
 

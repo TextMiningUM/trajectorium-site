@@ -14,7 +14,7 @@ The idea that experience can be distilled into training data is not new. In rein
 
 But reproducing known good decisions is not the same as reasoning well in novel situations. And two dimensions that are routinely present in the head of an experienced practitioner, almost never make it into the written record.
 
-![](https://trajectorium.ai/images/ReasoningTripletoQuintuple.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/ReasoningTripletoQuintuple.png){fig-align="center" .blog-hero-image}
 
 *Estimated reading time: 9 minutes*
 

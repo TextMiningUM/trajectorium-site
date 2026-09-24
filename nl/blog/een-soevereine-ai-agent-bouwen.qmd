@@ -10,7 +10,7 @@ lang: nl
 
 De meeste organisaties die zeggen dat ze een "AI-agent hebben gebouwd", hebben in werkelijkheid alleen een systeem-*prompt* geschreven bovenop Claude, GPT of Gemini en het daarbij gelaten. Dat is een vertrekpunt, geen soeverein systeem, zoals [eerdere artikelen op deze site](de-institutionele-slotgracht.qmd) hebben behandeld, laat dat je organisatie intelligentie huren in plaats van bezitten, afhankelijk van infrastructuur, prijsstelling en exportcontrolebeslissingen die volledig buiten jouw beheer worden genomen. Dit artikel brengt alles samen wat deze site tot nu toe heeft behandeld, [tekst naar actie](van-tekst-naar-agentische-workflows.qmd), [de institutionele slotgracht](de-institutionele-slotgracht.qmd), [soevereiniteit](waarom-europa-eigen-ai-modellen-nodig-heeft.qmd), [modelcompressie](pruning-quantization-distillation.qmd) en [governance](het-autonome-bedrijf-besturen.qmd), in één praktisch antwoord op één vraag: wat is er werkelijk nodig om je eigen soevereine agent te bouwen, van begin tot eind?
 
-![](https://trajectorium.ai/images/SovereignAgent.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/SovereignAgent.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 12 minuten*
 

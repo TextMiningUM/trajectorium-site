@@ -10,7 +10,7 @@ lang: nl
 
 Natural language processing is al ongeveer vijftig jaar "bijna klaar". Elke generatie onderzoekers loste een echt probleem op en liep meteen tegen een nieuw aan. *Transformers* zijn de eerste architectuur die niet alleen het volgende probleem in de rij oplost, ze pakken eindelijk alle lagen van taal tegelijk aan, en leiden alles af uit blootstelling aan data in plaats van uit wat een mens opschrijft. Begrijpen waarom dat zo is, vereist dat je doorloopt wat er aan voorafging, want het contrast is het hele verhaal.
 
-![](https://trajectorium.ai/images/NLPFinallyWorks.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/NLPFinallyWorks.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 8 minuten*
 

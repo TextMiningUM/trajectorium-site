@@ -49,6 +49,8 @@ We publiceren toegankelijke verdiepingsartikelen, praktische tutorials en geanno
 <div class="row g-4 mt-2">
 <div class="col-md-4"><div class="feature-card">
 
+<i class="bi bi-journal-text card-icon"></i>
+
 ### Blog
 
 Uitgebreide artikelen over AI-architecturen, agent-frameworks, redeneerpatronen en praktijktoepassingen.
@@ -58,6 +60,8 @@ Uitgebreide artikelen over AI-architecturen, agent-frameworks, redeneerpatronen 
 </div></div>
 <div class="col-md-4"><div class="feature-card">
 
+<i class="bi bi-code-slash card-icon"></i>
+
 ### Tutorials & Notebooks
 
 Praktische Jupyter-notebooks: bouw agents van de grond af, koppel tools via API's en verken retrieval-augmented generation.
@@ -66,6 +70,8 @@ Praktische Jupyter-notebooks: bouw agents van de grond af, koppel tools via API'
 
 </div></div>
 <div class="col-md-4"><div class="feature-card">
+
+<i class="bi bi-easel2 card-icon"></i>
 
 ### Slides
 

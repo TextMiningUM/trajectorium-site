@@ -14,7 +14,7 @@ Het idee dat ervaring kan worden gedestilleerd tot trainingsdata is niet nieuw. 
 
 Maar bekende goede beslissingen reproduceren is niet hetzelfde als goed redeneren in nieuwe situaties. En twee dimensies die routinematig aanwezig zijn in het hoofd van een ervaren beoefenaar komen bijna nooit in het schriftelijke verslag terecht.
 
-![](https://trajectorium.ai/images/ReasoningTripletoQuintuple.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/ReasoningTripletoQuintuple.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 9 minuten*
 

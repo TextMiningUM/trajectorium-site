@@ -539,6 +539,25 @@ footer.footer {
     border-top-color: $um-teal;
   }
 
+  .card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background: $um-blue-pale;
+    color: $um-blue;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    transition: background 0.25s, color 0.25s;
+  }
+
+  &:hover .card-icon {
+    background: $um-teal;
+    color: #fff;
+  }
+
   h3 {
     color: $um-navy;
     font-size: 1.15rem;
@@ -554,6 +573,33 @@ footer.footer {
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
+}
+
+// ── Blog hero image ─────────────────────────────────────────────────────
+
+.blog-hero-image {
+  max-width: 720px;
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: $card-border-radius;
+  box-shadow: 0 10px 28px rgba(29,45,62,0.12);
+}
+
+// ── Mobile adjustments ─────────────────────────────────────────────────────
+
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 2.25rem 1.25rem 2rem;
+
+    h1 { font-size: 1.9rem; }
+    .hero-subtitle { font-size: 1rem; }
+  }
+
+  .diagram-section { padding: 1.5rem 1.25rem 1.25rem; }
+
+  .insights-section { padding: 2.5rem 1.25rem; }
+
+  .feature-card, .course-card, .slide-block { padding: 1.25rem; }
 }
 
 // ── Accessibility & motion ─────────────────────────────────────────────────

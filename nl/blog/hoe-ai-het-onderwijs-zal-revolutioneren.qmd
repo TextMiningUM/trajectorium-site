@@ -10,7 +10,7 @@ lang: nl
 
 "Sinds 1985 vraag ik me af hoe we computers kunnen leren menselijke taal te gebruiken. En nu, na al die jaren, werkt het eindelijk." Dat is een eerlijke samenvatting van waar het hoger onderwijs zich bevindt met generatieve AI, de technologie werkt eindelijk, en de moeilijkere vraag is verschoven naar hoe we die verantwoord in onderwijs en leren integreren. Dit artikel loopt door beide kanten eerlijk: wat werkelijk transformatief is, en waar dezelfde technologie problemen schept die het onderwijs nog niet volledig heeft opgelost.
 
-![](https://trajectorium.ai/images/EducationHomeWorkMachine.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/EducationHomeWorkMachine.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 9 minuten*
 

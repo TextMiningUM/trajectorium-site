@@ -10,7 +10,7 @@ lang: nl
 
 De meeste organisaties beschikken al over een enorme hoeveelheid ongestructureerde tekst: handleidingen, dossiers, logboeken, contracten, jaren aan interne correspondentie. De vraag die dit artikel beantwoordt is heel praktisch: hoe zet je die ruwe tekst om in de daadwerkelijke trainingsdata die het geheugen, de tools, de redenering en de veiligheidscontroles van een agent aandrijft? En waarom doet die conversiepipeline er meer toe dan welk basismodel je er achter hangt?
 
-![](https://trajectorium.ai/images/AgentSmith.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/AgentSmith.png){fig-align="center" .blog-hero-image}
 
 *Geschatte leestijd: 8 minuten*
 

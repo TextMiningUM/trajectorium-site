@@ -10,7 +10,7 @@ lang: en
 
 Most enterprise "AI strategies" today look the same: pick a foundation model, Claude, GPT, Gemini, write a system prompt, wrap it in a few skill files, wire up some function calling, and call it an agent. It works, it demos well, and it ships fast. It is also, on its own, not a moat. If your CTO briefing stops there, this post is for you.
 
-![](https://trajectorium.ai/images/BraininaJar.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/BraininaJar.png){fig-align="center" .blog-hero-image}
 
 *Estimated reading time: 9 minutes*
 

@@ -49,6 +49,8 @@ We publish accessible deep-dives, hands-on tutorials, and annotated lecture slid
 <div class="row g-4 mt-2">
 <div class="col-md-4"><div class="feature-card">
 
+<i class="bi bi-journal-text card-icon"></i>
+
 ### Blog
 
 In-depth articles on AI architectures, agent frameworks, reasoning patterns, and real-world applications.
@@ -58,6 +60,8 @@ In-depth articles on AI architectures, agent frameworks, reasoning patterns, and
 </div></div>
 <div class="col-md-4"><div class="feature-card">
 
+<i class="bi bi-code-slash card-icon"></i>
+
 ### Tutorials & Notebooks
 
 Hands-on Jupyter notebooks: build agents from scratch, connect tools via APIs, and explore retrieval-augmented generation.
@@ -66,6 +70,8 @@ Hands-on Jupyter notebooks: build agents from scratch, connect tools via APIs, a
 
 </div></div>
 <div class="col-md-4"><div class="feature-card">
+
+<i class="bi bi-easel2 card-icon"></i>
 
 ### Slides
 

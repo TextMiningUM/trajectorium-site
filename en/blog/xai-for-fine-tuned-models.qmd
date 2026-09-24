@@ -10,7 +10,7 @@ lang: en
 
 When you call a foundation model's API, you're borrowing someone else's reasoning and someone else's accountability. The moment you fine-tune it on your own data, distill it into a smaller student model, or train a specialized component from scratch, as covered across the earlier posts on this site about [building sovereign agents](building-sovereign-ai-agents.qmd) and [compressing models for local deployment](pruning-quantization-distillation.qmd), that borrowed accountability disappears. The model's behavior is now *your* behavior. And a model that performs well on your validation set can still be reasoning in ways you'd never approve of if you could actually see them. This post covers what XAI (eXplainable AI) actually is, the concrete toolbox for looking inside a model, and why this stops being optional the moment you're the one training it.
 
-![](https://trajectorium.ai/images/XAIDarpa.png){fig-align="center" style="max-width:720px;width:100%;margin:1.5rem 0;"}
+![](https://trajectorium.ai/images/XAIDarpa.png){fig-align="center" .blog-hero-image}
 
 *Estimated reading time: 11 minutes*
 
