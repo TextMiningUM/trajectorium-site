@@ -37,6 +37,7 @@ jobs:
           mkdir -p _publish
           cp index.html _publish/
           cp robots.txt _publish/
+          cp CNAME _publish/
           cp -r _site/en _publish/en
           cp -r _site/nl _publish/nl
           cp -r images _publish/images
